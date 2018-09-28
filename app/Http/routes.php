@@ -16,4 +16,9 @@ $app->get('/', function () use ($app) {
 });
 
 
+$app->get('/migrasi-tb-kegiatan-patroli', 'ReadCsvController@migrasi_tb_kegiatan_patroli');
 $app->get('/read-csv', 'ReadCsvController@read');
+$app->get('/read-lokasi-udara', 'ReadCsvController@read_lokasi_udara');
+$app->get('/read-lokasi-darat', 'ReadCsvController@read_lokasi_darat');
+$app->get('/check-udara/{id_kegiatan}', 'ReadCsvController@check_exist_in_udara');
+$app->get('/check-darat/{id_kegiatan}', 'ReadCsvController@check_exist_in_darat');
