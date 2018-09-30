@@ -31,7 +31,7 @@ $api->version('v1', function ($api) {
 
     $api->post('/auth/login', [
         'as' => 'api.auth.login',
-        'uses' => 'Auth\AuthController@postLogin'
+        'uses' => 'App\Http\Controllers\Auth\AuthController@postLogin'
     ]);
     
 });
