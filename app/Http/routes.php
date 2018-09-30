@@ -22,3 +22,16 @@ $app->get('/read-lokasi-udara', 'ReadCsvController@read_lokasi_udara');
 $app->get('/read-lokasi-darat', 'ReadCsvController@read_lokasi_darat');
 $app->get('/check-udara/{id_kegiatan}', 'ReadCsvController@check_exist_in_udara');
 $app->get('/check-darat/{id_kegiatan}', 'ReadCsvController@check_exist_in_darat');
+$app->get('/test', 'ExampleController@test');
+
+
+$api = $app->make(Dingo\Api\Routing\Router::class);
+
+$api->version('v1', function ($api) {
+
+    $api->post('/auth/login', [
+        'as' => 'api.auth.login',
+        'uses' => 'Auth\AuthController@postLogin'
+    ]);
+    
+});
