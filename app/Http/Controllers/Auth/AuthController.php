@@ -3,11 +3,16 @@
 namespace App\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Http\JsonResponse;
+use Tymon\JWTAuth\Facades\JWTAuth;
+use App\Http\Controllers\Controller;
+use Tymon\JWTAuth\Exceptions\JWTException;
 use Illuminate\Http\Exception\HttpResponseException;
 
 class AuthController extends Controller
 {
-	/**
+    /**
      * Handle a login request to the application.
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response

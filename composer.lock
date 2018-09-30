@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d2b3783e8ddba7d8223741fae7a9d0f2",
+    "content-hash": "d509954d454fd5bf3d8d02b366340bd7",
     "packages": [
         {
             "name": "dingo/api",
@@ -3086,6 +3086,50 @@
                 "validate"
             ],
             "time": "2018-01-29T19:49:41+00:00"
+        },
+        {
+            "name": "widnyana/lumen-dingo-routes-list",
+            "version": "v0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/widnyana/lumen-dingo-route-list.git",
+                "reference": "2f9d1487649cee270741662f4c26e5c3e89f0bbc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/widnyana/lumen-dingo-route-list/zipball/2f9d1487649cee270741662f4c26e5c3e89f0bbc",
+                "reference": "2f9d1487649cee270741662f4c26e5c3e89f0bbc",
+                "shasum": ""
+            },
+            "require": {
+                "dingo/api": "1.0.x@dev",
+                "illuminate/support": "~5.0",
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Widnyana\\LDRoutesList\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Widnyana",
+                    "email": "me@widnyana.web.id",
+                    "homepage": "http://widnyana.web.id"
+                }
+            ],
+            "description": "Lumen Routes List Dingo API Endpoint",
+            "keywords": [
+                "dingo",
+                "lumen",
+                "route list"
+            ],
+            "time": "2016-07-03T15:53:10+00:00"
         }
     ],
     "packages-dev": [
@@ -4818,50 +4862,6 @@
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
             "time": "2018-01-20T15:04:53+00:00"
-        },
-        {
-            "name": "widnyana/lumen-dingo-routes-list",
-            "version": "v0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/widnyana/lumen-dingo-route-list.git",
-                "reference": "2f9d1487649cee270741662f4c26e5c3e89f0bbc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/widnyana/lumen-dingo-route-list/zipball/2f9d1487649cee270741662f4c26e5c3e89f0bbc",
-                "reference": "2f9d1487649cee270741662f4c26e5c3e89f0bbc",
-                "shasum": ""
-            },
-            "require": {
-                "dingo/api": "1.0.x@dev",
-                "illuminate/support": "~5.0",
-                "php": ">=5.5.9"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Widnyana\\LDRoutesList\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Widnyana",
-                    "email": "me@widnyana.web.id",
-                    "homepage": "http://widnyana.web.id"
-                }
-            ],
-            "description": "Lumen Routes List Dingo API Endpoint",
-            "keywords": [
-                "dingo",
-                "lumen",
-                "route list"
-            ],
-            "time": "2016-07-03T15:53:10+00:00"
         }
     ],
     "aliases": [],
