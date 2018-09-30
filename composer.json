@@ -5,14 +5,17 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": ">=5.5.9",
-        "laravel/lumen-framework": "5.2.*",
+        "php": ">=5.6.4",
+        "laravel/lumen-framework": "5.3.*",
         "vlucas/phpdotenv": "~2.2",
-        "dingo/api": "2.0.0-alpha1"
+        "krisanalfa/lumen-dingo-adapter": "^0.0.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
-        "phpunit/phpunit": "~4.0"
+        "phpunit/phpunit": "~5.0",
+        "mockery/mockery": "~0.9",
+        "flipbox/lumen-generator": "^5.3",
+        "widnyana/lumen-dingo-routes-list": "^0.1.0"
     },
     "autoload": {
         "psr-4": {
@@ -24,5 +27,12 @@
             "tests/",
             "database/"
         ]
-    }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "php -r \"copy('.env.example', '.env');\""
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

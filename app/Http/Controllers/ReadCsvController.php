@@ -36,7 +36,7 @@ class ReadCsvController extends Controller
 
 				// Step 1
 				// insert id_kegiatan, tgl_keg_patroli ke tabel kegiatan_patroli
-				$kegiatan_patroli_id = DB::tabel('kegiatan_patroli')->insert(
+				$kegiatan_patroli_id = DB::table('kegiatan_patroli')->insert(
 					[
 						'id'              => $data_indexed['id_kegiatan'],
 						'tanggal_patroli' => $data_indexed['tgl_keg_patroli']
@@ -44,7 +44,7 @@ class ReadCsvController extends Controller
 				);
 
 				// Step 2
-				if ($kegiatan_patroli_id) // hanya berjalan ketika step 1 berhasil
+				if ($kegiatan_patroli_id && FALSE) // hanya berjalan ketika step 1 berhasil
 				{
 					// cek id_kegiatan di tabel tb_lokasi_patroli dan tb_lokasi_udara untuk 
 					// mengetahui dia itu patroli darat apa udara
@@ -63,6 +63,9 @@ class ReadCsvController extends Controller
 						'cuaca_sore'          => $data_indexed['cuaca_sore'],
 						'cuaca_pagi'          => $data_indexed['cuaca_pagi']
 					);
+
+					$patroli_udara_id = NULL;
+					$patroli_darat_id = NULL;
 					if ($exist_in_udara != NULL)
 					{
 						// Spesial data for patroli_udara
@@ -71,10 +74,15 @@ class ReadCsvController extends Controller
 						$data_db['kegiatan']   = $data_indexed['kegiatan'];
 						$data_db['latitude']   = $data_indexed['latitude'];
 						$data_db['longitude']  = $data_indexed['longitude'];
+
+						$patroli_udara_id = DB::table('patroli_udara')->insert();
 					}
 				}
 
 				// array_push($all_data, $data_indexed);
+				
+				echo ($kegiatan_patroli_id) ? $kegiatan_patroli_id.' - success' : $kegiatan_patroli_id.' - failed';
+				echo "<br>";
 			}
 
 			$i++;
