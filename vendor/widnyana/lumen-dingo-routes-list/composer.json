@@ -1,0 +1,29 @@
+{
+    "name": "widnyana/lumen-dingo-routes-list",
+    "license": "BSD-3-Clause",
+    "description": "Lumen Routes List Dingo API Endpoint",
+    "keywords": [
+        "lumen",
+        "dingo",
+        "route list"
+    ],
+    "authors": [
+        {
+            "name": "Widnyana",
+            "email": "me@widnyana.web.id",
+            "homepage": "http://widnyana.web.id"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "dingo/api": "1.0.x@dev",
+        "illuminate/support": "~5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Widnyana\\LDRoutesList\\": ""
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
