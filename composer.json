@@ -9,7 +9,8 @@
         "laravel/lumen-framework": "5.3.*",
         "vlucas/phpdotenv": "~2.2",
         "krisanalfa/lumen-dingo-adapter": "^0.0.2",
-        "widnyana/lumen-dingo-routes-list": "^0.1.0"
+        "widnyana/lumen-dingo-routes-list": "^0.1.0",
+        "doctrine/dbal": "^2.8"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
