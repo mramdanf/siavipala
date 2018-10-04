@@ -77,11 +77,11 @@ class ReadCsvController extends Controller
 					if ($exist_in_udara != NULL)
 					{
 						// Spesial data for patroli_udara
-						$data_db['confidence'] = ($data_indexed['confidence'] == 'N/A' || empty($data_indexed['confidence'])) ? NULL : $data_indexed['confidence'];
-						$data_db['distance']   = ($data_indexed['distance'] == 'N/A' || empty($data_indexed['distance'])) ? NULL : $data_indexed['distance'];
-						$data_db['kegiatan']   = ($data_indexed['kegiatan'] == 'N/A' || empty($data_indexed['kegiatan'])) ? NULL : $data_indexed['kegiatan'];
-						$data_db['latitude']   = ($data_indexed['latitude'] == 'N/A' || empty($data_indexed['latitude'])) ? NULL : $data_indexed['latitude'];
-						$data_db['longitude']  = ($data_indexed['longitude'] == 'N/A' || empty($data_indexed['longitude'])) ? NULL : $data_indexed['longitude'];
+						$data_db['confidence'] = ($exist_in_udara['confidence'] == 'N/A' || empty($exist_in_udara['confidence'])) ? NULL : $exist_in_udara['confidence'];
+						$data_db['distance']   = ($exist_in_udara['distance'] == 'N/A' || empty($exist_in_udara['distance'])) ? NULL : $exist_in_udara['distance'];
+						$data_db['kegiatan']   = ($exist_in_udara['kegiatan'] == 'N/A' || empty($exist_in_udara['kegiatan'])) ? NULL : $exist_in_udara['kegiatan'];
+						$data_db['latitude']   = ($exist_in_udara['latitude'] == 'N/A' || empty($exist_in_udara['latitude'])) ? NULL : $exist_in_udara['latitude'];
+						$data_db['longitude']  = ($exist_in_udara['longitude'] == 'N/A' || empty($exist_in_udara['longitude'])) ? NULL : $exist_in_udara['longitude'];
 
 						$patroli_udara_id = DB::table('patroli_udara')->insert($data_db);
 						
@@ -126,9 +126,11 @@ class ReadCsvController extends Controller
 			if ($lu['id_kegiatan'] == $id_kegiatan)
 			{
 				$result = $lu;
-				break;
+				return $lu;
 			}
 		}
+
+		return NULL;
 	}
 
 	// Mencari apakah suatu id_kegiatan terdapat
