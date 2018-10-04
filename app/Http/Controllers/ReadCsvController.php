@@ -34,7 +34,8 @@ class ReadCsvController extends Controller
 				foreach ($headers as $key => $header) 
 					$data_indexed[$header] = $data[$key];
 
-				// Step 1
+				///////////////// Step 1 ///////////////////////
+
 				// insert id_kegiatan, tgl_keg_patroli ke tabel kegiatan_patroli
 				$kegiatan_patroli_id = DB::table('kegiatan_patroli')->insert(
 					[
@@ -51,9 +52,15 @@ class ReadCsvController extends Controller
 				echo " kegiatan_patroli_insert_id = ".$kegiatan_patroli_id;
 				echo "<br>";
 
-				// Step 2
+				
 				if ($kegiatan_patroli_id) // hanya berjalan ketika step 1 berhasil
 				{
+					///////////////// Step 2 ///////////////////////
+					$desa_kelurahan_id = $this->insert_tempat($data_indexed);
+
+
+					///////////////// Step 3 ///////////////////////
+
 					// cek id_kegiatan di tabel tb_lokasi_patroli dan tb_lokasi_udara untuk 
 					// mengetahui dia itu patroli darat apa udara
 					$exist_in_udara = $this->check_exist_in_udara($data_indexed['id_kegiatan']);
@@ -69,7 +76,8 @@ class ReadCsvController extends Controller
 						'curah_hujan'         => ($data_indexed['curah_hujan'] == 'N/A' || empty($data_indexed['curah_hujan'])) ? NULL : $data_indexed['curah_hujan'],
 						'cuaca_siang'         => ($data_indexed['cuaca_siang'] == 'N/A' || empty($data_indexed['cuaca_siang'])) ? NULL : $data_indexed['cuaca_siang'],
 						'cuaca_sore'          => ($data_indexed['cuaca_sore'] == 'N/A' || empty($data_indexed['cuaca_sore'])) ? NULL : $data_indexed['cuaca_sore'],
-						'cuaca_pagi'          => ($data_indexed['cuaca_pagi'] == 'N/A' || empty($data_indexed['cuaca_pagi'])) ? NULL : $data_indexed['cuaca_pagi']
+						'cuaca_pagi'          => ($data_indexed['cuaca_pagi'] == 'N/A' || empty($data_indexed['cuaca_pagi'])) ? NULL : $data_indexed['cuaca_pagi'],
+						'desa_kelurahan_id'   => $desa_kelurahan_id
 					);
 
 					$patroli_udara_id = NULL;
@@ -99,7 +107,7 @@ class ReadCsvController extends Controller
 					}
 
 					echo "<br>";
-					echo "=================================";
+					echo "=================================================================";
 					echo "<br><br><br>";
 					
 				}
@@ -251,6 +259,196 @@ class ReadCsvController extends Controller
 
 		echo "<pre>";
 		print_r($all_data);
+	}
+
+	public function insert_tempat($kegiatan_patroli = array())
+	{
+		// Insert ke tabel provinsi
+		// pastikan provinsi tersebut belum pernah diinsert
+		$provinsi_exist = DB::table('provinsi')
+							->where('nama', 'ILIKE', '%'.strtolower($kegiatan_patroli['provinsi']).'%')
+							->first();
+
+		// Provinsi belum ada
+		$provinsi_insert_id = NULL;
+
+		if ($provinsi_exist == NULL)
+		{
+			DB::table('provinsi')->insert(
+				['nama' => $kegiatan_patroli['provinsi']]
+			);
+			$provinsi_insert_id = DB::getPdo()->lastInsertId();
+			
+			echo "Insert provinsi ";
+			echo ($provinsi_insert_id) ? "success, provinsi_insert_id: ".$provinsi_insert_id : "FAILED";
+			echo "<br>";
+		}
+		else
+		{
+			$provinsi_insert_id = $provinsi_exist->id;
+
+			echo "Provinsi exist, provinsi_insert_id ".$provinsi_insert_id;
+			echo "<br>";
+		}
+
+		// Insert ke tabel daops
+		// pastikan daops tersebut belum pernah diinsert
+		$daops = $kegiatan_patroli['daops'];
+		$daops_insert_id = NULL;
+
+		if ($daops != 'N/A' && $daops != NULL && $daops != '')
+		{
+			$daops_exist = DB::table('daops')
+							->where('nama', 'ILIKE', '%'.strtolower($daops).'%')
+							->first();
+
+			if ($daops_exist == NULL)
+			{
+				DB::table('daops')->insert(
+					[
+						'nama'        => $kegiatan_patroli['daops'],
+						'provinsi_id' => $provinsi_insert_id
+					]
+				);
+				$daops_insert_id = DB::getPdo()->lastInsertId();
+
+				echo "Insert daops ";
+				echo ($daops_insert_id) ? "success, daops_insert_id: ".$daops_insert_id : "FAILED";
+				echo "<br>";
+			}
+			else
+			{
+				$daops_insert_id = $daops_exist->id;
+
+				echo "Daops exist, daops_insert_id ".$daops_insert_id;
+				echo "<br>";
+			}
+		}
+
+		// Insert ke tabel kota_kab
+		// pastikan kota_kab tersebut belum pernah di insert
+		$kota_kab = $kegiatan_patroli['kab_kota'];
+		$kota_kab_insert_id = NULL;
+
+		if ($kota_kab != 'N/A' && $kota_kab != NULL && $kota_kab != '')
+		{
+			$kota_kab_exist = DB::table('kota_kab')
+								->where('nama', 'ILIKE', '%'.strtolower($kota_kab).'%')
+								->first();
+
+			if ($kota_kab_exist == NULL)
+			{
+				DB::table('kota_kab')->insert(
+					[
+						'nama'     => $kegiatan_patroli['kab_kota'],
+						'daops_id' => $daops_insert_id
+					]
+				);
+				$kota_kab_insert_id = DB::getPdo()->lastInsertId();
+
+				echo "Insert kota kab ";
+				echo ($kota_kab_insert_id) ? "success, kota_kab_insert_id: ".$kota_kab_insert_id : "FAILED";
+				echo "<br>";
+			}
+			else
+			{
+				$kota_kab_insert_id = $kota_kab_exist->id;
+
+				echo "Kota kab exist, kota_kab_insert_id ".$kota_kab_insert_id;
+				echo "<br>";
+			}
+		}
+
+		// Insert ke tabel kecamatan
+		// pastikan kecamatan tersebut belum pernah diinsert
+		$kecamatan = $kegiatan_patroli['kecamatan'];
+		$kecamatan_insert_id = NULL;
+
+		if ($kecamatan != 'N/A' && $kecamatan != NULL && $kecamatan != '')
+		{
+			$kecamatan_exist = DB::table('kecamatan')
+								->where('nama', 'ILIKE', '%'.$kecamatan.'%')
+								->first();
+
+			if ($kecamatan_exist == NULL)
+			{
+				DB::table('kecamatan')->insert(
+					[
+						'kota_kab_id' => $kota_kab_insert_id,
+						'nama' => $kecamatan
+					]
+				);
+				$kecamatan_insert_id = DB::getPdo()->lastInsertId();
+
+				echo "Insert kecamatan ";
+				echo ($kecamatan_insert_id) ? "success, kecamatan_insert_id: ".$kecamatan_insert_id : "FAILED";
+				echo "<br>";
+			}
+			else
+			{
+				$kecamatan_insert_id = $kecamatan_exist->id;
+
+				echo "Kecamatan exist, kecamatan_insert_id ".$kecamatan_insert_id;
+				echo "<br>";
+			}
+		}
+
+		// Insert ke tabel desa kelurahan
+		// pastikan desa_kelurahan belum pernah diinsert sebelumnya
+		$desa_kelurahan = $kegiatan_patroli['desa_kelurahan'];
+		$desa_kelurahan_insert_id = NULL;
+
+		if ($desa_kelurahan != 'N/A' && $desa_kelurahan != NULL && $desa_kelurahan != '')
+		{
+			$desa_kelurahan_exist = DB::table('desa_kelurahan')
+										->where('nama', 'ILIKE', '%'.strtolower($desa_kelurahan).'%')
+										->first();
+
+			if ($desa_kelurahan_exist == NULL)
+			{
+				DB::table('desa_kelurahan')->insert(
+					[
+						'nama' => $desa_kelurahan,
+						'kecamatan_id' => $kecamatan_insert_id
+					]
+				);
+				$desa_kelurahan_insert_id = DB::getPdo()->lastInsertId();
+
+				echo "Insert desa kelurahan ";
+				echo ($desa_kelurahan_insert_id) ? "success, desa_kelurahan_insert_id: ".$desa_kelurahan_insert_id : "FAILED";
+				echo "<br>";
+			}
+			else
+			{
+				$desa_kelurahan_insert_id = $desa_kelurahan_exist->id;
+
+				echo "Desa kelurahan exist, desa_kelurahan_insert_id ".$desa_kelurahan_insert_id;
+				echo "<br>";
+			}
+		}
+
+		return $desa_kelurahan_insert_id;
+		
+	}
+
+	public function test()
+	{
+		// \DB::listen(function($sql) {
+		// 	var_dump($sql);
+		// });
+
+		// Insert ke tabel provinsi
+		// pastika provinsi tersebut belum pernah diinsert
+		$provinsi_exist = DB::table('provinsi')
+							->where('nama', 'ILIKE', '%'.strtolower('Kalimantan barat').'%')
+							// ->pluck('id')->toArray();
+							->first();
+
+		$this->pprint($provinsi_exist->nama);
+
+		// DB::connection()->enableQueryLog();
+		// dd(DB::getQueryLog());
+		
 	}
 
 	private function pprint($data)

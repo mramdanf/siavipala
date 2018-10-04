@@ -457,6 +457,7 @@ class ComposerStaticInit622b662a01a06a36ee3ca1f1af854892
     );
 
     public static $classMap = array (
+        'AddKecamatanIdToTableDesaKelurahan' => __DIR__ . '/../..' . '/database/migrations/2018_10_04_140632_add_kecamatan_id_to_table_desa_kelurahan.php',
         'AddRememberTokenToPenggunaTable' => __DIR__ . '/../..' . '/database/migrations/2018_09_30_083927_add_remember_token_to_pengguna_table.php',
         'CreateAktivitasHarianPatroliTable' => __DIR__ . '/../..' . '/database/migrations/2018_09_26_060400_create_aktivitas_harian_patroli_table.php',
         'CreateAktivitasHarianTable' => __DIR__ . '/../..' . '/database/migrations/2018_09_26_060328_create_aktivitas_harian_table.php',
@@ -561,6 +562,9 @@ class ComposerStaticInit622b662a01a06a36ee3ca1f1af854892
         'Hamcrest\\Util' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
         'Hamcrest\\Xml\\HasXPath' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
         'NullableTabelKegiatanPatroli' => __DIR__ . '/../..' . '/database/migrations/2018_10_03_140845_nullable_tabel_kegiatan_patroli.php',
+        'NullableTableDesaKelurahan' => __DIR__ . '/../..' . '/database/migrations/2018_10_04_134109_nullable_table_desa_kelurahan.php',
+        'NullableTableKecamatan' => __DIR__ . '/../..' . '/database/migrations/2018_10_04_133908_nullable_table_kecamatan.php',
+        'NullableTableKotaKab' => __DIR__ . '/../..' . '/database/migrations/2018_10_04_133645_nullable_table_kota_kab.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
         'PHPUnit\\Framework\\AssertionFailedError' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/AssertionFailedError.php',
         'PHPUnit\\Framework\\BaseTestListener' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',

@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AddKecamatanIdToTableDesaKelurahan' => $baseDir . '/database/migrations/2018_10_04_140632_add_kecamatan_id_to_table_desa_kelurahan.php',
     'AddRememberTokenToPenggunaTable' => $baseDir . '/database/migrations/2018_09_30_083927_add_remember_token_to_pengguna_table.php',
     'CreateAktivitasHarianPatroliTable' => $baseDir . '/database/migrations/2018_09_26_060400_create_aktivitas_harian_patroli_table.php',
     'CreateAktivitasHarianTable' => $baseDir . '/database/migrations/2018_09_26_060328_create_aktivitas_harian_table.php',
@@ -110,6 +111,9 @@ return array(
     'Hamcrest\\Util' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
     'Hamcrest\\Xml\\HasXPath' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
     'NullableTabelKegiatanPatroli' => $baseDir . '/database/migrations/2018_10_03_140845_nullable_tabel_kegiatan_patroli.php',
+    'NullableTableDesaKelurahan' => $baseDir . '/database/migrations/2018_10_04_134109_nullable_table_desa_kelurahan.php',
+    'NullableTableKecamatan' => $baseDir . '/database/migrations/2018_10_04_133908_nullable_table_kecamatan.php',
+    'NullableTableKotaKab' => $baseDir . '/database/migrations/2018_10_04_133645_nullable_table_kota_kab.php',
     'PHPUnit\\Framework\\Assert' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
     'PHPUnit\\Framework\\AssertionFailedError' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/AssertionFailedError.php',
     'PHPUnit\\Framework\\BaseTestListener' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',
