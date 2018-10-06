@@ -11,9 +11,9 @@
 |
 */
 
-$app->get('/read-csv', 'ReadCsvController@migrasi_tb_kegiatan_patroli');
-$app->get('/test', 'ReadCsvController@test');
-$app->get('/migrasi2', 'ReadCsvController@migrasi_tb_lokasi_patroli');
+// $app->get('/read-csv', 'ReadCsvController@migrasi_tb_kegiatan_patroli');
+// $app->get('/test', 'ReadCsvController@test');
+// $app->get('/migrasi2', 'ReadCsvController@migrasi_tb_lokasi_patroli');
 
 $api = $app->make(Dingo\Api\Routing\Router::class);
 
@@ -22,6 +22,10 @@ $api->version('v1', function ($api) {
     $api->post('/auth/login', [
         'as' => 'api.auth.login',
         'uses' => 'App\Http\Controllers\Auth\AuthController@postLogin'
+    ]);
+
+    $api->get('/provinsi/all', [
+        'uses' => 'App\Http\Controllers\ProvinsiController@all'
     ]);
 
      $api->group([
