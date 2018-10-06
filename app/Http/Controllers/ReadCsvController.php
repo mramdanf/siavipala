@@ -60,7 +60,6 @@ class ReadCsvController extends Controller
 
 
 					///////////////// Step 3 ///////////////////////
-
 					// cek id_kegiatan di tabel tb_lokasi_patroli dan tb_lokasi_udara untuk 
 					// mengetahui dia itu patroli darat apa udara
 					$exist_in_udara = $this->check_exist_in_udara($data_indexed['id_kegiatan']);
@@ -77,6 +76,8 @@ class ReadCsvController extends Controller
 						'cuaca_siang'         => ($data_indexed['cuaca_siang'] == 'N/A' || empty($data_indexed['cuaca_siang'])) ? NULL : $data_indexed['cuaca_siang'],
 						'cuaca_sore'          => ($data_indexed['cuaca_sore'] == 'N/A' || empty($data_indexed['cuaca_sore'])) ? NULL : $data_indexed['cuaca_sore'],
 						'cuaca_pagi'          => ($data_indexed['cuaca_pagi'] == 'N/A' || empty($data_indexed['cuaca_pagi'])) ? NULL : $data_indexed['cuaca_pagi'],
+						
+						///////////////// Step 4 ///////////////////////
 						'desa_kelurahan_id'   => $desa_kelurahan_id
 					);
 
@@ -119,6 +120,42 @@ class ReadCsvController extends Controller
 
 		// $this->pprint($all_data);
 
+	}
+
+	public function migrasi_tb_lokasi_patroli()
+	{
+		
+		// Data tabel patroli_darat
+		$list_patroli_darat = DB::table('patroli_darat')
+								->get()->toArray();
+
+		// Data dari CSV
+		$tb_lokasi_patroli = $this->read_lokasi_darat();
+
+		foreach ($list_patroli_darat as $patroli_darat) 
+		{
+			foreach ($tb_lokasi_patroli as $csv_lokasi_patroli)
+			{
+				//////////////// Step 1 //////////////////////
+				// Mengisi kolom aktivitas_masyarakat dan keterangan_lokasi
+				if ($patroli_darat->kegiatan_patroli_id == $csv_lokasi_patroli['idkegiatan'])
+				{
+					$aktivitas_masyarakat = $csv_lokasi_patroli['aktivitas'];
+					$aktivitas_masyarakat = ($aktivitas_masyarakat == 'N/A') ? NULL : $aktivitas_masyarakat;
+					$keterangan_lokasi = $csv_lokasi_patroli['keterangan'];
+					$keterangan_lokasi = ($keterangan_lokasi == 'N/A') ? NULL : $keterangan_lokasi;
+					$patroli_darat_update = DB::table('patroli_darat')
+						->where('kegiatan_patroli_id', $patroli_darat->kegiatan_patroli_id)
+						->update([
+							'aktivitas_masyarakat' => $aktivitas_masyarakat,
+							'keterangan_lokasi'    => $keterangan_lokasi
+						]);
+
+					echo "Patroli darat affected rows: ".$patroli_darat_update."<br>";
+					break;
+				}
+			}
+		}
 	}
 
 	// Mencari apakah suatu id_kegiatan terdapat
