@@ -17,4 +17,9 @@ class PatroliDarat extends Model
     {
         return $this->belongsTo('App\KegiatanPatroli');
     }
+
+    public function pemadaman()
+    {
+        return $this->hasMany('App\Pemadaman');
+    }
 }
