@@ -11,6 +11,7 @@ return array(
     'AddKategorikalColumnPatroliUdara' => $baseDir . '/database/migrations/2018_10_06_054855_add_kategorikal_column_patroli_udara.php',
     'AddKecamatanIdToTableDesaKelurahan' => $baseDir . '/database/migrations/2018_10_04_140632_add_kecamatan_id_to_table_desa_kelurahan.php',
     'AddKondisiKarhutlaColum' => $baseDir . '/database/migrations/2018_10_06_042518_add_kondisi_karhutla_colum.php',
+    'AddLuasTanahTabelKondisiVegetasi' => $baseDir . '/database/migrations/2018_10_10_114536_add_luas_tanah_tabel_kondisi_vegetasi.php',
     'AddRememberTokenToPenggunaTable' => $baseDir . '/database/migrations/2018_09_30_083927_add_remember_token_to_pengguna_table.php',
     'CreateAktivitasHarianPatroliTable' => $baseDir . '/database/migrations/2018_09_26_060400_create_aktivitas_harian_patroli_table.php',
     'CreateAktivitasHarianTable' => $baseDir . '/database/migrations/2018_09_26_060328_create_aktivitas_harian_table.php',

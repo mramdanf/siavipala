@@ -23,9 +23,15 @@ $api->version('v1', function ($api) {
         'as' => 'api.auth.login',
         'uses' => 'App\Http\Controllers\Auth\AuthController@postLogin'
     ]);
-
+    
+    // Get list all provinsi
     $api->get('/provinsi/all', [
         'uses' => 'App\Http\Controllers\ProvinsiController@all'
+    ]);
+
+    // Resume perprovinis
+    $api->get('/provinsi/resume', [
+        'uses' => 'App\Http\Controllers\ProvinsiController@resume'
     ]);
 
      $api->group([

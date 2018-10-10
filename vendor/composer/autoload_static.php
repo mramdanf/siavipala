@@ -462,6 +462,7 @@ class ComposerStaticInit622b662a01a06a36ee3ca1f1af854892
         'AddKategorikalColumnPatroliUdara' => __DIR__ . '/../..' . '/database/migrations/2018_10_06_054855_add_kategorikal_column_patroli_udara.php',
         'AddKecamatanIdToTableDesaKelurahan' => __DIR__ . '/../..' . '/database/migrations/2018_10_04_140632_add_kecamatan_id_to_table_desa_kelurahan.php',
         'AddKondisiKarhutlaColum' => __DIR__ . '/../..' . '/database/migrations/2018_10_06_042518_add_kondisi_karhutla_colum.php',
+        'AddLuasTanahTabelKondisiVegetasi' => __DIR__ . '/../..' . '/database/migrations/2018_10_10_114536_add_luas_tanah_tabel_kondisi_vegetasi.php',
         'AddRememberTokenToPenggunaTable' => __DIR__ . '/../..' . '/database/migrations/2018_09_30_083927_add_remember_token_to_pengguna_table.php',
         'CreateAktivitasHarianPatroliTable' => __DIR__ . '/../..' . '/database/migrations/2018_09_26_060400_create_aktivitas_harian_patroli_table.php',
         'CreateAktivitasHarianTable' => __DIR__ . '/../..' . '/database/migrations/2018_09_26_060328_create_aktivitas_harian_table.php',
