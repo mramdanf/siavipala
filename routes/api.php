@@ -34,6 +34,11 @@ $api->version('v1', function ($api) {
         'uses' => 'App\Http\Controllers\ProvinsiController@resume'
     ]);
 
+    // List patroli (can be filtered)
+    $api->get('/patroli/list', [
+        'uses' => 'App\Http\Controllers\PatroliController@listPatroli'
+    ]);
+
      $api->group([
         'namespace' => 'App\Http\Controllers\Auth',
         'middleware' => 'api.auth'

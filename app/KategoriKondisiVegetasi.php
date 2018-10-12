@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Vegetasi extends Model
+class KategoriKondisiVegetasi extends Model
 {
-    protected $table = 'vegetasi';
+    protected $table = 'kategori_kondisi_vegetasi';
 
     public function kondisiVegetasi()
     {

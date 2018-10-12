@@ -17,4 +17,25 @@ class KegiatanPatroli extends Model
     {
         return $this->hasMany('App\PatroliUdara');
     }
+
+    public function dokumentasi()
+    {
+        return $this->hasMany('App\Dokumentasi');
+    }
+
+    public function inventoriPatroli()
+    {
+        return $this->hasMany('App\InventoriPatroli');
+    }
+
+    public function kategoriPatroli()
+    {
+        return $this->belongsTo('App\KategoriPatroli');
+    }
+
+    public function hotspot()
+    {
+        return $this->hasMany('App\Hotspot');
+    }
+    
 }
