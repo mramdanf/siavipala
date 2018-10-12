@@ -39,7 +39,11 @@ class PatroliController extends Controller
             // Kategori Patroli
             'kategoriPatroli',
             // Hotspot
-            'hotspot'
+            'hotspot',
+            // Aktivitas Harian
+            'aktivitasHarianPatroli.aktivitasHarian',
+            // Anggota Patroli
+            'anggotaPatroli.anggota'
             ])
             ->get();
 

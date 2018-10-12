@@ -37,5 +37,15 @@ class KegiatanPatroli extends Model
     {
         return $this->hasMany('App\Hotspot');
     }
+
+    public function aktivitasHarianPatroli()
+    {
+        return $this->hasMany('App\AktivitasHarianPatroli');
+    }
+
+    public function anggotaPatroli()
+    {
+        return $this->hasMany('App\AnggotaPatroli');
+    }
     
 }
