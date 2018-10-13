@@ -5,8 +5,6 @@
 - [List Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-kegiatan-patroli)
 
 **Login**
-<a href="https://gitlab.com/wildan00x/CMS/snippets/1705752#table-of-content">↥ back to top</a>
-
 ----
 
 * **URL**
@@ -46,6 +44,9 @@
       "message": "Invalid credentials"
     }
     ```
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
 
 **List Kegiatan Patroli**
 ----
@@ -68,7 +69,6 @@
 	Responsenya panjang bgt, langsung dicoba aja dipostman atau di browser langsung
 	```
 
-  
-
-
-
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
