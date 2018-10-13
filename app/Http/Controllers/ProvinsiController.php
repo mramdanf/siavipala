@@ -18,7 +18,7 @@ class ProvinsiController extends Controller
 
     public function resume(Request $request)
     {
-        $kode = $request->input('kode');
+        $kode = $request->input('kode_provinsi');
         $year = $request->input('tahun');
 
         //////////// Statistik Harian //////////////////
@@ -59,7 +59,7 @@ class ProvinsiController extends Controller
         ->count();
 
         //////////// Statistik Tahunan //////////////////
-        // Jumlah daops
+        // Jumlah kebakaran
         $jmlKebakaranTahun = 'App\Pemadaman'::with([
             'patroliDarat.desaKelurahan.kecamatan.kotaKab.daops.provinsi',
             'patroliDarat.kegiatanPatroli'
@@ -69,6 +69,15 @@ class ProvinsiController extends Controller
         })
         ->whereHas('patroliDarat.kegiatanPatroli', function ($query) use ($year) {
             $query->whereYear('tanggal_patroli', '=', $year);
+        })
+        ->count();
+
+        // Jumlah daops
+        $jumlahDaops = 'App\Daops'::with([
+            'provinsi'
+        ])
+        ->whereHas('provinsi', function ($query) use ($kode) {
+            $query->where('provinsi.id', $kode);
         })
         ->count();
 
@@ -82,7 +91,8 @@ class ProvinsiController extends Controller
                 'kebakaran' => $jmlKebakaran
             ],
             'statistik_tahunan' => [
-                'kebakaran' => $jmlKebakaranTahun
+                'kebakaran' => $jmlKebakaranTahun,
+                'daops' => $jumlahDaops
             ]
         ]);
     }

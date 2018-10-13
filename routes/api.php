@@ -29,7 +29,7 @@ $api->version('v1', function ($api) {
         'uses' => 'App\Http\Controllers\ProvinsiController@list'
     ]);
 
-    // Resume perprovinis
+    // Resume perprovinsi
     $api->get('/provinsi/resume', [
         'uses' => 'App\Http\Controllers\ProvinsiController@resume'
     ]);
