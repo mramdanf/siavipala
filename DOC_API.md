@@ -66,7 +66,7 @@
 * **Success Response**
 
 	```
-	Responsenya panjang bgt, langsung dicoba aja dipostman atau di browser langsung
+	Responsenya panjang bgt, langsung dicoba aja dipostman atau di browser langsung.
 	```
 
 <div align="right">
