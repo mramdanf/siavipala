@@ -9,6 +9,8 @@
 - [Create Laporan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-laporan-patroli)
 - [Kategori Curah Hujan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-curah-hujan)
 - [Kategori Cuaca](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-cuaca)
+- [Kategori Artifisial Param](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-artifisial-param)
+- [Sumber Air](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#sumber-air)
 
 **Login**
 ----
@@ -499,6 +501,34 @@
         {
           "id": 1,
           "nama": "rendah"
+        }
+      ]
+    }
+  ```
+
+**Sumber Air**
+----
+
+* **URL**
+
+  `{{host}}/api/sumber-air`
+
+* **Method**
+
+  `GET`
+
+* **Data Param**
+
+  `none`
+
+* **Success Response**
+
+  ```
+    {
+      "data": [
+        {
+          "id": 1,
+          "name": "parit"
         }
       ]
     }
