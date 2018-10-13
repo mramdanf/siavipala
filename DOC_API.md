@@ -2,7 +2,9 @@
 
 ## Table of Contents
 - [Login](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#login)
-- [List Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-kegiatan-patroli)
+- [List Kegiatan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-kegiatan-patroli)
+- [List Provinsi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-provinsi)
+- [Resume Provinsi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#resume-provinsi)
 
 **Login**
 ----
@@ -75,6 +77,7 @@
 
 
 **List Provinsi**
+----
 
 * **URL**
 
@@ -116,6 +119,7 @@
 
 
 **Resume Provinsi**
+----
 
 * **URL**
 
