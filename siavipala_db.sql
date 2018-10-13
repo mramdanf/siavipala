@@ -3450,16 +3450,6 @@ COPY public.pemadaman (id, patroli_darat_id, latitude, longitude, luas_terbakar,
 SELECT pg_catalog.setval('public.pemadaman_id_seq', 2, true);
 
 
---
--- TOC entry 2346 (class 0 OID 16464)
--- Dependencies: 173
--- Data for Name: pengguna; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY public.pengguna (id, nama, email, password, no_telepon, created_at, updated_at, remember_token) FROM stdin;
-3	ramdan	ramdan@gmail.com	$2y$10$3xcNyzMWb8A.Lu31RuZyq.xgdpXl2oCQtx1ifnNB.YwMxBBiljO0K	081223445566	\N	\N	gEbphICnr1
-\.
-
 
 --
 -- TOC entry 2489 (class 0 OID 0)
