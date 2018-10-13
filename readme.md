@@ -14,3 +14,7 @@
 - Run `php artisan jwt:generate`
 - Configure your `.env` file for authenticating via database
 - Set the `API_PREFIX` parameter in your .env file (usually `api`).
+
+### Dokumentasi API
+
+[Dokumentasi API](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md)
