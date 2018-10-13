@@ -72,3 +72,45 @@
 <div align="right">
     <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
 </div>
+
+
+
+**List Provinsi**
+
+* **URL**
+
+  `{{host}}/api/provinsi/list`
+
+* **Method**
+
+  `GET`
+
+* **Data Params**
+
+  `none`
+
+* **Success Response**
+
+	```
+	{
+		"data": [
+			{
+				"id": 54,
+				"nama": "Kalimantan Barat",
+				"created_at": null,
+				"updated_at": null
+			},
+			{
+				"id": 55,
+				"nama": "Sumatera Selatan",
+				"created_at": null,
+				"updated_at": null
+			},
+			...
+		]
+	}
+	```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>

@@ -25,8 +25,8 @@ $api->version('v1', function ($api) {
     ]);
     
     // Get list all provinsi
-    $api->get('/provinsi/all', [
-        'uses' => 'App\Http\Controllers\ProvinsiController@all'
+    $api->get('/provinsi/list', [
+        'uses' => 'App\Http\Controllers\ProvinsiController@list'
     ]);
 
     // Resume perprovinis

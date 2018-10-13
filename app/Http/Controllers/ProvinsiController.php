@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 
 class ProvinsiController extends Controller
 {
-    public function all()
+    public function list()
     {
         return response([
             'data' => 'App\Provinsi'::all()
