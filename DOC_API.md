@@ -231,6 +231,7 @@
       // Data general
       "tanggal_patroli": "2018-04-06" (date),
       "kategori_patroli_id": 1 (unsignedInteger),
+      "jenis_patroli": "DARAT",
       "desa_kelurahan_id": 1079,
       "cuaca_pagi_id": 1,
       "cuaca_siang_id": 1,
@@ -321,6 +322,7 @@
       // Data general
       "tanggal_patroli": "2018-04-06" (date),
       "kategori_patroli_id": 1 (unsignedInteger),
+      "jenis_patroli": "UDARA",
       "desa_kelurahan_id": 1079,
       "cuaca_pagi_id": 1,
       "cuaca_siang_id": 1,

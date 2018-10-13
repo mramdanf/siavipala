@@ -35,7 +35,7 @@ $api->version('v1', function ($api) {
         // Get list kategori patrolil
         $api->get('/kategori-patroli/list', 'KategoriPatroliController@list');
         // List patroli (can be filtered)
-        $api->get('/patroli/list', 'PatroliController@listPatroli');
+        $api->get('/patroli/list', 'PatroliController@list');
         // List kategori curah hujan
         $api->get('/curah-hujan/list', 'CurahHujanController@list');
         // List kategori cuaca
@@ -46,13 +46,23 @@ $api->version('v1', function ($api) {
         $api->get('/sumber-air/list', 'SumberAirController@list');
     });
 
-     $api->group([
+    // Auth Group
+    $api->group([
         'namespace' => 'App\Http\Controllers\Auth',
         'middleware' => 'api.auth'
     ], function ($api) {
         $api->get('/auth/user', 'AuthController@getUser');
         $api->patch('/auth/refresh', 'AuthController@patchRefresh');
         $api->delete('/auth/invalidate', 'AuthController@deleteInvalidate');
+    });
+
+    // Required Login Group
+    $api->group([
+        'namespace' => 'App\Http\Controllers',
+        'middleware' => 'api.auth'
+    ], function ($api) {
+        // Create laporan patroli
+        $api->post('/patroli/create', 'PatroliController@create');
     });
     
 });
