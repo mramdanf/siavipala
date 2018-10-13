@@ -23,21 +23,20 @@ $api->version('v1', function ($api) {
         'as' => 'api.auth.login',
         'uses' => 'App\Http\Controllers\Auth\AuthController@postLogin'
     ]);
-    
-    // Get list all provinsi
-    $api->get('/provinsi/list', [
-        'uses' => 'App\Http\Controllers\ProvinsiController@list'
-    ]);
 
-    // Resume perprovinsi
-    $api->get('/provinsi/resume', [
-        'uses' => 'App\Http\Controllers\ProvinsiController@resume'
-    ]);
-
-    // List patroli (can be filtered)
-    $api->get('/patroli/list', [
-        'uses' => 'App\Http\Controllers\PatroliController@listPatroli'
-    ]);
+    // Guest Group
+    $api->group([
+        'namespace' => 'App\Http\Controllers'
+    ], function ($api) {
+        // Get list all provinsi
+        $api->get('/provinsi/list', 'ProvinsiController@list');
+        // Resume perprovinsi
+        $api->get('/provinsi/resume', 'ProvinsiController@resume');
+        // Get list kategori patrolil
+        $api->get('/kategori-patroli/list', 'KategoriPatroliController@list');
+        // List patroli (can be filtered)
+        $api->get('/patroli/list', 'PatroliController@listPatroli');
+    });
 
      $api->group([
         'namespace' => 'App\Http\Controllers\Auth',

@@ -150,7 +150,54 @@
           "kebakaran": 2,
           "daops": 16
       }
-  }
+    }
+	```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**Kategori Patroli**
+----
+
+* **URL**
+
+  `{{host}}/api/kategori-patroli/list`
+
+* **Method**
+
+  `GET`
+
+* **Data Params**
+
+  `none`
+
+* **Success Response**
+
+	```
+	{
+    "data": [
+        {
+            "id": 1,
+            "nama": "Mandiri",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 2,
+            "nama": "Pencegahan",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 3,
+            "nama": "Terpadu",
+            "created_at": null,
+            "updated_at": null
+        }
+    ]
+    }
 	```
 
 <div align="right">
