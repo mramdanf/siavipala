@@ -391,3 +391,36 @@
 <div align="right">
     <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
 </div>
+
+
+**Kategori Curah Hujan**
+---
+
+* **URL**
+
+  `{{host}}/api/curah-hujan/list`
+
+* **Data Params**
+
+  `none`
+
+* **Success Response**
+
+  ```
+    {
+      "data": [
+        {
+          "id": 1,
+          "nama": "rendah"
+        },
+        {
+          "id": 2,
+          "nama": "sedang"
+        },
+        {
+          "id": 3,
+          "nama": "tinggi"
+        }
+      ]
+    }
+  ```

@@ -36,6 +36,8 @@ $api->version('v1', function ($api) {
         $api->get('/kategori-patroli/list', 'KategoriPatroliController@list');
         // List patroli (can be filtered)
         $api->get('/patroli/list', 'PatroliController@listPatroli');
+        // List kategori curah hujan
+        $api->get('/curah-hujan/list', 'CurahHujanController@list');
     });
 
      $api->group([
