@@ -93,7 +93,7 @@
 
 	```
 	{
-		"data": [
+    "data": [
 			{
 				"id": 54,
 				"nama": "Kalimantan Barat",
@@ -106,7 +106,7 @@
 				"created_at": null,
 				"updated_at": null
 			},
-			...
+			..
 		]
 	}
 	```
