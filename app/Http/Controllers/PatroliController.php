@@ -45,6 +45,7 @@ class PatroliController extends Controller
             // Anggota Patroli
             'anggotaPatroli.anggota'
             ])
+            ->where('tanggal_patroli', '2016-02-24')
             ->get();
 
         return response([
