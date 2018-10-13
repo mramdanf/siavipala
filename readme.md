@@ -18,3 +18,7 @@
 ### Dokumentasi API
 
 [Dokumentasi API](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md)
+
+### Postgresql Database Dump
+
+[Database Dump](https://github.com/mramdanf/siavipala/blob/master/siavipala_db.sql)
