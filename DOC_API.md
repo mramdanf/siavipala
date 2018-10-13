@@ -5,6 +5,8 @@
 - [List Kegiatan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-kegiatan-patroli)
 - [List Provinsi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-provinsi)
 - [Resume Provinsi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#resume-provinsi)
+- [Kategori Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-patroli)
+- [Create Laporan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-laporan-patroli)
 
 **Login**
 ----
@@ -172,6 +174,78 @@
 * **Data Params**
 
   `none`
+
+* **Success Response**
+
+	```
+    {
+      "data": [
+        {
+            "id": 1,
+            "nama": "Mandiri",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 2,
+            "nama": "Pencegahan",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 3,
+            "nama": "Terpadu",
+            "created_at": null,
+            "updated_at": null
+        }
+      ]
+    }
+	```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**Create Laporan Patroli**
+----
+
+* **URL**
+
+  `{{host}}/api/patroli/create`
+
+* **Method**
+
+  `POST`
+
+* **Data Params (Raw data/payload/json)**
+
+  * Patroli Darat
+
+  ```javascript
+    {
+      "tanggal_patroli": "2018-04-06" (date),
+      "kategori_patroli_id": 1 (unsignedInteger),
+      "aktivitas_masyarakat": "membersihkan lahan dan bercocok tanam" (text),
+      "keterangan_lokasi": "akses yg bisa digunakan hanya jalan setapak" (text),
+      "early_warning_system": {
+        "suhu": 10.10 (double),
+        "kelembapan": 10.10 (double),
+        "kecepatan_angin": 10.10 (double),
+        "ffmc_kkas_id": 1 (integer),
+        "fwi_id": 1 (unsignedInteger),
+        "dc_kk_id": 1 (unsignedInteger),
+      },
+      "hasil_uji": [
+        {
+          "nama_pengujian": "Uji Remas Daun" (string, 400),
+          "hasil": "Daun agak kering" (text)
+        }
+      ],
+      ""
+
+    }
+  ```
 
 * **Success Response**
 
