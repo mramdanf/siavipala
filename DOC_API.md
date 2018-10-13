@@ -7,6 +7,8 @@
 - [Resume Provinsi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#resume-provinsi)
 - [Kategori Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-patroli)
 - [Create Laporan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-laporan-patroli)
+- [Kategori Curah Hujan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-curah-hujan)
+- [Kategori Cuaca](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-cuaca)
 
 **Login**
 ----
@@ -420,6 +422,47 @@
         {
           "id": 3,
           "nama": "tinggi"
+        }
+      ]
+    }
+  ```
+
+
+**Kategori Cuaca**
+----
+
+* **URL**
+
+  `{{host}}/api/cuaca/list`
+
+* **Method**
+
+  `GET`
+
+* **Data Params**
+
+  `none`
+
+* **Succes Response**
+
+  ```
+    {
+      "data": [
+        {
+          "id": 1,
+          "nama": "cerah"
+        },
+        {
+          "id": 2,
+          "nama": "berawan"
+        },
+        {
+          "id": 3,
+          "nama": "mendung"
+        },
+        {
+          "id": 4,
+          "nama": "hujan"
         }
       ]
     }

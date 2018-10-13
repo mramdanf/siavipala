@@ -38,6 +38,8 @@ $api->version('v1', function ($api) {
         $api->get('/patroli/list', 'PatroliController@listPatroli');
         // List kategori curah hujan
         $api->get('/curah-hujan/list', 'CurahHujanController@list');
+        // List kategori cuaca
+        $api->get('/cuaca/list', 'CuacaController@list');
     });
 
      $api->group([
