@@ -176,8 +176,8 @@
 * **Success Response**
 
 	```
-	{
-    "data": [
+    {
+      "data": [
         {
             "id": 1,
             "nama": "Mandiri",
@@ -196,7 +196,7 @@
             "created_at": null,
             "updated_at": null
         }
-    ]
+      ]
     }
 	```
 
