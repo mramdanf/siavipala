@@ -22,3 +22,7 @@
 ### Postgresql Database Dump
 
 [Database Dump](https://github.com/mramdanf/siavipala/blob/master/siavipala_db.sql)
+
+### Postman
+
+[Postman Link](https://www.getpostman.com/collections/4cab88b6a67bbe3818ad)
