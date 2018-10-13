@@ -467,3 +467,39 @@
       ]
     }
   ```
+
+**Kategori Artifisial Param**
+---
+
+* **URL**
+
+  `{{host}}/api/artifisial-param/list`
+
+* **Method**
+
+  `GET`
+
+* **Data Param**
+
+  `none`
+
+* **Success Response**
+
+  ```
+    {
+      "data": [
+        {
+          "id": 2,
+          "nama": "sedang"
+        },
+        {
+          "id": 3,
+          "nama": "tinggi"
+        },
+        {
+          "id": 1,
+          "nama": "rendah"
+        }
+      ]
+    }
+  ```

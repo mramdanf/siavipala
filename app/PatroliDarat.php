@@ -57,4 +57,19 @@ class PatroliDarat extends Model
     {
         return $this->belongsTo('App\Cuaca', 'cuaca_sore_id', 'id');
     }
+
+    public function fwi()
+    {
+        return $this->belongsTo('App\ArtifisialParam', 'fwi_id', 'id');
+    }
+
+    public function ffmc_kkas()
+    {
+        return $this->belongsTo('App\ArtifisialParam', 'ffmc_kkas_id', 'id');
+    }
+
+    public function dc_kk()
+    {
+        return $this->belongsTo('App\ArtifisialParam', 'dc_kk_id', 'id');
+    }
 }

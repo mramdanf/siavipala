@@ -40,6 +40,8 @@ $api->version('v1', function ($api) {
         $api->get('/curah-hujan/list', 'CurahHujanController@list');
         // List kategori cuaca
         $api->get('/cuaca/list', 'CuacaController@list');
+        // List artifisial params
+        $api->get('/artifisial-param/list', 'ArtifisialParamController@list');
     });
 
      $api->group([
