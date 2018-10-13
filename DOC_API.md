@@ -228,6 +228,11 @@
       "kategori_patroli_id": 1 (unsignedInteger),
       "aktivitas_masyarakat": "membersihkan lahan dan bercocok tanam" (text),
       "keterangan_lokasi": "akses yg bisa digunakan hanya jalan setapak" (text),
+      "desa_kelurahan_id": 1079,
+      "cuaca_pagi_id": 1,
+      "cuaca_siang_id": 1,
+      "cuaca_sore_id": 1,
+      "curah_hujan_id": 1,
       "early_warning_system": {
         "suhu": 10.10 (double),
         "kelembapan": 10.10 (double),
@@ -242,7 +247,16 @@
           "hasil": "Daun agak kering" (text)
         }
       ],
-      ""
+      "kondisi_sumber_air": [
+        {
+          "sumber_air_id": 1 (unsignedInteger),
+          "longitude": -1.963555556 (double),
+          "latitude": 110.1340833 (double),
+          "panjang": 2 (double),
+          "lebar": 2 (double),
+          "kedalaman": 1.5 (double),
+        }
+      ]
 
     }
   ```
