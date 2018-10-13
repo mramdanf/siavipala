@@ -312,7 +312,7 @@
 
   * Patroli Udara
 
-  ```javascript
+  ```
     {
       // Data general
       "tanggal_patroli": "2018-04-06" (date),
