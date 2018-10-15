@@ -11,6 +11,7 @@
 - [Kategori Cuaca](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-cuaca)
 - [Kategori Artifisial Param](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-artifisial-param)
 - [Sumber Air](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#sumber-air)
+- [Aktivitas Harian](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#aktivitas-harian)
 
 **Login**
 ----
@@ -221,6 +222,10 @@
 * **Method**
 
   `POST`
+
+* **Headers**
+
+  * `Authorization: Bearer {token}`
 
 * **Data Params (Raw data/payload/json)**
 
@@ -513,7 +518,7 @@
 
 * **URL**
 
-  `{{host}}/api/sumber-air`
+  `{{host}}/api/sumber-air/list`
 
 * **Method**
 
@@ -531,6 +536,58 @@
         {
           "id": 1,
           "name": "parit"
+        }
+      ]
+    }
+  ```
+
+**Aktivitas Harian**
+----
+
+* **URL**
+
+  `{{host}}/api/aktivitas-harian/list`
+
+* **Method**
+
+  `GET`
+
+* **Headers**
+
+  * `Authorization: Bearer {token}`
+
+* **Data Param**
+
+  `none`
+
+* **Success Response**
+
+  ```
+    {
+      "data": [
+        {
+          "id": 1,
+          "nama": "Apel pagi dan apel sore"
+        },
+        {
+          "id": 2,
+          "nama": "Melengkapi Administrasi patroli mandiri"
+        },
+        {
+          "id": 3,
+          "nama": "Pemantauan hospot"
+        },
+        {
+          "id": 4,
+          "nama": "IN.HOUSE TRAINIG"
+        },
+        {
+          "id": 5,
+          "nama": "Menggrid poto kegiatan dengan mudah dan Praktis"
+        },
+        {
+          "id": 6,
+          "nama": "Giat maghrib"
         }
       ]
     }

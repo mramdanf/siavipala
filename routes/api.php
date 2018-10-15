@@ -63,6 +63,8 @@ $api->version('v1', function ($api) {
     ], function ($api) {
         // Create laporan patroli
         $api->post('/patroli/create', 'PatroliController@create');
+        // List aktivitas harian
+        $api->get('/aktivitas-harian/list', 'AktivitasHarianController@list');
     });
     
 });
