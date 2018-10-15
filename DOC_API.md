@@ -592,3 +592,43 @@
       ]
     }
   ```
+
+**Kategori Anggota**
+---
+
+* **URL**
+
+  `{{host}}/api/kategori-anggota/list`
+
+* **Method**
+
+  `GET`
+
+* **Data Param**
+
+  `none`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Success Response**
+
+  ```
+    {
+      "data": [
+        {
+          "id": 1,
+          "nama": "TNI"
+        },
+        {
+          "id": 2,
+          "nama": "Manggala Agni"
+        },
+        {
+          "id": 3,
+          "nama": "Masyarakat"
+        }
+      ]
+    }
+  ```

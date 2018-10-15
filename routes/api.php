@@ -65,6 +65,8 @@ $api->version('v1', function ($api) {
         $api->post('/patroli/create', 'PatroliController@create');
         // List aktivitas harian
         $api->get('/aktivitas-harian/list', 'AktivitasHarianController@list');
+        // List kategori anggota
+        $api->get('/kategori-anggota/list', 'KategoriAnggotaController@list');
     });
     
 });
