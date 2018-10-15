@@ -1,0 +1,10 @@
+﻿delete from aktivitas_harian_patroli where id = (select max(id) from aktivitas_harian_patroli);
+delete from hotspot where id = (select max(id) from hotspot);
+delete from inventori_patroli where id = (select max(id) from inventori_patroli);
+delete from pemadaman where id = (select max(id) from pemadaman);
+delete from kondisi_tanah where id = (select max(id) from kondisi_tanah);
+delete from kondisi_vegetasi where id = (select max(id) from kondisi_vegetasi);
+delete from kondisi_sumber_air where id = (select max(id) from kondisi_sumber_air);
+delete from hasil_uji where id = (select max(id) from hasil_uji);
+delete from patroli_darat where id = (select max(id) from patroli_darat);
+delete from kegiatan_patroli where id = (select max(id) from kegiatan_patroli);

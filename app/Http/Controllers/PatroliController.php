@@ -6,7 +6,7 @@ use App\KegiatanPatroli;
 use App\PatroliDarat;
 use App\InventoriPatroli;
 use App\Hotspot;
-use App\AktivitasiHarianPatroli;
+use App\AktivitasHarianPatroli;
 use App\KondisiVegetasi;
 use App\HasilUji;
 use App\KondisiSumberAir;
@@ -146,7 +146,7 @@ class PatroliController extends Controller
         $patroliDarat->curah_hujan_id       = $data['curah_hujan_id'];
         $patroliDarat->curah_hujan_id       = $data['curah_hujan_id'];
         $patroliDarat->suhu                 = $data['suhu'];
-        $patroliDarat->kelembapan           = $data['kelembapan'];
+        $patroliDarat->kelembaban           = $data['kelembaban'];
         $patroliDarat->kecepatan_angin      = $data['kecepatan_angin'];
         $patroliDarat->ffmc_kkas_id         = $data['ffmc_kkas_id'];
         $patroliDarat->fwi_id               = $data['fwi_id'];
@@ -194,7 +194,7 @@ class PatroliController extends Controller
     {
         foreach($data['aktivitas_harian_patroli'] as $ahp)
         {
-            $aktivitasHarianPatroli = new AktivitasiHarianPatroli;
+            $aktivitasHarianPatroli = new AktivitasHarianPatroli;
             $aktivitasHarianPatroli->kegiatan_patroli_id = $kegiatanPatroliId;
             $aktivitasHarianPatroli->aktivitas_harian_id = $ahp['aktivitas_harian_id'];
             $aktivitasHarianPatroli->save();
@@ -258,6 +258,7 @@ class PatroliController extends Controller
             $kondisiTanah->longitude = $kt['longitude'];
             $kondisiTanah->latitude = $kt['latitude'];
             $kondisiTanah->kedalaman_gambut = $kt['kedalaman_gambut'];
+            $kondisiTanah->luas = $kt['luas'];
             $kondisiTanah->save();
         }
     }
