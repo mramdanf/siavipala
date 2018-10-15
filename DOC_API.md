@@ -243,7 +243,7 @@
       "ffmc_kkas_id": 1 (integer),
       "fwi_id": 1 (unsignedInteger),
       "dc_kk_id": 1 (unsignedInteger),
-      "Inventori_patroli": [
+      "inventori_patroli": [
         {
           "inventori_id": 1 (unsignedInteger)
         }
