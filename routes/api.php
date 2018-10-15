@@ -67,6 +67,8 @@ $api->version('v1', function ($api) {
         $api->get('/aktivitas-harian/list', 'AktivitasHarianController@list');
         // List kategori anggota
         $api->get('/kategori-anggota/list', 'KategoriAnggotaController@list');
+        // List anggota
+        $api->get('/anggota/list', 'AnggotaController@list');
     });
     
 });

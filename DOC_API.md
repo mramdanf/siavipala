@@ -12,6 +12,8 @@
 - [Kategori Artifisial Param](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-artifisial-param)
 - [Sumber Air](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#sumber-air)
 - [Aktivitas Harian](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#aktivitas-harian)
+- [Kategori Anggota](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-anggota)
+- [List Anggota](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-anggota)
 
 **Login**
 ----
@@ -628,6 +630,41 @@
         {
           "id": 3,
           "nama": "Masyarakat"
+        }
+      ]
+    }
+  ```
+
+**List Anggota**
+---
+
+* **URL**
+
+  `{{host}}/api/anggota/list`
+
+* **Method**
+
+  `GET`
+
+* **Data Param**
+
+  `none`
+
+* **Headers**
+
+  `Authorizaton: Bearer {token}`
+
+* **Success Response**
+
+  ```
+    {
+      "data": [
+        {
+          "id": 1,
+          "nama": "Yuni Setianingroom",
+          "email": "yuni@gmail.com",
+          "no_telepon": "8122334455",
+          "kategori_anggota_id": 2
         }
       ]
     }

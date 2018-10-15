@@ -3,12 +3,12 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class AnggotaTableSeeer extends Seeder
+class AnggotaTableSeeder extends Seeder
 {
 	public function run()
 	{
 		DB::table('anggota')->insert([
-			// ['nama'=>]
+			['nama'=>'Yuni Setianingroom', 'kategori_anggota_id'=>2, 'email'=>'yuni@gmail.com', 'no_telepon'=>'8122334455']
 		]);
 	}
 }
