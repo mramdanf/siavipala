@@ -81,8 +81,65 @@ class PatroliController extends Controller
         $kegiatanPatroli->tanggal_patroli     = $data['tanggal_patroli'];
         $kegiatanPatroli->kategori_patroli_id = $data['kategori_patroli_id'];
         $kegiatanPatroli->save();
-        
 
+        $this->storeKegiatanPatroliRelation($data, $kegiatanPatroli);
+              
+        return response([
+            'message' => 'Create laporan kegiatan patroli sukses.'
+        ]);
+    }
+
+    public function remove(Request $request)
+    {
+        // Validate request
+        $this->validate($request, [
+            'kegiatan_patroli_id' => 'required'
+        ]);
+
+        $payload = $request->all();
+
+        $kegiatanPatroliId = $payload['kegiatan_patroli_id'];
+
+        $this->deleteKegiatanPatroliRelation($kegiatanPatroliId);
+
+        // Last delete kegiatan_patroli
+        $kegiatanPatroli = KegiatanPatroli::find($kegiatanPatroliId);
+        $kegiatanPatroli->delete();
+
+        return response([
+            'message' => 'Delete laporan patroli darat sukses.'
+        ]);
+                        
+    }
+
+    public function update(Request $request)
+    {
+        $this->validate($request, [
+            'kegiatan_patroli_id' => 'required'
+        ]);
+
+        $data = $request->all();
+
+        $oldKegiatanPatroli = KegiatanPatroli::find($data['kegiatan_patroli_id'])->first();
+
+        // Delete kegiatan_patroli relation
+        $this->deleteKegiatanPatroliRelation($data['kegiatan_patroli_id']);
+
+        // Re-insert data for kegiatan_patroli relation
+        $this->storeKegiatanPatroliRelation($data, $oldKegiatanPatroli);
+
+        // Update tabel kegiatan_patroli
+        $oldKegiatanPatroli->tanggal_patroli     = $data['tanggal_patroli'];
+        $oldKegiatanPatroli->kategori_patroli_id = $data['kategori_patroli_id'];
+        $oldKegiatanPatroli->save();
+
+        return response([
+            'message' => 'Update laporan patroli sukses.'
+        ]);
+    }
+
+    private function storeKegiatanPatroliRelation($data = array(), $kegiatanPatroli)
+    {
         // Insert tabel patroli_darat
         if ($data['jenis_patroli'] == 'DARAT') 
         {
@@ -101,75 +158,6 @@ class PatroliController extends Controller
         $this->storeHotspot($data, $kegiatanPatroli->id);
         // Insert tabel aktivitas_harian_patroli
         $this->storeAktivitasHarianPatroli($data, $kegiatanPatroli->id);
-
-        return response([
-            'message' => 'Create laporan kegiatan patroli sukses.'
-        ]);
-    }
-
-    public function remove(Request $request)
-    {
-        // Validate request
-        $this->validate($request, [
-            'kegiatan_patroli_id' => 'required'
-        ]);
-
-        $payload = $request->all();
-
-        $kegiatanPatroliId = $payload['kegiatan_patroli_id'];
-
-        // Direct relation to kegiatan_patroli
-        // Delete aktivitas_harian_patroli
-        $aktivitasHarianPatroli = AktivitasHarianPatroli::where('kegiatan_patroli_id', '=', $kegiatanPatroliId);
-        $aktivitasHarianPatroli->delete();
-        
-        // Delete inventori_patroli
-        $inventoriPatroli = InventoriPatroli::where('kegiatan_patroli_id', '=', $kegiatanPatroliId);
-        $inventoriPatroli->delete();
-
-        // Delete hotspot
-        $hotspot = Hotspot::where('kegiatan_patroli_id', '=', $kegiatanPatroliId);
-        $hotspot->delete();
-
-        // Indirect relation via patroli_darat
-        $patroliDarat = PatroliDarat::where('kegiatan_patroli_id', '=', $kegiatanPatroliId)->first();
-        if ($patroliDarat != null)
-        {
-            // Delete hasil_uji
-            $hasilUji = HasilUji::where('patroli_darat_id', '=', $patroliDarat->id);
-            $hasilUji->delete();
-            
-            // Delete kondisi_sumber_air
-            $kondisiSumberAir = KondisiSumberAir::where('patroli_darat_id', '=', $patroliDarat->id);
-            $kondisiSumberAir->delete();
-
-            // Delete kondisi_tanah
-            $kondisiTanah = KondisiTanah::where('patroli_darat_id', '=', $patroliDarat->id);
-            $kondisiTanah->delete();
-
-            // Kondisi vegetasi
-            $kondisiVegetasi = KondisiVegetasi::where('patroli_darat_id', '=', $patroliDarat->id);
-            $kondisiVegetasi->delete();
-
-            // Delete pemadaman
-            $pemadaman = Pemadaman::where('patroli_darat_id', '=', $patroliDarat->id);
-            $pemadaman->delete();
-
-            // Last delete patroli_darat it selft
-            $patroliDarat->delete();
-        }
-
-        // Delete patroli_udara
-        $patroliUdara = PatroliUdara::where('kegiatan_patroli_id', '=', $kegiatanPatroliId)->first();
-        if ($patroliUdara != null)
-        {
-            $patroliUdara->delete();
-        }
-
-        return response([
-            'message' => 'Delete laporan patroli darat sukses.'
-        ]);
-                        
     }
 
     private function storePatroliUdara($data = array(), $kegiatanPatroliId = NULL)
@@ -338,6 +326,57 @@ class PatroliController extends Controller
             $pemadaman->latitude = $pem['latitude'];
             $pemadaman->luas_terbakar = $pem['luas_terbakar'];
             $pemadaman->save();
+        }
+    }
+
+    private function deleteKegiatanPatroliRelation($kegiatanPatroliId)
+    {
+        // Direct relation to kegiatan_patroli
+        // Delete aktivitas_harian_patroli
+        $aktivitasHarianPatroli = AktivitasHarianPatroli::where('kegiatan_patroli_id', '=', $kegiatanPatroliId);
+        $aktivitasHarianPatroli->delete();
+        
+        // Delete inventori_patroli
+        $inventoriPatroli = InventoriPatroli::where('kegiatan_patroli_id', '=', $kegiatanPatroliId);
+        $inventoriPatroli->delete();
+
+        // Delete hotspot
+        $hotspot = Hotspot::where('kegiatan_patroli_id', '=', $kegiatanPatroliId);
+        $hotspot->delete();
+
+        // Indirect relation via patroli_darat
+        $patroliDarat = PatroliDarat::where('kegiatan_patroli_id', '=', $kegiatanPatroliId)->first();
+        if ($patroliDarat != null)
+        {
+            // Delete hasil_uji
+            $hasilUji = HasilUji::where('patroli_darat_id', '=', $patroliDarat->id);
+            $hasilUji->delete();
+            
+            // Delete kondisi_sumber_air
+            $kondisiSumberAir = KondisiSumberAir::where('patroli_darat_id', '=', $patroliDarat->id);
+            $kondisiSumberAir->delete();
+
+            // Delete kondisi_tanah
+            $kondisiTanah = KondisiTanah::where('patroli_darat_id', '=', $patroliDarat->id);
+            $kondisiTanah->delete();
+
+            // Kondisi vegetasi
+            $kondisiVegetasi = KondisiVegetasi::where('patroli_darat_id', '=', $patroliDarat->id);
+            $kondisiVegetasi->delete();
+
+            // Delete pemadaman
+            $pemadaman = Pemadaman::where('patroli_darat_id', '=', $patroliDarat->id);
+            $pemadaman->delete();
+
+            // Last delete patroli_darat it selft
+            $patroliDarat->delete();
+        }
+
+        // Delete patroli_udara
+        $patroliUdara = PatroliUdara::where('kegiatan_patroli_id', '=', $kegiatanPatroliId)->first();
+        if ($patroliUdara != null)
+        {
+            $patroliUdara->delete();
         }
     }
 }
