@@ -69,6 +69,8 @@ $api->version('v1', function ($api) {
         $api->get('/kategori-anggota/list', 'KategoriAnggotaController@list');
         // List anggota
         $api->get('/anggota/list', 'AnggotaController@list');
+        // Delete laporan patroli
+        $api->post('/patroli/delete', 'PatroliController@remove');
     });
     
 });

@@ -7,6 +7,7 @@
 - [Resume Provinsi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#resume-provinsi)
 - [Kategori Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-patroli)
 - [Create Laporan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-laporan-patroli)
+- [Delete Laporan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-laporan-patroli)
 - [Kategori Curah Hujan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-curah-hujan)
 - [Kategori Cuaca](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-cuaca)
 - [Kategori Artifisial Param](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-artifisial-param)
@@ -378,28 +379,44 @@
 
 	```
     {
-      "data": [
-        {
-            "id": 1,
-            "nama": "Mandiri",
-            "created_at": null,
-            "updated_at": null
-        },
-        {
-            "id": 2,
-            "nama": "Pencegahan",
-            "created_at": null,
-            "updated_at": null
-        },
-        {
-            "id": 3,
-            "nama": "Terpadu",
-            "created_at": null,
-            "updated_at": null
-        }
-      ]
+      "data": "Create laporan kegiatan patroli sukses."
     }
 	```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+**Delete Laporan Patroli**
+---
+
+* **URL**
+
+  `{{host}}/api/patroli/delete`
+
+* **Method**
+
+  `POST`
+
+* **Data Param (raw data/payload/json)**
+
+  ```
+    {
+      "kegiatan_patroli_id": 1
+    }
+  ```
+
+* **Headers**
+
+  `Authorizaton: Bearer {token}`
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Delete laporan patorli sukses"
+    }
+  ```
 
 <div align="right">
     <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
@@ -669,3 +686,4 @@
       ]
     }
   ```
+

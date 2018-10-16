@@ -107,6 +107,71 @@ class PatroliController extends Controller
         ]);
     }
 
+    public function remove(Request $request)
+    {
+        // Validate request
+        $this->validate($request, [
+            'kegiatan_patroli_id' => 'required'
+        ]);
+
+        $payload = $request->all();
+
+        $kegiatanPatroliId = $payload['kegiatan_patroli_id'];
+
+        // Direct relation to kegiatan_patroli
+        // Delete aktivitas_harian_patroli
+        $aktivitasHarianPatroli = AktivitasHarianPatroli::where('kegiatan_patroli_id', '=', $kegiatanPatroliId);
+        $aktivitasHarianPatroli->delete();
+        
+        // Delete inventori_patroli
+        $inventoriPatroli = InventoriPatroli::where('kegiatan_patroli_id', '=', $kegiatanPatroliId);
+        $inventoriPatroli->delete();
+
+        // Delete hotspot
+        $hotspot = Hotspot::where('kegiatan_patroli_id', '=', $kegiatanPatroliId);
+        $hotspot->delete();
+
+        // Indirect relation via patroli_darat
+        $patroliDarat = PatroliDarat::where('kegiatan_patroli_id', '=', $kegiatanPatroliId)->first();
+        if ($patroliDarat != null)
+        {
+            // Delete hasil_uji
+            $hasilUji = HasilUji::where('patroli_darat_id', '=', $patroliDarat->id);
+            $hasilUji->delete();
+            
+            // Delete kondisi_sumber_air
+            $kondisiSumberAir = KondisiSumberAir::where('patroli_darat_id', '=', $patroliDarat->id);
+            $kondisiSumberAir->delete();
+
+            // Delete kondisi_tanah
+            $kondisiTanah = KondisiTanah::where('patroli_darat_id', '=', $patroliDarat->id);
+            $kondisiTanah->delete();
+
+            // Kondisi vegetasi
+            $kondisiVegetasi = KondisiVegetasi::where('patroli_darat_id', '=', $patroliDarat->id);
+            $kondisiVegetasi->delete();
+
+            // Delete pemadaman
+            $pemadaman = Pemadaman::where('patroli_darat_id', '=', $patroliDarat->id);
+            $pemadaman->delete();
+
+            // Last delete patroli_darat it selft
+            $patroliDarat->delete();
+        }
+
+        // Delete patroli_udara
+        $patroliUdara = PatroliUdara::where('kegiatan_patroli_id', '=', $kegiatanPatroliId)->first();
+        if ($patroliUdara != null)
+        {
+            $patroliUdara->delete();
+        }
+
+        return response([
+            'message' => 'Delete laporan patroli darat sukses.'
+        ]);
+                        
+    }
+
     private function storePatroliUdara($data = array(), $kegiatanPatroliId = NULL)
     {
         $patroliUdara = new PatroliUdara;

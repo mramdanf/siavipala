@@ -12,4 +12,9 @@ class AktivitasHarianPatroli extends Model
     {
         return $this->belongsTo('App\AktivitasHarian');
     }
+
+    public function kegiatanPatroli()
+    {
+        return $this->belongsTo('App\KegiatanPatroli');
+    }
 }
