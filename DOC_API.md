@@ -18,6 +18,7 @@
 - [List Anggota](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-anggota)
 - [Create Anggota](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-anggota)
 - [Update Anggota](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-anggota)
+- [List Pengguna](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-pengguna)
 
 **Login**
 ----
@@ -995,6 +996,45 @@
   ```
     {
       "message": "Delete anggota patroli sukses."
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**List Pengguna**
+---
+
+* **URL**
+
+  `{{host}}/api/pengguna/list`
+
+* **Method**
+
+  `GET`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params**
+
+  `none`
+
+* **Success Response**
+
+  ```
+    {
+      "data": [
+        {
+          "id": 3,
+          "nama": "ramdan",
+          "email": "ramdan@gmail.com",
+          "no_telepon": "081223445566"
+        }
+      ]
     }
   ```
 

@@ -81,6 +81,9 @@ $api->version('v1', function ($api) {
         $api->post('/anggota/update', 'AnggotaController@update');
         // Delete anggota
         $api->post('/anggota/delete', 'AnggotaController@remove');
+
+        // List pengguna
+        $api->get('/pengguna/list', 'PenggunaController@list');
         
     });
     

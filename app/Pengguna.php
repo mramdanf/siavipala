@@ -48,4 +48,9 @@ class Pengguna extends Model implements
     {
         return [];
     }
+
+    public function levelPengguna()
+    {
+        return $this->hasMany('App\LevelPengguna');
+    }
 }
