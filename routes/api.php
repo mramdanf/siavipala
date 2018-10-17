@@ -67,12 +67,16 @@ $api->version('v1', function ($api) {
         $api->post('/patroli/update', 'PatroliController@update');
         // Delete laporan patroli
         $api->post('/patroli/delete', 'PatroliController@remove');
+        
         // List aktivitas harian
         $api->get('/aktivitas-harian/list', 'AktivitasHarianController@list');
+
         // List kategori anggota
         $api->get('/kategori-anggota/list', 'KategoriAnggotaController@list');
         // List anggota
         $api->get('/anggota/list', 'AnggotaController@list');
+        // Create anggota
+        $api->post('/anggota/create', 'AnggotaController@store');
         
     });
     

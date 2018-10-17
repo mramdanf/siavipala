@@ -16,6 +16,7 @@
 - [Aktivitas Harian](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#aktivitas-harian)
 - [Kategori Anggota](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-anggota)
 - [List Anggota](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-anggota)
+- [Create Anggota](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-anggota)
 
 **Login**
 ----
@@ -384,6 +385,10 @@
     }
 	```
 
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
 **Update Laporan Patroli**
 ----
 
@@ -626,6 +631,10 @@
     }
   ```
 
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
 
 **Kategori Cuaca**
 ----
@@ -667,6 +676,10 @@
     }
   ```
 
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
 **Kategori Artifisial Param**
 ---
 
@@ -703,6 +716,10 @@
     }
   ```
 
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
 **Sumber Air**
 ----
 
@@ -730,6 +747,10 @@
       ]
     }
   ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
 
 **Aktivitas Harian**
 ----
@@ -782,6 +803,10 @@
       ]
     }
   ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
 
 **Kategori Anggota**
 ---
@@ -857,4 +882,46 @@
       ]
     }
   ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+**Create Anggota**
+---
+
+* **URL**
+
+  `{{host}}/api/anggota/create`
+
+* **Method**
+
+  `POST`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (payload/json)**
+
+  ```
+    {
+      "kategori_anggota_id": 2,
+      "nama": "ramdan",
+      "email": "mramdanf@gmail.com",
+      "no_telepon": "08122334455"
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Create anggota patroli sukses."
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
 
