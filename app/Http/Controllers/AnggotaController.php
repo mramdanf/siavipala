@@ -33,4 +33,26 @@ class AnggotaController extends Controller
             'message' => 'Create anggota patroli sukses.'
         ]);
     }
+
+    public function update(Request $request)
+    {
+        $this->validate($request, [
+            'kategori_anggota_id' => 'required',
+            'id' => 'required'
+        ]);
+
+        $data = $request->all();
+
+        $anggota = Anggota::find($data['id']);
+
+        $anggota->kategori_anggota_id = $data['kategori_anggota_id'];
+        $anggota->nama = $data['nama'];
+        $anggota->email= $data['email'];
+        $anggota->no_telepon = $data['no_telepon'];
+        $anggota->save();
+
+        return response([
+            'message' => 'Update anggota patroli sukses.'
+        ]);
+    }
 }

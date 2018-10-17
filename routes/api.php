@@ -77,6 +77,8 @@ $api->version('v1', function ($api) {
         $api->get('/anggota/list', 'AnggotaController@list');
         // Create anggota
         $api->post('/anggota/create', 'AnggotaController@store');
+        // Update anggota
+        $api->post('/anggota/update', 'AnggotaController@update');
         
     });
     
