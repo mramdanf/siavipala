@@ -120,7 +120,7 @@ class PatroliController extends Controller
 
         $data = $request->all();
 
-        $oldKegiatanPatroli = KegiatanPatroli::find($data['kegiatan_patroli_id'])->first();
+        $oldKegiatanPatroli = KegiatanPatroli::find($data['kegiatan_patroli_id']);
 
         // Delete kegiatan_patroli relation
         $this->deleteKegiatanPatroliRelation($data['kegiatan_patroli_id']);
