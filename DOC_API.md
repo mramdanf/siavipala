@@ -966,3 +966,39 @@
     <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
 </div>
 
+
+**Delete Anggota**
+---
+
+* **URL**
+
+  `{{host}}/api/anggota/delete`
+
+* **Method**
+
+  `POST`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (payload/json)**
+
+  ```
+    {
+      "id": 2
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Delete anggota patroli sukses."
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+

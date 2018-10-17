@@ -79,6 +79,8 @@ $api->version('v1', function ($api) {
         $api->post('/anggota/create', 'AnggotaController@store');
         // Update anggota
         $api->post('/anggota/update', 'AnggotaController@update');
+        // Delete anggota
+        $api->post('/anggota/delete', 'AnggotaController@remove');
         
     });
     

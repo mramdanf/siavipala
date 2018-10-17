@@ -55,4 +55,20 @@ class AnggotaController extends Controller
             'message' => 'Update anggota patroli sukses.'
         ]);
     }
+
+    public function remove(Request $request)
+    {
+        $this->validate($request, [
+            'id' => 'required'
+        ]);
+
+        $id = $request->all()['id'];
+
+        $anggota = Anggota::find($id);
+        $anggota->delete();
+
+        return response([
+            'message' => 'Delete anggota patroli sukses.'
+        ]);
+    }
 }
