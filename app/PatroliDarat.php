@@ -7,6 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 class PatroliDarat extends Model
 {
     protected $table = 'patroli_darat';
+    protected $hidden = [
+        'created_at', 
+        'updated_at',
+
+        // Hide relation id
+        'kegiatan_patroli_id',
+        'desa_kelurahan_id',
+        'cuaca_pagi_id',
+        'cuaca_siang_id',
+        'cuaca_sore_id',
+        "fwi_id",
+        "ffmc_kkas_id",
+        "dc_kk_id",
+    ];
 
     public function desaKelurahan()
     {
