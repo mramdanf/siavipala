@@ -47,7 +47,20 @@ class ProvinsiController extends Controller
 
     public function update(Request $request)
     {
-        $this->validate();
+        $this->validate($request, [
+            'nama' => 'required',
+            'id' => 'required'
+        ]);
+
+        $data = $request->all();
+
+        $provinsi = Provinsi::find($data['id']);
+        $provinsi->nama = $data['nama'];
+        $provinsi->save();
+
+        return response([
+            'message' => 'Update provinsi sukses.'
+        ]);
     }
 
     public function remove(Request $request)

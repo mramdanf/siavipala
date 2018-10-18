@@ -1251,3 +1251,40 @@
     <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
 </div>
 
+
+**Update Provinisi**
+---
+
+* **URL**
+
+  `{{host}}/api/provinsi/update`
+
+* **Method**
+
+  `POST`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (json/payload)**
+
+  ```
+    {
+      "id": 61,
+      "nama": "rudi"
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Update provinsi sukses."
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
