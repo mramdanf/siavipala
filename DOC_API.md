@@ -28,6 +28,13 @@
 - Provinsi
   - [List Provinsi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-provinsi)
   - [Create Provinsi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-provinsi)
+  - [Update Provinsi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-provinsi)
+  - [Delete Provinsi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-provinsi)
+- Daops
+  - [List Daops](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-daops)
+  - [Create Daops](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-daops)
+  - [Update Daops](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-daops)
+  - [Delete Daops](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-daops)
 
 **Login**
 ----
@@ -1324,6 +1331,43 @@
           "nama": "pontianak"
         },
       ]
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**Create Daops**
+---
+
+* **URL**
+
+  `{{host}}/api/daops/create`
+
+* **Method**
+
+  `GET`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (json/payload)**
+
+  ```
+    {
+      "provinsi_id": 61,
+      "nama": "Purwakarta"
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Create daops sukses."
+    }
   ```
 
 <div align="right">

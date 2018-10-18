@@ -102,11 +102,11 @@ $api->version('v1', function ($api) {
         $api->post('/provinsi/delete', 'ProvinsiController@remove');
 
         // Create daops
-        $api->post('/dasops/create', 'DaopsController@store');
+        $api->post('/daops/create', 'DaopsController@store');
         // Update daops
-        $api->post('/dasops/update', 'DaopsController@update');
+        $api->post('/daops/update', 'DaopsController@update');
         // Delete dasops
-        $api->post('/dasops/delete', 'DaopsController@remove');
+        $api->post('/daops/delete', 'DaopsController@remove');
         
     });
     
