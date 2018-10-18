@@ -45,6 +45,8 @@ $api->version('v1', function ($api) {
         $api->get('/artifisial-param/list', 'ArtifisialParamController@list');
         // List sumber air
         $api->get('/sumber-air/list', 'SumberAirController@list');
+        // List Daops
+        $api->get('/daops/list', 'DaopsController@list');
     });
 
     // Auth Group
@@ -98,6 +100,13 @@ $api->version('v1', function ($api) {
         $api->post('/provinsi/update', 'ProvinsiController@update');
         // Delete provinsi
         $api->post('/provinsi/delete', 'ProvinsiController@remove');
+
+        // Create daops
+        $api->post('/dasops/create', 'DaopsController@store');
+        // Update daops
+        $api->post('/dasops/update', 'DaopsController@update');
+        // Delete dasops
+        $api->post('/dasops/delete', 'DaopsController@remove');
         
     });
     

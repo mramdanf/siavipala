@@ -1288,3 +1288,45 @@
     <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
 </div>
 
+
+**List Daops**
+---
+
+* **URL**
+
+  `{{host}}/api/daops/list`
+
+* **Method**
+
+  `GET`
+
+* **Headers**
+
+  `none`
+
+* **Data Params (json/payload)**
+
+  `none`
+
+* **Success Response**
+
+  ```
+    {
+      "data": [
+        {
+          "id": 336,
+          "provinsi_id": 54,
+          "nama": "ketapang"
+        },
+        {
+          "id": 337,
+          "provinsi_id": 54,
+          "nama": "pontianak"
+        },
+      ]
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
