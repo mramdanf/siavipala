@@ -18,6 +18,7 @@
 - [List Anggota](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-anggota)
 - [Create Anggota](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-anggota)
 - [Update Anggota](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-anggota)
+- [Delete Anggota](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-anggota)
 - [List Pengguna](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-pengguna)
 - [Create Pengguna](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-pengguna)
 - [Delete Pengguna](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-pengguna)
