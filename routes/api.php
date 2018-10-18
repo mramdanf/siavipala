@@ -94,6 +94,10 @@ $api->version('v1', function ($api) {
 
         // Create provinsi
         $api->post('/provinsi/create', 'ProvinsiController@store');
+        // Update provinsi
+        $api->post('/provinsi/update', 'ProvinsiController@update');
+        // Delete provinsi
+        $api->post('/provinsi/delete', 'ProvinsiController@remove');
         
     });
     

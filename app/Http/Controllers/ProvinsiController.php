@@ -45,6 +45,23 @@ class ProvinsiController extends Controller
         ]);
     }
 
+    public function update(Request $request)
+    {
+        $this->validate();
+    }
+
+    public function remove(Request $request)
+    {
+        $this->validate($request, ['id'=>'required']);
+
+        $provinsi = Provinsi::find($request->input('id'));
+        $provinsi->delete();
+
+        return response([
+            'message' => 'Delete provinsi sukses.'
+        ]);
+    }
+
     public function resume(Request $request)
     {
         $kode = $request->input('kode_provinsi');
