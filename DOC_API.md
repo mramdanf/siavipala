@@ -1491,3 +1491,40 @@
     <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
 </div>
 
+
+**Create Kotakab**
+---
+
+* **URL**
+
+  `{{host}}/api/kotakab/create`
+
+* **Method**
+
+  `POST`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (json/payload)**
+
+  ```
+    {
+      "daops_id": 336,
+      "nama": "testing"
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Create daops sukses."
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
