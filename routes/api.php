@@ -14,6 +14,7 @@
 // $app->get('/read-csv', 'ReadCsvController@migrasi_tb_kegiatan_patroli');
 // $app->get('/test', 'ReadCsvController@test');
 // $app->get('/migrasi2', 'ReadCsvController@migrasi_tb_lokasi_patroli');
+$app->get('/test', 'ExampleController@test');
 
 $api = $app->make(Dingo\Api\Routing\Router::class);
 
