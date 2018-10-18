@@ -84,6 +84,12 @@ $api->version('v1', function ($api) {
 
         // List pengguna
         $api->get('/pengguna/list', 'PenggunaController@list');
+        // Create pengguna
+        $api->post('/pengguna/create', 'PenggunaController@store');
+        // Update pengguna
+        $api->post('/pengguna/update', 'PenggunaController@update');
+        // Delete pengguna
+        $api->post('/pengguna/delete', 'PenggunaController@remove');
         
     });
     

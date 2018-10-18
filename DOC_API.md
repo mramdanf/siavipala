@@ -19,6 +19,7 @@
 - [Create Anggota](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-anggota)
 - [Update Anggota](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-anggota)
 - [List Pengguna](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-pengguna)
+- [Create Pengguna](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-pengguna)
 
 **Login**
 ----
@@ -1035,6 +1036,45 @@
           "no_telepon": "081223445566"
         }
       ]
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**Create Pengguna**
+---
+
+* **URL**
+
+  `{{host}}/api/pengguna/create`
+
+* **Method**
+
+  `POST`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (json/payload)**
+
+  ```
+    {
+      "nama": "rudi",
+      "email": "rudi@test.com",
+      "password": 111
+      
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Create pengguna sukses."
     }
   ```
 

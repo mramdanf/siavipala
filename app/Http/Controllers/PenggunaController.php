@@ -15,4 +15,25 @@ class PenggunaController extends Controller
             'data' => Pengguna::all()
         ]);
     }
+
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'nama' => 'required',
+            'email' => 'required',
+            'password' => 'required'
+        ]);
+
+       $data = $request->all();
+       
+       $pengguna = new Pengguna;
+       $pengguna->nama = $data['nama'];
+       $pengguna->email = $data['email'];
+       $pengguna->password = app('hash')->make($data['password']);
+       $pengguna->save();
+
+       return response([
+           'message' => 'Create pengguna sukses.'
+       ]);
+    }
 }
