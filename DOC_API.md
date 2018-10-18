@@ -1448,3 +1448,46 @@
     <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
 </div>
 
+
+**List Kotakab**
+---
+
+* **URL**
+
+  `{{host}}/api/kotakab/list`
+
+* **Method**
+
+  `GET`
+
+* **Headers**
+
+  `none`
+
+* **Data Params (json/payload)**
+
+  `none`
+
+* **Success Response**
+
+  ```
+    {
+      "data": [
+        {
+          "id": 253,
+          "daops_id": 337,
+          "nama": "kubu raya"
+        },
+        {
+          "id": 254,
+          "daops_id": 343,
+          "nama": "banyuasin"
+        }
+      ]
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+

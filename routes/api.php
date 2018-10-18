@@ -47,6 +47,8 @@ $api->version('v1', function ($api) {
         $api->get('/sumber-air/list', 'SumberAirController@list');
         // List Daops
         $api->get('/daops/list', 'DaopsController@list');
+        // List Kota Kab
+        $api->get('/kotakab/list', 'KotakabController@list');
     });
 
     // Auth Group
@@ -107,6 +109,13 @@ $api->version('v1', function ($api) {
         $api->post('/daops/update', 'DaopsController@update');
         // Delete dasops
         $api->post('/daops/delete', 'DaopsController@remove');
+
+        // Create daops
+        $api->post('/kotakab/create', 'KotakabController@store');
+        // Update daops
+        $api->post('/kotakab/update', 'KotakabController@update');
+        // Delete dasops
+        $api->post('/kotakab/delete', 'KotakabController@remove');
         
     });
     
