@@ -52,4 +52,18 @@ class DaopsController extends Controller
             'message' => 'Update daops sukses.'
         ]);
     }
+
+    public function remove(Request $request)
+    {
+        $this->validate($request, [
+            'id' => 'required'
+        ]);
+
+        $daops = Daops::find($request->input('id'));
+        $daops->delete();
+
+        return response([
+            'message' => 'Delete daops sukses.'
+        ]);
+    }
 }
