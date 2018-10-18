@@ -2,7 +2,6 @@
 
 ## Table of Contents
 - [Login](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#login)
-- [List Provinsi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-provinsi)
 - [Resume Provinsi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#resume-provinsi)
 - [Kategori Curah Hujan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-curah-hujan)
 - [Kategori Cuaca](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-cuaca)
@@ -26,6 +25,9 @@
   - [Create Pengguna](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-pengguna)
   - [Delete Pengguna](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-pengguna)
   - [Update Pengguna](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-pengguna)
+- Provinsi
+  - [List Provinsi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-provinsi)
+  - [Create Provinsi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-provinsi)
 
 **Login**
 ----
@@ -1159,6 +1161,54 @@
       "message": "Update pengguna sukses."
     }
   ```
+
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**Create Provinisi**
+---
+
+* **URL**
+
+  `{{host}}/api/provinsi/create`
+
+* **Method**
+
+  `POST`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (json/payload)**
+
+  ```
+    {
+      "nama": "rudi"
+      
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Create provinsi sukses."
+    }
+  ```
+
+* **Error Response**
+
+  * **Code:** 400 HTTP_BAD_REQUEST
+  * **Content:**
+    ```
+      {
+        "message": "Create provinsi gagal, Nama provinsi x telah terdaftar."
+      }
+    ```
 
 <div align="right">
     <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>

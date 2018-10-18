@@ -91,6 +91,9 @@ $api->version('v1', function ($api) {
         $api->post('/pengguna/update', 'PenggunaController@update');
         // Delete pengguna
         $api->post('/pengguna/delete', 'PenggunaController@remove');
+
+        // Create provinsi
+        $api->post('/provinsi/create', 'ProvinsiController@store');
         
     });
     

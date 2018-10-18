@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 
+use App\Provinsi;
+
+
 
 class ProvinsiController extends Controller
 {
@@ -13,6 +16,32 @@ class ProvinsiController extends Controller
     {
         return response([
             'data' => 'App\Provinsi'::all()
+        ]);
+    }
+
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'nama' => 'required'
+        ]);
+
+        $prov_exist = Provinsi::where('nama', 'ilike', $request->input('nama'))
+                                ->count();
+
+        if ($prov_exist)
+        {
+            return response()
+                ->json(array(
+                    'message' => 'Create provinsi gagal, Nama provinsi '.$request->input('nama').' telah terdaftar.'), 
+                    400);
+        }
+
+        $provinsi = new Provinsi;
+        $provinsi->nama = $request->input('nama');
+        $provinsi->save();
+
+        return response([
+            'message' => 'Create provinsi sukses.'
         ]);
     }
 
