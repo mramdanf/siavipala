@@ -2,27 +2,30 @@
 
 ## Table of Contents
 - [Login](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#login)
-- [List Kegiatan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-kegiatan-patroli)
 - [List Provinsi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-provinsi)
 - [Resume Provinsi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#resume-provinsi)
-- [Kategori Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-patroli)
-- [Create Laporan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-laporan-patroli)
-- [Update Laporan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-laporan-patroli)
-- [Delete Laporan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-laporan-patroli)
 - [Kategori Curah Hujan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-curah-hujan)
 - [Kategori Cuaca](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-cuaca)
 - [Kategori Artifisial Param](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-artifisial-param)
 - [Sumber Air](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#sumber-air)
 - [Aktivitas Harian](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#aktivitas-harian)
-- [Kategori Anggota](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-anggota)
-- [List Anggota](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-anggota)
-- [Create Anggota](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-anggota)
-- [Update Anggota](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-anggota)
-- [Delete Anggota](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-anggota)
-- [List Pengguna](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-pengguna)
-- [Create Pengguna](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-pengguna)
-- [Delete Pengguna](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-pengguna)
-- [Update Pengguna](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-pengguna)
+- Patroli
+  - [List Kegiatan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-kegiatan-patroli)
+  - [Kategori Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-patroli)
+  - [Create Laporan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-laporan-patroli)
+  - [Update Laporan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-laporan-patroli)
+  - [Delete Laporan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-laporan-patroli)
+- Anggota
+  - [Kategori Anggota](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-anggota)
+  - [List Anggota](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-anggota)
+  - [Create Anggota](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-anggota)
+  - [Update Anggota](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-anggota)
+  - [Delete Anggota](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-anggota)
+- Pengguna
+  - [List Pengguna](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-pengguna)
+  - [Create Pengguna](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-pengguna)
+  - [Delete Pengguna](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-pengguna)
+  - [Update Pengguna](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-pengguna)
 
 **Login**
 ----
