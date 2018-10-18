@@ -36,4 +36,20 @@ class PenggunaController extends Controller
            'message' => 'Create pengguna sukses.'
        ]);
     }
+
+    public function remove(Request $request)
+    {
+        $this->validate($request, [
+            'id' => 'required'
+        ]);
+
+        $id = $request->all()['id'];
+
+        $pengguna = Pengguna::find($id);
+        $pengguna->delete();
+
+        return response([
+            'message' => 'Delete pengguna sukses.'
+        ]);
+    }
 }
