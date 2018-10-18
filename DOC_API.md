@@ -20,6 +20,8 @@
 - [Update Anggota](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-anggota)
 - [List Pengguna](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-pengguna)
 - [Create Pengguna](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-pengguna)
+- [Delete Pengguna](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-pengguna)
+- [Update Pengguna](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-pengguna)
 
 **Login**
 ----
@@ -1111,6 +1113,46 @@
   ```
     {
       "message": "Delete pengguna sukses."
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**Update Pengguna**
+---
+
+* **URL**
+
+  `{{host}}/api/pengguna/update`
+
+* **Method**
+
+  `POST`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (json/payload)**
+
+  ```
+    {
+      "id": 6,
+      "nama": "rudi",
+      "email": "rudi@test.com",
+      "password": 111
+      
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Update pengguna sukses."
     }
   ```
 
