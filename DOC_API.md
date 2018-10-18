@@ -1347,7 +1347,7 @@
 
 * **Method**
 
-  `GET`
+  `POST`
 
 * **Headers**
 
@@ -1367,6 +1367,44 @@
   ```
     {
       "message": "Create daops sukses."
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**Update Daops**
+---
+
+* **URL**
+
+  `{{host}}/api/daops/update`
+
+* **Method**
+
+  `POST`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (json/payload)**
+
+  ```
+    {
+      "id": 468,
+      "provinsi_id": 61,
+      "nama": "Purwakarta"
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Update daops sukses."
     }
   ```
 

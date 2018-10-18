@@ -32,4 +32,24 @@ class DaopsController extends Controller
             'message' => 'Create daops sukses.'
         ]);
     }
+
+    public function update(Request $request)
+    {
+        $this->validate($request, [
+            'provinsi_id' => 'required',
+            'nama' => 'required',
+            'id' => 'required'
+        ]);
+
+        $data = $request->all();
+
+        $daops = Daops::find($data['id']);
+        $daops->provinsi_id = $data['provinsi_id'];
+        $daops->nama = $data['nama'];
+        $daops->save();
+
+        return response([
+            'message' => 'Update daops sukses.'
+        ]);
+    }
 }
