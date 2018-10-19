@@ -50,6 +50,11 @@
   - [Create Posko](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-posko)
   - [Update Posko](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-posko)
   - [Delete Posko](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-posko)
+- Desa Kelurahan
+  - [List Desa Kelurahan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-desa-kelurahan)
+  - [Create Desa Kelurahan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-desa-kelurahan)
+  - [Update Desa Kelurahan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-desa-kelurahan)
+  - [Delete Desa Kelurahan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-desa-kelurahan)
 
 **Login**
 ----
