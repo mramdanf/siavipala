@@ -45,6 +45,11 @@
   - [Create Kecamatan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-kecamatan)
   - [Update Kecamatan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-kecamatan)
   - [Delete Kecamatan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-kecamatan)
+- Posko
+  - [List Posko](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-posko)
+  - [Create Posko](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-posko)
+  - [Update Posko](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-posko)
+  - [Delete Posko](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-posko)
 
 **Login**
 ----
@@ -1759,6 +1764,160 @@
   ```
     {
       "message": "Delete kecamatan sukses."
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**List Posko**
+---
+
+* **URL**
+
+  `{{host}}/api/posko/list`
+
+* **Method**
+
+  `GET`
+
+* **Headers**
+
+  `none`
+
+* **Data Params (json/payload)**
+
+  `none`
+
+* **Success Response**
+
+  ```
+    {
+      "data": [
+        {
+          "id": 580,
+          "kecamatan_id": null,
+          "nama": "kendawangan"
+        },
+        {
+          "id": 581,
+          "kecamatan_id": null,
+          "nama": "muara pawan"
+        },
+      ]
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**Create Kecamatan**
+---
+
+* **URL**
+
+  `{{host}}/api/kecamatan/create`
+
+* **Method**
+
+  `POST`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (json/payload)**
+
+  ```
+    {
+      "kecamatan_id": 336,
+      "nama": "posko testing"
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Create posko sukses."
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**Update Posko**
+---
+
+* **URL**
+
+  `{{host}}/api/posko/update`
+
+* **Method**
+
+  `POST`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (json/payload)**
+
+  ```
+    {
+      "id": 3360,
+      "kecamatan_id": 336,
+      "nama": "testing"
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Update posko sukses."
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**Delete Posko**
+---
+
+* **URL**
+
+  `{{host}}/api/posko/delete`
+
+* **Method**
+
+  `POST`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (json/payload)**
+
+  ```
+    {
+      "id": 3360
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Delete posko sukses."
     }
   ```
 

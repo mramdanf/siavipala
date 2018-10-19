@@ -18,4 +18,9 @@ class Kecamatan extends Model
     {
         return $this->belongsTo('App\KotaKab');
     }
+
+    public function posko()
+    {
+        return $this->hasMany('App\Posko');
+    }
 }
