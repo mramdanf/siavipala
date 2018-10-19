@@ -1815,12 +1815,12 @@
 </div>
 
 
-**Create Kecamatan**
+**Create Posko**
 ---
 
 * **URL**
 
-  `{{host}}/api/kecamatan/create`
+  `{{host}}/api/posko/create`
 
 * **Method**
 
@@ -1918,6 +1918,163 @@
   ```
     {
       "message": "Delete posko sukses."
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+**List Desa Kelurahan**
+---
+
+* **URL**
+
+  `{{host}}/api/desakelurahan/list`
+
+* **Method**
+
+  `GET`
+
+* **Headers**
+
+  `none`
+
+* **Data Params (json/payload)**
+
+  `none`
+
+* **Success Response**
+
+  ```
+    {
+      "data": [
+        {
+          "id": 580,
+          "kecamatan_id": 1,
+          "posko_id": 1,
+          "nama": "kendawangan"
+        },
+        {
+          "id": 581,
+          "kecamatan_id": 2,
+          "posko_id": 1,
+          "nama": "muara pawan"
+        },
+      ]
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**Create Desa Kelurahan**
+---
+
+* **URL**
+
+  `{{host}}/api/posko/create`
+
+* **Method**
+
+  `POST`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (json/payload)**
+
+  ```
+    {
+      "kecamatan_id": 2,
+      "posko_id": 2,
+      "nama": "desa kelurahan testing"
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Create desa kelurahan sukses."
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**Update Desa Kelurahan**
+---
+
+* **URL**
+
+  `{{host}}/api/desakelurahan/update`
+
+* **Method**
+
+  `POST`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (json/payload)**
+
+  ```
+    {
+      "id": 3360,
+      "kecamatan_id": 1,
+      "posko_id": 2,
+      "nama": "testing"
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Update desa kelurahan sukses."
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**Delete Desa Kelurahan**
+---
+
+* **URL**
+
+  `{{host}}/api/desakelurahan/delete`
+
+* **Method**
+
+  `POST`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (json/payload)**
+
+  ```
+    {
+      "id": 3360
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Delete desa kelurahan sukses."
     }
   ```
 

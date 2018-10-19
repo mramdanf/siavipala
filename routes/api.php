@@ -53,6 +53,8 @@ $api->version('v1', function ($api) {
         $api->get('/kecamatan/list', 'KecamatanController@list');
         // List Posko
         $api->get('/posko/list', 'PoskoController@list');
+        // List Desa Kelurahan
+        $api->get('/desakelurahan/list', 'DesaKelurahanController@list');
     });
 
     // Auth Group
@@ -134,6 +136,13 @@ $api->version('v1', function ($api) {
         $api->post('/posko/update', 'PoskoController@update');
         // Delete posko
         $api->post('/posko/delete', 'PoskoController@remove');
+
+        // Create desa kelurahan
+        $api->post('/desakelurahan/create', 'DesaKelurahanController@store');
+        // Update desa kelurahan
+        $api->post('/desakelurahan/update', 'DesaKelurahanController@update');
+        // Delete desa kelurahan
+        $api->post('/desakelurahan/delete', 'DesaKelurahanController@remove');
         
     });
     
