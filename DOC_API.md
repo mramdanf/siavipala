@@ -1528,3 +1528,77 @@
     <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
 </div>
 
+
+**Update Kotakab**
+---
+
+* **URL**
+
+  `{{host}}/api/kotakab/update`
+
+* **Method**
+
+  `POST`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (json/payload)**
+
+  ```
+    {
+      "id": 3360,
+      "daops_id": 336,
+      "nama": "testing"
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Update kota kab sukses."
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**Delete Kotakab**
+---
+
+* **URL**
+
+  `{{host}}/api/kotakab/delete`
+
+* **Method**
+
+  `POST`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (json/payload)**
+
+  ```
+    {
+      "id": 3360
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Delete kota kab sukses."
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
