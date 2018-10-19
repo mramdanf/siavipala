@@ -49,6 +49,8 @@ $api->version('v1', function ($api) {
         $api->get('/daops/list', 'DaopsController@list');
         // List Kota Kab
         $api->get('/kotakab/list', 'KotakabController@list');
+        // List Kecamatan
+        $api->get('/kecamatan/list', 'KecamatanController@list');
     });
 
     // Auth Group
@@ -110,12 +112,19 @@ $api->version('v1', function ($api) {
         // Delete dasops
         $api->post('/daops/delete', 'DaopsController@remove');
 
-        // Create daops
+        // Create kotakab
         $api->post('/kotakab/create', 'KotakabController@store');
-        // Update daops
+        // Update kotakab
         $api->post('/kotakab/update', 'KotakabController@update');
-        // Delete dasops
+        // Delete kotakab
         $api->post('/kotakab/delete', 'KotakabController@remove');
+
+        // Create kecamatan
+        $api->post('/kecamatan/create', 'KecamatanController@store');
+        // Update kecamatan
+        $api->post('/kecamatan/update', 'KecamatanController@update');
+        // Delete kecamatan
+        $api->post('/kecamatan/delete', 'KecamatanController@remove');
         
     });
     

@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Kecamatan extends Model
 {
     protected $table = 'kecamatan';
+    protected $hidden = ['created_at', 'updated_at'];
 
     public function desaKelurahan()
     {

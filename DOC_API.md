@@ -35,6 +35,16 @@
   - [Create Daops](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-daops)
   - [Update Daops](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-daops)
   - [Delete Daops](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-daops)
+- Kota Kab
+  - [List Kotakab](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-kotakab)
+  - [Create Kotakab](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-kotakab)
+  - [Update Kotakab](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-kotakab)
+  - [Delete Kotakab](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-kotakab)
+- Kecamatan
+  - [List Kecamatan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-kecamatan)
+  - [Create Kecamatan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-kecamatan)
+  - [Update Kecamatan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-kecamatan)
+  - [Delete Kecamatan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-kecamatan)
 
 **Login**
 ----
@@ -1595,6 +1605,160 @@
   ```
     {
       "message": "Delete kota kab sukses."
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**List Kecamatan**
+---
+
+* **URL**
+
+  `{{host}}/api/kecamatan/list`
+
+* **Method**
+
+  `GET`
+
+* **Headers**
+
+  `none`
+
+* **Data Params (json/payload)**
+
+  `none`
+
+* **Success Response**
+
+  ```
+    {
+      "data": [
+        {
+          "id": 580,
+          "kota_kab_id": null,
+          "nama": "kendawangan"
+        },
+        {
+          "id": 581,
+          "kota_kab_id": null,
+          "nama": "muara pawan"
+        },
+      ]
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**Create Kecamatan**
+---
+
+* **URL**
+
+  `{{host}}/api/kecamatan/create`
+
+* **Method**
+
+  `POST`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (json/payload)**
+
+  ```
+    {
+      "kota_kab_id": 336,
+      "nama": "kecamatan testing"
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Create kecamatan sukses."
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**Update Kecamatan**
+---
+
+* **URL**
+
+  `{{host}}/api/kecamatan/update`
+
+* **Method**
+
+  `POST`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (json/payload)**
+
+  ```
+    {
+      "id": 3360,
+      "kota_kab_id": 336,
+      "nama": "testing"
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Update kecamatan sukses."
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**Delete Kecamatan**
+---
+
+* **URL**
+
+  `{{host}}/api/kecamatan/delete`
+
+* **Method**
+
+  `POST`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (json/payload)**
+
+  ```
+    {
+      "id": 3360
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Delete kecamatan sukses."
     }
   ```
 
