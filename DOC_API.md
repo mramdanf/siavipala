@@ -1229,8 +1229,12 @@
 
 * **Error Response**
 
-  * **Code:** 400 HTTP_BAD_REQUEST
+  * **Code:** 
+    
+    `400 HTTP_BAD_REQUEST`
+
   * **Content:**
+    
     ```
       {
         "message": "Create provinsi gagal, Nama provinsi x telah terdaftar."
