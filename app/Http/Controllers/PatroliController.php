@@ -43,6 +43,9 @@ class PatroliController extends Controller
             'patroliDarat.cuacaPagi',
             'patroliDarat.cuacaSiang',
             'patroliDarat.cuacaSore',
+            'patroliDarat.fwi',
+            'patroliDarat.ffmcKkas',
+            'patroliDarat.dcKk',
 
             // Patroli Udara
             'patroliUdara.desaKelurahan.kecamatan.kotakab.daops.provinsi',

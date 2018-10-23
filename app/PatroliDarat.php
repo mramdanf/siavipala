@@ -77,12 +77,12 @@ class PatroliDarat extends Model
         return $this->belongsTo('App\ArtifisialParam', 'fwi_id', 'id');
     }
 
-    public function ffmc_kkas()
+    public function ffmcKkas()
     {
         return $this->belongsTo('App\ArtifisialParam', 'ffmc_kkas_id', 'id');
     }
 
-    public function dc_kk()
+    public function dcKk()
     {
         return $this->belongsTo('App\ArtifisialParam', 'dc_kk_id', 'id');
     }
