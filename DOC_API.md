@@ -359,6 +359,10 @@
           "latitude": -1.992222222 (double)
           "luas_terbakar": 1.5 (double)
         }
+      ],
+      "images": [
+        "base65img",
+        "base64img"
       ]
     }
   ```
@@ -403,6 +407,10 @@
           "anggota_id": 1 (unsignedInteger)
         }
       ],
+      "images": [
+        "base65img",
+        "base64img"
+      ]
 
       // Data spesifik patroli udara
       "latitude": 10.10 (double),
