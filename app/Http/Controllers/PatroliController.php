@@ -13,9 +13,11 @@ use App\KondisiSumberAir;
 use App\KondisiTanah;
 use App\Pemadaman;
 use App\PatroliUdara;
+use App\Dokumentasi;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Intervention\Image\Facades\Image;
 use Log;
 
 class PatroliController extends Controller
@@ -157,6 +159,8 @@ class PatroliController extends Controller
         $this->storeHotspot($data, $kegiatanPatroli->id);
         // Insert tabel aktivitas_harian_patroli
         $this->storeAktivitasHarianPatroli($data, $kegiatanPatroli->id);
+        // Insert tabel dokumentasi
+        $this->storeDokumentasiPatroli($data, $kegiatanPatroli->id);
     }
 
     private function storePatroliUdara($data = array(), $kegiatanPatroliId = NULL)
@@ -227,6 +231,23 @@ class PatroliController extends Controller
             $inventoriPatroli->kegiatan_patroli_id = $kegiatanPatroliId;
             $inventoriPatroli->inventori_id        = $ip['inventori_id'];
             $inventoriPatroli->save();
+        }
+    }
+
+    private function storeDokumentasiPatroli($data = array(), $kegiatanPatroliId = NULL)
+    {
+        foreach($data['images'] as $img)
+        {
+            $pngUrl = "dok-".$kegiatanPatroliId."-".time().".png";
+            $path   = base_path('public').'/img/'.$pngUrl;
+
+            Image::make($img)->save($path);
+
+            $dokumentasi = new Dokumentasi;
+            $dokumentasi->kegiatan_patroli_id = $kegiatanPatroliId;
+            $dokumentasi->url_file = $pngUrl;
+            $dokumentasi->tipe_file = 'images/png';
+            $dokumentasi->save();
         }
     }
 
@@ -342,6 +363,18 @@ class PatroliController extends Controller
         // Delete hotspot
         $hotspot = Hotspot::where('kegiatan_patroli_id', '=', $kegiatanPatroliId);
         $hotspot->delete();
+
+        // Delete dokumentasi
+        $dokumentasi = Dokumentasi::where('kegiatan_patroli_id', '=', $kegiatanPatroliId);
+        // Unlink image
+        foreach($dokumentasi->get() as $dok)
+        {
+            $imgUrl = base_path('public/img/'.$dok->url_file);
+            if (file_exists($imgUrl))
+                unlink($imgUrl);
+        }
+        $dokumentasi->delete();
+        
 
         // Indirect relation via patroli_darat
         $patroliDarat = PatroliDarat::where('kegiatan_patroli_id', '=', $kegiatanPatroliId)->first();

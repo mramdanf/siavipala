@@ -19,11 +19,6 @@ class ExampleController extends Controller
 
     public function test()
     {
-        $client = new Client();
-        $res = $client->request('GET', 'http://sipongi.menlhk.go.id/action/indohotspot');
-        $res = $res->getBody()->getContents();
-        $res = json_decode($res, TRUE);
-
-        dd($res);
+        dd(base_path('public'));
     }
 }
