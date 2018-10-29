@@ -78,7 +78,12 @@
   {
     "message": "Login success",
     "data": {
-        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjMsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Qvc2lhdmlwYWxhL3B1YmxpYy9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTUzOTM4NTk4MSwiZXhwIjoxNTM5Mzg5NTgxLCJuYmYiOjE1MzkzODU5ODEsImp0aSI6IlhCZHVMUTdzdGZiMHllV2IifQ.KNqA10aDMB_sAWqPC4VAaCw03X3tkt9xwOTWjmalcDQ"
+      "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjMsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Qvc2lhdmlwYWxhL3B1YmxpYy9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTU0MDg1NjI1MywiZXhwIjoxNTQwODc3ODUzLCJuYmYiOjE1NDA4NTYyNTMsImp0aSI6IjFOYVdrUDNSVWlxU1F5cHcifQ.5Y_sj2tC1Zy2akL3I_2OfdRmti1VoUT4QBF4irCGyy8",
+      "user": {
+        "id": 3,
+        "nama": "ramdan",
+        "email": "ramdan@gmail.com"
+      }
     }
   }
   ```
