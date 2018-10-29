@@ -37,6 +37,8 @@ class AuthController extends Controller
             return $this->onJwtGenerationError();
         }
 
+        $user = JWTAuth::toUser($token);
+
         // All good so return the token
         return $this->onAuthorized($token);
     }
