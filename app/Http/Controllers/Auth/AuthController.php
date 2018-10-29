@@ -40,7 +40,7 @@ class AuthController extends Controller
         $user = JWTAuth::toUser($token);
 
         // All good so return the token
-        return $this->onAuthorized($token);
+        return $this->onAuthorized($token, $user);
     }
 
     /**
@@ -94,12 +94,13 @@ class AuthController extends Controller
      * What response should be returned on authorized.
      * @return Response
      */
-    protected function onAuthorized($token)
+    protected function onAuthorized($token, $user)
     {
         return response([
             'message' => 'Login success',
             'data' => [
                 'token' => $token,
+                'user' => $user
             ]
         ]);
     }
