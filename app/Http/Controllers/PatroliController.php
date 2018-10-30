@@ -31,7 +31,6 @@ class PatroliController extends Controller
             'patroliDarat.kondisiVegetasi.kategoriKondisiVegetasi',
             'patroliDarat.kondisiVegetasi.kondisiKarhutla',
             'patroliDarat.kondisiVegetasi.potensiKarhutla',
-
             
             'patroliDarat.kondisiTanah.tanah',
             'patroliDarat.kondisiTanah.kondisiKarhutla',
@@ -144,18 +143,7 @@ class PatroliController extends Controller
 
     private function storeKegiatanPatroliRelation($data = array(), $kegiatanPatroli)
     {
-        // Insert tabel patroli_darat
-        if ($data['jenis_patroli'] == 'DARAT') 
-        {
-            $this->storePatroliDarat($data, $kegiatanPatroli->id);
-        }
-
-        // Insert tabel patroli_udara
-        else if ($data['jenis_patroli'] == 'UDARA')
-        {
-            $this->storePatroliUdara($data, $kegiatanPatroli->id);
-        }
-
+        // Data general, baik patroli darat maupun patroli udara mesti create data ini
         // Insert tabel inventori_patroli
         $this->storeInventoriPatroli($data, $kegiatanPatroli->id);
         // Insert tabel hotspot
@@ -164,6 +152,20 @@ class PatroliController extends Controller
         $this->storeAktivitasHarianPatroli($data, $kegiatanPatroli->id);
         // Insert tabel dokumentasi
         $this->storeDokumentasiPatroli($data, $kegiatanPatroli->id);
+
+        // Insert tabel patroli_darat
+        if (!empty($data['patroli_darat'])) 
+        {
+            $this->storePatroliDarat($data['patroli_darat'], $kegiatanPatroli->id);
+        }
+
+        // Insert tabel patroli_udara
+        if (!empty($data['patroli_udara']))
+        {
+            $this->storePatroliUdara($data['patroli_udara'], $kegiatanPatroli->id);
+        }
+
+        
     }
 
     private function storePatroliUdara($data = array(), $kegiatanPatroliId = NULL)
@@ -177,7 +179,7 @@ class PatroliController extends Controller
         $patroliUdara->curah_hujan_id       = $data['curah_hujan_id'];
         $patroliUdara->curah_hujan_id       = $data['curah_hujan_id'];
         $patroliUdara->suhu                 = $data['suhu'];
-        $patroliUdara->kelembapan           = $data['kelembapan'];
+        $patroliUdara->kelembaban           = $data['kelembaban'];
         $patroliUdara->kecepatan_angin      = $data['kecepatan_angin'];
         $patroliUdara->ffmc_kkas_id         = $data['ffmc_kkas_id'];
         $patroliUdara->fwi_id               = $data['fwi_id'];
