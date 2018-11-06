@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class KegiatanPatroli extends Model
 {
     protected $table = 'kegiatan_patroli';
+    protected $hidden = ['created_at', 'updated_at'];
 
     public function patroliDarat()
     {

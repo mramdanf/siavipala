@@ -143,6 +143,9 @@ $api->version('v1', function ($api) {
         $api->post('/desakelurahan/update', 'DesaKelurahanController@update');
         // Delete desa kelurahan
         $api->post('/desakelurahan/delete', 'DesaKelurahanController@remove');
+
+        // Unduh laporan patroli
+        $api->get('/patroli/unduh-laporan', 'PatroliController@unduh_laporan_patroli');
         
     });
     

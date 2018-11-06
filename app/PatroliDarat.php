@@ -20,6 +20,7 @@ class PatroliDarat extends Model
         "fwi_id",
         "ffmc_kkas_id",
         "dc_kk_id",
+        'kadar_air_bahan_bakar_id'
     ];
 
     public function desaKelurahan()
@@ -85,5 +86,10 @@ class PatroliDarat extends Model
     public function dcKk()
     {
         return $this->belongsTo('App\ArtifisialParam', 'dc_kk_id', 'id');
+    }
+
+    public function kadarAirBahanBakar()
+    {
+        return $this->belongsTo('App\KadarAirBahanBakar');
     }
 }

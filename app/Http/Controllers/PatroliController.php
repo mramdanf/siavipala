@@ -14,6 +14,9 @@ use App\KondisiTanah;
 use App\Pemadaman;
 use App\PatroliUdara;
 use App\Dokumentasi;
+use App\Anggota;
+use App\AnggotaPatroli;
+use App\KategoriAnggota;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -141,6 +144,55 @@ class PatroliController extends Controller
         ]);
     }
 
+    public function unduh_laporan_patroli(Request $request)
+    {
+        $tanggal = '2018-04-10';
+
+        // 1. Pelaksana
+        $kategoriAnggota = KategoriAnggota::with([
+            'anggota.anggotaPatroli.kegiatanPatroli'
+        ])
+        ->whereHas('anggota.anggotaPatroli.kegiatanPatroli', function ($query) use ($tanggal) {
+            $query->where('kegiatan_patroli.tanggal_patroli', $tanggal);
+        })
+        ->get()
+        ->toArray();
+
+        foreach($kategoriAnggota as $key => $ka) 
+        {
+            $kategoriAnggota[$key]['count_anggota'] = count($ka['anggota']).' Orang';
+            unset($kategoriAnggota[$key]['anggota']);
+        }
+
+        // 2. Posko patroli terpadu
+        // 3. Kondisi Cuaca
+        $kegiatanPatroli = KegiatanPatroli::with([
+            // Patroli Darat
+            'patroliDarat.kondisiVegetasi.vegetasi',
+            'patroliDarat.kondisiVegetasi.kategoriKondisiVegetasi',
+            'patroliDarat.kondisiVegetasi.kondisiKarhutla',
+            'patroliDarat.kondisiVegetasi.potensiKarhutla',
+            
+            'patroliDarat.kondisiTanah.tanah',
+            'patroliDarat.kondisiTanah.kondisiKarhutla',
+            'patroliDarat.kondisiTanah.potensiKarhutla',
+            
+            'patroliDarat.kondisiSumberAir.sumberAir',
+            'patroliDarat.desaKelurahan.kecamatan.kotakab.daops.provinsi',
+
+            'patroliDarat.kadarAirBahanBakar',
+
+            // Patroli Udara
+            'patroliUdara.desaKelurahan.kecamatan.kotakab.daops.provinsi',
+        ])
+        ->where('tanggal_patroli', $tanggal)
+        ->get();
+
+        return response([
+            'data' => $kegiatanPatroli
+        ]);
+    }
+
     private function storeKegiatanPatroliRelation($data = array(), $kegiatanPatroli)
     {
         // Data general, baik patroli darat maupun patroli udara mesti create data ini
@@ -152,6 +204,8 @@ class PatroliController extends Controller
         $this->storeAktivitasHarianPatroli($data, $kegiatanPatroli->id);
         // Insert tabel dokumentasi
         $this->storeDokumentasiPatroli($data, $kegiatanPatroli->id);
+        // Insert tabel anggota_patroli
+        $this->storeAnggotaPatroli($data, $kegiatanPatroli->id);
 
         // Insert tabel patroli_darat
         if (!empty($data['patroli_darat'])) 
@@ -212,6 +266,7 @@ class PatroliController extends Controller
         $patroliDarat->ffmc_kkas_id         = $data['ffmc_kkas_id'];
         $patroliDarat->fwi_id               = $data['fwi_id'];
         $patroliDarat->dc_kk_id             = $data['dc_kk_id'];
+        $patroliDarat->kadar_air_bahan_bakar_id = $data['kadar_air_bahan_bakar_id'];
         $patroliDarat->aktivitas_masyarakat = $data['aktivitas_masyarakat'];
         $patroliDarat->keterangan_lokasi    = $data['keterangan_lokasi'];
         $patroliDarat->save();
@@ -276,6 +331,17 @@ class PatroliController extends Controller
             $aktivitasHarianPatroli->kegiatan_patroli_id = $kegiatanPatroliId;
             $aktivitasHarianPatroli->aktivitas_harian_id = $ahp['aktivitas_harian_id'];
             $aktivitasHarianPatroli->save();
+        }
+    }
+
+    private function storeAnggotaPatroli($data = array(), $kegiatanPatroliId = NULL)
+    {
+        foreach($data['anggota_patroli'] as $anggota_patroli)
+        {
+            $anggotaPatroli = new AnggotaPatroli;
+            $anggotaPatroli->anggota_id = $anggota_patroli['anggota_id'];
+            $anggotaPatroli->kegiatan_patroli_id = $kegiatanPatroliId;
+            $anggotaPatroli->save();
         }
     }
 
@@ -368,6 +434,10 @@ class PatroliController extends Controller
         // Delete hotspot
         $hotspot = Hotspot::where('kegiatan_patroli_id', '=', $kegiatanPatroliId);
         $hotspot->delete();
+
+        // Delete anggota_patroli
+        $anggotaPatroli = AnggotaPatroli::where('kegiatan_patroli_id', '=', $kegiatanPatroliId);
+        $anggotaPatroli->delete();
 
         // Delete dokumentasi
         $dokumentasi = Dokumentasi::where('kegiatan_patroli_id', '=', $kegiatanPatroliId);
