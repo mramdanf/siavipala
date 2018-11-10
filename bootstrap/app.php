@@ -25,7 +25,6 @@ $app = new Laravel\Lumen\Application(
 
 
 $app->withFacades();
-class_alias('tibonilab\Pdf\PdfFacade', 'PDF');
 
 
 $app->withEloquent();
@@ -95,7 +94,8 @@ $app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
 $app->register(Widnyana\LDRoutesList\CommandServiceProvider::class);
 
 // pdf
-$app->register('tibonilab\Pdf\PdfServiceProvider');
+$app->register(\Barryvdh\DomPDF\ServiceProvider::class);
+
 
 /*
 |--------------------------------------------------------------------------

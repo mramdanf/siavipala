@@ -17,6 +17,7 @@ use App\Dokumentasi;
 use App\Anggota;
 use App\AnggotaPatroli;
 use App\KategoriAnggota;
+use App\Daops;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -48,6 +49,7 @@ class PatroliController extends Controller
             'patroliDarat.fwi',
             'patroliDarat.ffmcKkas',
             'patroliDarat.dcKk',
+            'patroliDarat.pemadaman',
 
             // Patroli Udara
             'patroliUdara.desaKelurahan.kecamatan.kotakab.daops.provinsi',
@@ -188,9 +190,113 @@ class PatroliController extends Controller
         ->where('tanggal_patroli', $tanggal)
         ->get();
 
-        return response([
-            'data' => $kegiatanPatroli
-        ]);
+        
+    }
+
+    public function unduh_laporan_patroli_v2(Request $request)
+    {
+        $load = $request->input('load');
+
+        $tanggal = '2018-04-10';
+        // $tanggal = '2016-02-25';
+        $daopsId = 336;
+
+        // Detail Daops
+        $daops = Daops::with([
+            'provinsi'
+        ])
+        ->where('id', $daopsId)
+        ->first()
+        ->toArray();
+
+        // 1. Pelaksana
+        $kategoriAnggota = KategoriAnggota::with([
+            'anggota.anggotaPatroli.kegiatanPatroli.patroliDarat.desaKelurahan.kecamatan.kotaKab.daops',
+            'anggota.anggotaPatroli.kegiatanPatroli.patroliUdara.desaKelurahan.kecamatan.kotaKab.daops'
+        ])
+        ->whereHas('anggota.anggotaPatroli.kegiatanPatroli.patroliDarat.desaKelurahan.kecamatan.kotaKab.daops', function ($query) use ($tanggal, $daopsId) {
+            $query->where('kegiatan_patroli.tanggal_patroli', $tanggal);
+            $query->where('daops.id', $daopsId);
+        })
+        ->orWhereHas('anggota.anggotaPatroli.kegiatanPatroli.patroliUdara.desaKelurahan.kecamatan.kotaKab.daops', function ($query) use ($tanggal, $daopsId) {
+            $query->where('kegiatan_patroli.tanggal_patroli', $tanggal);
+            $query->where('daops.id', $daopsId);
+        })
+        ->get()
+        ->toArray();
+
+        foreach($kategoriAnggota as $key => $ka) 
+        {
+            $kategoriAnggota[$key]['count_anggota'] = count($ka['anggota']).' Orang';
+            unset($kategoriAnggota[$key]['anggota']);
+        }
+
+        // 2. Posko patroli terpadu
+        // 3. Kondisi Cuaca
+        // 4. Kegiatan Patroli
+        $kegiatanPatroli = KegiatanPatroli::with([
+            // Patroli Darat
+            'patroliDarat.kondisiVegetasi.vegetasi',
+            'patroliDarat.kondisiVegetasi.kategoriKondisiVegetasi',
+            'patroliDarat.kondisiVegetasi.kondisiKarhutla',
+            'patroliDarat.kondisiVegetasi.potensiKarhutla',
+            'patroliDarat.kondisiTanah.tanah',
+            'patroliDarat.kondisiTanah.kondisiKarhutla',
+            'patroliDarat.kondisiTanah.potensiKarhutla',
+            'patroliDarat.kondisiSumberAir.sumberAir',
+            'patroliDarat.desaKelurahan.kecamatan.kotakab.daops.provinsi',
+            'patroliDarat.kadarAirBahanBakar',
+            'patroliDarat.cuacaPagi',
+            'patroliDarat.cuacaSiang',
+            'patroliDarat.cuacaSore',
+
+            // Patroli Udara
+            'patroliUdara.desaKelurahan.kecamatan.kotakab.daops.provinsi',
+        ])
+        ->where('tanggal_patroli', $tanggal)
+        ->whereHas('patroliDarat.desaKelurahan.kecamatan.kotaKab.daops', function ($query) use ($tanggal, $daopsId) {
+            $query->where('daops.id', $daopsId);
+        })
+        ->orWhereHas('patroliUdara.desaKelurahan.kecamatan.kotaKab.daops', function ($query) use ($tanggal, $daopsId) {
+            $query->where('daops.id', $daopsId);
+        })
+        ->first()
+        ->toArray();
+
+        $result = [
+            'tanggal' => $this->tglIndo($tanggal),
+            'daops' => $daops,
+            'kategoriAnggota' => $kategoriAnggota,
+            'kegiatanPatroli' => $kegiatanPatroli
+        ];
+
+        if ($load == 'pdf')
+            return app()->make('dompdf.wrapper')->loadView('LaporanPdf', $result)->stream();
+        else if ($load == 'json')
+            return response($result);
+        else
+            return view('LaporanPdf', $result);
+    }
+
+    private function tglIndo($tanggal)
+    {
+        $bulan = array (
+            1 =>   'Januari',
+            'Februari',
+            'Maret',
+            'April',
+            'Mei',
+            'Juni',
+            'Juli',
+            'Agustus',
+            'September',
+            'Oktober',
+            'November',
+            'Desember'
+        );
+        $bulan_segs = explode('-', $tanggal);
+
+        return $bulan_segs[2] . ' '. $bulan[ (int)$bulan_segs[1] ] . ' ' . $bulan_segs[0];
     }
 
     private function storeKegiatanPatroliRelation($data = array(), $kegiatanPatroli)

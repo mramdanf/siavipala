@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
 
-use PDF;
+use App\AnggotaPatroli;
 
 class ExampleController extends Controller
 {
@@ -21,11 +21,14 @@ class ExampleController extends Controller
 
     public function test()
     {
-        $html = '<html><body>'
-			. '<p>Put your html here, or generate it with your favourite '
-			. 'templating system.</p>'
-            . '</body></html>';
-            
-        return PDF::load($html, 'A4', 'portrait')->show();
+        $anggotaPatroli = AnggotaPatroli::with([
+            'anggota.kategoriAnggota'
+        ])
+        ->where('kegiatan_patroli_id', 43)
+        ->get();
+
+        return response([
+            'data' => $anggotaPatroli
+        ]);
     }
 }
