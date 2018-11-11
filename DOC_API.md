@@ -364,7 +364,11 @@
           {
             "longitude": 110.1355278,
             "latitude": -1.992222222,
-            "luas_terbakar": 1.5
+            "luas_terbakar": 1.5,
+            "luas_dipadamkan": 1,
+            "hasil_pemadaman": "Berhasil dipadamkan",
+            "tipe_kebakaran_id": 1,
+            "pemilik_lahan_id": 3
           }
         ]
       },

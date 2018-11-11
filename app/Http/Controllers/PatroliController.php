@@ -524,6 +524,10 @@ class PatroliController extends Controller
             $pemadaman->longitude = $pem['longitude'];
             $pemadaman->latitude = $pem['latitude'];
             $pemadaman->luas_terbakar = $pem['luas_terbakar'];
+            $pemadaman->luas_dipadamkan = $pem['luas_dipadamkan'];
+            $pemadaman->hasil_pemadaman = $pem['hasil_pemadaman'];
+            $pemadaman->tipe_kebakaran_id = $pem['tipe_kebakaran_id'];
+            $pemadaman->pemilik_lahan_id = $pem['pemilik_lahan_id'];
             $pemadaman->save();
         }
     }
