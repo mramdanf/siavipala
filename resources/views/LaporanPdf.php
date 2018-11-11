@@ -238,7 +238,7 @@
             </tr>
             <tr>
               <td>Tipe Kebakaran</td>
-              <td></td>
+              <td><?=$pemadaman['tipe_kebakaran']['nama']?></td>
             </tr>
             <tr>
               <td>Vegetasi</td>
@@ -294,7 +294,7 @@
             </tr>
             <tr>
               <td>Pemilik Lahan</td>
-              <td></td>
+              <td><?=$pemadaman['pemilik_lahan']['nama']?></td>
             </tr>
             <tr>
               <td>Hasil Pemadaman</td>
