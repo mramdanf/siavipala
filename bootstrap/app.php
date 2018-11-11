@@ -23,7 +23,9 @@ $app = new Laravel\Lumen\Application(
     realpath(__DIR__.'/../')
 );
 
+
 $app->withFacades();
+
 
 $app->withEloquent();
 
@@ -90,6 +92,10 @@ $app->register(Zeek\LumenDingoAdapter\Providers\LumenDingoAdapterServiceProvider
 // Lumen Generator disabled it on production if you want
 $app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
 $app->register(Widnyana\LDRoutesList\CommandServiceProvider::class);
+
+// pdf
+$app->register(\Barryvdh\DomPDF\ServiceProvider::class);
+
 
 /*
 |--------------------------------------------------------------------------

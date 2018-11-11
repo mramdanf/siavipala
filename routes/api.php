@@ -15,6 +15,8 @@
 // $app->get('/test', 'ReadCsvController@test');
 // $app->get('/migrasi2', 'ReadCsvController@migrasi_tb_lokasi_patroli');
 $app->get('/test', 'ExampleController@test');
+// Unduh laporan patroli
+$app->get('/patroli/unduh-laporan', 'PatroliController@unduh_laporan_patroli_v2');
 
 $api = $app->make(Dingo\Api\Routing\Router::class);
 
@@ -55,6 +57,11 @@ $api->version('v1', function ($api) {
         $api->get('/posko/list', 'PoskoController@list');
         // List Desa Kelurahan
         $api->get('/desakelurahan/list', 'DesaKelurahanController@list');
+        // List Tipe Kebakaran
+        $api->get('/tipe-kebakaran/list', 'TipeKebakaranController@list');
+        // List Pemilik Lahan
+        $api->get('/pemilik-lahan/list', 'PemilikLahanController@list');
+        
     });
 
     // Auth Group
@@ -143,9 +150,6 @@ $api->version('v1', function ($api) {
         $api->post('/desakelurahan/update', 'DesaKelurahanController@update');
         // Delete desa kelurahan
         $api->post('/desakelurahan/delete', 'DesaKelurahanController@remove');
-
-        // Unduh laporan patroli
-        $api->get('/patroli/unduh-laporan', 'PatroliController@unduh_laporan_patroli');
         
     });
     

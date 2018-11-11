@@ -4,9 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class KondisiKarhutla extends Model
+class TipeKebakaran extends Model
 {
-    protected $table = 'kondisi_karhutla';
+    protected $table = 'tipe_kebakaran';
     protected $hidden = ['created_at', 'updated_at'];
-    
 }

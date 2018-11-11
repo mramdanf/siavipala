@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
 
+use App\AnggotaPatroli;
+
 class ExampleController extends Controller
 {
     /**
@@ -19,6 +21,14 @@ class ExampleController extends Controller
 
     public function test()
     {
-        dd(base_path('public'));
+        $anggotaPatroli = AnggotaPatroli::with([
+            'anggota.kategoriAnggota'
+        ])
+        ->where('kegiatan_patroli_id', 43)
+        ->get();
+
+        return response([
+            'data' => $anggotaPatroli
+        ]);
     }
 }
