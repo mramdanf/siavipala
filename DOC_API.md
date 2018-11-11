@@ -8,7 +8,8 @@
 - [Kategori Artifisial Param](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-artifisial-param)
 - [Sumber Air](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#sumber-air)
 - [Aktivitas Harian](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#aktivitas-harian)
-- [Tipe Kebakaran](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#aktivitas-harian)
+- [Tipe Kebakaran](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#tipe-kebakaran)
+- [Pemilik Lahan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#pemilik-lahan)
 - Patroli
   - [List Kegiatan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-kegiatan-patroli)
   - [Kategori Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-patroli)
@@ -821,6 +822,50 @@
         {
             "id": 2,
             "nama": "Atas"
+        }
+      ]
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+**Pemilik Lahan**
+----
+
+* **URL**
+
+  `{{host}}/api/pemilik-lahan/list`
+
+* **Method**
+
+  `GET`
+
+* **Headers**
+
+  * `none`
+
+* **Data Param**
+
+  `none`
+
+* **Success Response**
+
+  ```
+    {
+      "data": [
+        {
+          "id": 1,
+          "nama": "ramdan"
+        },
+        {
+          "id": 2,
+          "nama": "dhani"
+        },
+        {
+          "id": 3,
+          "nama": "deny"
         }
       ]
     }

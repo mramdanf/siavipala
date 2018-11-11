@@ -59,6 +59,8 @@ $api->version('v1', function ($api) {
         $api->get('/desakelurahan/list', 'DesaKelurahanController@list');
         // List Tipe Kebakaran
         $api->get('/tipe-kebakaran/list', 'TipeKebakaranController@list');
+        // List Pemilik Lahan
+        $api->get('/pemilik-lahan/list', 'PemilikLahanController@list');
         
     });
 
