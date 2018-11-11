@@ -234,7 +234,7 @@
             </tr>
             <tr>
               <td>Luas Dipadamkan</td>
-              <td></td>
+              <td><?=$pemadaman['luas_dipadamkan']?> Ha</td>
             </tr>
             <tr>
               <td>Tipe Kebakaran</td>
@@ -298,7 +298,7 @@
             </tr>
             <tr>
               <td>Hasil Pemadaman</td>
-              <td></td>
+              <td><?=$pemadaman['hasil_pemadaman']?></td>
             </tr>
           </table>
         <?php endforeach ?>

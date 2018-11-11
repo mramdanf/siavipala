@@ -8,6 +8,7 @@
 - [Kategori Artifisial Param](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-artifisial-param)
 - [Sumber Air](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#sumber-air)
 - [Aktivitas Harian](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#aktivitas-harian)
+- [Tipe Kebakaran](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#aktivitas-harian)
 - Patroli
   - [List Kegiatan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-kegiatan-patroli)
   - [Kategori Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-patroli)
@@ -779,6 +780,47 @@
         {
           "id": 6,
           "nama": "Giat maghrib"
+        }
+      ]
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**Tipe Kebakaran**
+----
+
+* **URL**
+
+  `{{host}}/api/tipe-kebakaran/list`
+
+* **Method**
+
+  `GET`
+
+* **Headers**
+
+  * `none`
+
+* **Data Param**
+
+  `none`
+
+* **Success Response**
+
+  ```
+    {
+      "data": [
+        {
+            "id": 1,
+            "nama": "Bawah"
+        },
+        {
+            "id": 2,
+            "nama": "Atas"
         }
       ]
     }

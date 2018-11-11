@@ -57,6 +57,8 @@ $api->version('v1', function ($api) {
         $api->get('/posko/list', 'PoskoController@list');
         // List Desa Kelurahan
         $api->get('/desakelurahan/list', 'DesaKelurahanController@list');
+        // List Tipe Kebakaran
+        $api->get('/tipe-kebakaran/list', 'TipeKebakaranController@list');
         
     });
 
