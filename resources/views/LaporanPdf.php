@@ -203,56 +203,109 @@
 
   <div id="pemadaman">
     <h3>4. Pemadaman</h3>
-    <table class="table-padding table-bordered">
-      <tr>
-        <td>No</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Koordinat</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Wilayah</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Luas Terbakar</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Luas Dipadamkan</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Tipe Kebakaran</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Vegetasi</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Jenis Tanah</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Kedalaman Gambut</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Sumber Air</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Pemilik Lahan</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Hasil Pemadaman</td>
-        <td></td>
-      </tr>
-    </table>
+    <?php foreach($kegiatanPatroli['patroli_darat'] as $pd): ?>
+      <?php if (!empty($pd['pemadaman'])): ?>
+        <?php foreach($pd['pemadaman'] as $key => $pemadaman): ?>
+          <table class="table-padding table-bordered">
+            <tr>
+              <td>No</td>
+              <td><?=++$key?></td>
+            </tr>
+            <tr>
+              <td>Koordinat</td>
+              <td>
+                Lat: <?=$pemadaman['latitude']?>
+                Long: <?=$pemadaman['longitude']?>
+              </td>
+            </tr>
+            <tr>
+              <td>Wilayah</td>
+              <td>
+                Ds. <?=ucwords($pd['desa_kelurahan']['nama'])?>
+                Kec. <?=ucwords($pd['desa_kelurahan']['kecamatan']['nama'])?>
+                Kab. <?=ucwords($pd['desa_kelurahan']['kecamatan']['kotakab']['nama'])?>
+              </td>
+            </tr>
+            <tr>
+              <td>Luas Terbakar</td>
+              <td>
+                <?=$pemadaman['luas_terbakar']?> Ha
+              </td>
+            </tr>
+            <tr>
+              <td>Luas Dipadamkan</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Tipe Kebakaran</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Vegetasi</td>
+              <td>
+              <?php
+                $vegs = [];
+                foreach($pd['kondisi_vegetasi'] as $kv) {
+                  array_push($vegs, ucwords($kv['vegetasi']['nama']));
+                }
+                $vegs = implode(',', $vegs);
+                echo $vegs;
+              ?>
+              </td>
+            </tr>
+            <tr>
+              <td>Jenis Tanah</td>
+              <td>
+              <?php
+                $soils = [];
+                $gambutDeeps = [];
+                foreach($pd['kondisi_tanah'] as $kt) {
+                  array_push($soils, ucwords($kt['tanah']['nama']));
+                  array_push($gambutDeeps, $kt['kedalaman_gambut']);
+                }
+                $soils = implode(',', $soils);
+                echo $soils;
+              ?>
+              </td>
+            </tr>
+            <tr>
+              <td>Kedalaman Gambut</td>
+              <td>
+                <?php
+                  $gambutDeeps = implode(',', $gambutDeeps);
+                  echo $gambutDeeps;
+                ?>
+              </td>
+            </tr>
+            <tr>
+              <td>Sumber Air</td>
+              <td>
+                <?php
+                  $waterSources = [];
+                  $waterDeeps = [];
+                  foreach($pd['kondisi_sumber_air'] as $ksa) {
+                    array_push($waterSources, ucwords($ksa['sumber_air']['name']));
+                    array_push($waterDeeps, $ksa['kedalaman']);
+                  }
+                  $waterSources = implode(',', $waterSources);
+                  echo $waterSources;
+                ?>
+              </td>
+            </tr>
+            <tr>
+              <td>Pemilik Lahan</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Hasil Pemadaman</td>
+              <td></td>
+            </tr>
+          </table>
+        <?php endforeach ?>
+      <?php else: ?>
+        <p>-</p>
+      <?php endif ?>
+    <?php endforeach ?>
   </div>
 </body>
 </html>
