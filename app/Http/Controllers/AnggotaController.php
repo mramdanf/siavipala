@@ -7,17 +7,12 @@ use App\Anggota;
 
 class AnggotaController extends Controller
 {
-    public function list()
-    {
-        return response([
-            'data' => 'App\Anggota'::all()
-        ]);
-    }
-
     public function store(Request $request)
     {
         $this->validate($request, [
-            'kategori_anggota_id' => 'required'
+            'kategori_anggota_id' => 'required',
+            'nama' => 'required',
+            'no_telepon' => 'required'
         ]);
 
         $data = $request->all();
@@ -29,10 +24,22 @@ class AnggotaController extends Controller
         $anggota->no_telepon = $data['no_telepon'];
         $anggota->save();
 
+        $insertedAnggota = Anggota::where('id', $anggota->id)->first()->toArray();
+
         return response([
-            'message' => 'Create anggota patroli sukses.'
+            'message' => 'Create anggota patroli sukses.',
+            'anggotaBaru' => $insertedAnggota
         ]);
     }
+
+    public function list()
+    {
+        return response([
+            'data' => 'App\Anggota'::all()
+        ]);
+    }
+
+    
 
     public function update(Request $request)
     {

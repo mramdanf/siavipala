@@ -54,13 +54,17 @@ class CacheDataHotspotSipongi extends Command
         $hostspotSipongi->save();
 
         // Insert ke tabel sebaran_hotspot
-        foreach($res['data']['hotspot'] as $hotspot) 
+        if (!empty($res['data']['hotspot']))
         {
-            $sebaranHotspot = new SebaranHotspot;
-            $sebaranHotspot->hotspot_sipongi_id = $hostspotSipongi->id;
-            $sebaranHotspot->latitude = $hotspot[0];
-            $sebaranHotspot->longitude = $hotspot[1];
-            $sebaranHotspot->save();
+            foreach($res['data']['hotspot'] as $hotspot) 
+            {
+                $sebaranHotspot = new SebaranHotspot;
+                $sebaranHotspot->hotspot_sipongi_id = $hostspotSipongi->id;
+                $sebaranHotspot->latitude = $hotspot[0];
+                $sebaranHotspot->longitude = $hotspot[1];
+                $sebaranHotspot->save();
+            }
         }
+        
     }
 }
