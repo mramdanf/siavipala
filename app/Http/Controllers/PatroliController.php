@@ -332,27 +332,7 @@ class PatroliController extends Controller
     {
         $patroliUdara = new PatroliUdara;
         $patroliUdara->kegiatan_patroli_id  = $kegiatanPatroliId;
-        $patroliUdara->desa_kelurahan_id    = $data['desa_kelurahan_id'];
-        $patroliUdara->cuaca_pagi_id        = $data['cuaca_pagi_id'];
-        $patroliUdara->cuaca_siang_id       = $data['cuaca_siang_id'];
-        $patroliUdara->cuaca_sore_id        = $data['cuaca_sore_id'];
-        $patroliUdara->curah_hujan_id       = $data['curah_hujan_id'];
-        $patroliUdara->curah_hujan_id       = $data['curah_hujan_id'];
-        $patroliUdara->suhu                 = $data['suhu'];
-        $patroliUdara->kelembaban           = $data['kelembaban'];
-        $patroliUdara->kecepatan_angin      = $data['kecepatan_angin'];
-        $patroliUdara->ffmc_kkas_id         = $data['ffmc_kkas_id'];
-        $patroliUdara->fwi_id               = $data['fwi_id'];
-        $patroliUdara->dc_kk_id             = $data['dc_kk_id'];
-
-        $patroliUdara->latitude = $data['latitude'];
-        $patroliUdara->longitude = $data['longitude'];
-        $patroliUdara->confidence = $data['confidence'];
-        $patroliUdara->distance = $data['distance'];
-        $patroliUdara->radial = $data['radial'];
-        $patroliUdara->kegiatan = $data['kegiatan'];
-        $patroliUdara->keterangan = $data['keterangan'];
-
+        foreach($data as $key => $dataVal) { if (!is_array($dataVal)) $patroliUdara->{$key} = $dataVal; }
         $patroliUdara->save();
     }
 
@@ -360,21 +340,7 @@ class PatroliController extends Controller
     {
         $patroliDarat = new PatroliDarat;
         $patroliDarat->kegiatan_patroli_id  = $kegiatanPatroliId;
-        $patroliDarat->desa_kelurahan_id    = $data['desa_kelurahan_id'];
-        $patroliDarat->cuaca_pagi_id        = $data['cuaca_pagi_id'];
-        $patroliDarat->cuaca_siang_id       = $data['cuaca_siang_id'];
-        $patroliDarat->cuaca_sore_id        = $data['cuaca_sore_id'];
-        $patroliDarat->curah_hujan_id       = $data['curah_hujan_id'];
-        $patroliDarat->curah_hujan_id       = $data['curah_hujan_id'];
-        $patroliDarat->suhu                 = $data['suhu'];
-        $patroliDarat->kelembaban           = $data['kelembaban'];
-        $patroliDarat->kecepatan_angin      = $data['kecepatan_angin'];
-        $patroliDarat->ffmc_kkas_id         = $data['ffmc_kkas_id'];
-        $patroliDarat->fwi_id               = $data['fwi_id'];
-        $patroliDarat->dc_kk_id             = $data['dc_kk_id'];
-        $patroliDarat->kadar_air_bahan_bakar_id = $data['kadar_air_bahan_bakar_id'];
-        $patroliDarat->aktivitas_masyarakat = $data['aktivitas_masyarakat'];
-        $patroliDarat->keterangan_lokasi    = $data['keterangan_lokasi'];
+        foreach ($data as $key => $dataVal) {  if (!is_array($dataVal)) $patroliDarat->{$key} = $dataVal; }
         $patroliDarat->save();
 
         // Insert ke tabel hasil_uji
@@ -475,13 +441,7 @@ class PatroliController extends Controller
             {
                 $kondisiVegetasi = new KondisiVegetasi;
                 $kondisiVegetasi->patroli_darat_id = $patroliDaratId;
-                $kondisiVegetasi->vegetasi_id      = $kv['vegetasi_id'];
-                $kondisiVegetasi->kategori_kondisi_vegetasi_id = $kv['kategori_kondisi_vegetasi_id'];
-                $kondisiVegetasi->potensi_karhutla_id = $kv['potensi_karhutla_id'];
-                $kondisiVegetasi->kondisi_karhutla_id = $kv['kondisi_karhutla_id'];
-                $kondisiVegetasi->luas_tanah = $kv['luas_tanah'];
-                $kondisiVegetasi->longitude = $this->nullify($kv['longitude']);
-                $kondisiVegetasi->latitude = $this->nullify($kv['latitude']);
+                foreach ($kv as $key => $kvValue) { $kondisiVegetasi->{$key} = $kvValue; }
                 $kondisiVegetasi->save();
             }
         }
@@ -510,12 +470,7 @@ class PatroliController extends Controller
             {
                 $kondisiSumberAir = new KondisiSumberAir;
                 $kondisiSumberAir->patroli_darat_id = $patroliDaratId;
-                $kondisiSumberAir->sumber_air_id = $ksa['sumber_air_id'];
-                $kondisiSumberAir->longitude = $this->nullify($ksa['longitude']);
-                $kondisiSumberAir->latitude = $this->nullify($ksa['latitude']);
-                $kondisiSumberAir->panjang = $ksa['panjang'];
-                $kondisiSumberAir->lebar = $ksa['lebar'];
-                $kondisiSumberAir->kedalaman = $ksa['kedalaman'];
+                foreach($ksa as $key => $ksaVal) { $kondisiSumberAir->{$key} = $ksaVal; }
                 $kondisiSumberAir->save();
             }
         }
@@ -529,13 +484,7 @@ class PatroliController extends Controller
             {
                 $kondisiTanah = new KondisiTanah;
                 $kondisiTanah->patroli_darat_id = $patroliDaratId;
-                $kondisiTanah->tanah_id = $kt['tanah_id'];
-                $kondisiTanah->potensi_karhutla_id = $kt['potensi_karhutla_id'];
-                $kondisiTanah->kondisi_karhutla_id = $kt['kondisi_karhutla_id'];
-                $kondisiTanah->longitude = $this->nullify($kt['longitude']);
-                $kondisiTanah->latitude  = $this->nullify($kt['latitude']);
-                $kondisiTanah->kedalaman_gambut = $kt['kedalaman_gambut'];
-                $kondisiTanah->luas = $kt['luas'];
+                foreach($kt as $key => $ktVal) { $kondisiTanah->{$key} = $ktVal; }
                 $kondisiTanah->save();
             }
         }
@@ -549,13 +498,7 @@ class PatroliController extends Controller
             {
                 $pemadaman = new Pemadaman;
                 $pemadaman->patroli_darat_id = $patroliDaratId;
-                $pemadaman->longitude = $pem['longitude'];
-                $pemadaman->latitude = $pem['latitude'];
-                $pemadaman->luas_terbakar = $pem['luas_terbakar'];
-                $pemadaman->luas_dipadamkan = $pem['luas_dipadamkan'];
-                $pemadaman->hasil_pemadaman = $pem['hasil_pemadaman'];
-                $pemadaman->tipe_kebakaran_id = $pem['tipe_kebakaran_id'];
-                $pemadaman->pemilik_lahan_id = $pem['pemilik_lahan_id'];
+                foreach($pem as $key => $pemVal) { $pemadaman->{$key} = $pemVal; }
                 $pemadaman->save();
             }
         }
@@ -627,10 +570,5 @@ class PatroliController extends Controller
         {
             $patroliUdara->delete();
         }
-    }
-
-    private function nullify($data)
-    {
-        return (!empty($data) && isset($data) && $data != NULL && $data != '') ? $data : NULL;
     }
 }
