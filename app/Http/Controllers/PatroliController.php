@@ -326,8 +326,6 @@ class PatroliController extends Controller
         {
             $this->storePatroliUdara($data['patroli_udara'], $kegiatanPatroli->id);
         }
-
-        
     }
 
     private function storePatroliUdara($data = array(), $kegiatanPatroliId = NULL)
@@ -393,143 +391,175 @@ class PatroliController extends Controller
 
     private function storeInventoriPatroli($data = array(), $kegiatanPatroliId = NULL)
     {
-        foreach($data['inventori_patroli'] as $ip)
+        if (!empty($data['inventori_patroli']))
         {
-            $inventoriPatroli = new InventoriPatroli;
-            $inventoriPatroli->kegiatan_patroli_id = $kegiatanPatroliId;
-            $inventoriPatroli->inventori_id        = $ip['inventori_id'];
-            $inventoriPatroli->save();
+            foreach($data['inventori_patroli'] as $ip)
+            {
+                $inventoriPatroli = new InventoriPatroli;
+                $inventoriPatroli->kegiatan_patroli_id = $kegiatanPatroliId;
+                $inventoriPatroli->inventori_id        = $ip['inventori_id'];
+                $inventoriPatroli->save();
+            }
         }
     }
 
     private function storeDokumentasiPatroli($data = array(), $kegiatanPatroliId = NULL)
     {
-        foreach($data['images'] as $img)
+        if (!empty($data['images']))
         {
-            $pngUrl = "dok-".$kegiatanPatroliId."-".time().".png";
-            $path   = base_path('public').'/img/'.$pngUrl;
+            foreach($data['images'] as $img)
+            {
+                $pngUrl = "dok-".$kegiatanPatroliId."-".time().".png";
+                $path   = base_path('public').'/img/'.$pngUrl;
 
-            Image::make($img)->save($path);
+                Image::make($img)->save($path);
 
-            $dokumentasi = new Dokumentasi;
-            $dokumentasi->kegiatan_patroli_id = $kegiatanPatroliId;
-            $dokumentasi->url_file = $pngUrl;
-            $dokumentasi->tipe_file = 'images/png';
-            $dokumentasi->save();
+                $dokumentasi = new Dokumentasi;
+                $dokumentasi->kegiatan_patroli_id = $kegiatanPatroliId;
+                $dokumentasi->url_file = $pngUrl;
+                $dokumentasi->tipe_file = 'images/png';
+                $dokumentasi->save();
+            }
         }
     }
 
     private function storeHotspot($data = array(), $kegiatanPatroliId = NULL)
     {
-        foreach($data['hotspot'] as $hs)
+        if (!empty($data['hotspot']))
         {
-            $hotspot = new Hotspot;
-            $hotspot->kegiatan_patroli_id = $kegiatanPatroliId;
-            $hotspot->satelit_id          = $hs['satelit_id'];
-            $hotspot->deskripsi           = $hs['deskripsi'];
-            $hotspot->save();
+            foreach($data['hotspot'] as $hs)
+            {
+                $hotspot = new Hotspot;
+                $hotspot->kegiatan_patroli_id = $kegiatanPatroliId;
+                $hotspot->satelit_id          = $hs['satelit_id'];
+                $hotspot->deskripsi           = $hs['deskripsi'];
+                $hotspot->save();
+            }
         }
     }
 
     private function storeAktivitasHarianPatroli($data = array(), $kegiatanPatroliId = NULL)
     {
-        foreach($data['aktivitas_harian_patroli'] as $ahp)
+        if (!empty($data['aktivitas_harian_patroli']))
         {
-            $aktivitasHarianPatroli = new AktivitasHarianPatroli;
-            $aktivitasHarianPatroli->kegiatan_patroli_id = $kegiatanPatroliId;
-            $aktivitasHarianPatroli->aktivitas_harian_id = $ahp['aktivitas_harian_id'];
-            $aktivitasHarianPatroli->save();
+            foreach($data['aktivitas_harian_patroli'] as $ahp)
+            {
+                $aktivitasHarianPatroli = new AktivitasHarianPatroli;
+                $aktivitasHarianPatroli->kegiatan_patroli_id = $kegiatanPatroliId;
+                $aktivitasHarianPatroli->aktivitas_harian_id = $ahp['aktivitas_harian_id'];
+                $aktivitasHarianPatroli->save();
+            }
         }
+        
     }
 
     private function storeAnggotaPatroli($data = array(), $kegiatanPatroliId = NULL)
     {
-        foreach($data['anggota_patroli'] as $anggota_patroli)
+        if (!empty($data['anggota_patroli']))
         {
-            $anggotaPatroli = new AnggotaPatroli;
-            $anggotaPatroli->anggota_id = $anggota_patroli['anggota_id'];
-            $anggotaPatroli->kegiatan_patroli_id = $kegiatanPatroliId;
-            $anggotaPatroli->save();
+            foreach($data['anggota_patroli'] as $anggota_patroli)
+            {
+                $anggotaPatroli = new AnggotaPatroli;
+                $anggotaPatroli->anggota_id = $anggota_patroli['anggota_id'];
+                $anggotaPatroli->kegiatan_patroli_id = $kegiatanPatroliId;
+                $anggotaPatroli->save();
+            }
         }
     }
 
     private function storeKondisiVegetasi($data = array(), $patroliDaratId = NULL)
     {
-        foreach($data['kondisi_vegetasi'] as $kv)
+        if (!empty($data['kondisi_vegetasi']))
         {
-            $kondisiVegetasi = new KondisiVegetasi;
-            $kondisiVegetasi->patroli_darat_id = $patroliDaratId;
-            $kondisiVegetasi->vegetasi_id      = $kv['vegetasi_id'];
-            $kondisiVegetasi->kategori_kondisi_vegetasi_id = $kv['kategori_kondisi_vegetasi_id'];
-            $kondisiVegetasi->potensi_karhutla_id = $kv['potensi_karhutla_id'];
-            $kondisiVegetasi->kondisi_karhutla_id = $kv['kondisi_karhutla_id'];
-            $kondisiVegetasi->luas_tanah = $kv['luas_tanah'];
-            $kondisiVegetasi->longitude = $kv['longitude'];
-            $kondisiVegetasi->latitude = $kv['latitude'];
-            $kondisiVegetasi->save();
+            foreach($data['kondisi_vegetasi'] as $kv)
+            {
+                $kondisiVegetasi = new KondisiVegetasi;
+                $kondisiVegetasi->patroli_darat_id = $patroliDaratId;
+                $kondisiVegetasi->vegetasi_id      = $kv['vegetasi_id'];
+                $kondisiVegetasi->kategori_kondisi_vegetasi_id = $kv['kategori_kondisi_vegetasi_id'];
+                $kondisiVegetasi->potensi_karhutla_id = $kv['potensi_karhutla_id'];
+                $kondisiVegetasi->kondisi_karhutla_id = $kv['kondisi_karhutla_id'];
+                $kondisiVegetasi->luas_tanah = $kv['luas_tanah'];
+                $kondisiVegetasi->longitude = $this->nullify($kv['longitude']);
+                $kondisiVegetasi->latitude = $this->nullify($kv['latitude']);
+                $kondisiVegetasi->save();
+            }
         }
     }
 
     private function storeHasilUji($data = array(), $patroliDaratId = NULL)
     {
-        foreach($data['hasil_uji'] as $hu)
+        if (!empty($data['hasil_uji']))   
         {
-            $hasilUji = new HasilUji;
-            $hasilUji->patroli_darat_id = $patroliDaratId;
-            $hasilUji->nama_pengujian = $hu['nama_pengujian'];
-            $hasilUji->hasil = $hu['hasil'];
-            $hasilUji->save();
+            foreach($data['hasil_uji'] as $hu)
+            {
+                $hasilUji = new HasilUji;
+                $hasilUji->patroli_darat_id = $patroliDaratId;
+                $hasilUji->nama_pengujian = $hu['nama_pengujian'];
+                $hasilUji->hasil = $hu['hasil'];
+                $hasilUji->save();
+            }
         }
     }
 
     private function storeKondisiSumberAir($data = array(), $patroliDaratId = NULL)
     {
-        foreach($data['kondisi_sumber_air'] as $ksa)
+        if (!empty($data['kondisi_sumber_air']))
         {
-            $kondisiSumberAir = new KondisiSumberAir;
-            $kondisiSumberAir->patroli_darat_id = $patroliDaratId;
-            $kondisiSumberAir->sumber_air_id = $ksa['sumber_air_id'];
-            $kondisiSumberAir->longitude = $ksa['longitude'];
-            $kondisiSumberAir->latitude = $ksa['latitude'];
-            $kondisiSumberAir->panjang = $ksa['panjang'];
-            $kondisiSumberAir->lebar = $ksa['lebar'];
-            $kondisiSumberAir->kedalaman = $ksa['kedalaman'];
-            $kondisiSumberAir->save();
+            foreach($data['kondisi_sumber_air'] as $ksa)
+            {
+                $kondisiSumberAir = new KondisiSumberAir;
+                $kondisiSumberAir->patroli_darat_id = $patroliDaratId;
+                $kondisiSumberAir->sumber_air_id = $ksa['sumber_air_id'];
+                $kondisiSumberAir->longitude = $this->nullify($ksa['longitude']);
+                $kondisiSumberAir->latitude = $this->nullify($ksa['latitude']);
+                $kondisiSumberAir->panjang = $ksa['panjang'];
+                $kondisiSumberAir->lebar = $ksa['lebar'];
+                $kondisiSumberAir->kedalaman = $ksa['kedalaman'];
+                $kondisiSumberAir->save();
+            }
         }
     }
 
     private function storeKondisiTanah($data = array(), $patroliDaratId = NULL)
     {
-        foreach($data['kondisi_tanah'] as $kt)
+        if (!empty($data['kondisi_tanah']))
         {
-            $kondisiTanah = new KondisiTanah;
-            $kondisiTanah->patroli_darat_id = $patroliDaratId;
-            $kondisiTanah->tanah_id = $kt['tanah_id'];
-            $kondisiTanah->potensi_karhutla_id = $kt['potensi_karhutla_id'];
-            $kondisiTanah->kondisi_karhutla_id = $kt['kondisi_karhutla_id'];
-            $kondisiTanah->longitude = $kt['longitude'];
-            $kondisiTanah->latitude = $kt['latitude'];
-            $kondisiTanah->kedalaman_gambut = $kt['kedalaman_gambut'];
-            $kondisiTanah->luas = $kt['luas'];
-            $kondisiTanah->save();
+            foreach($data['kondisi_tanah'] as $kt)
+            {
+                $kondisiTanah = new KondisiTanah;
+                $kondisiTanah->patroli_darat_id = $patroliDaratId;
+                $kondisiTanah->tanah_id = $kt['tanah_id'];
+                $kondisiTanah->potensi_karhutla_id = $kt['potensi_karhutla_id'];
+                $kondisiTanah->kondisi_karhutla_id = $kt['kondisi_karhutla_id'];
+                $kondisiTanah->longitude = $this->nullify($kt['longitude']);
+                $kondisiTanah->latitude  = $this->nullify($kt['latitude']);
+                $kondisiTanah->kedalaman_gambut = $kt['kedalaman_gambut'];
+                $kondisiTanah->luas = $kt['luas'];
+                $kondisiTanah->save();
+            }
         }
     }
 
     private function storePemadaman($data = array(), $patroliDaratId = NULL)
     {
-        foreach($data['pemadaman'] as $pem)
+        if (!empty($data['pemadaman']))
         {
-            $pemadaman = new Pemadaman;
-            $pemadaman->patroli_darat_id = $patroliDaratId;
-            $pemadaman->longitude = $pem['longitude'];
-            $pemadaman->latitude = $pem['latitude'];
-            $pemadaman->luas_terbakar = $pem['luas_terbakar'];
-            $pemadaman->luas_dipadamkan = $pem['luas_dipadamkan'];
-            $pemadaman->hasil_pemadaman = $pem['hasil_pemadaman'];
-            $pemadaman->tipe_kebakaran_id = $pem['tipe_kebakaran_id'];
-            $pemadaman->pemilik_lahan_id = $pem['pemilik_lahan_id'];
-            $pemadaman->save();
+            foreach($data['pemadaman'] as $pem)
+            {
+                $pemadaman = new Pemadaman;
+                $pemadaman->patroli_darat_id = $patroliDaratId;
+                $pemadaman->longitude = $pem['longitude'];
+                $pemadaman->latitude = $pem['latitude'];
+                $pemadaman->luas_terbakar = $pem['luas_terbakar'];
+                $pemadaman->luas_dipadamkan = $pem['luas_dipadamkan'];
+                $pemadaman->hasil_pemadaman = $pem['hasil_pemadaman'];
+                $pemadaman->tipe_kebakaran_id = $pem['tipe_kebakaran_id'];
+                $pemadaman->pemilik_lahan_id = $pem['pemilik_lahan_id'];
+                $pemadaman->save();
+            }
         }
+        
     }
 
     private function deleteKegiatanPatroliRelation($kegiatanPatroliId)
@@ -597,5 +627,10 @@ class PatroliController extends Controller
         {
             $patroliUdara->delete();
         }
+    }
+
+    private function nullify($data)
+    {
+        return (!empty($data) && isset($data) && $data != NULL && $data != '') ? $data : NULL;
     }
 }
