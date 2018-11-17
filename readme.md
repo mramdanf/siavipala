@@ -11,6 +11,7 @@
 - Clone repo ini
 - Run `composer install`
 - Run `php artisan key:generate`
+- Download file `jwt.php` [here](https://github.com/ahmadarif/lumen-jwt/blob/master/config/jwt.php) than place inside config folder
 - Run `php artisan jwt:generate`
 - Configure your `.env` file for authenticating via database
 - Set the `API_PREFIX` parameter in your .env file (usually `api`).
