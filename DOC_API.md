@@ -317,6 +317,8 @@
       "suhu": 10.10,
       "kelembaban": 11.10,
       "kecepatan_angin": 12.10,
+      "latitude": -1.999756,
+      "longitude": 23.56543,
       "ffmc_kkas_id": 1,
       "fwi_id": 1,
       "dc_kk_id": 1,
