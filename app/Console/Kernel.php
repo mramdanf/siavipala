@@ -25,7 +25,8 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('CacheDataHotspotSipongi:cachehotspot')
-                    ->dailyAt('16:00');
+                     ->dailyAt('13:00');
+                     //->everyMinute();
     }
 
     /**
