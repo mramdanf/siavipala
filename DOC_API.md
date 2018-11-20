@@ -10,6 +10,7 @@
 - [Aktivitas Harian](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#aktivitas-harian)
 - [Tipe Kebakaran](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#tipe-kebakaran)
 - [Pemilik Lahan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#pemilik-lahan)
+- [Inventori Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#inventori-patroli)
 - Patroli
   - [List Kegiatan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-kegiatan-patroli)
   - [Kategori Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-patroli)
@@ -873,6 +874,54 @@
           "id": 3,
           "nama": "deny"
         }
+      ]
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+**Inventori Patorli**
+----
+
+* **URL**
+
+  `{{host}}/api/inventori-patroli/list`
+
+* **Method**
+
+  `GET`
+
+* **Headers**
+
+  * `Authroization: Bearer {{ Token }}`
+
+* **Data Param**
+
+  `none`
+
+* **Success Response**
+
+  ```
+    {
+      "data": [
+          {
+              "id": 2,
+              "nama": "Mobil Triton"
+          },
+          {
+              "id": 3,
+              "nama": "Motor KLX"
+          },
+          {
+              "id": 4,
+              "nama": "Motor Viar"
+          },
+          {
+              "id": 5,
+              "nama": "Mesin Max"
+          }
       ]
     }
   ```

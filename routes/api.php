@@ -79,6 +79,9 @@ $api->version('v1', function ($api) {
         'namespace' => 'App\Http\Controllers',
         'middleware' => 'api.auth'
     ], function ($api) {
+
+        $api->get('/inventori-patroli/list', 'InventoriController@list');
+
         // Create laporan patroli
         $api->post('/patroli/create', 'PatroliController@create');
         // Update laporan patroli
