@@ -92,4 +92,14 @@ class PatroliDarat extends Model
     {
         return $this->belongsTo('App\KadarAirBahanBakar');
     }
+
+    public function potensiKarhutla()
+    {
+        return $this->belongsTo('App\PotensiKarhutla');
+    }
+
+    public function kondisiKarhutla()
+    {
+        return $this->belongsTo('App\KondisiKarhutla');
+    }
 }
