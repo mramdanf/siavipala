@@ -19,6 +19,7 @@
 - [Kategori Kondisi Vegetasi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-kategori-kondisi-vegetasi)
 - [Kategori Potensi Karhutla](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-potensi-karhutla)
 - [Kategori Kondisi Karhutla](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-kondisi-karhutla)
+- [Keterangan Lokasi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#keterangan-lokasi)
 - Patroli
   - [List Kegiatan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-kegiatan-patroli)
   - [Kategori Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-patroli)
@@ -1267,6 +1268,46 @@
         {
             "id": 2,
             "nama": "bekas karhutla"
+        }
+      ]
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+**Keterangan Lokasi**
+----
+
+* **URL**
+
+  `{{host}}/api/keterangan-lokasi/list`
+
+* **Method**
+
+  `GET`
+
+* **Headers**
+
+  * `Authroization: Bearer {{ Token }}`
+
+* **Data Param**
+
+  `none`
+
+* **Success Response**
+
+  ```
+    {
+      "data": [
+        {
+            "id": 1,
+            "nama": "Lokasi konsentrasi penduduk"
+        },
+        {
+            "id": 2,
+            "nama": "akses yg bisa digunakan hanya jalan setapak"
         }
       ]
     }
