@@ -966,6 +966,62 @@
     <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
 </div>
 
+**List Vegetasi**
+----
+
+* **URL**
+
+  `{{host}}/api/vegetasi/list`
+
+* **Method**
+
+  `GET`
+
+* **Headers**
+
+  * `Authroization: Bearer {{ Token }}`
+
+* **Data Param**
+
+  `none`
+
+* **Success Response**
+
+  ```
+    {
+      "data": [
+          {
+              "id": 1,
+              "nama": "ilalang"
+          },
+          {
+              "id": 2,
+              "nama": "palawija"
+          },
+          {
+              "id": 3,
+              "nama": "semak belukar"
+          },
+          {
+              "id": 4,
+              "nama": "pakis"
+          },
+          {
+              "id": 5,
+              "nama": "galam"
+          },
+          {
+              "id": 6,
+              "nama": "sempuk"
+          }
+      ]
+  }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
 **Kategori Anggota**
 ---
 
