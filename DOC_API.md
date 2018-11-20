@@ -15,6 +15,7 @@
 - [List Vegetasi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-vegetasi)
 - [List Satelit](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-satelit)
 - [List Tipe Kebakaran](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-tipe-kebakaran)
+- [List Pemilik Lahan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-pemilik-lahan)
 - Patroli
   - [List Kegiatan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-kegiatan-patroli)
   - [Kategori Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-patroli)
@@ -1097,6 +1098,50 @@
           {
               "id": 2,
               "nama": "Atas"
+          }
+      ]
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+**List Pemilik Lahan**
+----
+
+* **URL**
+
+  `{{host}}/api/pemilik-lahan/list`
+
+* **Method**
+
+  `GET`
+
+* **Headers**
+
+  * `Authroization: Bearer {{ Token }}`
+
+* **Data Param**
+
+  `none`
+
+* **Success Response**
+
+  ```
+    {
+      "data": [
+          {
+              "id": 1,
+              "nama": "ramdan"
+          },
+          {
+              "id": 2,
+              "nama": "dhani"
+          },
+          {
+              "id": 3,
+              "nama": "deny"
           }
       ]
     }
