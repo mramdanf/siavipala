@@ -11,6 +11,9 @@
 - [Tipe Kebakaran](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#tipe-kebakaran)
 - [Pemilik Lahan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#pemilik-lahan)
 - [Inventori Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#inventori-patroli)
+- [List Tanah](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-tanah)
+- [List Vegetasi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-vegetasi)
+- [List Satelit](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-satelit)
 - Patroli
   - [List Kegiatan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-kegiatan-patroli)
   - [Kategori Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-patroli)
@@ -1016,6 +1019,46 @@
           }
       ]
   }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+**List Satelit**
+----
+
+* **URL**
+
+  `{{host}}/api/satelit/list`
+
+* **Method**
+
+  `GET`
+
+* **Headers**
+
+  * `Authroization: Bearer {{ Token }}`
+
+* **Data Param**
+
+  `none`
+
+* **Success Response**
+
+  ```
+    {
+      "data": [
+          {
+              "id": 1,
+              "nama": "noa 18"
+          },
+          {
+              "id": 2,
+              "nama": "terra/aqua"
+          }
+      ]
+    }
   ```
 
 <div align="right">

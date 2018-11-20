@@ -88,6 +88,8 @@ $api->version('v1', function ($api) {
 
         $api->get('/hotspot/list', 'HotspotController@list');
 
+        $api->get('/satelit/list', 'SatelitController@list');
+
         // Create laporan patroli
         $api->post('/patroli/create', 'PatroliController@create');
         // Update laporan patroli
