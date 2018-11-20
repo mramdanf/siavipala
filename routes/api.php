@@ -81,6 +81,10 @@ $api->version('v1', function ($api) {
     ], function ($api) {
 
         $api->get('/inventori-patroli/list', 'InventoriController@list');
+        
+        $api->get('/tanah/list', 'TanahController@list');
+
+        $api->get('/vegetasi/list', 'VegetasiController@list');
 
         // Create laporan patroli
         $api->post('/patroli/create', 'PatroliController@create');
