@@ -16,6 +16,7 @@
 - [List Satelit](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-satelit)
 - [List Tipe Kebakaran](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-tipe-kebakaran)
 - [List Pemilik Lahan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-pemilik-lahan)
+- [List Kategori Kondisi Vegetasi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-kategori-kondisi-vegetasi)
 - Patroli
   - [List Kegiatan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-kegiatan-patroli)
   - [Kategori Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-patroli)
