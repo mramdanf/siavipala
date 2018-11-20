@@ -86,6 +86,8 @@ $api->version('v1', function ($api) {
 
         $api->get('/vegetasi/list', 'VegetasiController@list');
 
+        $api->get('/hotspot/list', 'HotspotController@list');
+
         // Create laporan patroli
         $api->post('/patroli/create', 'PatroliController@create');
         // Update laporan patroli
