@@ -1151,6 +1151,46 @@
     <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
 </div>
 
+**List Kategori Kondisi Vegetasi**
+----
+
+* **URL**
+
+  `{{host}}/api/kategori-kondisi-vegetasi/list`
+
+* **Method**
+
+  `GET`
+
+* **Headers**
+
+  * `Authroization: Bearer {{ Token }}`
+
+* **Data Param**
+
+  `none`
+
+* **Success Response**
+
+  ```
+    {
+      "data": [
+          {
+              "id": 1,
+              "nama": "kering"
+          },
+          {
+              "id": 2,
+              "nama": "basah"
+          }
+      ]
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
 **Kategori Anggota**
 ---
 

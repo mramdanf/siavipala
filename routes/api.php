@@ -80,15 +80,18 @@ $api->version('v1', function ($api) {
         'middleware' => 'api.auth'
     ], function ($api) {
 
+        // List invengori patroli
         $api->get('/inventori-patroli/list', 'InventoriController@list');
-        
+        // List jenis tanah
         $api->get('/tanah/list', 'TanahController@list');
-
+        // List jenis vegetasi
         $api->get('/vegetasi/list', 'VegetasiController@list');
-
+        // list hotspot
         $api->get('/hotspot/list', 'HotspotController@list');
-
+        // List nama satelit
         $api->get('/satelit/list', 'SatelitController@list');
+        // List kategori kondisi vegetasi
+        $api->get('/kategori-kondisi-vegetasi/list', 'KategoriKondisiVegetasiController@list');
 
         // Create laporan patroli
         $api->post('/patroli/create', 'PatroliController@create');
