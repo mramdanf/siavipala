@@ -323,6 +323,8 @@
       "cuaca_siang_id": 1,
       "cuaca_sore_id": 1,
       "curah_hujan_id": 1,
+      "potensi_karhutla_id": 1,
+      "kondisi_karhutla_id": 1,
       "suhu": 10.10,
       "kelembaban": 11.10,
       "kecepatan_angin": 12.10,
@@ -353,8 +355,6 @@
           {
             "vegetasi_id": 1,
             "kategori_kondisi_vegetasi_id": 1,
-            "potensi_karhutla_id": 1,
-            "kondisi_karhutla_id": 1,
             "luas_tanah": 3,
             "longitude": 110.1355278,
             "latitude": -1.992222222
@@ -363,8 +363,6 @@
         "kondisi_tanah": [
           {
             "tanah_id": 1,
-            "potensi_karhutla_id": 1,
-            "kondisi_karhutla_id": 1,
             "longitude": 110.1355278,
             "latitude": -1.992222222,
             "kedalaman_gambut": 1.5,
