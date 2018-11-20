@@ -1199,7 +1199,7 @@
 
 * **URL**
 
-  `{{host}}/api/kategori-potensi-karhutla/list`
+  `{{host}}/api/potensi-karhutla/list`
 
 * **Method**
 
@@ -1243,7 +1243,7 @@
 
 * **URL**
 
-  `{{host}}/api/kategori-kondisi-karhutla/list`
+  `{{host}}/api/kondisi-karhutla/list`
 
 * **Method**
 
