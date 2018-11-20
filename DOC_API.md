@@ -19,6 +19,7 @@
 - [Kategori Kondisi Vegetasi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-kategori-kondisi-vegetasi)
 - [Kategori Potensi Karhutla](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-potensi-karhutla)
 - [Kategori Kondisi Karhutla](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-kondisi-karhutla)
+- [Keterangan Lokasi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#keterangan-lokasi)
 - Patroli
   - [List Kegiatan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-kegiatan-patroli)
   - [Kategori Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-patroli)
@@ -325,16 +326,16 @@
       "curah_hujan_id": 1,
       "potensi_karhutla_id": 1,
       "kondisi_karhutla_id": 1,
+      "ffmc_kkas_id": 1,
+      "fwi_id": 1,
+      "dc_kk_id": 1,
+      "keterangan_lokasi_id": 1,
       "suhu": 10.10,
       "kelembaban": 11.10,
       "kecepatan_angin": 12.10,
       "latitude": -1.999756,
       "longitude": 23.56543,
-      "ffmc_kkas_id": 1,
-      "fwi_id": 1,
-      "dc_kk_id": 1,
       "aktivitas_masyarakat": "membersihkan lahan dan bercocok tanam",
-      "keterangan_lokasi": "akses yg bisa digunakan hanya jalan setapak",
       "hasil_uji": [
         {
           "nama_pengujian": "Uji Remas Daun",
@@ -1267,6 +1268,46 @@
         {
             "id": 2,
             "nama": "bekas karhutla"
+        }
+      ]
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+**Keterangan Lokasi**
+----
+
+* **URL**
+
+  `{{host}}/api/keterangan-lokasi/list`
+
+* **Method**
+
+  `GET`
+
+* **Headers**
+
+  * `Authroization: Bearer {{ Token }}`
+
+* **Data Param**
+
+  `none`
+
+* **Success Response**
+
+  ```
+    {
+      "data": [
+        {
+            "id": 1,
+            "nama": "Lokasi konsentrasi penduduk"
+        },
+        {
+            "id": 2,
+            "nama": "akses yg bisa digunakan hanya jalan setapak"
         }
       ]
     }

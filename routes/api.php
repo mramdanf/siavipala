@@ -96,6 +96,8 @@ $api->version('v1', function ($api) {
         $api->get('/potensi-karhutla/list', 'PotensiKarhutlaController@list');
         // List kondisi karhutla
         $api->get('/kondisi-karhutla/list', 'KondisiKarhutlaController@list');
+        // List keterangan lokasi
+        $api->get('/keterangan-lokasi/list', 'KeteranganLokasiController@list');
 
         // Create laporan patroli
         $api->post('/patroli/create', 'PatroliController@create');
