@@ -11,12 +11,13 @@
 - [Tipe Kebakaran](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#tipe-kebakaran)
 - [Pemilik Lahan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#pemilik-lahan)
 - [Inventori Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#inventori-patroli)
-- [List Tanah](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-tanah)
-- [List Vegetasi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-vegetasi)
-- [List Satelit](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-satelit)
-- [List Tipe Kebakaran](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-tipe-kebakaran)
-- [List Pemilik Lahan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-pemilik-lahan)
-- [List Kategori Kondisi Vegetasi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-kategori-kondisi-vegetasi)
+- [Tanah](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-tanah)
+- [Vegetasi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-vegetasi)
+- [Satelit](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-satelit)
+- [Tipe Kebakaran](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-tipe-kebakaran)
+- [Pemilik Lahan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-pemilik-lahan)
+- [Kategori Kondisi Vegetasi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-kategori-kondisi-vegetasi)
+- [Kategori Potensi Karhutla](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-potensi-karhutla)
 - Patroli
   - [List Kegiatan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-kegiatan-patroli)
   - [Kategori Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-patroli)
@@ -1183,6 +1184,50 @@
           {
               "id": 2,
               "nama": "basah"
+          }
+      ]
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+**Kategori Potensi Karhutla**
+----
+
+* **URL**
+
+  `{{host}}/api/kategori-potensi-karhutla/list`
+
+* **Method**
+
+  `GET`
+
+* **Headers**
+
+  * `Authroization: Bearer {{ Token }}`
+
+* **Data Param**
+
+  `none`
+
+* **Success Response**
+
+  ```
+    {
+      "data": [
+          {
+              "id": 1,
+              "nama": "rendah"
+          },
+          {
+              "id": 2,
+              "nama": "sedang"
+          },
+          {
+              "id": 3,
+              "nama": "tinggi"
           }
       ]
     }
