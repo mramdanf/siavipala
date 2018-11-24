@@ -12,6 +12,6 @@ class CurahHujan extends Model
 
     public function patroliDarat()
     {
-        return $this->hasMany('App\PatroliDarat');
+        return $this->hasMany('App\Models\PatroliDarat');
     }
 }

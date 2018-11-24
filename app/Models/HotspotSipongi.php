@@ -11,6 +11,6 @@ class HotspotSipongi extends Model
 
     public function sebaranHotspot()
     {
-        return $this->hasMany('App\SebaranHotspot');
+        return $this->hasMany('App\Models\SebaranHotspot');
     }
 }

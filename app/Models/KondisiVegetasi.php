@@ -10,21 +10,21 @@ class KondisiVegetasi extends Model
 
     public function vegetasi()
     {
-        return $this->belongsTo('App\Vegetasi');
+        return $this->belongsTo('App\Models\Vegetasi');
     }
 
     public function kategoriKondisiVegetasi()
     {
-        return $this->belongsTo('App\KategoriKondisiVegetasi');
+        return $this->belongsTo('App\Models\KategoriKondisiVegetasi');
     }
 
     public function potensiKarhutla()
     {
-        return $this->belongsTo('App\PotensiKarhutla');
+        return $this->belongsTo('App\Models\PotensiKarhutla');
     }
 
     public function kondisiKarhutla()
     {
-        return $this->belongsTo('App\KondisiKarhutla');
+        return $this->belongsTo('App\Models\KondisiKarhutla');
     }
 }

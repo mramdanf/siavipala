@@ -11,6 +11,6 @@ class Dokumentasi extends Model
 
     public function kegiatanPatroli()
     {
-        return $this->belongsTo('App\KegiatanPatroli');
+        return $this->belongsTo('App\Models\KegiatanPatroli');
     }
 }

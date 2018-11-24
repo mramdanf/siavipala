@@ -11,6 +11,6 @@ class Tanah extends Model
 
     public function kondisiTanah()
     {
-        return $this->hasMany('App\KondisiTanah');
+        return $this->hasMany('App\Models\KondisiTanah');
     }
 }

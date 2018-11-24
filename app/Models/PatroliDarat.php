@@ -25,86 +25,86 @@ class PatroliDarat extends Model
 
     public function desaKelurahan()
     {
-        return $this->belongsTo('App\DesaKelurahan');
+        return $this->belongsTo('App\Models\Models\DesaKelurahan');
     }
 
     public function kegiatanPatroli()
     {
-        return $this->belongsTo('App\KegiatanPatroli');
+        return $this->belongsTo('App\Models\Models\KegiatanPatroli');
     }
 
     public function pemadaman()
     {
-        return $this->hasMany('App\Pemadaman');
+        return $this->hasMany('App\Models\Models\Pemadaman');
     }
 
     public function kondisiVegetasi()
     {
-        return $this->hasMany('App\KondisiVegetasi');
+        return $this->hasMany('App\Models\Models\KondisiVegetasi');
     }
 
     public function kondisiSumberAir()
     {
-        return $this->hasMany('App\KondisiSumberAir');
+        return $this->hasMany('App\Models\Models\KondisiSumberAir');
     }
 
     public function kondisiTanah()
     {
-        return $this->hasMany('App\KondisiTanah');
+        return $this->hasMany('App\Models\Models\KondisiTanah');
     }
 
     public function curahHujan()
     {
-        return $this->belongsTo('App\CurahHujan');
+        return $this->belongsTo('App\Models\Models\CurahHujan');
     }
 
     public function cuacaPagi()
     {
-        return $this->belongsTo('App\Cuaca', 'cuaca_pagi_id', 'id');
+        return $this->belongsTo('App\Models\Models\Cuaca', 'cuaca_pagi_id', 'id');
     }
 
     public function cuacaSiang()
     {
-        return $this->belongsTo('App\Cuaca', 'cuaca_siang_id', 'id');
+        return $this->belongsTo('App\Models\Models\Cuaca', 'cuaca_siang_id', 'id');
     }
 
     public function cuacaSore()
     {
-        return $this->belongsTo('App\Cuaca', 'cuaca_sore_id', 'id');
+        return $this->belongsTo('App\Models\Models\Cuaca', 'cuaca_sore_id', 'id');
     }
 
     public function fwi()
     {
-        return $this->belongsTo('App\ArtifisialParam', 'fwi_id', 'id');
+        return $this->belongsTo('App\Models\Models\ArtifisialParam', 'fwi_id', 'id');
     }
 
     public function ffmcKkas()
     {
-        return $this->belongsTo('App\ArtifisialParam', 'ffmc_kkas_id', 'id');
+        return $this->belongsTo('App\Models\Models\ArtifisialParam', 'ffmc_kkas_id', 'id');
     }
 
     public function dcKk()
     {
-        return $this->belongsTo('App\ArtifisialParam', 'dc_kk_id', 'id');
+        return $this->belongsTo('App\Models\Models\ArtifisialParam', 'dc_kk_id', 'id');
     }
 
     public function kadarAirBahanBakar()
     {
-        return $this->belongsTo('App\KadarAirBahanBakar');
+        return $this->belongsTo('App\Models\Models\KadarAirBahanBakar');
     }
 
     public function potensiKarhutla()
     {
-        return $this->belongsTo('App\PotensiKarhutla');
+        return $this->belongsTo('App\Models\Models\PotensiKarhutla');
     }
 
     public function kondisiKarhutla()
     {
-        return $this->belongsTo('App\KondisiKarhutla');
+        return $this->belongsTo('App\Models\Models\KondisiKarhutla');
     }
 
     public function keteranganLokasi()
     {
-        return $this->belongsTo('App\KeteranganLokasi');
+        return $this->belongsTo('App\Models\Models\KeteranganLokasi');
     }
 }

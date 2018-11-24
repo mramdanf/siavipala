@@ -11,11 +11,11 @@ class DesaKelurahan extends Model
 
     public function kegiatanPatroli()
     {
-        return $this->hasMany('App\KegiatanPatroli');
+        return $this->hasMany('App\Models\KegiatanPatroli');
     }
 
     public function kecamatan()
     {
-        return $this->belongsTo('App\Kecamatan');
+        return $this->belongsTo('App\Models\Kecamatan');
     }
 }

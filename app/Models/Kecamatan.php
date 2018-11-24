@@ -11,16 +11,16 @@ class Kecamatan extends Model
 
     public function desaKelurahan()
     {
-        return $this->hasMany('App\DesaKelurahan');
+        return $this->hasMany('App\Models\DesaKelurahan');
     }
 
     public function kotaKab()
     {
-        return $this->belongsTo('App\KotaKab');
+        return $this->belongsTo('App\Models\KotaKab');
     }
 
     public function posko()
     {
-        return $this->hasMany('App\Posko');
+        return $this->hasMany('App\Models\Posko');
     }
 }

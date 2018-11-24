@@ -7,6 +7,9 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 
 use App\Models\Provinsi;
+use App\Models\KegiatanPatroli;
+use App\Models\Pemadaman;
+use App\Models\Daops;
 
 
 
@@ -88,14 +91,14 @@ class ProvinsiController extends Controller
                   ->where('tanggal_patroli', $today);
         };
         
-        $kegiatanPatroliDarat = 'App\KegiatanPatroli'::with([
+        $kegiatanPatroliDarat = KegiatanPatroli::with([
                                 'patroliDarat.desaKelurahan.kecamatan.kotaKab.daops.provinsi'
                             ])
                             ->whereHas('patroliDarat.desaKelurahan.kecamatan.kotaKab.daops.provinsi', $filterHarian)
                             ->get()
                             ->toArray();
 
-        $kegiatanPatroliUdara = 'App\KegiatanPatroli'::with([
+        $kegiatanPatroliUdara = KegiatanPatroli::with([
                                 'patroliUdara.desaKelurahan.kecamatan.kotaKab.daops.provinsi'
                             ])
                             ->whereHas('patroliUdara.desaKelurahan.kecamatan.kotaKab.daops.provinsi', $filterHarian)
@@ -106,7 +109,7 @@ class ProvinsiController extends Controller
         $kegiatanPatroliUdara = (count($kegiatanPatroliUdara)) ? count($kegiatanPatroliUdara[0]['patroli_udara']) : 0;
 
         // Jumlah kebakaran
-        $jmlKebakaran = 'App\Pemadaman'::with([
+        $jmlKebakaran = Pemadaman::with([
             'patroliDarat.desaKelurahan.kecamatan.kotaKab.daops.provinsi',
             'patroliDarat.kegiatanPatroli'
         ])
@@ -120,7 +123,7 @@ class ProvinsiController extends Controller
 
         //////////// Statistik Tahunan //////////////////
         // Jumlah kebakaran
-        $jmlKebakaranTahun = 'App\Pemadaman'::with([
+        $jmlKebakaranTahun = Pemadaman::with([
             'patroliDarat.desaKelurahan.kecamatan.kotaKab.daops.provinsi',
             'patroliDarat.kegiatanPatroli'
         ])
@@ -133,7 +136,7 @@ class ProvinsiController extends Controller
         ->count();
 
         // Jumlah daops
-        $jumlahDaops = 'App\Daops'::with([
+        $jumlahDaops = Daops::with([
             'provinsi'
         ])
         ->whereHas('provinsi', function ($query) use ($kode) {

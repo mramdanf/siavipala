@@ -11,6 +11,6 @@ class SebaranHotspot extends Model
 
     public function hostspotSipongi()
     {
-        return $this->belongsTo('App\HostspotSipongi');
+        return $this->belongsTo('App\Models\HostspotSipongi');
     }
 }

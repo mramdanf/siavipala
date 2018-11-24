@@ -11,6 +11,6 @@ class PotensiKarhutla extends Model
 
     public function kondisiVegetasi()
     {
-        return $this->hasMany('App\KondisiVegetasi');
+        return $this->hasMany('App\Models\KondisiVegetasi');
     }
 }

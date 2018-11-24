@@ -11,42 +11,42 @@ class KegiatanPatroli extends Model
 
     public function patroliDarat()
     {
-        return $this->hasMany('App\PatroliDarat');
+        return $this->hasMany('App\Models\PatroliDarat');
     }
 
     public function patroliUdara()
     {
-        return $this->hasMany('App\PatroliUdara');
+        return $this->hasMany('App\Models\PatroliUdara');
     }
 
     public function dokumentasi()
     {
-        return $this->hasMany('App\Dokumentasi');
+        return $this->hasMany('App\Models\Dokumentasi');
     }
 
     public function inventoriPatroli()
     {
-        return $this->hasMany('App\InventoriPatroli');
+        return $this->hasMany('App\Models\InventoriPatroli');
     }
 
     public function kategoriPatroli()
     {
-        return $this->belongsTo('App\KategoriPatroli');
+        return $this->belongsTo('App\Models\KategoriPatroli');
     }
 
     public function hotspot()
     {
-        return $this->hasMany('App\Hotspot');
+        return $this->hasMany('App\Models\Hotspot');
     }
 
     public function aktivitasHarianPatroli()
     {
-        return $this->hasMany('App\AktivitasHarianPatroli');
+        return $this->hasMany('App\Models\AktivitasHarianPatroli');
     }
 
     public function anggotaPatroli()
     {
-        return $this->hasMany('App\AnggotaPatroli');
+        return $this->hasMany('App\Models\AnggotaPatroli');
     }
     
 }

@@ -12,6 +12,6 @@ class SumberAir extends Model
 
     public function kondisiSumberAir()
     {
-        return $this->hasMany('App\KondisiSumberAir');
+        return $this->hasMany('App\Models\KondisiSumberAir');
     }
 }

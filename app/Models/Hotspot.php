@@ -11,6 +11,6 @@ class Hotspot extends Model
 
     public function satelit()
     {
-        return $this->belongsTo('App\Satelit');
+        return $this->belongsTo('App\Models\Satelit');
     }
 }

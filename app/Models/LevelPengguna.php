@@ -11,6 +11,6 @@ class LevelPengguna extends Model
 
     public function hakAkses()
     {
-        return $this->belongsTo('App\HakAkses');
+        return $this->belongsTo('App\Models\HakAkses');
     }
 }

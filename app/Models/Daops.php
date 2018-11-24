@@ -11,11 +11,11 @@ class Daops extends Model
 
     public function kotaKab()
     {
-        return $this->hasMany('App\KotaKab');
+        return $this->hasMany('App\Models\KotaKab');
     }
 
     public function provinsi()
     {
-        return $this->belongsTo('App\Provinsi');
+        return $this->belongsTo('App\Models\Provinsi');
     }
 }

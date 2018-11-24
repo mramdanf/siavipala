@@ -10,6 +10,6 @@ class KondisiSumberAir extends Model
 
     public function sumberAir()
     {
-        return $this->belongsTo('App\SumberAir');
+        return $this->belongsTo('App\Models\SumberAir');
     }
 }

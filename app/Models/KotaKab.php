@@ -11,11 +11,11 @@ class KotaKab extends Model
 
     public function kecamatan()
     {
-        return $this->hasMany('App\Kecamatan');
+        return $this->hasMany('App\Models\Kecamatan');
     }
 
     public function daops()
     {
-        return $this->belongsTo('App\Daops');
+        return $this->belongsTo('App\Models\Daops');
     }
 }

@@ -11,11 +11,11 @@ class AnggotaPatroli extends Model
 
     public function anggota()
     {
-        return $this->belongsTo('App\Anggota');
+        return $this->belongsTo('App\Models\Anggota');
     }
 
     public function kegiatanPatroli()
     {
-        return $this->belongsTo('App\KegiatanPatroli');
+        return $this->belongsTo('App\Models\KegiatanPatroli');
     }
 }

@@ -10,6 +10,6 @@ class InventoriPatroli extends Model
 
     public function inventori()
     {
-        return $this->belongsTo('App\Inventori');
+        return $this->belongsTo('App\Models\Inventori');
     }
 }

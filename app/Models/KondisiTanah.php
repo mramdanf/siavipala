@@ -10,16 +10,16 @@ class KondisiTanah extends Model
 
     public function tanah()
     {
-        return $this->belongsTo('App\Tanah');
+        return $this->belongsTo('App\Models\Tanah');
     }
 
     public function potensiKarhutla()
     {
-        return $this->belongsTo('App\PotensiKarhutla');
+        return $this->belongsTo('App\Models\PotensiKarhutla');
     }
 
     public function kondisiKarhutla()
     {
-        return $this->belongsTo('App\KondisiKarhutla');
+        return $this->belongsTo('App\Models\KondisiKarhutla');
     }
 }

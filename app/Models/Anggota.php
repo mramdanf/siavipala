@@ -12,11 +12,11 @@ class Anggota extends Model
 
     public function kategoriAnggota()
     {
-        return $this->belongsTo('App\KategoriAnggota');
+        return $this->belongsTo('App\Models\KategoriAnggota');
     }
 
     public function anggotaPatroli()
     {
-        return $this->hasMany('App\AnggotaPatroli');
+        return $this->hasMany('App\Models\AnggotaPatroli');
     }
 }

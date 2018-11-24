@@ -10,26 +10,26 @@ class PatroliUdara extends Model
 
     public function desaKelurahan()
     {
-        return $this->belongsTo('App\DesaKelurahan');
+        return $this->belongsTo('App\Models\DesaKelurahan');
     }
 
     public function kegiatanPatroli()
     {
-        return $this->belongsTo('App\KegiatanPatroli');
+        return $this->belongsTo('App\Models\KegiatanPatroli');
     }
 
     public function cuacaPagi()
     {
-        return $this->belongsTo('App\Cuaca', 'cuaca_pagi_id', 'id');
+        return $this->belongsTo('App\Models\Cuaca', 'cuaca_pagi_id', 'id');
     }
 
     public function cuacaSiang()
     {
-        return $this->belongsTo('App\Cuaca', 'cuaca_siang_id', 'id');
+        return $this->belongsTo('App\Models\Cuaca', 'cuaca_siang_id', 'id');
     }
 
     public function cuacaSore()
     {
-        return $this->belongsTo('App\Cuaca', 'cuaca_sore_id', 'id');
+        return $this->belongsTo('App\Models\Cuaca', 'cuaca_sore_id', 'id');
     }
 }

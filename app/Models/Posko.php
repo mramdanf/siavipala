@@ -11,11 +11,11 @@ class Posko extends Model
 
     public function kecamatan()
     {
-        return $this->belongsTo('App\Kecamatan');
+        return $this->belongsTo('App\Models\Kecamatan');
     }
 
     public function desaKelurahan()
     {
-        return $this->hasMany('App\DesaKelurahan');
+        return $this->hasMany('App\Models\DesaKelurahan');
     }
 }

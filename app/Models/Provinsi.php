@@ -11,6 +11,6 @@ class Provinsi extends Model
 
     public function daops()
     {
-        return $this->hasMany('App\Daops');
+        return $this->hasMany('App\Models\Daops');
     }
 }

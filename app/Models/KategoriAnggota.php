@@ -11,6 +11,6 @@ class KategoriAnggota extends Model
 
     public function anggota()
     {
-        return $this->hasMany('App\Anggota');
+        return $this->hasMany('App\Models\Anggota');
     }
 }

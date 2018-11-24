@@ -11,16 +11,16 @@ class Pemadaman extends Model
 
     public function patroliDarat()
     {
-        return $this->belongsTo('App\PatroliDarat');
+        return $this->belongsTo('App\Models\PatroliDarat');
     }
 
     public function tipeKebakaran()
     {
-        return $this->belongsTo('App\TipeKebakaran');
+        return $this->belongsTo('App\Models\TipeKebakaran');
     }
 
     public function pemilikLahan()
     {
-        return $this->belongsTo('App\PemilikLahan');
+        return $this->belongsTo('App\Models\PemilikLahan');
     }
 }
