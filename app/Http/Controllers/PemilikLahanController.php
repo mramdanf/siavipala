@@ -9,7 +9,7 @@ class PemilikLahanController extends Controller
     public function list ()
     {
         return response([
-            'data' => 'App\PemilikLahan'::all()
+            'data' => 'App\Models\PemilikLahan'::all()
         ]);
     }
 }

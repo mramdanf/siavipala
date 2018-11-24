@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Daops;
+use App\Models\Daops;
 
 class DaopsController extends Controller
 {

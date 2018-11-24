@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Role;
-use App\Pengguna;
+use App\Models\Role;
+use App\Models\Pengguna;
 
 class EntrustRoleController extends Controller
 {

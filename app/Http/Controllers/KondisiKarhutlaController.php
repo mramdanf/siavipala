@@ -9,7 +9,7 @@ class KondisiKarhutlaController extends Controller
     public function list()
     {
         return response([
-            'data' => 'App\KondisiKarhutla'::all()
+            'data' => 'App\Models\KondisiKarhutla'::all()
         ]);
     }
 }

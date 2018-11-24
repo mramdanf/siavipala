@@ -9,7 +9,7 @@ class InventoriController extends Controller
     public function list()
     {
         return response([
-            'data' => 'App\Inventori'::all()
+            'data' => 'App\Models\Inventori'::all()
         ]);
     }
 }

@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Pengguna;
-use App\LevelAkses;
-use App\HakAkses;
+use App\Models\Pengguna;
+use App\Models\LevelAkses;
+use App\Models\HakAkses;
 
 class PenggunaController extends Controller
 {

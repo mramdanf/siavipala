@@ -9,7 +9,7 @@ class SatelitController extends Controller
     public function list()
     {
         return response([
-            'data' => 'App\Satelit'::all()
+            'data' => 'App\Models\Satelit'::all()
         ]);
     }
 }

@@ -9,7 +9,7 @@ class ArtifisialParamController extends Controller
     public function list()
     {
         return response([
-            'data' => 'App\ArtifisialParam'::all()
+            'data' => 'App\Models\ArtifisialParam'::all()
         ]);
     }
 }

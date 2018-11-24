@@ -63,11 +63,11 @@ return [
     'providers' => [
         'jwt' => [
             'driver' => 'eloquent',
-            'model' => App\Pengguna::class,
+            'model' => App\Models\Pengguna::class,
         ],
         'users' => [
             'table' => 'pengguna',
-            'model' => App\Pengguna::class,
+            'model' => App\Models\Pengguna::class,
         ],
     ],
 

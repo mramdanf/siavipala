@@ -9,7 +9,7 @@ class VegetasiController extends Controller
     public function list()
     {
         return response([
-            'data' => 'App\Vegetasi'::all()
+            'data' => 'App\Models\Vegetasi'::all()
         ]);
     }
 }

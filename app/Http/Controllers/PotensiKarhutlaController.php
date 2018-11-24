@@ -9,7 +9,7 @@ class PotensiKarhutlaController extends Controller
     public function list()
     {
         return response([
-            'data' => 'App\PotensiKarhutla'::all()
+            'data' => 'App\Models\PotensiKarhutla'::all()
         ]);
     }
 }

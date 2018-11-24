@@ -9,7 +9,7 @@ class KeteranganLokasiController extends Controller
     public function list()
     {
         return response([
-            'data' => 'App\KeteranganLokasi'::all()
+            'data' => 'App\Models\KeteranganLokasi'::all()
         ]);
     }
 }

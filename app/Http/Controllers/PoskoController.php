@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Posko;
+use App\Models\Posko;
 
 class PoskoController extends Controller
 {

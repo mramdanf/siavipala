@@ -9,7 +9,7 @@ class AktivitasHarianController extends Controller
     public function list()
     {
         return response([
-            'data' => 'App\AktivitasHarian'::all()
+            'data' => 'App\Models\AktivitasHarian'::all()
         ]);
     }
 }

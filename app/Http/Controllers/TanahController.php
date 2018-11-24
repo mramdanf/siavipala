@@ -9,7 +9,7 @@ class TanahController extends Controller
     public function list()
     {
         return response([
-            'data' => 'App\Tanah'::all()
+            'data' => 'App\Models\Tanah'::all()
         ]);
     }
 }

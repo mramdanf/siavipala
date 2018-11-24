@@ -2,22 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\KegiatanPatroli;
-use App\PatroliDarat;
-use App\InventoriPatroli;
-use App\Hotspot;
-use App\AktivitasHarianPatroli;
-use App\KondisiVegetasi;
-use App\HasilUji;
-use App\KondisiSumberAir;
-use App\KondisiTanah;
-use App\Pemadaman;
-use App\PatroliUdara;
-use App\Dokumentasi;
-use App\Anggota;
-use App\AnggotaPatroli;
-use App\KategoriAnggota;
-use App\Daops;
+use App\Models\KegiatanPatroli;
+use App\Models\PatroliDarat;
+use App\Models\InventoriPatroli;
+use App\Models\Hotspot;
+use App\Models\AktivitasHarianPatroli;
+use App\Models\KondisiVegetasi;
+use App\Models\HasilUji;
+use App\Models\KondisiSumberAir;
+use App\Models\KondisiTanah;
+use App\Models\Pemadaman;
+use App\Models\PatroliUdara;
+use App\Models\Dokumentasi;
+use App\Models\Anggota;
+use App\Models\AnggotaPatroli;
+use App\Models\KategoriAnggota;
+use App\Models\Daops;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;

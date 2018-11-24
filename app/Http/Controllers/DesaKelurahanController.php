@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\DesaKelurahan;
+use App\Models\DesaKelurahan;
 
 class DesaKelurahanController extends Controller
 {

@@ -9,7 +9,7 @@ class HotspotController extends Controller
     public function list()
     {
         return response([
-            'data' => 'App\Hotspot'::all()
+            'data' => 'App\Models\Hotspot'::all()
         ]);
     }
 }

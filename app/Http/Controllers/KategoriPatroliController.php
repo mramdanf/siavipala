@@ -10,7 +10,7 @@ class KategoriPatroliController extends Controller
     public function list()
     {
         return response([
-            'data' => 'App\KategoriPatroli'::all()
+            'data' => 'App\Models\KategoriPatroli'::all()
         ]);
     }
 }

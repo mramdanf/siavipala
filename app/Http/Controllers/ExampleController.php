@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
 
-use App\AnggotaPatroli;
+use App\Models\AnggotaPatroli;
 
 class ExampleController extends Controller
 {

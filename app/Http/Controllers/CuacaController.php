@@ -9,7 +9,7 @@ class CuacaController extends Controller
     public function list()
     {
         return response([
-            'data' => 'App\Cuaca'::all()
+            'data' => 'App\Models\Cuaca'::all()
         ]);
     }
 }

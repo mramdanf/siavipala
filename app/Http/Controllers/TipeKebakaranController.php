@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\TipeKebakaran;
+use App\Models\TipeKebakaran;
 
 class TipeKebakaranController extends Controller
 {

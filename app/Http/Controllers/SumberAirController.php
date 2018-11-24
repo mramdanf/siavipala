@@ -9,7 +9,7 @@ class SumberAirController extends Controller
     public function list()
     {
         return response([
-            'data' => 'App\SumberAir'::all()
+            'data' => 'App\Models\SumberAir'::all()
         ]);
     }
 }
