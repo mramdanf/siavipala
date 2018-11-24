@@ -79,12 +79,13 @@ class ProvinsiController extends Controller
     {
         $kode = $request->input('kode_provinsi');
         $year = $request->input('tahun');
+        $today = date('Y-m-d');
 
         //////////// Statistik Harian //////////////////
         // Jumlah kegiatan patroli
-        $filterHarian = function ($query) use ($kode) {
+        $filterHarian = function ($query) use ($kode, $today) {
             $query->where('provinsi.id', $kode)
-                  ->where('tanggal_patroli', '2016-02-24');
+                  ->where('tanggal_patroli', $today);
         };
         
         $kegiatanPatroliDarat = 'App\KegiatanPatroli'::with([
@@ -112,8 +113,8 @@ class ProvinsiController extends Controller
         ->whereHas('patroliDarat.desaKelurahan.kecamatan.kotaKab.daops.provinsi', function ($query) use ($kode) {
             $query->where('provinsi.id', $kode);
         })
-        ->whereHas('patroliDarat.kegiatanPatroli', function ($query) {
-            $query->where('tanggal_patroli', '2016-02-24');
+        ->whereHas('patroliDarat.kegiatanPatroli', function ($query) use ($today) {
+            $query->where('tanggal_patroli', $today);
         })
         ->count();
 
