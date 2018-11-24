@@ -65,6 +65,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\Pengguna::class,
         ],
+        'users' => [
+            'table' => 'pengguna',
+            'model' => App\Pengguna::class,
+        ],
     ],
 
 ];

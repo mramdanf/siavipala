@@ -18,6 +18,16 @@ $app->get('/test', 'ExampleController@test');
 // Unduh laporan patroli
 $app->get('/patroli/unduh-laporan', 'PatroliController@unduh_laporan_patroli_v2');
 
+// Entrust role
+// Route to create a new role
+$app->post('role', 'EntrustRoleController@createRole');
+// Route to create a new permission
+$app->post('permission', 'EntrustRoleController@createPermission');
+// Route to assign role to user
+$app->post('assign-role', 'EntrustRoleController@assignRole');
+// Route to attache permission to a role
+$app->post('attach-permission', 'EntrustRoleController@attachPermission');
+
 $api = $app->make(Dingo\Api\Routing\Router::class);
 
 $api->version('v1', function ($api) {
@@ -27,7 +37,20 @@ $api->version('v1', function ($api) {
         'uses' => 'App\Http\Controllers\Auth\AuthController@postLogin'
     ]);
 
-    // Guest Group
+    // Administrator
+    $api->group([
+        'namespace' => 'App\Http\Controllers',
+        'middleware' => ['ability:administrator']
+    ], function ($api) {
+        // Create anggota
+        $api->post('/anggota/create', 'AnggotaController@store');
+        // Update anggota
+        $api->post('/anggota/update', 'AnggotaController@update');
+        // Delete anggota
+        $api->post('/anggota/delete', 'AnggotaController@remove');
+    });
+
+    // Guest
     $api->group([
         'namespace' => 'App\Http\Controllers'
     ], function ($api) {
@@ -74,7 +97,7 @@ $api->version('v1', function ($api) {
         $api->delete('/auth/invalidate', 'AuthController@deleteInvalidate');
     });
 
-    // Required Login Group
+    // Pengguna Terdaftar
     $api->group([
         'namespace' => 'App\Http\Controllers',
         'middleware' => 'api.auth'
@@ -113,12 +136,7 @@ $api->version('v1', function ($api) {
         $api->get('/kategori-anggota/list', 'KategoriAnggotaController@list');
         // List anggota
         $api->get('/anggota/list', 'AnggotaController@list');
-        // Create anggota
-        $api->post('/anggota/create', 'AnggotaController@store');
-        // Update anggota
-        $api->post('/anggota/update', 'AnggotaController@update');
-        // Delete anggota
-        $api->post('/anggota/delete', 'AnggotaController@remove');
+        
 
         // List pengguna
         $api->get('/pengguna/list', 'PenggunaController@list');

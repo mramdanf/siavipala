@@ -24,7 +24,9 @@ $app = new Laravel\Lumen\Application(
 );
 
 
-$app->withFacades();
+$app->withFacades(true, [
+    Zizaco\Entrust\EntrustFacade::class => 'Entrust',
+]);
 
 
 $app->withEloquent();
@@ -62,11 +64,12 @@ $app->singleton(
 */
 
 $app->middleware([
-    App\Http\Middleware\CORSMiddleware::class
+    App\Http\Middleware\CORSMiddleware::class,
+    App\Http\Middleware\JsonRequestMiddleware::class
 ]);
 
-$app->middleware([
-    App\Http\Middleware\JsonRequestMiddleware::class
+$app->routeMiddleware([
+    'ability' => App\Http\Middleware\TokenEntrustAbility::class
 ]);
 
 /*
@@ -95,6 +98,9 @@ $app->register(Widnyana\LDRoutesList\CommandServiceProvider::class);
 
 // pdf
 $app->register(\Barryvdh\DomPDF\ServiceProvider::class);
+
+// Register Service providers for Entrust
+$app->register(Zizaco\Entrust\EntrustServiceProvider::class);
 
 
 /*

@@ -8,12 +8,10 @@ class PenggunaTableSeeder extends Seeder
 {
 	public function run()
 	{
-		DB::table('pengguna')->insert([
-			'nama' => 'ramdan',
-			'email' => 'ramdan@gmail.com',
-			'password' => app('hash')->make('123'),
-			'no_telepon' => '081223445566',
-			'remember_token' => str_random(10)
+		DB::table('pengguna')
+		->where('id', 6)
+		->update([
+			'password' => app('hash')->make('123')
 		]);
 	}
 }
