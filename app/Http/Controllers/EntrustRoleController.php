@@ -89,7 +89,9 @@ class EntrustRoleController extends Controller
     public function listRoleUser(Request $request)
     {
         return response([
-            'pengguna' => Pengguna::with('roleUser.role')->get()
+            'pengguna' => Pengguna::with([
+                'roleUser.role.permissionRole.permission'
+            ])->get()
         ]);
     }
 }
