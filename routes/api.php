@@ -44,7 +44,14 @@ $api->version('v1', function ($api) {
         
         // =============== PROVINSI =============== //
         // Resume perprovinsi
-        $api->get('/provinsi/resume', 'ProvinsiController@resume');
+        $api->get('/provinsi/resume', [
+            'uses' => 'ProvinsiController@resume',
+            'middleware' => 'ability:administrator'
+        ]);
     });
+
+    
+
+    
     
 });
