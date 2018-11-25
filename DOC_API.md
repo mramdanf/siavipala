@@ -2,7 +2,6 @@
 
 ## Table of Contents
 - [Login](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#login)
-- [Resume Provinsi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#resume-provinsi)
 - [Kategori Curah Hujan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-curah-hujan)
 - [Kategori Cuaca](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-cuaca)
 - [Kategori Artifisial Param](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-artifisial-param)
@@ -38,6 +37,7 @@
   - [Delete Pengguna](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-pengguna)
   - [Update Pengguna](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-pengguna)
 - Provinsi
+  - [Resume Provinsi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#resume-provinsi)
   - [List Provinsi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-provinsi)
   - [Create Provinsi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-provinsi)
   - [Update Provinsi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-provinsi)
@@ -142,6 +142,45 @@
     <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
 </div>
 
+**Resume Provinsi**
+----
+
+* **URL**
+
+  `{{host}}/api/provinsi/resume`
+
+* **Method**
+
+  `GET`
+
+* **Data Params**
+
+  * `kode_provinsi (unsignedInteger) (required)`
+  * `tahun (unsignedInteger) (required)`
+
+* **Success Response**
+
+	```
+	{
+      "query": {
+          "tahun": "2016",
+          "kode_provinsi": "54"
+      },
+      "statistik_harian": {
+          "kegiatan_patroli": 4,
+          "kebakaran": 2
+      },
+      "statistik_tahunan": {
+          "kebakaran": 2,
+          "daops": 16
+      }
+    }
+	```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
 
 **List Provinsi**
 ----
@@ -178,46 +217,6 @@
 			...
 		]
 	}
-	```
-
-<div align="right">
-    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
-</div>
-
-
-**Resume Provinsi**
-----
-
-* **URL**
-
-  `{{host}}/api/provinsi/resume`
-
-* **Method**
-
-  `GET`
-
-* **Data Params**
-
-  * `kode_provinsi (unsignedInteger) (required)`
-  * `tahun (unsignedInteger) (required)`
-
-* **Success Response**
-
-	```
-	{
-      "query": {
-          "tahun": "2016",
-          "kode_provinsi": "54"
-      },
-      "statistik_harian": {
-          "kegiatan_patroli": 4,
-          "kebakaran": 2
-      },
-      "statistik_tahunan": {
-          "kebakaran": 2,
-          "daops": 16
-      }
-    }
 	```
 
 <div align="right">
