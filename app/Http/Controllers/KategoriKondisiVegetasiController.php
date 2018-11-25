@@ -9,7 +9,7 @@ class KategoriKondisiVegetasiController extends Controller
     public function list()
     {
         return response([
-            'data' => 'App\Moels\KategoriKondisiVegetasi'::all()
+            'data' => 'App\Models\KategoriKondisiVegetasi'::all()
         ]);
     }
 }

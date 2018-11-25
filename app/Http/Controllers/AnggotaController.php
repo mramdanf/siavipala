@@ -35,11 +35,9 @@ class AnggotaController extends Controller
     public function list()
     {
         return response([
-            'data' => 'App\Anggota'::all()
+            'data' => Anggota::all()
         ]);
     }
-
-    
 
     public function update(Request $request)
     {
