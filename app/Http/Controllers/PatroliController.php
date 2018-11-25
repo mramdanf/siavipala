@@ -26,9 +26,11 @@ use Log;
 
 class PatroliController extends Controller
 {
-    public function list()
+    public function list(Request $request)
     {
-        $patrolis = 'App\KegiatanPatroli'::with([
+        $data = $request->all();
+
+        $patrolis = KegiatanPatroli::with([
 
             // Patroli Darat
             'patroliDarat.kondisiVegetasi.vegetasi',
@@ -66,8 +68,12 @@ class PatroliController extends Controller
             'aktivitasHarianPatroli.aktivitasHarian',
             // Anggota Patroli
             'anggotaPatroli.anggota'
-            ])
-            ->get();
+            ]);
+
+        if (!empty($data['tanggal_patroli']))
+            $patrolis->where('tanggal_patroli', $data['tanggal_patroli']);
+
+        $patrolis = $patrolis->get();
 
         return response([
             'data' => $patrolis
