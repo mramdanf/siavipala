@@ -1665,7 +1665,7 @@
 </div>
 
 
-**Create Provinisi**
+**Create Provinsi**
 ---
 
 * **URL**

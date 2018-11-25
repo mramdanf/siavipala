@@ -6,10 +6,12 @@ use Illuminate\Http\Request;
 
 use App\Models\Role;
 use App\Models\Pengguna;
+use App\Models\Permission;
 
 class EntrustRoleController extends Controller
 {
-    public function createRole(Request $request){
+    public function createRole(Request $request)
+    {
 
         $data = $request->all();
 
@@ -24,24 +26,27 @@ class EntrustRoleController extends Controller
         ]);
     }
 
-    public function createPermission(Request $request){
+    public function createPermission(Request $request) 
+    {
         // Todo       
     }
 
     public function assignRole(Request $request) {
 
         $data = $request->all();
+
         $adminRole = Role::find($data['role_id'])->first();
         $pengguna  = Pengguna::find($data['pengguna_id'])->first();
 
         $pengguna->attachRole($adminRole);
 
         return response([
-            'data' => 'Success'
+            'data' => 'Assign role success'
         ]);
     }
 
-    public function attachPermission(Request $request){
+    public function attachPermission(Request $request)
+    {
         return response([
             'data' => 'yuhuuu'
         ]);

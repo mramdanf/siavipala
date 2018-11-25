@@ -18,7 +18,7 @@ class ProvinsiController extends Controller
     public function list()
     {
         return response([
-            'data' => 'App\Provinsi'::all()
+            'data' => Provinsi::all()
         ]);
     }
 
