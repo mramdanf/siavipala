@@ -27,6 +27,8 @@ $app->post('permission', 'EntrustRoleController@createPermission');
 $app->post('assign-role', 'EntrustRoleController@assignRole');
 // Route to attache permission to a role
 $app->post('attach-permission', 'EntrustRoleController@attachPermission');
+// List Role User
+$app->get('role-user', 'EntrustRoleController@listRoleUser');
 
 $api = $app->make(Dingo\Api\Routing\Router::class);
 

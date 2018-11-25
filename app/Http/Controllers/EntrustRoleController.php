@@ -28,10 +28,28 @@ class EntrustRoleController extends Controller
 
     public function createPermission(Request $request) 
     {
-        // Todo       
+        $this->validate($request, [
+            'name' => 'required',
+            'display_name' => 'required'
+        ]);
+
+        $data = $request->all();
+
+        $newPermisson = new Permission();
+        $newPermisson->name         = $data['name'];
+        $newPermisson->display_name = $data['display_name'];
+        $newPermisson->save();
+
+        $createdPermission = Permission::find($newPermisson->id)->first();
+
+        return response([
+            'message' => 'Create permisson success.',
+            'newPermission' => $createdPermission
+        ]);
     }
 
-    public function assignRole(Request $request) {
+    public function assignRole(Request $request) 
+    {
 
         $data = $request->all();
 
@@ -47,8 +65,31 @@ class EntrustRoleController extends Controller
 
     public function attachPermission(Request $request)
     {
+        $this->validate($request, [
+            'role_id' => 'required',
+            'permission_id' => 'required'
+        ]);
+
+        $data = $request->all();
+
+        $role = Role::find($data['role_id']);
+
+        $permission = Permission::find($data['permission_id']);
+
+        $role->attachPermission($permission);
+
+        $roleAttached = Role::with('permissions')->get();
+
         return response([
-            'data' => 'yuhuuu'
+            'message' => 'Attach permission success',
+            'role' => $roleAttached
+        ]);
+    }
+
+    public function listRoleUser(Request $request)
+    {
+        return response([
+            'pengguna' => Pengguna::with('roleUser.role')->get()
         ]);
     }
 }

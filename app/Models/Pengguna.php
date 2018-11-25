@@ -54,4 +54,9 @@ class Pengguna extends Model implements
     {
         return $this->hasMany('App\Models\LevelPengguna');
     }
+
+    public function roleUser()
+    {
+        return $this->hasMany('App\Models\RoleUser');
+    }
 }
