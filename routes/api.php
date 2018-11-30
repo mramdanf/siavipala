@@ -15,8 +15,7 @@
 // $app->get('/test', 'ReadCsvController@test');
 // $app->get('/migrasi2', 'ReadCsvController@migrasi_tb_lokasi_patroli');
 $app->get('/test', 'ExampleController@test');
-// Unduh laporan patroli
-$app->get('/patroli/unduh-laporan', 'PatroliController@unduh_laporan_patroli_v2');
+
 
 // Entrust role
 // Route to create a new role
@@ -118,6 +117,8 @@ $api->version('v1', function ($api) {
         $api->post('/patroli/update', 'PatroliController@update');
         // Delete laporan patroli
         $api->post('/patroli/delete', 'PatroliController@remove');
+        // Unduh laporan patroli
+        $api->get('/patroli/unduh-laporan', 'PatroliController@unduh_laporan_patroli_v2');
         
         // List aktivitas harian
         $api->get('/aktivitas-harian/list', 'AktivitasHarianController@list');
