@@ -19,7 +19,7 @@
 - [Kategori Potensi Karhutla](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-potensi-karhutla)
 - [Kategori Kondisi Karhutla](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-kondisi-karhutla)
 - [Keterangan Lokasi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#keterangan-lokasi)
-- [Hotspot Sipongi Date Range](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#hotspot-sipongi date-range)
+- [Hotspot Sipongi Date Range](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#hotspot-sipongi-date-range)
 - Patroli
   - [List Kegiatan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-kegiatan-patroli)
   - [Kategori Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-patroli)
