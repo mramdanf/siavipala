@@ -606,7 +606,7 @@
 
   `GET`
 
-* **GET Param **
+* **GET Param**
 
   - `tanggal: tanggal patroli`
   - `daops: id daops (336)`
