@@ -17,7 +17,7 @@ class TokenEntrustAbility extends BaseMiddleware
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next, $roles, $permissions = '', $validateAll = false)
+    public function handle($request, Closure $next, $permissions, $roles = '', $validateAll = false)
     {
 
         if (! $token = $this->auth->setRequest($request)->getToken()) {

@@ -94,4 +94,18 @@ class EntrustRoleController extends Controller
             ])->get()
         ]);
     }
+
+    public function listRole()
+    {
+        return response([
+            'roles' => Role::all()  
+        ]);
+    }
+
+    public function listPermission()
+    {
+        return response([
+            'permissions' => Permission::all()  
+        ]);
+    }
 }
