@@ -7,8 +7,8 @@ use Illuminate\Console\Command;
 use DB;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
-use App\HotspotSipongi;
-use App\SebaranHotspot;
+use App\Models\HotspotSipongi;
+use App\Models\SebaranHotspot;
 
 class CacheDataHotspotSipongi extends Command
 {
