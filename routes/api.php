@@ -100,6 +100,8 @@ $api->version('v1', function ($api) {
         $api->get('/kategori-anggota/list', 'KategoriAnggotaController@list');
         // List anggota
         $api->get('/anggota/list', 'AnggotaController@list');
+        // Hotspot sipongi by date range
+        $api->get('/hotspot-sipongi/date-range', 'SipongiHotspotController@hotspotByDateRange');
 
 
         // WITH PERMISSION OR WITH AUTH

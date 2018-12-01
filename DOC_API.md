@@ -19,6 +19,7 @@
 - [Kategori Potensi Karhutla](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-potensi-karhutla)
 - [Kategori Kondisi Karhutla](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-kondisi-karhutla)
 - [Keterangan Lokasi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#keterangan-lokasi)
+- [Hotspot Sipongi Date Range](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#hotspot-sipongi date-range)
 - Patroli
   - [List Kegiatan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-kegiatan-patroli)
   - [Kategori Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-patroli)
@@ -1339,6 +1340,70 @@
         {
             "id": 2,
             "nama": "akses yg bisa digunakan hanya jalan setapak"
+        }
+      ]
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**Hotspot Sipongi Date Range**
+----
+
+* **URL**
+
+  `{{host}}/api/hotspot-sipongi/date-range`
+
+* **Method**
+
+  `GET`
+
+* **Headers**
+
+  * `None`
+
+* **Data Param**
+
+  * `start_date (required): YYYY-MM-DD`
+  * `end_date (required): YYYY-MM-DD`
+
+* **Success Response**
+
+  ```
+    {
+      "hostspot_sipongi": [
+        {
+          "id": 19,
+          "tanggal": "2018-11-16",
+          "sebaran_hotspot_count": 52
+        },
+        {
+          "id": 20,
+          "tanggal": "2018-11-17",
+          "sebaran_hotspot_count": 23
+        },
+        {
+          "id": 21,
+          "tanggal": "2018-11-19",
+          "sebaran_hotspot_count": 0
+        },
+        {
+          "id": 22,
+          "tanggal": "2018-11-20",
+          "sebaran_hotspot_count": 6
+        },
+        {
+          "id": 23,
+          "tanggal": "2018-11-22",
+          "sebaran_hotspot_count": 0
+        },
+        {
+          "id": 24,
+          "tanggal": "2018-11-23",
+          "sebaran_hotspot_count": 0
         }
       ]
     }
