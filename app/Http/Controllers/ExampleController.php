@@ -21,14 +21,8 @@ class ExampleController extends Controller
 
     public function test()
     {
-        $anggotaPatroli = AnggotaPatroli::with([
-            'anggota.kategoriAnggota'
-        ])
-        ->where('kegiatan_patroli_id', 43)
-        ->get();
+        $penggunas = DB::table('pengguna');
 
-        return response([
-            'data' => $anggotaPatroli
-        ]);
+        return response();
     }
 }
