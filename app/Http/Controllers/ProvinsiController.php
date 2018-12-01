@@ -94,20 +94,43 @@ class ProvinsiController extends Controller
         $kegiatanPatroliDarat = KegiatanPatroli::with([
                                 'patroliDarat.desaKelurahan.kecamatan.kotaKab.daops.provinsi'
                             ])
-                            ->whereHas('patroliDarat.desaKelurahan.kecamatan.kotaKab.daops.provinsi', $filterHarian)
-                            ->get()
-                            ->toArray();
+                            ->where('tanggal_patroli', $today)
+                            ->whereHas('patroliDarat.desaKelurahan.kecamatan.kotaKab.daops.provinsi', function ($query) use ($kode) {
+                                $query->where('provinsi.id', $kode);
+                            })
+                            ->get();
 
         $kegiatanPatroliUdara = KegiatanPatroli::with([
                                 'patroliUdara.desaKelurahan.kecamatan.kotaKab.daops.provinsi'
                             ])
-                            ->whereHas('patroliUdara.desaKelurahan.kecamatan.kotaKab.daops.provinsi', $filterHarian)
-                            ->get()
-                            ->toArray();
+                            ->where('tanggal_patroli', $today)
+                            ->whereHas('patroliUdara.desaKelurahan.kecamatan.kotaKab.daops.provinsi', function ($query) use ($kode) {
+                                $query->where('provinsi.id', $kode);
+                            })
+                            ->get();
+        
+        $countPatroliDaratHarian = 0;
+        if ($kegiatanPatroliDarat)
+        {
+            $kegiatanPatroliDarat = $kegiatanPatroliDarat->toArray();
+            foreach($kegiatanPatroliDarat as $pd)
+            {
+                if (!empty($pd['patroli_darat']))
+                    $countPatroliDaratHarian++;
+            }
+        }
 
-        $kegiatanPatroliDarat = (count($kegiatanPatroliDarat)) ? count($kegiatanPatroliDarat[0]['patroli_darat']) : 0;
-        $kegiatanPatroliUdara = (count($kegiatanPatroliUdara)) ? count($kegiatanPatroliUdara[0]['patroli_udara']) : 0;
-
+        $countPatroliUdaraHarian = 0;
+        if ($kegiatanPatroliDarat)
+        {
+            $kegiatanPatroliUdara = $kegiatanPatroliUdara->toArray();
+            foreach($kegiatanPatroliUdara as $pu)
+            {
+                if (!empty($pu['patroli_udara']))
+                    $countPatroliUdaraHarian++;
+            }
+        }
+        
         // Jumlah kebakaran
         $jmlKebakaran = Pemadaman::with([
             'patroliDarat.desaKelurahan.kecamatan.kotaKab.daops.provinsi',
@@ -150,7 +173,7 @@ class ProvinsiController extends Controller
                 'kode_provinsi' => $kode,
             ),
             'statistik_harian' => [
-                'kegiatan_patroli' => (int) $kegiatanPatroliDarat + (int) $kegiatanPatroliUdara,
+                'kegiatan_patroli' => $countPatroliDaratHarian + $countPatroliUdaraHarian,
                 'kebakaran' => $jmlKebakaran
             ],
             'statistik_tahunan' => [
