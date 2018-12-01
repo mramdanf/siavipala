@@ -15,8 +15,7 @@
 // $app->get('/test', 'ReadCsvController@test');
 // $app->get('/migrasi2', 'ReadCsvController@migrasi_tb_lokasi_patroli');
 $app->get('/test', 'ExampleController@test');
-// Unduh laporan patroli
-$app->get('/patroli/unduh-laporan', 'PatroliController@unduh_laporan_patroli_v2');
+
 
 // Entrust role
 // Route to create a new role

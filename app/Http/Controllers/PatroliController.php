@@ -35,12 +35,10 @@ class PatroliController extends Controller
             // Patroli Darat
             'patroliDarat.kondisiVegetasi.vegetasi',
             'patroliDarat.kondisiVegetasi.kategoriKondisiVegetasi',
-            'patroliDarat.kondisiVegetasi.kondisiKarhutla',
-            'patroliDarat.kondisiVegetasi.potensiKarhutla',
+            'patroliDarat.kondisiKarhutla',
+            'patroliDarat.potensiKarhutla',
             
             'patroliDarat.kondisiTanah.tanah',
-            'patroliDarat.kondisiTanah.kondisiKarhutla',
-            'patroliDarat.kondisiTanah.potensiKarhutla',
             
             'patroliDarat.kondisiSumberAir.sumberAir',
             'patroliDarat.desaKelurahan.kecamatan.kotakab.daops.provinsi',
@@ -59,15 +57,15 @@ class PatroliController extends Controller
             // Dokumentasi
             'dokumentasi',
             // Inventori Patroli
-            'inventoriPatroli',
+            'inventoriPatroli.inventori',
             // Kategori Patroli
             'kategoriPatroli',
             // Hotspot
-            'hotspot',
+            'hotspot.satelit',
             // Aktivitas Harian
             'aktivitasHarianPatroli.aktivitasHarian',
             // Anggota Patroli
-            'anggotaPatroli.anggota'
+            'anggotaPatroli.anggota.kategoriAnggota'
             ]);
 
         if (!empty($data['tanggal_patroli']))
@@ -201,11 +199,12 @@ class PatroliController extends Controller
 
     public function unduh_laporan_patroli_v2(Request $request)
     {
-        $load = $request->input('load');
+        $data = $request->all();
 
-        $tanggal = '2018-04-10';
-        // $tanggal = '2016-02-25';
-        $daopsId = 336;
+        $load = $data['load'];
+
+        $tanggal = $data['tanggal'];
+        $daopsId = $data['daops'];
 
         // Detail Daops
         $daops = Daops::with([
@@ -244,11 +243,11 @@ class PatroliController extends Controller
             // Patroli Darat
             'patroliDarat.kondisiVegetasi.vegetasi',
             'patroliDarat.kondisiVegetasi.kategoriKondisiVegetasi',
-            'patroliDarat.kondisiVegetasi.kondisiKarhutla',
-            'patroliDarat.kondisiVegetasi.potensiKarhutla',
+            // 'patroliDarat.kondisiVegetasi.kondisiKarhutla',
+            // 'patroliDarat.kondisiVegetasi.potensiKarhutla',
             'patroliDarat.kondisiTanah.tanah',
-            'patroliDarat.kondisiTanah.kondisiKarhutla',
-            'patroliDarat.kondisiTanah.potensiKarhutla',
+            // 'patroliDarat.kondisiTanah.kondisiKarhutla',
+            // 'patroliDarat.kondisiTanah.potensiKarhutla',
             'patroliDarat.kondisiSumberAir.sumberAir',
             'patroliDarat.desaKelurahan.kecamatan.kotakab.daops.provinsi',
             'patroliDarat.kadarAirBahanBakar',
@@ -370,6 +369,7 @@ class PatroliController extends Controller
                 $inventoriPatroli = new InventoriPatroli;
                 $inventoriPatroli->kegiatan_patroli_id = $kegiatanPatroliId;
                 $inventoriPatroli->inventori_id        = $ip['inventori_id'];
+                $inventoriPatroli->jumlah_unit         = $ip['jumlah_unit'];
                 $inventoriPatroli->save();
             }
         }
@@ -384,12 +384,13 @@ class PatroliController extends Controller
                 $pngUrl = "dok-".$kegiatanPatroliId."-".time().".png";
                 $path   = base_path('public').'/img/'.$pngUrl;
 
-                Image::make($img)->save($path);
+                Image::make($img['file'])->save($path);
 
                 $dokumentasi = new Dokumentasi;
                 $dokumentasi->kegiatan_patroli_id = $kegiatanPatroliId;
                 $dokumentasi->url_file = $pngUrl;
                 $dokumentasi->tipe_file = 'images/png';
+                $dokumentasi->deskripsi = $img['deskripsi'];
                 $dokumentasi->save();
             }
         }

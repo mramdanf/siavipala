@@ -25,6 +25,7 @@
   - [Create Laporan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-laporan-patroli)
   - [Update Laporan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-laporan-patroli)
   - [Delete Laporan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-laporan-patroli)
+  - [Unduh Laporan Patroli](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#unduh-laporan-patroli)
 - Anggota
   - [Kategori Anggota](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-anggota)
   - [List Anggota](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-anggota)
@@ -587,6 +588,37 @@
     {
       "message": "Delete laporan patorli sukses"
     }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+**Unduh Laporan Patroli**
+---
+
+* **URL**
+
+  `{{host}}/api/patroli/unduh-laporan`
+
+* **Method**
+
+  `GET`
+
+* **GET Param **
+
+  - `tanggal: tanggal patroli`
+  - `daops: id daops (336)`
+  - `load: pdf`
+
+* **Headers**
+
+  `Authorizaton: Bearer {token}`
+
+* **Success Response**
+
+  ```
+    download pdf
   ```
 
 <div align="right">
