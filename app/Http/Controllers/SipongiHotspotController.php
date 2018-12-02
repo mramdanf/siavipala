@@ -18,7 +18,7 @@ class SipongiHotspotController extends Controller
         $start_date = date('Y-m-d', strtotime($data['start_date']));
         $end_date = date('Y-m-d', strtotime($data['end_date']));
 
-        $hotspotSipongis = HotspotSipongi::withCount(['sebaranHotspot'])
+        $hotspotSipongis = HotspotSipongi::with(['sebaranHotspot'])
                                     ->whereBetween('tanggal', [$start_date, $end_date])
                                     ->get();
         
