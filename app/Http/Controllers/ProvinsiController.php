@@ -17,8 +17,12 @@ class ProvinsiController extends Controller
 {
     public function list()
     {
+        $provinsis = Provinsi::with([
+            'daops'
+        ])->get();
+
         return response([
-            'data' => Provinsi::all()
+            'data' => $provinsis
         ]);
     }
 

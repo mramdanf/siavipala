@@ -41,7 +41,7 @@
       <?php endforeach ?>
     </table>
   </div>
-
+  
   <div id="posko">
     <h3>2. Posko Patroli Terpadu</h3>
     <table class="table-padding table-bordered">
@@ -307,5 +307,6 @@
       <?php endif ?>
     <?php endforeach ?>
   </div>
+
 </body>
 </html>
