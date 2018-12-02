@@ -369,13 +369,16 @@ class PatroliController extends Controller
         // Insert tabel patroli_darat
         if (!empty($data['patroli_darat'])) 
         {
-            $this->storePatroliDarat($data['patroli_darat'], $kegiatanPatroli->id);
+            foreach ($data['patroli_darat'] as $patroliDarat)
+                $this->storePatroliDarat($patroliDarat, $kegiatanPatroli->id);
+            
         }
 
         // Insert tabel patroli_udara
         if (!empty($data['patroli_udara']))
         {
-            $this->storePatroliUdara($data['patroli_udara'], $kegiatanPatroli->id);
+            foreach($data['patroli_udara'] as $patroliUdara)
+                $this->storePatroliUdara($patroliUdara, $kegiatanPatroli->id);
         }
     }
 
@@ -590,8 +593,8 @@ class PatroliController extends Controller
         
 
         // Indirect relation via patroli_darat
-        $patroliDarat = PatroliDarat::where('kegiatan_patroli_id', '=', $kegiatanPatroliId)->first();
-        if ($patroliDarat != null)
+        $patroliDarats = PatroliDarat::where('kegiatan_patroli_id', '=', $kegiatanPatroliId)->get();
+        foreach ($patroliDarats as $patroliDarat)
         {
             // Delete hasil_uji
             $hasilUji = HasilUji::where('patroli_darat_id', '=', $patroliDarat->id);
@@ -618,8 +621,8 @@ class PatroliController extends Controller
         }
 
         // Delete patroli_udara
-        $patroliUdara = PatroliUdara::where('kegiatan_patroli_id', '=', $kegiatanPatroliId)->first();
-        if ($patroliUdara != null)
+        $patroliUdaras = PatroliUdara::where('kegiatan_patroli_id', '=', $kegiatanPatroliId)->get();
+        foreach ($patroliUdaras as $patroliUdara)
         {
             $patroliUdara->delete();
         }

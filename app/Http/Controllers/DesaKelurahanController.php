@@ -9,8 +9,13 @@ class DesaKelurahanController extends Controller
 {
     public function list()
     {
+        $desas = DesaKelurahan::with([
+            'kecamatan.kotaKab.daops.provinsi'
+        ])
+        ->get();
+        
         return response([
-            'data' => DesaKelurahan::all()
+            'data' => $desas
         ]);
     }
 
