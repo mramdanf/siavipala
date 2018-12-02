@@ -202,7 +202,7 @@
   </div>
 
   <div id="pemadaman">
-    <h3>4. Pemadaman</h3>
+    <h3>5. Pemadaman</h3>
     <?php foreach($kegiatanPatroli['patroli_darat'] as $pd): ?>
       <?php if (!empty($pd['pemadaman'])): ?>
         <?php foreach($pd['pemadaman'] as $key => $pemadaman): ?>

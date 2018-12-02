@@ -97,8 +97,13 @@ class EntrustRoleController extends Controller
 
     public function listRole()
     {
+        $roles = Role::with([
+            'permissionRole.permission'
+        ])
+        ->get();
+
         return response([
-            'roles' => Role::all()  
+            'roles' => $roles
         ]);
     }
 
