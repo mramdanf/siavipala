@@ -255,7 +255,16 @@ class PatroliController extends Controller
         $tanggal = $data['tanggal'];
         $provinsi_id = $data['provinsi_id'];
 
-        
+        $daops = Daops::with([
+            'provinsi'
+        ])
+        ->whereHas('provinsi', function ($query) use ($provinsi_id) {
+            $query->where('provinsi.id', $provinsi_id);
+        });
+
+        return response([
+            'daops' => $daops
+        ]);
     }
 
     private function laporan_patroli_by_daops($filter = array())
@@ -329,6 +338,8 @@ class PatroliController extends Controller
             'kategoriAnggota' => $kategoriAnggota,
             'kegiatanPatroli' => $kegiatanPatroli
         ];
+
+        return $result;
     }
 
     private function tglIndo($tanggal)

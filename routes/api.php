@@ -166,7 +166,7 @@ $api->version('v1', function ($api) {
         // Unduh rekapitulasi laporan patroli
         $api->get('/patroli/unduh-rekapitulasi-laporan', [
             'uses' => 'PatroliController@unduh_rekapitulasi_laporan_patroli',
-            // 'middleware' => ['ability:patroli-unduh-rekapitulasi-laporan']
+            'middleware' => ['ability:patroli-unduh-rekapitulasi-laporan']
         ]);
 
         // Create daops
