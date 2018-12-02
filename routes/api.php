@@ -160,7 +160,7 @@ $api->version('v1', function ($api) {
 
         // Unduh laporan patroli
         $api->get('/patroli/unduh-laporan', [
-            'uses' => 'PatroliController@unduh_laporan_patroli_v2',
+            'uses' => 'PatroliController@unduh_laporan_patroli',
             'middleware' => ['ability:patroli-unduh-laporan']
         ]);
 

@@ -152,53 +152,12 @@ class PatroliController extends Controller
 
     public function unduh_laporan_patroli(Request $request)
     {
-        $tanggal = '2018-04-10';
+        $this->validate($request, [
+            'load' => 'required',
+            'tanggal' => 'required',
+            'daops' => 'required'
+        ]);
 
-        // 1. Pelaksana
-        $kategoriAnggota = KategoriAnggota::with([
-            'anggota.anggotaPatroli.kegiatanPatroli'
-        ])
-        ->whereHas('anggota.anggotaPatroli.kegiatanPatroli', function ($query) use ($tanggal) {
-            $query->where('kegiatan_patroli.tanggal_patroli', $tanggal);
-        })
-        ->get()
-        ->toArray();
-
-        foreach($kategoriAnggota as $key => $ka) 
-        {
-            $kategoriAnggota[$key]['count_anggota'] = count($ka['anggota']).' Orang';
-            unset($kategoriAnggota[$key]['anggota']);
-        }
-
-        // 2. Posko patroli terpadu
-        // 3. Kondisi Cuaca
-        $kegiatanPatroli = KegiatanPatroli::with([
-            // Patroli Darat
-            'patroliDarat.kondisiVegetasi.vegetasi',
-            'patroliDarat.kondisiVegetasi.kategoriKondisiVegetasi',
-            'patroliDarat.kondisiVegetasi.kondisiKarhutla',
-            'patroliDarat.kondisiVegetasi.potensiKarhutla',
-            
-            'patroliDarat.kondisiTanah.tanah',
-            'patroliDarat.kondisiTanah.kondisiKarhutla',
-            'patroliDarat.kondisiTanah.potensiKarhutla',
-            
-            'patroliDarat.kondisiSumberAir.sumberAir',
-            'patroliDarat.desaKelurahan.kecamatan.kotakab.daops.provinsi',
-
-            'patroliDarat.kadarAirBahanBakar',
-
-            // Patroli Udara
-            'patroliUdara.desaKelurahan.kecamatan.kotakab.daops.provinsi',
-        ])
-        ->where('tanggal_patroli', $tanggal)
-        ->get();
-
-        
-    }
-
-    public function unduh_laporan_patroli_v2(Request $request)
-    {
         $data = $request->all();
 
         $load = $data['load'];
@@ -243,11 +202,7 @@ class PatroliController extends Controller
             // Patroli Darat
             'patroliDarat.kondisiVegetasi.vegetasi',
             'patroliDarat.kondisiVegetasi.kategoriKondisiVegetasi',
-            // 'patroliDarat.kondisiVegetasi.kondisiKarhutla',
-            // 'patroliDarat.kondisiVegetasi.potensiKarhutla',
             'patroliDarat.kondisiTanah.tanah',
-            // 'patroliDarat.kondisiTanah.kondisiKarhutla',
-            // 'patroliDarat.kondisiTanah.potensiKarhutla',
             'patroliDarat.kondisiSumberAir.sumberAir',
             'patroliDarat.desaKelurahan.kecamatan.kotakab.daops.provinsi',
             'patroliDarat.kadarAirBahanBakar',
