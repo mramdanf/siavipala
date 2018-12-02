@@ -71,7 +71,7 @@ class PatroliController extends Controller
         if (!empty($data['tanggal_patroli']))
             $patrolis->where('tanggal_patroli', $data['tanggal_patroli']);
 
-        $patrolis = $patrolis->get();
+        $patrolis = $patrolis->orderBy('id', 'DESC')->get();
 
         return response([
             'data' => $patrolis
