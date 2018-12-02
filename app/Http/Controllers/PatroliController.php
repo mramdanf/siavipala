@@ -174,25 +174,44 @@ class PatroliController extends Controller
         ->toArray();
 
         // 1. Pelaksana
-        $kategoriAnggota = KategoriAnggota::with([
-            'anggota.anggotaPatroli.kegiatanPatroli.patroliDarat.desaKelurahan.kecamatan.kotaKab.daops',
-            'anggota.anggotaPatroli.kegiatanPatroli.patroliUdara.desaKelurahan.kecamatan.kotaKab.daops'
+        $kategoriAnggota = KategoriAnggota::
+        with([
+            'anggota' => function ($q) use ($daopsId, $tanggal) {
+                $q->has('anggotaPatroli'); // Only that has anggotaPatroli
+                $q->whereHas('anggotaPatroli', function ($q) use ($daopsId, $tanggal) {
+                    $q->whereHas('kegiatanPatroli', function ($q) use ($daopsId, $tanggal) {
+                        $q->where('tanggal_patroli', $tanggal); // Filter by tanggal
+                        $q->whereHas('patroliDarat', function ($q) use ($daopsId, $tanggal) {
+                            $q->whereHas('desaKelurahan', function ($q) use ($daopsId, $tanggal) {
+                                $q->whereHas('kecamatan', function ($q) use ($daopsId, $tanggal) {
+                                    $q->whereHas('kotaKab', function ($q) use ($daopsId, $tanggal) {
+                                        $q->whereHas('daops', function ($q) use ($daopsId, $tanggal) {
+                                            $q->where('id', $daopsId); // Filter by daops_id
+                                        });
+                                    });
+                                });
+                            });
+                        });
+                    });
+                });
+            },
+            'anggota.anggotaPatroli'
         ])
-        ->whereHas('anggota.anggotaPatroli.kegiatanPatroli.patroliDarat.desaKelurahan.kecamatan.kotaKab.daops', function ($query) use ($tanggal, $daopsId) {
-            $query->where('kegiatan_patroli.tanggal_patroli', $tanggal);
-            $query->where('daops.id', $daopsId);
-        })
-        ->orWhereHas('anggota.anggotaPatroli.kegiatanPatroli.patroliUdara.desaKelurahan.kecamatan.kotaKab.daops', function ($query) use ($tanggal, $daopsId) {
-            $query->where('kegiatan_patroli.tanggal_patroli', $tanggal);
-            $query->where('daops.id', $daopsId);
-        })
         ->get()
         ->toArray();
 
         foreach($kategoriAnggota as $key => $ka) 
         {
-            $kategoriAnggota[$key]['count_anggota'] = count($ka['anggota']).' Orang';
-            unset($kategoriAnggota[$key]['anggota']);
+            if (count($ka['anggota']) > 0)
+            {
+                $kategoriAnggota[$key]['count_anggota'] = count($ka['anggota']).' Orang';
+                unset($kategoriAnggota[$key]['anggota']);
+            }
+            else
+            {
+                unset($kategoriAnggota[$key]);
+            }
+                
         }
 
         // 2. Posko patroli terpadu
@@ -216,8 +235,6 @@ class PatroliController extends Controller
             'patroliDarat.kondisiVegetasi.kategoriKondisiVegetasi',
             'patroliDarat.kondisiTanah.tanah',
             'patroliDarat.kondisiSumberAir.sumberAir',
-            'patroliDarat.desaKelurahan.kecamatan.kotakab.daops',
-            'patroliDarat.desaKelurahan.kecamatan.kotakab.daops.provinsi',
             'patroliDarat.kadarAirBahanBakar',
             'patroliDarat.cuacaPagi',
             'patroliDarat.cuacaSiang',
@@ -240,10 +257,16 @@ class PatroliController extends Controller
             'patroliUdara.cuacaPagi',
             'patroliUdara.cuacaSiang',
             'patroliUdara.cuacaSore',
+
+            'anggotaPatroli.anggota.kategoriAnggota'
         ])
         ->where('tanggal_patroli', $tanggal)
-        ->first()
+        ->get()
         ->toArray();
+
+        // return response([
+        //     'data' => $kegiatanPatroli
+        // ]);
 
         $result = [
             'tanggal' => $this->tglIndo($tanggal),
