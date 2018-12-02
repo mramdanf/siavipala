@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Log;
 
 use DB;
 use GuzzleHttp\Exception\GuzzleException;
@@ -48,22 +49,36 @@ class CacheDataHotspotSipongi extends Command
         $res = $res->getBody()->getContents();
         $res = json_decode($res, TRUE);
         
-        // Insert ke tabel hotspot_sipongi
-        $hostspotSipongi = new HotspotSipongi;
-        $hostspotSipongi->tanggal = date('Y-m-d');
-        $hostspotSipongi->save();
+        Log::debug('command runs');        
 
         // Insert ke tabel sebaran_hotspot
         if (!empty($res['data']['hotspot']))
         {
-            foreach($res['data']['hotspot'] as $hotspot) 
+            $today = date('Y-m-d');
+
+            $todayHotspot = HotspotSipongi::where('tanggal', '=', $today)->get();
+
+            Log::debug(json_encode($res['data']['hotspot']));
+
+            if ($todayHotspot->count() <= 0)
             {
-                $sebaranHotspot = new SebaranHotspot;
-                $sebaranHotspot->hotspot_sipongi_id = $hostspotSipongi->id;
-                $sebaranHotspot->latitude = $hotspot[0];
-                $sebaranHotspot->longitude = $hotspot[1];
-                $sebaranHotspot->save();
+                // Insert ke tabel hotspot_sipongi
+                $hostspotSipongi = new HotspotSipongi();
+                $hostspotSipongi->tanggal = $today;
+                $hostspotSipongi->save();
+
+                foreach($res['data']['hotspot'] as $hotspot) 
+                {
+                    $sebaranHotspot = new SebaranHotspot;
+                    $sebaranHotspot->hotspot_sipongi_id = $hostspotSipongi->id;
+                    $sebaranHotspot->latitude = $hotspot[0];
+                    $sebaranHotspot->longitude = $hotspot[1];
+                    $sebaranHotspot->save();
+                }
+
+                Log::debug('insert new hotspot cache');
             }
+            
         }
         
     }
