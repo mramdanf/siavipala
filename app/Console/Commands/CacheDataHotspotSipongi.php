@@ -73,6 +73,7 @@ class CacheDataHotspotSipongi extends Command
                     $sebaranHotspot->hotspot_sipongi_id = $hostspotSipongi->id;
                     $sebaranHotspot->latitude = $hotspot[0];
                     $sebaranHotspot->longitude = $hotspot[1];
+                    $sebaranHotspot->html = $hotspot[2];
                     $sebaranHotspot->save();
                 }
 
