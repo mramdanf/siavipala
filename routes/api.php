@@ -98,8 +98,6 @@ $api->version('v1', function ($api) {
         $api->get('/aktivitas-harian/list', 'AktivitasHarianController@list');
         // List kategori anggota
         $api->get('/kategori-anggota/list', 'KategoriAnggotaController@list');
-        // List anggota
-        $api->get('/anggota/list', 'AnggotaController@list');
         // Hotspot sipongi by date range
         $api->get('/hotspot-sipongi/date-range', 'SipongiHotspotController@hotspotByDateRange');
 
@@ -248,7 +246,12 @@ $api->version('v1', function ($api) {
             'uses' => 'DesaKelurahanController@remove',
             'middleware' => ['ability:desakelurahan-delete']
         ]);
-
+        
+        // List anggota
+        $api->get('/anggota/list', [
+            'uses' => 'AnggotaController@list',
+            'middleware' => ['ability:anggota-list']
+        ]);
         // Create anggota
         $api->post('/anggota/create', [
             'uses' => 'AnggotaController@store',
