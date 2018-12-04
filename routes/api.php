@@ -248,6 +248,22 @@ $api->version('v1', function ($api) {
             'uses' => 'DesaKelurahanController@remove',
             'middleware' => ['ability:desakelurahan-delete']
         ]);
+
+        // Create anggota
+        $api->post('/anggota/create', [
+            'uses' => 'AnggotaController@store',
+            'middleware' => ['ability:anggota-create']
+        ]);
+        // Update anggota
+        $api->post('/anggota/update', [
+            'uses' => 'AnggotaController@update',
+            'middleware' => ['ability:anggota-update']
+        ]);
+        // Delete anggota
+        $api->post('/anggota/delete', [
+            'uses' => 'AnggotaController@remove',
+            'middleware' => ['ability:anggota-delete']
+        ]);
     });
     
 });
