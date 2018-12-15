@@ -264,10 +264,6 @@ class PatroliController extends Controller
         ->get()
         ->toArray();
 
-        // return response([
-        //     'data' => $kegiatanPatroli
-        // ]);
-
         $result = [
             'tanggal' => $this->tglIndo($tanggal),
             'daops' => $daops,

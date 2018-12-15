@@ -126,11 +126,11 @@
         </tr>
       </thead>
       <tbody>
-        <?php foreach($kegiatanPatroli as $itemKegiatanPatroli): ?>
+        <?php $noKegiatanPatroli = 0; foreach($kegiatanPatroli as $itemKegiatanPatroli): ?>
           <?php foreach($itemKegiatanPatroli['patroli_darat'] as $key => $pd): ?>
           <tr>
             <!-- No -->
-            <td><?=++$key?></td>
+            <td><?=++$noKegiatanPatroli?></td>
 
             <!-- Area Rawan Terbakar -->
             <td>
