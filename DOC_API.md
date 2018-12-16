@@ -765,7 +765,7 @@
 
 * **Data Param**
 
-  `none`
+  * `key: search key (opsional)`
 
 * **Success Response**
 
