@@ -10,6 +10,8 @@ use App\Http\Controllers\Controller;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use Illuminate\Http\Exception\HttpResponseException;
 
+use App\Models\Pengguna;
+
 class AuthController extends Controller
 {
     /**
@@ -96,11 +98,17 @@ class AuthController extends Controller
      */
     protected function onAuthorized($token, $user)
     {
+        $detailUser = Pengguna::with([
+            'roleUser.role.roleNavigationMenu.navigationMenu'
+        ])
+        ->where('id', $user->id)
+        ->get();
+
         return response([
             'message' => 'Login success',
             'data' => [
                 'token' => $token,
-                'user' => $user
+                'user' => $detailUser
             ]
         ]);
     }

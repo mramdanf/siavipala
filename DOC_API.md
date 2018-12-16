@@ -119,12 +119,27 @@
   {
     "message": "Login success",
     "data": {
-      "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjMsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Qvc2lhdmlwYWxhL3B1YmxpYy9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTU0MDg1NjI1MywiZXhwIjoxNTQwODc3ODUzLCJuYmYiOjE1NDA4NTYyNTMsImp0aSI6IjFOYVdrUDNSVWlxU1F5cHcifQ.5Y_sj2tC1Zy2akL3I_2OfdRmti1VoUT4QBF4irCGyy8",
-      "user": {
-        "id": 3,
-        "nama": "ramdan",
-        "email": "ramdan@gmail.com"
-      }
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjMsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Qvc2lhdmlwYWxhL3B1YmxpYy9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTU0NDk5OTU1OSwiZXhwIjoxNTQ1MDIxMTU5LCJuYmYiOjE1NDQ5OTk1NTksImp0aSI6Inp5STFjVkQ1YXpGT3U0Y3kifQ.actfiDrE__TKBH8M-7oNAYkkjErRSEmZaGv32FI2hkA",
+        "user": [
+            {
+                "id": 3,
+                "nama": "ramdan",
+                "email": "ramdan@gmail.com",
+                "role_user": [
+                    {
+                        "pengguna_id": 3,
+                        "role_id": 28,
+                        "role": {
+                            "id": 28,
+                            "name": "administrator",
+                            "display_name": "Administrator",
+                            "description": null,
+                            "role_navigation_menu": []
+                        }
+                    }
+                ]
+            }
+        ]
     }
   }
   ```
