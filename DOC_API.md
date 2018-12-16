@@ -69,6 +69,11 @@
   - [Create Desa Kelurahan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-desa-kelurahan)
   - [Update Desa Kelurahan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-desa-kelurahan)
   - [Delete Desa Kelurahan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-desa-kelurahan)
+- Role
+  - [List Role](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-role)
+  - [Create Role](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-role)
+  - [Update Role](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-role)
+  - [Delete Role](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-role)
 
 **Login**
 ----
@@ -2647,6 +2652,169 @@
   ```
     {
       "message": "Delete desa kelurahan sukses."
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+**List Role**
+---
+
+* **URL**
+
+  `{{host}}/api/role/list`
+
+* **Method**
+
+  `GET`
+
+* **Headers**
+
+  * `Authorization: Bearer {Token}`
+
+* **Data Params (json/payload)**
+
+  `none`
+
+* **Success Response**
+
+  ```
+    {
+      "roles": [
+        {
+          "id": 26,
+          "name": "pengguna_terdaftar",
+          "display_name": "Pengguna Terdaftar",
+          "description": null
+        },
+        {
+          "id": 27,
+          "name": "tim_patroli",
+          "display_name": "Tim Patroli",
+          "description": null
+        },
+        {
+          "id": 28,
+          "name": "administrator",
+          "display_name": "Administrator",
+          "description": null
+        }
+      ]
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**Create Role**
+---
+
+* **URL**
+
+  `{{host}}/api/role/create`
+
+* **Method**
+
+  `POST`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (json/payload)**
+
+  ```
+    {
+      "name": "testing",
+      "display_name": "test",
+      "description": "test"
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Create role success."
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**Update Role**
+---
+
+* **URL**
+
+  `{{host}}/api/role/update`
+
+* **Method**
+
+  `POST`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (json/payload)**
+
+  ```
+    {
+      "id": 29,
+      "name": "testong",
+      "display_name": "testx",
+      "description": "testx"
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Update role success."
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**Delete Role**
+---
+
+* **URL**
+
+  `{{host}}/api/role/delete`
+
+* **Method**
+
+  `POST`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (json/payload)**
+
+  ```
+    {
+      "id": 29
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Delete role sukses."
     }
   ```
 
