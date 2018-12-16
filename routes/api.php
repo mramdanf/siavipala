@@ -314,6 +314,19 @@ $api->version('v1', function ($api) {
         $api->post('/role-user/unassign-role-user', [
             'uses' => 'RoleUserController@unassignRoleFromUser'
         ]);
+
+        // List permission role
+        $api->get('/permission-role/list', [
+            'uses' => 'PermissionRoleController@list'
+        ]);
+        // Assign permission to role
+        $api->post('/permission-role/assign-permission-role', [
+            'uses' => 'PermissionRoleController@assignPermissionToRole'
+        ]);
+        // Unassign permission from role
+        $api->post('/permission-role/unassign-permission-role', [
+            'uses' => 'PermissionRoleController@unassignPermissionFromRole'
+        ]);
     });
     
 });

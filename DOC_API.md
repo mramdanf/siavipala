@@ -83,6 +83,10 @@
   - [List Role User](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-role-user)
   - [Assign Role to User](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#assign-role-to-user)
   - [Unassign Role from User](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#unassign-role-from-user)
+- Permission Role
+  - [List Permissiion Role](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-permission-role)
+  - [Assign Permission to Role](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#assign-permission-to-role)
+  - [Unassign Permission from Role](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#unassign-permission-from-role)
 
 **Login**
 ----
@@ -3148,6 +3152,212 @@
                     }
                 }
             ]
+        }
+      }
+    ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**List Permission Role**
+---
+
+  * **URL**
+  
+    `{host}/api/permission-role/list`
+
+  * **Method**
+
+    `GET`
+
+  * **Get Params**
+
+    `none`
+
+  * **Headers**
+
+    * `Authorzation: Bearer {Token}`
+
+  * **Success Response**
+    ```
+      {
+        "roles": [
+          {
+              "id": 26,
+              "name": "pengguna_terdaftar",
+              "display_name": "Pengguna Terdaftar",
+              "description": null,
+              "permission_role": [
+                  {
+                      "permission_id": 84,
+                      "role_id": 26,
+                      "permission": {
+                          "id": 84,
+                          "name": "patroli-unduh-laporan",
+                          "display_name": "Patroli Unduh Laporan",
+                          "description": null
+                      }
+                  },
+                  {
+                      "permission_id": 112,
+                      "role_id": 26,
+                      "permission": {
+                          "id": 112,
+                          "name": "patroli-unduh-rekapitulasi-laporan",
+                          "display_name": "Patroli Unduh Rekapitulasi Laporan",
+                          "description": null
+                      }
+                  },
+                  {
+                      "permission_id": 85,
+                      "role_id": 26,
+                      "permission": {
+                          "id": 85,
+                          "name": "patroli-create",
+                          "display_name": "Patroli Create",
+                          "description": null
+                      }
+                  }
+              ]
+          }
+        ]
+      }
+    ```
+    
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+**Assign Permissiion to Role**
+---
+
+  * **URL**
+  
+    `{host}/api/permission-role/assign-permission-role`
+
+  * **Method**
+
+    `POST`
+
+  * **Payload**
+
+    ```
+      {
+        "permission_id": 85,
+        "role_id": 26
+      }
+    ```
+
+  * **Headers**
+
+    * `Authorzation: Bearer {Token}`
+
+  * **Success Response**
+    ```
+      {
+        "message": "Attach permission to role success",
+        "role": {
+            "id": 26,
+            "name": "pengguna_terdaftar",
+            "display_name": "Pengguna Terdaftar",
+            "description": null,
+            "permission_role": [
+                {
+                    "permission_id": 84,
+                    "role_id": 26,
+                    "permission": {
+                        "id": 84,
+                        "name": "patroli-unduh-laporan",
+                        "display_name": "Patroli Unduh Laporan",
+                        "description": null
+                    }
+                },
+                {
+                    "permission_id": 85,
+                    "role_id": 26,
+                    "permission": {
+                        "id": 85,
+                        "name": "patroli-create",
+                        "display_name": "Patroli Create",
+                        "description": null
+                    }
+                },
+                {
+                    "permission_id": 112,
+                    "role_id": 26,
+                    "permission": {
+                        "id": 112,
+                        "name": "patroli-unduh-rekapitulasi-laporan",
+                        "display_name": "Patroli Unduh Rekapitulasi Laporan",
+                        "description": null
+                    }
+                }
+            ]
+        }
+      }
+    ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+**Unassign Permission from Role**
+---
+
+  * **URL**
+  
+    `{host}/api/permission-role/unassign-permission-role`
+
+  * **Method**
+
+    `POST`
+
+  * **Payload**
+
+    ```
+      {
+        "permission_id": 85,
+        "role_id": 26
+      }
+    ```
+
+  * **Headers**
+
+    * `Authorzation: Bearer {Token}`
+
+  * **Success Response**
+    ```
+      {
+        "message": "Unassign permission from role success",
+        "role": {
+          "id": 26,
+          "name": "pengguna_terdaftar",
+          "display_name": "Pengguna Terdaftar",
+          "description": null,
+          "permission_role": [
+            {
+              "permission_id": 84,
+              "role_id": 26,
+              "permission": {
+                "id": 84,
+                "name": "patroli-unduh-laporan",
+                "display_name": "Patroli Unduh Laporan",
+                "description": null
+              }
+            },
+            {
+              "permission_id": 112,
+              "role_id": 26,
+              "permission": {
+                "id": 112,
+                "name": "patroli-unduh-rekapitulasi-laporan",
+                "display_name": "Patroli Unduh Rekapitulasi Laporan",
+                "description": null
+              }
+            }
+          ]
         }
       }
     ```
