@@ -79,6 +79,10 @@
   - [Create Permission](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-permission)
   - [Update Permission](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-permission)
   - [Delete Permission](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-permission)
+- Role User
+  - [List Role User](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-role-user)
+  - [Assign Role to User](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#assign-role-to-user)
+  - [Unassign Role from User](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#unassign-role-from-user)
 
 **Login**
 ----
@@ -2989,4 +2993,167 @@
 <div align="right">
     <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
 </div>
+
+**List Role User**
+---
+
+  * **URL**
+  
+    `{host}/api/role-user/list`
+
+  * **Method**
+
+    `GET`
+
+  * **Get Params**
+
+    `none`
+
+  * **Headers**
+
+    * `Authorzation: Bearer {Token}`
+
+  * **Success Response**
+    ```
+      {
+        "roles": [
+          {
+              "id": 26,
+              "name": "pengguna_terdaftar",
+              "display_name": "Pengguna Terdaftar",
+              "description": null,
+              "role_user": [
+                  {
+                      "pengguna_id": 6,
+                      "role_id": 26,
+                      "pengguna": {
+                          "id": 6,
+                          "nama": "rudi",
+                          "email": "rudi@gmail.com"
+                      }
+                  }
+              ]
+          }
+        ]
+      }
+    ```
+    
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+**Assign Role to User**
+---
+
+  * **URL**
+  
+    `{host}/api/role-user/assign-role-user`
+
+  * **Method**
+
+    `POST`
+
+  * **Payload**
+
+    ```
+      {
+        "pengguna_id": 3,
+        "role_id": 27
+      }
+    ```
+
+  * **Headers**
+
+    * `Authorzation: Bearer {Token}`
+
+  * **Success Response**
+    ```
+      {
+        "message": "Assign role to user success.",
+        "user": {
+            "id": 3,
+            "nama": "ramdan",
+            "email": "ramdan@gmail.com",
+            "role_user": [
+                {
+                    "pengguna_id": 3,
+                    "role_id": 28,
+                    "role": {
+                        "id": 28,
+                        "name": "administrator",
+                        "display_name": "Administrator",
+                        "description": null
+                    }
+                },
+                {
+                    "pengguna_id": 3,
+                    "role_id": 26,
+                    "role": {
+                        "id": 26,
+                        "name": "pengguna_terdaftar",
+                        "display_name": "Pengguna Terdaftar",
+                        "description": null
+                    }
+                }
+            ]
+        }
+      }
+    ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+**Unassign Role from User**
+---
+
+  * **URL**
+  
+    `{host}/api/role-user/unassign-role-user`
+
+  * **Method**
+
+    `POST`
+
+  * **Payload**
+
+    ```
+      {
+        "pengguna_id": 3,
+        "role_id": 27
+      }
+    ```
+
+  * **Headers**
+
+    * `Authorzation: Bearer {Token}`
+
+  * **Success Response**
+    ```
+      {
+        "message": "Assign role to user success.",
+        "user": {
+            "id": 3,
+            "nama": "ramdan",
+            "email": "ramdan@gmail.com",
+            "role_user": [
+                {
+                    "pengguna_id": 3,
+                    "role_id": 28,
+                    "role": {
+                        "id": 28,
+                        "name": "administrator",
+                        "display_name": "Administrator",
+                        "description": null
+                    }
+                }
+            ]
+        }
+      }
+    ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
 

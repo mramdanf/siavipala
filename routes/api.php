@@ -301,6 +301,19 @@ $api->version('v1', function ($api) {
         $api->post('/permission/delete', [
             'uses' => 'PermissionController@delete'
         ]);
+
+        // List role user
+        $api->get('/role-user/list', [
+            'uses' => 'RoleUserController@list'
+        ]);
+        // Assign role to user
+        $api->post('/role-user/assign-role-user', [
+            'uses' => 'RoleUserController@assignRoleToUser'
+        ]);
+        // Unassign role from user
+        $api->post('/role-user/unassign-role-user', [
+            'uses' => 'RoleUserController@unassignRoleFromUser'
+        ]);
     });
     
 });
