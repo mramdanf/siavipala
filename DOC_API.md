@@ -14,7 +14,6 @@
 - [Vegetasi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-vegetasi)
 - [Satelit](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-satelit)
 - [Tipe Kebakaran](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-tipe-kebakaran)
-- [Pemilik Lahan](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-pemilik-lahan)
 - [Kategori Kondisi Vegetasi](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-kategori-kondisi-vegetasi)
 - [Kategori Potensi Karhutla](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-potensi-karhutla)
 - [Kategori Kondisi Karhutla](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#kategori-kondisi-karhutla)
@@ -1173,50 +1172,6 @@
           {
               "id": 2,
               "nama": "Atas"
-          }
-      ]
-    }
-  ```
-
-<div align="right">
-    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
-</div>
-
-**List Pemilik Lahan**
-----
-
-* **URL**
-
-  `{{host}}/api/pemilik-lahan/list`
-
-* **Method**
-
-  `GET`
-
-* **Headers**
-
-  * `Authroization: Bearer {{ Token }}`
-
-* **Data Param**
-
-  `none`
-
-* **Success Response**
-
-  ```
-    {
-      "data": [
-          {
-              "id": 1,
-              "nama": "ramdan"
-          },
-          {
-              "id": 2,
-              "nama": "dhani"
-          },
-          {
-              "id": 3,
-              "nama": "deny"
           }
       ]
     }
