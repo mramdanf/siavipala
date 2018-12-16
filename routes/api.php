@@ -284,6 +284,23 @@ $api->version('v1', function ($api) {
         $api->post('/role/delete', [
             'uses' => 'RoleController@delete'
         ]);
+
+        // List permission
+        $api->get('/permission/list', [
+            'uses' => 'PermissionController@list'
+        ]);
+        // Create permission
+        $api->post('/permission/create', [
+            'uses' => 'PermissionController@store'
+        ]);
+        // Update permission
+        $api->post('/permission/update', [
+            'uses' => 'PermissionController@update'
+        ]);
+        // Delete permission
+        $api->post('/permission/delete', [
+            'uses' => 'PermissionController@delete'
+        ]);
     });
     
 });

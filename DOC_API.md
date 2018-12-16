@@ -74,6 +74,11 @@
   - [Create Role](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-role)
   - [Update Role](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-role)
   - [Delete Role](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-role)
+- Permission
+  - [List Permission](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-permission)
+  - [Create Permission](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-permission)
+  - [Update Permission](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-permission)
+  - [Delete Permission](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-permission)
 
 **Login**
 ----
@@ -2815,6 +2820,169 @@
   ```
     {
       "message": "Delete role sukses."
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**List Permisson**
+---
+
+* **URL**
+
+  `{{host}}/api/permission/list`
+
+* **Method**
+
+  `GET`
+
+* **Headers**
+
+  * `Authorization: Bearer {Token}`
+
+* **Data Params (json/payload)**
+
+  `none`
+
+* **Success Response**
+
+  ```
+    {
+    "data": [
+        {
+            "id": 84,
+            "name": "patroli-unduh-laporan",
+            "display_name": "Patroli Unduh Laporan",
+            "description": null
+        },
+        {
+            "id": 85,
+            "name": "patroli-create",
+            "display_name": "Patroli Create",
+            "description": null
+        },
+        {
+            "id": 86,
+            "name": "patroli-update",
+            "display_name": "Patroli Update",
+            "description": null
+        }
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**Create Permisson**
+---
+
+* **URL**
+
+  `{{host}}/api/permission/create`
+
+* **Method**
+
+  `POST`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (json/payload)**
+
+  ```
+    {
+      "name": "testing",
+      "display_name": "test",
+      "description": "test"
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Create permission success."
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**Update Permisson**
+---
+
+* **URL**
+
+  `{{host}}/api/role/update`
+
+* **Method**
+
+  `POST`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (json/payload)**
+
+  ```
+    {
+      "id": 29,
+      "name": "testong",
+      "display_name": "testx",
+      "description": "testx"
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Update permission success."
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**Delete Permisson**
+---
+
+* **URL**
+
+  `{{host}}/api/permission/delete`
+
+* **Method**
+
+  `POST`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (json/payload)**
+
+  ```
+    {
+      "id": 29
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Delete permission success."
     }
   ```
 
