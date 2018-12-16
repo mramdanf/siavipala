@@ -19,9 +19,8 @@ class AddNewUnduhRekapPermissionSeeder extends Seeder
     public function __construct()
     {
         $this->roles = [
-            
             [
-                'name' => 'administrator',
+                'name' => 'pengguna_terdaftar',
                 'pengguna' => [
                     'ramdan'
                 ],
@@ -40,7 +39,7 @@ class AddNewUnduhRekapPermissionSeeder extends Seeder
      */
     public function run()
     {
-        $this->createPermissions();
+        // $this->createPermissions();
 
         $this->assignPermissionRole();
     }
