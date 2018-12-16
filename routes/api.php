@@ -270,92 +270,113 @@ $api->version('v1', function ($api) {
 
         // List role
         $api->get('/role/list', [
-            'uses' => 'RoleController@list'
+            'uses' => 'RoleController@list',
+            'middleware' => ['ability:role-list']
         ]);
         // Create role
         $api->post('/role/create', [
-            'uses' => 'RoleController@store'
+            'uses' => 'RoleController@store',
+            'middleware' => ['ability:role-create']
         ]);
         // Update role
         $api->post('/role/update', [
-            'uses' => 'RoleController@update'
+            'uses' => 'RoleController@update',
+            'middleware' => ['ability:role-update']
         ]);
         // Delete role
         $api->post('/role/delete', [
-            'uses' => 'RoleController@delete'
+            'uses' => 'RoleController@delete',
+            'middleware' => ['ability:role-delete']
         ]);
 
         // List permission
         $api->get('/permission/list', [
-            'uses' => 'PermissionController@list'
+            'uses' => 'PermissionController@list',
+            'middleware' => ['ability:permission-list']
         ]);
         // Create permission
         $api->post('/permission/create', [
-            'uses' => 'PermissionController@store'
+            'uses' => 'PermissionController@store',
+            'middleware' => ['ability:permission-create']
         ]);
         // Update permission
         $api->post('/permission/update', [
-            'uses' => 'PermissionController@update'
+            'uses' => 'PermissionController@update',
+            'middleware' => ['ability:permission-update']
         ]);
         // Delete permission
         $api->post('/permission/delete', [
-            'uses' => 'PermissionController@delete'
+            'uses' => 'PermissionController@delete',
+            'middleware' => ['ability:permission-delete']
         ]);
 
         // List role user
         $api->get('/role-user/list', [
-            'uses' => 'RoleUserController@list'
+            'uses' => 'RoleUserController@list',
+            'middleware' => ['ability:role-user-list']
         ]);
         // Assign role to user
         $api->post('/role-user/assign-role-user', [
-            'uses' => 'RoleUserController@assignRoleToUser'
+            'uses' => 'RoleUserController@assignRoleToUser',
+            'middleware' => ['ability:role-user-assign-role-user']
         ]);
         // Unassign role from user
         $api->post('/role-user/unassign-role-user', [
-            'uses' => 'RoleUserController@unassignRoleFromUser'
+            'uses' => 'RoleUserController@unassignRoleFromUser',
+            'middleware' => ['ability:role-user-unassign-role-user']
         ]);
 
         // List permission role
         $api->get('/permission-role/list', [
-            'uses' => 'PermissionRoleController@list'
+            'uses' => 'PermissionRoleController@list',
+            'middleware' => ['ability:permission-role-list']
         ]);
         // Assign permission to role
         $api->post('/permission-role/assign-permission-role', [
-            'uses' => 'PermissionRoleController@assignPermissionToRole'
+            'uses' => 'PermissionRoleController@assignPermissionToRole',
+            'middleware' => ['ability:permission-role-assign-permission-role']
         ]);
         // Unassign permission from role
         $api->post('/permission-role/unassign-permission-role', [
-            'uses' => 'PermissionRoleController@unassignPermissionFromRole'
+            'uses' => 'PermissionRoleController@unassignPermissionFromRole',
+            'middleware' => ['ability:permission-role-unassign-permission-role']
         ]);
 
         // List navigation menu
         $api->get('/navigation-menu/list', [
-            'uses' => 'NavigationMenuController@list'
+            'uses' => 'NavigationMenuController@list',
+            'middleware' => ['ability:navigation-menu-list']
         ]);
         // Create navigation menu
         $api->post('/navigation-menu/create', [
-            'uses' => 'NavigationMenuController@store'
+            'uses' => 'NavigationMenuController@store',
+            'middleware' => ['ability:navigation-menu-create']
         ]);
         // Update navigation menu
         $api->post('/navigation-menu/update', [
-            'uses' => 'NavigationMenuController@update'
+            'uses' => 'NavigationMenuController@update',
+            'middleware' => ['ability:navigation-menu-update']
         ]);
         // Delete navigation menu
         $api->post('/navigation-menu/delete', [
-            'uses' => 'NavigationMenuController@delete'
+            'uses' => 'NavigationMenuController@delete',
+            'middleware' => ['ability:navigation-menu-delete']
         ]);
         
         // List role navigation menu
         $api->get('/role-navigation-menu/list', [
-            'uses' => 'RoleNavigationMenuController@list'
+            'uses' => 'RoleNavigationMenuController@list',
+            'middleware' => ['ability:role-navigation-menu-list']
         ]);
         // Assign navigation menu to role
         $api->post('/role-navigation-menu/assign-navigation-menu-role', [
-            'uses' => 'RoleNavigationMenuController@assignNavigationMenuToRole'
+            'uses' => 'RoleNavigationMenuController@assignNavigationMenuToRole',
+            'middleware' => ['ability:role-navigation-menu-assign-navigation-menu-role']
         ]);
         // Unassign navigation menu from role
         $api->post('/role-navigation-menu/unassign-navigation-menu-role', [
-            'uses' => 'RoleNavigationMenuController@unassignNavigationMenuFromRole'
+            'uses' => 'RoleNavigationMenuController@unassignNavigationMenuFromRole',
+            'middleware' => ['ability:role-navigation-menu-unassign-navigation-menu-role']
         ]);
     });
     
