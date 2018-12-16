@@ -267,6 +267,23 @@ $api->version('v1', function ($api) {
             'uses' => 'AnggotaController@remove',
             'middleware' => ['ability:anggota-delete']
         ]);
+
+        // List role
+        $api->get('/role/list', [
+            'uses' => 'RoleController@list'
+        ]);
+        // Create role
+        $api->post('/role/create', [
+            'uses' => 'RoleController@store'
+        ]);
+        // Update role
+        $api->post('/role/update', [
+            'uses' => 'RoleController@update'
+        ]);
+        // Delete role
+        $api->post('/role/delete', [
+            'uses' => 'RoleController@delete'
+        ]);
     });
     
 });
