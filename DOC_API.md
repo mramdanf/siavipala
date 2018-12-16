@@ -1234,11 +1234,11 @@
 
 * **Headers**
 
-  * `Authroization: Bearer {{ Token }}`
+  `none`
 
 * **Data Param**
 
-  `none`
+  * `key: search key (opsional)`
 
 * **Success Response**
 
