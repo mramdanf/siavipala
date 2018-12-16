@@ -92,6 +92,10 @@
   - [Create Navigation Menu](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-navigation-menu)
   - [Update Navigation Menu](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-navigation-menu)
   - [Delete Navigation Menu](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-navigation-menu)
+- Role Navigation Menu
+  - [List Role Navigation Menu](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-role-navigation-menu)
+  - [Assign Navigation Menu to Role](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#assign-navigation-menu-to-role)
+  - [Unassign Navigation Menu from Role](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#unassign-navigation-menu-from-role)
 
 **Login**
 ----
@@ -3531,3 +3535,167 @@
     <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
 </div>
 
+**List Role Navigation Menu**
+---
+
+  * **URL**
+  
+    `{host}/api/role-navigation-menu/list`
+
+  * **Method**
+
+    `GET`
+
+  * **Get Params**
+
+    `none`
+
+  * **Headers**
+
+    * `Authorzation: Bearer {Token}`
+
+  * **Success Response**
+    ```
+      {
+        "roles": [
+          {
+            "id": 28,
+            "name": "administrator",
+            "display_name": "Administrator",
+            "description": null,
+            "role_navigation_menu": [
+                {
+                    "id": 3,
+                    "role_id": 28,
+                    "navigation_menu_id": 16,
+                    "navigation_menu": {
+                        "id": 16,
+                        "name": "manajemen-tim-patroli",
+                        "display_name": "Manajemen Tim Patroli",
+                        "link": null
+                    }
+                }
+            ]
+          },
+          {
+            "id": 26,
+            "name": "pengguna_terdaftar",
+            "display_name": "Pengguna Terdaftar",
+            "description": null,
+            "role_navigation_menu": [
+                {
+                    "id": 2,
+                    "role_id": 26,
+                    "navigation_menu_id": 15,
+                    "navigation_menu": {
+                        "id": 15,
+                        "name": "rekapitulasi-patroli",
+                        "display_name": "Rekapitulasi Patroli",
+                        "link": null
+                    }
+                }
+            ]
+          }
+        ]
+      }
+    ```
+    
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+**Assign Navigation Menu to Role**
+---
+
+  * **URL**
+  
+    `{host}/api/role-navigation-menu/assign-navigation-menu-role`
+
+  * **Method**
+
+    `POST`
+
+  * **Payload**
+
+    ```
+      {
+        "role_id": 28,
+        "navigation_menu_id": 16
+      }
+    ```
+
+  * **Headers**
+
+    * `Authorzation: Bearer {Token}`
+
+  * **Success Response**
+    ```
+      {
+        "message": "Assing navigation menu to role success.",
+        "role": {
+          "id": 28,
+          "name": "administrator",
+          "display_name": "Administrator",
+          "description": null,
+          "role_navigation_menu": [
+              {
+                  "id": 4,
+                  "role_id": 28,
+                  "navigation_menu_id": 16,
+                  "navigation_menu": {
+                      "id": 16,
+                      "name": "manajemen-tim-patroli",
+                      "display_name": "Manajemen Tim Patroli",
+                      "link": null
+                  }
+              }
+          ]
+        }
+      }
+    ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+**Unassign Navigation Menu from Role**
+---
+
+  * **URL**
+  
+    `{host}/api/permission-role/unassign-permission-role`
+
+  * **Method**
+
+    `POST`
+
+  * **Payload**
+
+    ```
+      {
+        "role_id": 28,
+        "navigation_menu_id": 16
+      }
+    ```
+
+  * **Headers**
+
+    * `Authorzation: Bearer {Token}`
+
+  * **Success Response**
+    ```
+      {
+        "message": "Unassign navigation menu from role success.",
+        "role": {
+            "id": 28,
+            "name": "administrator",
+            "display_name": "Administrator",
+            "description": null,
+            "role_navigation_menu": []
+        }
+      }
+    ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>

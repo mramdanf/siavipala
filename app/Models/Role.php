@@ -17,4 +17,9 @@ class Role extends EntrustRole
 	{
 		return $this->hasMany('App\Models\PermissionRole');
 	}
+
+	public function roleNavigationMenu()
+	{
+		return $this->hasMany('App\Models\RoleNavigationMenu');
+	}
 }

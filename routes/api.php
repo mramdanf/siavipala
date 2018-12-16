@@ -344,6 +344,19 @@ $api->version('v1', function ($api) {
         $api->post('/navigation-menu/delete', [
             'uses' => 'NavigationMenuController@delete'
         ]);
+        
+        // List role navigation menu
+        $api->get('/role-navigation-menu/list', [
+            'uses' => 'RoleNavigationMenuController@list'
+        ]);
+        // Assign navigation menu to role
+        $api->post('/role-navigation-menu/assign-navigation-menu-role', [
+            'uses' => 'RoleNavigationMenuController@assignNavigationMenuToRole'
+        ]);
+        // Unassign navigation menu from role
+        $api->post('/role-navigation-menu/unassign-navigation-menu-role', [
+            'uses' => 'RoleNavigationMenuController@unassignNavigationMenuFromRole'
+        ]);
     });
     
 });
