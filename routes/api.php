@@ -327,6 +327,23 @@ $api->version('v1', function ($api) {
         $api->post('/permission-role/unassign-permission-role', [
             'uses' => 'PermissionRoleController@unassignPermissionFromRole'
         ]);
+
+        // List navigation menu
+        $api->get('/navigation-menu/list', [
+            'uses' => 'NavigationMenuController@list'
+        ]);
+        // Create navigation menu
+        $api->post('/navigation-menu/create', [
+            'uses' => 'NavigationMenuController@store'
+        ]);
+        // Update navigation menu
+        $api->post('/navigation-menu/update', [
+            'uses' => 'NavigationMenuController@update'
+        ]);
+        // Delete navigation menu
+        $api->post('/navigation-menu/delete', [
+            'uses' => 'NavigationMenuController@delete'
+        ]);
     });
     
 });

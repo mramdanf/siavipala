@@ -87,6 +87,11 @@
   - [List Permissiion Role](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-permission-role)
   - [Assign Permission to Role](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#assign-permission-to-role)
   - [Unassign Permission from Role](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#unassign-permission-from-role)
+- Navigation Menu
+  - [List Navigation Menu](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#list-navigation-menu)
+  - [Create Navigation Menu](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#create-navigation-menu)
+  - [Update Navigation Menu](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#update-navigation-menu)
+  - [Delete Navigation Menu](https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#delete-navigation-menu)
 
 **Login**
 ----
@@ -3366,4 +3371,163 @@
     <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
 </div>
 
+
+
+
+**List Navigation Menu**
+---
+
+* **URL**
+
+  `{{host}}/api/navigation-menu/list`
+
+* **Method**
+
+  `GET`
+
+* **Headers**
+
+  * `Authorization: Bearer {Token}`
+
+* **Data Params (json/payload)**
+
+  `none`
+
+* **Success Response**
+
+  ```
+    {
+      "data": [
+        {
+            "id": 12,
+            "name": "sipongi-live-update",
+            "display_name": "Sipongi Live Update",
+            "link": null
+        },
+        {
+            "id": 13,
+            "name": "patroli-hari-ini",
+            "display_name": "Patroli Hari Ini",
+            "link": null
+        }
+      ]
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**Create Navigation Menu**
+---
+
+* **URL**
+
+  `{{host}}/api/role/create`
+
+* **Method**
+
+  `POST`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (json/payload)**
+
+  ```
+    {
+      "name": "testing",
+      "display_name": "test",
+      "link": "test"
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Create navigation menu success."
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**Update Navigation Menu**
+---
+
+* **URL**
+
+  `{{host}}/api/role/update`
+
+* **Method**
+
+  `POST`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (json/payload)**
+
+  ```
+    {
+      "id": 1,
+      "name": "testing",
+      "display_name": "test",
+      "link": "test"
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Update navigation menu success."
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
+
+
+**Delete Navigation Menu**
+---
+
+* **URL**
+
+  `{{host}}/api/navigation-menu/delete`
+
+* **Method**
+
+  `POST`
+
+* **Headers**
+
+  `Authorization: Bearer {token}`
+
+* **Data Params (json/payload)**
+
+  ```
+    {
+      "id": 29
+    }
+  ```
+
+* **Success Response**
+
+  ```
+    {
+      "message": "Delete navigation menu sukses."
+    }
+  ```
+
+<div align="right">
+    <b><a href="https://github.com/mramdanf/siavipala/blob/master/DOC_API.md#dokumentasi-api-siavipala">↥ back to top</a></b>
+</div>
 
