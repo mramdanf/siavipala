@@ -674,9 +674,13 @@
 
   `{{host}}/api/curah-hujan/list`
 
+* **Method**
+
+  `GET`
+
 * **Data Params**
 
-  `none`
+  * `key: search key (opsional)`
 
 * **Success Response**
 
@@ -717,7 +721,7 @@
 
 * **Data Params**
 
-  `none`
+  * `key: search key (opsional)`
 
 * **Succes Response**
 
