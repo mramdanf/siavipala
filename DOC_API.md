@@ -320,90 +320,94 @@
     "images": [
       "base64"
     ],
-    "patroli_darat": {
-      "desa_kelurahan_id": 1079,
-      "cuaca_pagi_id": 1,
-      "cuaca_siang_id": 1,
-      "cuaca_sore_id": 1,
-      "curah_hujan_id": 1,
-      "potensi_karhutla_id": 1,
-      "kondisi_karhutla_id": 1,
-      "ffmc_kkas_id": 1,
-      "fwi_id": 1,
-      "dc_kk_id": 1,
-      "keterangan_lokasi_id": 1,
-      "suhu": 10.10,
-      "kelembaban": 11.10,
-      "kecepatan_angin": 12.10,
-      "latitude": -1.999756,
-      "longitude": 23.56543,
-      "aktivitas_masyarakat": "membersihkan lahan dan bercocok tanam",
-      "hasil_uji": [
-        {
-          "nama_pengujian": "Uji Remas Daun",
-          "hasil": "Daun agak kering"
-        }
-      ],
-      "kondisi_sumber_air": [
-          {
-            "sumber_air_id": 1,
-            "longitude": -1.963555556,
-            "latitude": 110.1340833,
-            "panjang": 2,
-            "lebar": 2,
-            "kedalaman": 1.5
-          }
-        ],
-        "kondisi_vegetasi": [
-          {
-            "vegetasi_id": 1,
-            "kategori_kondisi_vegetasi_id": 1,
-            "luas_tanah": 3,
-            "longitude": 110.1355278,
-            "latitude": -1.992222222
-          }
-        ],
-        "kondisi_tanah": [
-          {
-            "tanah_id": 1,
-            "longitude": 110.1355278,
-            "latitude": -1.992222222,
-            "kedalaman_gambut": 1.5,
-            "luas": 0
-          }
-        ],
-        "pemadaman": [
-          {
-            "longitude": 110.1355278,
-            "latitude": -1.992222222,
-            "luas_terbakar": 1.5,
-            "luas_dipadamkan": 1,
-            "hasil_pemadaman": "Berhasil dipadamkan",
-            "tipe_kebakaran_id": 1,
-            "pemilik_lahan_id": 3
-          }
-        ]
-      },
-      "patroli_udara": {
+    "patroli_darat": [
+      {
         "desa_kelurahan_id": 1079,
         "cuaca_pagi_id": 1,
         "cuaca_siang_id": 1,
         "cuaca_sore_id": 1,
         "curah_hujan_id": 1,
-        "suhu": 10.10,
-        "kelembaban": 11.10,
-        "kecepatan_angin": 12.10,
+        "potensi_karhutla_id": 1,
+        "kondisi_karhutla_id": 1,
         "ffmc_kkas_id": 1,
         "fwi_id": 1,
         "dc_kk_id": 1,
-        "latitude": 10.10,
-        "longitude": 20.20,
-        "confidence": 112,
-        "distance": 111,
-        "radial": 2312,
-        "kegiatan": "lorem ipsum",
-        "keterangan": "lorem ipsum"
-      }
+        "keterangan_lokasi_id": 1,
+        "suhu": 10.10,
+        "kelembaban": 11.10,
+        "kecepatan_angin": 12.10,
+        "latitude": -1.999756,
+        "longitude": 23.56543,
+        "aktivitas_masyarakat": "membersihkan lahan dan bercocok tanam",
+        "hasil_uji": [
+          {
+            "nama_pengujian": "Uji Remas Daun",
+            "hasil": "Daun agak kering"
+          }
+        ],
+        "kondisi_sumber_air": [
+            {
+              "sumber_air_id": 1,
+              "longitude": -1.963555556,
+              "latitude": 110.1340833,
+              "panjang": 2,
+              "lebar": 2,
+              "kedalaman": 1.5
+            }
+          ],
+          "kondisi_vegetasi": [
+            {
+              "vegetasi_id": 1,
+              "kategori_kondisi_vegetasi_id": 1,
+              "luas_tanah": 3,
+              "longitude": 110.1355278,
+              "latitude": -1.992222222
+            }
+          ],
+          "kondisi_tanah": [
+            {
+              "tanah_id": 1,
+              "longitude": 110.1355278,
+              "latitude": -1.992222222,
+              "kedalaman_gambut": 1.5,
+              "luas": 0
+            }
+          ],
+          "pemadaman": [
+            {
+              "longitude": 110.1355278,
+              "latitude": -1.992222222,
+              "luas_terbakar": 1.5,
+              "luas_dipadamkan": 1,
+              "hasil_pemadaman": "Berhasil dipadamkan",
+              "tipe_kebakaran_id": 1,
+              "pemilik_lahan_id": 3
+            }
+          ]
+        }
+      ],
+      "patroli_udara": [
+        {
+          "desa_kelurahan_id": 1079,
+          "cuaca_pagi_id": 1,
+          "cuaca_siang_id": 1,
+          "cuaca_sore_id": 1,
+          "curah_hujan_id": 1,
+          "suhu": 10.10,
+          "kelembaban": 11.10,
+          "kecepatan_angin": 12.10,
+          "ffmc_kkas_id": 1,
+          "fwi_id": 1,
+          "dc_kk_id": 1,
+          "latitude": 10.10,
+          "longitude": 20.20,
+          "confidence": 112,
+          "distance": 111,
+          "radial": 2312,
+          "kegiatan": "lorem ipsum",
+          "keterangan": "lorem ipsum"
+        }
+      ]
   }
   ```
 
@@ -466,67 +470,8 @@
       "images": [
         "base64"
       ],
-      "patroli_darat": {
-        "desa_kelurahan_id": 1079,
-        "cuaca_pagi_id": 1,
-        "cuaca_siang_id": 1,
-        "cuaca_sore_id": 1,
-        "curah_hujan_id": 1,
-        "suhu": 10.10,
-        "kelembaban": 11.10,
-        "kecepatan_angin": 12.10,
-        "ffmc_kkas_id": 1,
-        "fwi_id": 1,
-        "dc_kk_id": 1,
-        "aktivitas_masyarakat": "membersihkan lahan dan bercocok tanam",
-        "keterangan_lokasi": "akses yg bisa digunakan hanya jalan setapak",
-        "hasil_uji": [
-          {
-            "nama_pengujian": "Uji Remas Daun",
-            "hasil": "Daun agak kering"
-          }
-        ],
-        "kondisi_sumber_air": [
-            {
-              "sumber_air_id": 1,
-              "longitude": -1.963555556,
-              "latitude": 110.1340833,
-              "panjang": 2,
-              "lebar": 2,
-              "kedalaman": 1.5
-            }
-          ],
-          "kondisi_vegetasi": [
-            {
-              "vegetasi_id": 1,
-              "kategori_kondisi_vegetasi_id": 1,
-              "potensi_karhutla_id": 1,
-              "kondisi_karhutla_id": 1,
-              "luas_tanah": 3,
-              "longitude": 110.1355278,
-              "latitude": -1.992222222
-            }
-          ],
-          "kondisi_tanah": [
-            {
-              "tanah_id": 1,
-              "potensi_karhutla_id": 1,
-              "kondisi_karhutla_id": 1,
-              "longitude": 110.1355278,
-              "latitude": -1.992222222,
-              "kedalaman_gambut": 1.5,
-              "luas": 0
-            }
-          ],
-          "pemadaman": [
-            {
-              "longitude": 110.1355278,
-              "latitude": -1.992222222,
-              "luas_terbakar": 1.5
-            }
-          ]
-        },
-        "patroli_udara": {
+      "patroli_darat": [
+        {
           "desa_kelurahan_id": 1079,
           "cuaca_pagi_id": 1,
           "cuaca_siang_id": 1,
@@ -538,14 +483,77 @@
           "ffmc_kkas_id": 1,
           "fwi_id": 1,
           "dc_kk_id": 1,
-          "latitude": 10.10,
-          "longitude": 20.20,
-          "confidence": 112,
-          "distance": 111,
-          "radial": 2312,
-          "kegiatan": "lorem ipsum",
-          "keterangan": "lorem ipsum"
-        }
+          "aktivitas_masyarakat": "membersihkan lahan dan bercocok tanam",
+          "keterangan_lokasi": "akses yg bisa digunakan hanya jalan setapak",
+          "hasil_uji": [
+            {
+              "nama_pengujian": "Uji Remas Daun",
+              "hasil": "Daun agak kering"
+            }
+          ],
+          "kondisi_sumber_air": [
+              {
+                "sumber_air_id": 1,
+                "longitude": -1.963555556,
+                "latitude": 110.1340833,
+                "panjang": 2,
+                "lebar": 2,
+                "kedalaman": 1.5
+              }
+            ],
+            "kondisi_vegetasi": [
+              {
+                "vegetasi_id": 1,
+                "kategori_kondisi_vegetasi_id": 1,
+                "potensi_karhutla_id": 1,
+                "kondisi_karhutla_id": 1,
+                "luas_tanah": 3,
+                "longitude": 110.1355278,
+                "latitude": -1.992222222
+              }
+            ],
+            "kondisi_tanah": [
+              {
+                "tanah_id": 1,
+                "potensi_karhutla_id": 1,
+                "kondisi_karhutla_id": 1,
+                "longitude": 110.1355278,
+                "latitude": -1.992222222,
+                "kedalaman_gambut": 1.5,
+                "luas": 0
+              }
+            ],
+            "pemadaman": [
+              {
+                "longitude": 110.1355278,
+                "latitude": -1.992222222,
+                "luas_terbakar": 1.5
+              }
+            ]
+          }
+        ],
+        "patroli_udara": [
+          {
+            "desa_kelurahan_id": 1079,
+            "cuaca_pagi_id": 1,
+            "cuaca_siang_id": 1,
+            "cuaca_sore_id": 1,
+            "curah_hujan_id": 1,
+            "suhu": 10.10,
+            "kelembaban": 11.10,
+            "kecepatan_angin": 12.10,
+            "ffmc_kkas_id": 1,
+            "fwi_id": 1,
+            "dc_kk_id": 1,
+            "latitude": 10.10,
+            "longitude": 20.20,
+            "confidence": 112,
+            "distance": 111,
+            "radial": 2312,
+            "kegiatan": "lorem ipsum",
+            "keterangan": "lorem ipsum"
+          }
+        ]
     }
   ```
 
