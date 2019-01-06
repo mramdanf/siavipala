@@ -39,7 +39,7 @@ class AddNewUnduhRekapPermissionSeeder extends Seeder
      */
     public function run()
     {
-        // $this->createPermissions();
+        $this->createPermissions();
 
         $this->assignPermissionRole();
     }

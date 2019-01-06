@@ -153,6 +153,8 @@ class PatroliController extends Controller
 
     public function unduh_laporan_patroli(Request $request)
     {
+	Log::debug(json_encode($request->all()));
+	
         $this->validate($request, [
             'load' => 'required',
             'tanggal' => 'required',
