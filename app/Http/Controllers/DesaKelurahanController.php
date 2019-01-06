@@ -7,8 +7,21 @@ use App\Models\DesaKelurahan;
 
 class DesaKelurahanController extends Controller
 {
-    public function list()
+    public function list(Request $r)
     {
+        if ($r->has('key'))
+        {
+            $desas = DesaKelurahan::with([
+                'kecamatan.kotaKab.daops.provinsi'
+            ])
+            ->where('nama', 'ilike', '%'.$r->input('key').'%')
+            ->get();
+
+            return response([
+                'data' => $desas
+            ]);
+        }
+
         $desas = DesaKelurahan::with([
             'kecamatan.kotaKab.daops.provinsi'
         ])
