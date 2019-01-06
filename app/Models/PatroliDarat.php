@@ -20,7 +20,9 @@ class PatroliDarat extends Model
         "fwi_id",
         "ffmc_kkas_id",
         "dc_kk_id",
-        'kadar_air_bahan_bakar_id'
+        'kadar_air_bahan_bakar_id',
+        'kondisi_karhutla_id',
+        'potensi_karhutla_id'
     ];
 
     public function desaKelurahan()

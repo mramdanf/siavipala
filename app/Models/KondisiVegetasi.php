@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class KondisiVegetasi extends Model
 {
     protected $table = 'kondisi_vegetasi';
-    protected $hiden = ['crated_at', 'updated_at'];
+    protected $hidden = ['created_at', 'updated_at'];
 
     public function vegetasi()
     {

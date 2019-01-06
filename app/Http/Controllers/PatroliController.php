@@ -33,40 +33,41 @@ class PatroliController extends Controller
 
         $patrolis = KegiatanPatroli::with([
 
-            // Patroli Darat
-            'patroliDarat.kondisiVegetasi.vegetasi',
-            'patroliDarat.kondisiVegetasi.kategoriKondisiVegetasi',
-            'patroliDarat.kondisiKarhutla',
-            'patroliDarat.potensiKarhutla',
-            
-            'patroliDarat.kondisiTanah.tanah',
-            
-            'patroliDarat.kondisiSumberAir.sumberAir',
-            'patroliDarat.desaKelurahan.kecamatan.kotakab.daops.provinsi',
-            'patroliDarat.curahHujan',
-            'patroliDarat.cuacaPagi',
-            'patroliDarat.cuacaSiang',
-            'patroliDarat.cuacaSore',
-            'patroliDarat.fwi',
-            'patroliDarat.ffmcKkas',
-            'patroliDarat.dcKk',
-            'patroliDarat.pemadaman',
-
-            // Patroli Udara
-            'patroliUdara.desaKelurahan.kecamatan.kotakab.daops.provinsi',
-
-            // Dokumentasi
-            'dokumentasi',
-            // Inventori Patroli
-            'inventoriPatroli.inventori',
             // Kategori Patroli
             'kategoriPatroli',
+            // Inventori Patroli
+            'inventoriPatroli.inventori',
             // Hotspot
             'hotspot.satelit',
             // Aktivitas Harian
             'aktivitasHarianPatroli.aktivitasHarian',
             // Anggota Patroli
-            'anggotaPatroli.anggota.kategoriAnggota'
+            'anggotaPatroli.anggota.kategoriAnggota',
+            // Dokumentasi
+            'dokumentasi',
+
+            // Patroli Darat
+            'patroliDarat.desaKelurahan.kecamatan.kotakab.daops.provinsi',
+            'patroliDarat.cuacaPagi',
+            'patroliDarat.cuacaSiang',
+            'patroliDarat.cuacaSore',
+            'patroliDarat.curahHujan',
+            'patroliDarat.potensiKarhutla',
+            'patroliDarat.kondisiKarhutla',
+            'patroliDarat.fwi',
+            'patroliDarat.ffmcKkas',
+            'patroliDarat.dcKk',
+            'patroliDarat.keteranganLokasi',
+            'patroliDarat.kondisiSumberAir.sumberAir',
+            'patroliDarat.kondisiVegetasi.vegetasi',
+            'patroliDarat.kondisiVegetasi.kategoriKondisiVegetasi',
+            'patroliDarat.kondisiTanah.tanah',
+            'patroliDarat.pemadaman.tipeKebakaran',
+            'patroliDarat.pemadaman.pemilikLahan',
+
+            // Patroli Udara
+            'patroliUdara.desaKelurahan.kecamatan.kotakab.daops.provinsi'      
+            
             ]);
 
         if (!empty($data['tanggal_patroli']))
