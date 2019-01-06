@@ -74,6 +74,7 @@ class CacheDataHotspotSipongi extends Command
                     $sebaranHotspot->latitude = $hotspot[0];
                     $sebaranHotspot->longitude = $hotspot[1];
                     $sebaranHotspot->html = $hotspot[2];
+                    $sebaranHotspot->provinsi = $this->getProvinsiFromHtmlString($hotspot[2]);
                     $sebaranHotspot->save();
                 }
 
@@ -82,5 +83,34 @@ class CacheDataHotspotSipongi extends Command
             
         }
         
+    }
+
+    private function getProvinsiFromHtmlString($strHtml)
+    {
+        $cell = array();
+        $tt = 0;
+        $rr = 0;
+        $cc = 0;
+        $cont = $strHtml;
+        preg_match_all('#<table[^>]*>(.*?)</table[^>]*>#is', $cont, $t_matches, PREG_PATTERN_ORDER);
+        //now we have the data from each table in $t_matches[1]
+        foreach ($t_matches[1] as $tablestring) {
+            preg_match_all('#<tr[^>]*>(.*?)</tr[^>]*>#is', $tablestring, $tr_matches, PREG_PATTERN_ORDER);
+            //now we have each row in the table $tr_matches[1];
+            foreach($tr_matches[1] as $rowstring){
+                preg_match_all('#<td[^>]*>(.*?)</td[^>]*>#is', $rowstring, $td_matches, PREG_PATTERN_ORDER);
+                //and now we have each table cell in the row in $td_matches[1]
+                foreach($td_matches[1] as $cellstring){
+                    $cell[$tt][$rr][$cc] = trim($cellstring);
+                    $cc++;
+                } 
+                $rr++;
+                $cc=0;
+            }
+            $tt++;
+            $rr=0;
+        }
+
+        return (!empty($cell[0]) && $cell[0][8][2] != NULL) ? $cell[0][8][2] : '';
     }
 }
