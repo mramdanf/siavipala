@@ -21,9 +21,10 @@ class SipongiHotspotController extends Controller
 
         $hotspotSipongis = HotspotSipongi::with(['sebaranHotspot'])
                                     ->whereBetween('tanggal', [$start_date, $end_date])
-                                    // ->whereHas('sebaranHotspot', function ($q) use ($data) {
-                                    //     $q->where('html', 'ilike', '%'.$data['provinsi'].'%');
-                                    // })
+                                     ->whereHas('sebaranHotspot', function ($q) use ($data) {
+                                         $q->where('provinsi', 'ilike', '%'.$data['provinsi'].'%');
+                                    })
+				     //->where('provinsi', 'ilike', '%'.$data['provinsi'].'%')
                                     ->get();
         
         return response([
