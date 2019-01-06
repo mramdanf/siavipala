@@ -32,10 +32,24 @@ class AnggotaController extends Controller
         ]);
     }
 
-    public function list()
+    public function list(Request $r)
     {
+        if ($r->has('key'))
+        {
+            $data = Anggota::with(['kategoriAnggota'])
+                            ->where('nama', 'ilike', '%'.$r->input('key').'%')
+                            ->get();
+
+            return response([
+                'data' => $data
+            ]);
+        }
+
+        $data = Anggota::with(['kategoriAnggota'])
+                        ->get();
+        
         return response([
-            'data' => Anggota::all()
+            'data' => $data
         ]);
     }
 

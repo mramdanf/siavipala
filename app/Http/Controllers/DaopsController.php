@@ -7,8 +7,15 @@ use App\Models\Daops;
 
 class DaopsController extends Controller
 {
-    public function list()
+    public function list(Request $r)
     {
+        if ($r->has('key'))
+        {
+            return response([
+                'data' => Daops::where('nama', 'ilike', '%'.$r->input('key').'%')->get()
+            ]);
+        }
+
         return response([
             'data' => Daops::all()
         ]);
