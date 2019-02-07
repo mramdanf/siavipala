@@ -48,9 +48,18 @@ class DaopsController extends Controller
             'id' => 'required'
         ]);
 
+        
+
         $data = $request->all();
 
         $daops = Daops::find($data['id']);
+
+        if ($daops == NULL) {
+            return response([
+                'message' => 'Daops dengan id '.$data['id'].' tidak ditemukan.'
+            ]);
+        }
+
         $daops->provinsi_id = $data['provinsi_id'];
         $daops->nama = $data['nama'];
         $daops->save();
@@ -67,6 +76,13 @@ class DaopsController extends Controller
         ]);
 
         $daops = Daops::find($request->input('id'));
+
+        if ($daops == NULL) {
+            return response([
+                'message' => 'Daops dengan id '.$request->input('id').' tidak ditemukan.'
+            ]);
+        }
+        
         $daops->delete();
 
         return response([

@@ -57,12 +57,19 @@ class AnggotaController extends Controller
     {
         $this->validate($request, [
             'kategori_anggota_id' => 'required',
-            'id' => 'required'
+            'id' => 'required',
+            'no_telepon' => 'required'
         ]);
 
         $data = $request->all();
 
         $anggota = Anggota::find($data['id']);
+
+        if ($anggota == NULL) {
+            return response([
+                'message' => 'Anggota dengan id '.$data['id'].' tidak ditemukan.'
+            ]);
+        }
 
         $anggota->kategori_anggota_id = $data['kategori_anggota_id'];
         $anggota->nama = $data['nama'];
@@ -84,6 +91,13 @@ class AnggotaController extends Controller
         $id = $request->all()['id'];
 
         $anggota = Anggota::find($id);
+
+        if ($anggota == NULL) {
+            return response([
+                'message' => 'Anggota dengan id '.$id.' tidak ditemukan.'
+            ]);
+        }
+
         $anggota->delete();
 
         return response([

@@ -125,10 +125,17 @@ class PatroliController extends Controller
 
         $kegiatanPatroliId = $payload['kegiatan_patroli_id'];
 
+        $kegiatanPatroli = KegiatanPatroli::find($kegiatanPatroliId);
+
+        if ($kegiatanPatroli == NULL) {
+            return response([
+                'message' => 'Kegiatan patroli dengan ID '.$kegiatanPatroliId.' tidak ditemukan.'
+            ]);
+        }
+
         $this->deleteKegiatanPatroliRelation($kegiatanPatroliId);
 
         // Last delete kegiatan_patroli
-        $kegiatanPatroli = KegiatanPatroli::find($kegiatanPatroliId);
         $kegiatanPatroli->delete();
 
         return response([
@@ -140,12 +147,19 @@ class PatroliController extends Controller
     public function update(Request $request)
     {
         $this->validate($request, [
-            'kegiatan_patroli_id' => 'required'
+            'kegiatan_patroli_id' => 'required',
+            'tanggal_patroli' => 'required'
         ]);
 
         $data = $request->all();
 
         $oldKegiatanPatroli = KegiatanPatroli::find($data['kegiatan_patroli_id']);
+
+        if ($oldKegiatanPatroli == NULL) {
+            return response([
+                'message' => 'Kegiatan patroli dengan ID '.$data['kegiatan_patroli_id'].' tidak ditemukan.'
+            ]);
+        }
 
         // Delete kegiatan_patroli relation
         $this->deleteKegiatanPatroliRelation($data['kegiatan_patroli_id']);
@@ -164,9 +178,7 @@ class PatroliController extends Controller
     }
 
     public function unduh_laporan_patroli(Request $request)
-    {
-	Log::debug(json_encode($request->all()));
-	
+    {	
         $this->validate($request, [
             'load' => 'required',
             'tanggal' => 'required',
@@ -185,8 +197,15 @@ class PatroliController extends Controller
             'provinsi'
         ])
         ->where('id', $daopsId)
-        ->first()
-        ->toArray();
+        ->first();
+
+        if ($daops == NULL) {
+            return response([
+                'message' => 'Daops denga id '.$daopsId.' tidak ditemukan.'
+            ]);
+        }
+
+        $daops = $daops->toArray();
 
         // 1. Pelaksana
         $kategoriAnggota = KategoriAnggota::
@@ -311,6 +330,12 @@ class PatroliController extends Controller
 
         // Get provinsi detail
         $provinsi = Provinsi::find($provinsi_id);
+
+        if ($provinsi == NULL) {
+            return response([
+                'message' => 'Provinsi dengan id '.$provinsi_id.' tidak ditemukan'
+            ]);
+        }
 
         // Get list daops by provinsi id, only daops
         // that exist in patroli darat

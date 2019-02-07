@@ -84,9 +84,22 @@ class ProvinsiController extends Controller
 
     public function resume(Request $request)
     {
+        $this->validate($request, [
+            'kode_provinsi' => 'required',
+            'tahun' => 'required'
+        ]);
+
+
         $kode = $request->input('kode_provinsi');
         $year = $request->input('tahun');
         $today = date('Y-m-d');
+
+        $provinsi = Provinsi::find($kode);
+        if ($provinsi == NULL) {
+            return response([
+                'message' => 'Provinsi dengan kode provinsi '.$kode.' tidak ditemukan.'
+            ]);
+        }
 
         //////////// Statistik Harian //////////////////
         // Jumlah kegiatan patroli
