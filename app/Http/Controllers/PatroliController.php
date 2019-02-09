@@ -47,38 +47,29 @@ class PatroliController extends Controller
             // Dokumentasi
             'dokumentasi',
 
-            // Patroli Darat
-            'patroliDarat.desaKelurahan.kecamatan.kotakab.daops.provinsi',
-            'patroliDarat.cuacaPagi',
-            'patroliDarat.cuacaSiang',
-            'patroliDarat.cuacaSore',
-            'patroliDarat.curahHujan',
-            'patroliDarat.potensiKarhutla',
-            'patroliDarat.kondisiKarhutla',
-            'patroliDarat.fwi',
-            'patroliDarat.ffmcKkas',
-            'patroliDarat.dcKk',
-            'patroliDarat.keteranganLokasi',
-            'patroliDarat.kondisiSumberAir.sumberAir',
-            'patroliDarat.kondisiVegetasi.vegetasi',
-            'patroliDarat.kondisiVegetasi.kategoriKondisiVegetasi',
-            'patroliDarat.kondisiTanah.tanah',
-            'patroliDarat.pemadaman.tipeKebakaran',
-            'patroliDarat.pemadaman.pemilikLahan',
+            // lokasi patroli
+            'lokasiPatroli.desaKelurahan.kecamatan.kotakab.daops.provinsi',
+            'lokasiPatroli.cuacaPagi',
+            'lokasiPatroli.cuacaSiang',
+            'lokasiPatroli.cuacaSore',
+            'lokasiPatroli.curahHujan',
+            'lokasiPatroli.fwi',
+            'lokasiPatroli.ffmcKkas',
+            'lokasiPatroli.dcKk',
 
-            // Patroli Udara
-            'patroliUdara.desaKelurahan.kecamatan.kotakab.daops.provinsi',
-            'patroliUdara.cuacaSiang',
-            'patroliUdara.cuacaPagi',   
-            'patroliUdara.cuacaSore',
-            'patroliUdara.curahHujan',
-            'patroliUdara.ffmcKkas',
-            'patroliUdara.fwi',
-            'patroliUdara.dcKk',
-            // 'patroliUdara.',
-            // 'patroliUdara.',
-            // 'patroliUdara.',
-            // 'patroliUdara.',
+            // Lokasi patroli darat
+            'lokasiPatroli.patroliDarat.keteranganLokasi',
+            'lokasiPatroli.patroliDarat.kondisiSumberAir.sumberAir',
+            'lokasiPatroli.patroliDarat.kondisiVegetasi.vegetasi',
+            'lokasiPatroli.patroliDarat.kondisiVegetasi.kategoriKondisiVegetasi',
+            'lokasiPatroli.patroliDarat.kondisiTanah.tanah',
+            'lokasiPatroli.patroliDarat.pemadaman.tipeKebakaran',
+            'lokasiPatroli.patroliDarat.pemadaman.pemilikLahan',
+            'lokasiPatroli.patroliDarat.potensiKarhutla',
+            'lokasiPatroli.patroliDarat.kondisiKarhutla',
+
+            // lokasi patroli udara
+            'lokasiPatroli.patroliUdara'
             
             ]);
 
@@ -129,9 +120,9 @@ class PatroliController extends Controller
         $kegiatanPatroli = KegiatanPatroli::find($kegiatanPatroliId);
 
         if ($kegiatanPatroli == NULL) {
-            return response([
+            return response()->json([
                 'message' => 'Kegiatan patroli dengan ID '.$kegiatanPatroliId.' tidak ditemukan.'
-            ]);
+            ], 404);
         }
 
         $this->deleteKegiatanPatroliRelation($kegiatanPatroliId);
@@ -140,7 +131,7 @@ class PatroliController extends Controller
         $kegiatanPatroli->delete();
 
         return response([
-            'message' => 'Delete laporan patroli darat sukses.'
+            'message' => 'Delete laporan patroli sukses.'
         ]);
                         
     }
@@ -157,9 +148,9 @@ class PatroliController extends Controller
         $oldKegiatanPatroli = KegiatanPatroli::find($data['kegiatan_patroli_id']);
 
         if ($oldKegiatanPatroli == NULL) {
-            return response([
+            return response()->json([
                 'message' => 'Kegiatan patroli dengan ID '.$data['kegiatan_patroli_id'].' tidak ditemukan.'
-            ]);
+            ], 404);
         }
 
         // Delete kegiatan_patroli relation
@@ -788,10 +779,12 @@ class PatroliController extends Controller
         $dokumentasi->delete();
         
 
-        // Indirect relation via patroli_darat
-        $patroliDarats = PatroliDarat::where('kegiatan_patroli_id', '=', $kegiatanPatroliId)->get();
-        foreach ($patroliDarats as $patroliDarat)
+        // Indirect relation via lokasi_patroli
+        $lokasiPatrolis = LokasiPatroli::where('kegiatan_patroli_id', '=', $kegiatanPatroliId)->get();
+        foreach ($lokasiPatrolis as $lokasiPatroli)
         {
+            $patroliDarat = PatroliDarat::where('lokasi_patroli_id', '=', $lokasiPatroli->id)->first();
+
             // Delete hasil_uji
             $hasilUji = HasilUji::where('patroli_darat_id', '=', $patroliDarat->id);
             $hasilUji->delete();
@@ -812,15 +805,18 @@ class PatroliController extends Controller
             $pemadaman = Pemadaman::where('patroli_darat_id', '=', $patroliDarat->id);
             $pemadaman->delete();
 
-            // Last delete patroli_darat it selft
+            // Last delete patroli_darat
             $patroliDarat->delete();
-        }
 
-        // Delete patroli_udara
-        $patroliUdaras = PatroliUdara::where('kegiatan_patroli_id', '=', $kegiatanPatroliId)->get();
-        foreach ($patroliUdaras as $patroliUdara)
-        {
+            // Delete patroli_udara
+            $patroliUdaras = PatroliUdara::where('lokasi_patroli_id', '=', $lokasiPatroli->id);
             $patroliUdara->delete();
+
+            // Delete lokasi patroli
+            $lokasiPatroli->delete();
         }
+        
+
+        
     }
 }

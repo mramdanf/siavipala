@@ -9,14 +9,8 @@ class KegiatanPatroli extends Model
     protected $table = 'kegiatan_patroli';
     protected $hidden = ['created_at', 'updated_at', 'kategori_patroli_id'];
 
-    public function patroliDarat()
-    {
-        return $this->hasMany('App\Models\PatroliDarat');
-    }
-
-    public function patroliUdara()
-    {
-        return $this->hasMany('App\Models\PatroliUdara');
+    public function lokasiPatroli() {
+        return $this->hasMany('App\Models\LokasiPatroli');
     }
 
     public function dokumentasi()
