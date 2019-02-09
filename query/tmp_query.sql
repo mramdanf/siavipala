@@ -1,1 +1,4 @@
-SELECT * FROM hotspot_sipongi;
+SELECT 
+  id,
+  desa_kelurahan_id
+FROM lokasi_patroli;

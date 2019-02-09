@@ -19,6 +19,7 @@ use App\Models\AnggotaPatroli;
 use App\Models\KategoriAnggota;
 use App\Models\Daops;
 use App\Models\Provinsi;
+use App\Models\LokasiPatroli;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -547,9 +548,49 @@ class PatroliController extends Controller
 
     private function storePatroliDarat($data = array(), $kegiatanPatroliId)
     {
+        // Insert to lokasi patroli
+        $lokasiPatroliFields = array(
+            'desa_kelurahan_id',
+            'cuaca_pagi_id',
+            'cuaca_siang_id',
+            'cuaca_sore_id',
+            'curah_hujan_id',
+            'ffmc_kkas_id',
+            'fwi_id',
+            'dc_kk_id',
+            'suhu',
+            'kelembaban',
+            'kecepatan_angin',
+            'latitude',
+            'longitude'
+        );
+        $lokasiPatroli = new LokasiPatroli;
+        $lokasiPatroli->kegiatan_patroli_id = $kegiatanPatroliId;
+        foreach($lokasiPatroliFields as $field) {
+            foreach($data as $dataKey => $dataVal) {
+                if (!is_array($dataVal) && $dataKey == $field) {
+                    $lokasiPatroli->{$dataKey} = $dataVal;
+                }
+            }
+        }
+        $lokasiPatroli->save();
+
+        // Insert to patroli darat
+        $patroliDaratFields = array(
+            'aktivitas_masyarakat',
+            'potensi_karhutla_id',
+            'kondisi_karhutla_id',
+            'keterangan_lokasi_id'
+        );
         $patroliDarat = new PatroliDarat;
-        $patroliDarat->kegiatan_patroli_id  = $kegiatanPatroliId;
-        foreach ($data as $key => $dataVal) {  if (!is_array($dataVal)) $patroliDarat->{$key} = $dataVal; }
+        $patroliDarat->lokasi_patroli_id = $lokasiPatroli->id;
+        foreach($patroliDaratFields as $field) {
+            foreach($data as $dataKey => $dataVal) {
+                if (!is_array($dataVal) && $dataKey == $field) {
+                    $patroliDarat->{$dataKey} = $dataVal;
+                }
+            }
+        }
         $patroliDarat->save();
 
         // Insert ke tabel hasil_uji
