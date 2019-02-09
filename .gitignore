@@ -1,3 +1,4 @@
 .env
 vendor/*
 config/jwt.php
+public/img/*
