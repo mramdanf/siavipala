@@ -4,7 +4,7 @@
 
 -- Dumped from database version 9.3.23
 -- Dumped by pg_dump version 9.3.23
--- Started on 2019-01-06 16:59:29 WIB
+-- Started on 2019-02-18 09:42:02 WIB
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -23,7 +23,7 @@ CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 
 
 --
--- TOC entry 2610 (class 0 OID 0)
+-- TOC entry 2616 (class 0 OID 0)
 -- Dependencies: 1
 -- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
 --
@@ -66,7 +66,7 @@ CREATE SEQUENCE public.aktivitas_harian_id_seq
 ALTER TABLE public.aktivitas_harian_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2611 (class 0 OID 0)
+-- TOC entry 2617 (class 0 OID 0)
 -- Dependencies: 216
 -- Name: aktivitas_harian_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -106,7 +106,7 @@ CREATE SEQUENCE public.aktivitas_harian_patroli_id_seq
 ALTER TABLE public.aktivitas_harian_patroli_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2612 (class 0 OID 0)
+-- TOC entry 2618 (class 0 OID 0)
 -- Dependencies: 218
 -- Name: aktivitas_harian_patroli_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -148,7 +148,7 @@ CREATE SEQUENCE public.anggota_id_seq
 ALTER TABLE public.anggota_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2613 (class 0 OID 0)
+-- TOC entry 2619 (class 0 OID 0)
 -- Dependencies: 212
 -- Name: anggota_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -188,7 +188,7 @@ CREATE SEQUENCE public.anggota_patroli_id_seq
 ALTER TABLE public.anggota_patroli_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2614 (class 0 OID 0)
+-- TOC entry 2620 (class 0 OID 0)
 -- Dependencies: 214
 -- Name: anggota_patroli_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -227,7 +227,7 @@ CREATE SEQUENCE public.artifisial_param_id_seq
 ALTER TABLE public.artifisial_param_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2615 (class 0 OID 0)
+-- TOC entry 2621 (class 0 OID 0)
 -- Dependencies: 244
 -- Name: artifisial_param_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -266,7 +266,7 @@ CREATE SEQUENCE public.cuaca_id_seq
 ALTER TABLE public.cuaca_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2616 (class 0 OID 0)
+-- TOC entry 2622 (class 0 OID 0)
 -- Dependencies: 234
 -- Name: cuaca_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -305,7 +305,7 @@ CREATE SEQUENCE public.curah_hujan_id_seq
 ALTER TABLE public.curah_hujan_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2617 (class 0 OID 0)
+-- TOC entry 2623 (class 0 OID 0)
 -- Dependencies: 232
 -- Name: curah_hujan_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -345,7 +345,7 @@ CREATE SEQUENCE public.daops_id_seq
 ALTER TABLE public.daops_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2618 (class 0 OID 0)
+-- TOC entry 2624 (class 0 OID 0)
 -- Dependencies: 180
 -- Name: daops_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -386,7 +386,7 @@ CREATE SEQUENCE public.desa_kelurahan_id_seq
 ALTER TABLE public.desa_kelurahan_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2619 (class 0 OID 0)
+-- TOC entry 2625 (class 0 OID 0)
 -- Dependencies: 188
 -- Name: desa_kelurahan_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -428,7 +428,7 @@ CREATE SEQUENCE public.dokumentasi_id_seq
 ALTER TABLE public.dokumentasi_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2620 (class 0 OID 0)
+-- TOC entry 2626 (class 0 OID 0)
 -- Dependencies: 242
 -- Name: dokumentasi_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -468,7 +468,7 @@ CREATE SEQUENCE public.hak_akses_id_seq
 ALTER TABLE public.hak_akses_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2621 (class 0 OID 0)
+-- TOC entry 2627 (class 0 OID 0)
 -- Dependencies: 174
 -- Name: hak_akses_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -509,7 +509,7 @@ CREATE SEQUENCE public.hasil_uji_id_seq
 ALTER TABLE public.hasil_uji_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2622 (class 0 OID 0)
+-- TOC entry 2628 (class 0 OID 0)
 -- Dependencies: 210
 -- Name: hasil_uji_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -550,7 +550,7 @@ CREATE SEQUENCE public.hotspot_id_seq
 ALTER TABLE public.hotspot_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2623 (class 0 OID 0)
+-- TOC entry 2629 (class 0 OID 0)
 -- Dependencies: 222
 -- Name: hotspot_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -589,7 +589,7 @@ CREATE SEQUENCE public.hotspot_sipongi_id_seq
 ALTER TABLE public.hotspot_sipongi_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2624 (class 0 OID 0)
+-- TOC entry 2630 (class 0 OID 0)
 -- Dependencies: 248
 -- Name: hotspot_sipongi_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -628,7 +628,7 @@ CREATE SEQUENCE public.inventori_id_seq
 ALTER TABLE public.inventori_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2625 (class 0 OID 0)
+-- TOC entry 2631 (class 0 OID 0)
 -- Dependencies: 224
 -- Name: inventori_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -669,7 +669,7 @@ CREATE SEQUENCE public.inventori_patroli_id_seq
 ALTER TABLE public.inventori_patroli_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2626 (class 0 OID 0)
+-- TOC entry 2632 (class 0 OID 0)
 -- Dependencies: 226
 -- Name: inventori_patroli_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -708,7 +708,7 @@ CREATE SEQUENCE public.kadar_air_bahan_bakar_id_seq
 ALTER TABLE public.kadar_air_bahan_bakar_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2627 (class 0 OID 0)
+-- TOC entry 2633 (class 0 OID 0)
 -- Dependencies: 252
 -- Name: kadar_air_bahan_bakar_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -747,7 +747,7 @@ CREATE SEQUENCE public.kategori_anggota_id_seq
 ALTER TABLE public.kategori_anggota_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2628 (class 0 OID 0)
+-- TOC entry 2634 (class 0 OID 0)
 -- Dependencies: 246
 -- Name: kategori_anggota_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -786,7 +786,7 @@ CREATE SEQUENCE public.kategori_kondisi_vegetasi_id_seq
 ALTER TABLE public.kategori_kondisi_vegetasi_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2629 (class 0 OID 0)
+-- TOC entry 2635 (class 0 OID 0)
 -- Dependencies: 236
 -- Name: kategori_kondisi_vegetasi_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -825,7 +825,7 @@ CREATE SEQUENCE public.kategori_patroli_id_seq
 ALTER TABLE public.kategori_patroli_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2630 (class 0 OID 0)
+-- TOC entry 2636 (class 0 OID 0)
 -- Dependencies: 190
 -- Name: kategori_patroli_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -865,7 +865,7 @@ CREATE SEQUENCE public.kecamatan_id_seq
 ALTER TABLE public.kecamatan_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2631 (class 0 OID 0)
+-- TOC entry 2637 (class 0 OID 0)
 -- Dependencies: 184
 -- Name: kecamatan_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -905,7 +905,7 @@ CREATE SEQUENCE public.kegiatan_patroli_id_seq
 ALTER TABLE public.kegiatan_patroli_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2632 (class 0 OID 0)
+-- TOC entry 2638 (class 0 OID 0)
 -- Dependencies: 192
 -- Name: kegiatan_patroli_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -944,7 +944,7 @@ CREATE SEQUENCE public.keterangan_lokasi_id_seq
 ALTER TABLE public.keterangan_lokasi_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2633 (class 0 OID 0)
+-- TOC entry 2639 (class 0 OID 0)
 -- Dependencies: 260
 -- Name: keterangan_lokasi_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -983,7 +983,7 @@ CREATE SEQUENCE public.kondisi_karhutla_id_seq
 ALTER TABLE public.kondisi_karhutla_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2634 (class 0 OID 0)
+-- TOC entry 2640 (class 0 OID 0)
 -- Dependencies: 230
 -- Name: kondisi_karhutla_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1028,7 +1028,7 @@ CREATE SEQUENCE public.kondisi_sumber_air_id_seq
 ALTER TABLE public.kondisi_sumber_air_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2635 (class 0 OID 0)
+-- TOC entry 2641 (class 0 OID 0)
 -- Dependencies: 208
 -- Name: kondisi_sumber_air_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1072,7 +1072,7 @@ CREATE SEQUENCE public.kondisi_tanah_id_seq
 ALTER TABLE public.kondisi_tanah_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2636 (class 0 OID 0)
+-- TOC entry 2642 (class 0 OID 0)
 -- Dependencies: 204
 -- Name: kondisi_tanah_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1116,7 +1116,7 @@ CREATE SEQUENCE public.kondisi_vegetasi_id_seq
 ALTER TABLE public.kondisi_vegetasi_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2637 (class 0 OID 0)
+-- TOC entry 2643 (class 0 OID 0)
 -- Dependencies: 200
 -- Name: kondisi_vegetasi_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1156,7 +1156,7 @@ CREATE SEQUENCE public.kota_kab_id_seq
 ALTER TABLE public.kota_kab_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2638 (class 0 OID 0)
+-- TOC entry 2644 (class 0 OID 0)
 -- Dependencies: 182
 -- Name: kota_kab_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1196,12 +1196,64 @@ CREATE SEQUENCE public.level_pengguna_id_seq
 ALTER TABLE public.level_pengguna_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2639 (class 0 OID 0)
+-- TOC entry 2645 (class 0 OID 0)
 -- Dependencies: 176
 -- Name: level_pengguna_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE public.level_pengguna_id_seq OWNED BY public.level_pengguna.id;
+
+
+--
+-- TOC entry 273 (class 1259 OID 18664)
+-- Name: lokasi_patroli; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE public.lokasi_patroli (
+    id integer NOT NULL,
+    kegiatan_patroli_id integer,
+    desa_kelurahan_id integer,
+    latitude double precision,
+    longitude double precision,
+    suhu double precision,
+    kelembaban double precision,
+    kecepatan_angin double precision,
+    created_at timestamp(0) without time zone,
+    updated_at timestamp(0) without time zone,
+    cuaca_pagi_id integer,
+    cuaca_sore_id integer,
+    cuaca_siang_id integer,
+    curah_hujan_id integer,
+    ffmc_kkas_id integer,
+    fwi_id integer,
+    dc_kk_id integer
+);
+
+
+ALTER TABLE public.lokasi_patroli OWNER TO postgres;
+
+--
+-- TOC entry 272 (class 1259 OID 18662)
+-- Name: lokasi_patroli_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.lokasi_patroli_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.lokasi_patroli_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2646 (class 0 OID 0)
+-- Dependencies: 272
+-- Name: lokasi_patroli_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public.lokasi_patroli_id_seq OWNED BY public.lokasi_patroli.id;
 
 
 --
@@ -1250,7 +1302,7 @@ CREATE SEQUENCE public.navigation_menus_id_seq
 ALTER TABLE public.navigation_menus_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2640 (class 0 OID 0)
+-- TOC entry 2647 (class 0 OID 0)
 -- Dependencies: 268
 -- Name: navigation_menus_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1265,27 +1317,14 @@ ALTER SEQUENCE public.navigation_menus_id_seq OWNED BY public.navigation_menus.i
 
 CREATE TABLE public.patroli_darat (
     id integer NOT NULL,
-    kegiatan_patroli_id integer,
-    desa_kelurahan_id integer,
-    suhu double precision,
-    kelembaban double precision,
-    kecepatan_angin double precision,
     aktivitas_masyarakat character varying(255),
     created_at timestamp(0) without time zone,
     updated_at timestamp(0) without time zone,
-    cuaca_pagi_id integer,
-    cuaca_sore_id integer,
-    cuaca_siang_id integer,
     curah_hujan_id integer,
-    fwi_id integer,
-    ffmc_kkas_id integer,
-    dc_kk_id integer,
-    kadar_air_bahan_bakar_id integer,
-    latitude double precision,
-    longitude double precision,
     potensi_karhutla_id integer,
     kondisi_karhutla_id integer,
-    keterangan_lokasi_id integer
+    keterangan_lokasi_id integer,
+    lokasi_patroli_id integer
 );
 
 
@@ -1307,7 +1346,7 @@ CREATE SEQUENCE public.patroli_darat_id_seq
 ALTER TABLE public.patroli_darat_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2641 (class 0 OID 0)
+-- TOC entry 2648 (class 0 OID 0)
 -- Dependencies: 196
 -- Name: patroli_darat_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1322,27 +1361,14 @@ ALTER SEQUENCE public.patroli_darat_id_seq OWNED BY public.patroli_darat.id;
 
 CREATE TABLE public.patroli_udara (
     id integer NOT NULL,
-    kegiatan_patroli_id integer,
-    desa_kelurahan_id integer,
-    latitude double precision,
-    longitude double precision,
     confidence integer,
     distance integer,
     kegiatan character varying(255),
     radial integer,
     keterangan character varying(255),
-    suhu double precision,
-    kelembaban double precision,
-    kecepatan_angin double precision,
     created_at timestamp(0) without time zone,
     updated_at timestamp(0) without time zone,
-    cuaca_siang_id integer NOT NULL,
-    cuaca_pagi_id integer NOT NULL,
-    cuaca_sore_id integer NOT NULL,
-    curah_hujan_id integer NOT NULL,
-    dc_kk_id integer,
-    ffmc_kkas_id integer,
-    fwi_id integer
+    lokasi_patroli_id integer
 );
 
 
@@ -1364,7 +1390,7 @@ CREATE SEQUENCE public.patroli_udara_id_seq
 ALTER TABLE public.patroli_udara_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2642 (class 0 OID 0)
+-- TOC entry 2649 (class 0 OID 0)
 -- Dependencies: 194
 -- Name: patroli_udara_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1410,7 +1436,7 @@ CREATE SEQUENCE public.pemadaman_id_seq
 ALTER TABLE public.pemadaman_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2643 (class 0 OID 0)
+-- TOC entry 2650 (class 0 OID 0)
 -- Dependencies: 240
 -- Name: pemadaman_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1449,7 +1475,7 @@ CREATE SEQUENCE public.pemilik_lahan_id_seq
 ALTER TABLE public.pemilik_lahan_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2644 (class 0 OID 0)
+-- TOC entry 2651 (class 0 OID 0)
 -- Dependencies: 258
 -- Name: pemilik_lahan_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1491,7 +1517,7 @@ CREATE SEQUENCE public.pengguna_id_seq
 ALTER TABLE public.pengguna_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2645 (class 0 OID 0)
+-- TOC entry 2652 (class 0 OID 0)
 -- Dependencies: 172
 -- Name: pengguna_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1545,7 +1571,7 @@ CREATE SEQUENCE public.permissions_id_seq
 ALTER TABLE public.permissions_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2646 (class 0 OID 0)
+-- TOC entry 2653 (class 0 OID 0)
 -- Dependencies: 265
 -- Name: permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1585,7 +1611,7 @@ CREATE SEQUENCE public.posko_id_seq
 ALTER TABLE public.posko_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2647 (class 0 OID 0)
+-- TOC entry 2654 (class 0 OID 0)
 -- Dependencies: 186
 -- Name: posko_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1624,7 +1650,7 @@ CREATE SEQUENCE public.potensi_karhutla_id_seq
 ALTER TABLE public.potensi_karhutla_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2648 (class 0 OID 0)
+-- TOC entry 2655 (class 0 OID 0)
 -- Dependencies: 238
 -- Name: potensi_karhutla_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1663,7 +1689,7 @@ CREATE SEQUENCE public.provinsi_id_seq
 ALTER TABLE public.provinsi_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2649 (class 0 OID 0)
+-- TOC entry 2656 (class 0 OID 0)
 -- Dependencies: 178
 -- Name: provinsi_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1703,7 +1729,7 @@ CREATE SEQUENCE public.role_navigation_menu_id_seq
 ALTER TABLE public.role_navigation_menu_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2650 (class 0 OID 0)
+-- TOC entry 2657 (class 0 OID 0)
 -- Dependencies: 270
 -- Name: role_navigation_menu_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1757,7 +1783,7 @@ CREATE SEQUENCE public.roles_id_seq
 ALTER TABLE public.roles_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2651 (class 0 OID 0)
+-- TOC entry 2658 (class 0 OID 0)
 -- Dependencies: 262
 -- Name: roles_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1796,7 +1822,7 @@ CREATE SEQUENCE public.satelit_id_seq
 ALTER TABLE public.satelit_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2652 (class 0 OID 0)
+-- TOC entry 2659 (class 0 OID 0)
 -- Dependencies: 220
 -- Name: satelit_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1816,7 +1842,8 @@ CREATE TABLE public.sebaran_hotspot (
     longitude double precision,
     created_at timestamp(0) without time zone,
     updated_at timestamp(0) without time zone,
-    html character varying(255)
+    html character varying(255),
+    provinsi character varying(500)
 );
 
 
@@ -1838,7 +1865,7 @@ CREATE SEQUENCE public.sebaran_hotspot_id_seq
 ALTER TABLE public.sebaran_hotspot_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2653 (class 0 OID 0)
+-- TOC entry 2660 (class 0 OID 0)
 -- Dependencies: 250
 -- Name: sebaran_hotspot_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1880,7 +1907,7 @@ CREATE SEQUENCE public.sosialisasi_penyadartahuan_id_seq
 ALTER TABLE public.sosialisasi_penyadartahuan_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2654 (class 0 OID 0)
+-- TOC entry 2661 (class 0 OID 0)
 -- Dependencies: 254
 -- Name: sosialisasi_penyadartahuan_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1919,7 +1946,7 @@ CREATE SEQUENCE public.sumber_air_id_seq
 ALTER TABLE public.sumber_air_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2655 (class 0 OID 0)
+-- TOC entry 2662 (class 0 OID 0)
 -- Dependencies: 206
 -- Name: sumber_air_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1958,7 +1985,7 @@ CREATE SEQUENCE public.tanah_id_seq
 ALTER TABLE public.tanah_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2656 (class 0 OID 0)
+-- TOC entry 2663 (class 0 OID 0)
 -- Dependencies: 202
 -- Name: tanah_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -1997,7 +2024,7 @@ CREATE SEQUENCE public.test_id_seq
 ALTER TABLE public.test_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2657 (class 0 OID 0)
+-- TOC entry 2664 (class 0 OID 0)
 -- Dependencies: 228
 -- Name: test_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -2036,7 +2063,7 @@ CREATE SEQUENCE public.tipe_kebakaran_id_seq
 ALTER TABLE public.tipe_kebakaran_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2658 (class 0 OID 0)
+-- TOC entry 2665 (class 0 OID 0)
 -- Dependencies: 256
 -- Name: tipe_kebakaran_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -2075,7 +2102,7 @@ CREATE SEQUENCE public.vegetasi_id_seq
 ALTER TABLE public.vegetasi_id_seq OWNER TO postgres;
 
 --
--- TOC entry 2659 (class 0 OID 0)
+-- TOC entry 2666 (class 0 OID 0)
 -- Dependencies: 198
 -- Name: vegetasi_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -2084,7 +2111,7 @@ ALTER SEQUENCE public.vegetasi_id_seq OWNED BY public.vegetasi.id;
 
 
 --
--- TOC entry 2204 (class 2604 OID 16803)
+-- TOC entry 2212 (class 2604 OID 16803)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2092,7 +2119,7 @@ ALTER TABLE ONLY public.aktivitas_harian ALTER COLUMN id SET DEFAULT nextval('pu
 
 
 --
--- TOC entry 2205 (class 2604 OID 16811)
+-- TOC entry 2213 (class 2604 OID 16811)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2100,7 +2127,7 @@ ALTER TABLE ONLY public.aktivitas_harian_patroli ALTER COLUMN id SET DEFAULT nex
 
 
 --
--- TOC entry 2202 (class 2604 OID 16774)
+-- TOC entry 2210 (class 2604 OID 16774)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2108,7 +2135,7 @@ ALTER TABLE ONLY public.anggota ALTER COLUMN id SET DEFAULT nextval('public.angg
 
 
 --
--- TOC entry 2203 (class 2604 OID 16785)
+-- TOC entry 2211 (class 2604 OID 16785)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2116,7 +2143,7 @@ ALTER TABLE ONLY public.anggota_patroli ALTER COLUMN id SET DEFAULT nextval('pub
 
 
 --
--- TOC entry 2218 (class 2604 OID 18092)
+-- TOC entry 2226 (class 2604 OID 18092)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2124,7 +2151,7 @@ ALTER TABLE ONLY public.artifisial_param ALTER COLUMN id SET DEFAULT nextval('pu
 
 
 --
--- TOC entry 2213 (class 2604 OID 17956)
+-- TOC entry 2221 (class 2604 OID 17956)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2132,7 +2159,7 @@ ALTER TABLE ONLY public.cuaca ALTER COLUMN id SET DEFAULT nextval('public.cuaca_
 
 
 --
--- TOC entry 2212 (class 2604 OID 17945)
+-- TOC entry 2220 (class 2604 OID 17945)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2140,7 +2167,7 @@ ALTER TABLE ONLY public.curah_hujan ALTER COLUMN id SET DEFAULT nextval('public.
 
 
 --
--- TOC entry 2186 (class 2604 OID 16529)
+-- TOC entry 2194 (class 2604 OID 16529)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2148,7 +2175,7 @@ ALTER TABLE ONLY public.daops ALTER COLUMN id SET DEFAULT nextval('public.daops_
 
 
 --
--- TOC entry 2190 (class 2604 OID 16589)
+-- TOC entry 2198 (class 2604 OID 16589)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2156,7 +2183,7 @@ ALTER TABLE ONLY public.desa_kelurahan ALTER COLUMN id SET DEFAULT nextval('publ
 
 
 --
--- TOC entry 2217 (class 2604 OID 18081)
+-- TOC entry 2225 (class 2604 OID 18081)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2164,7 +2191,7 @@ ALTER TABLE ONLY public.dokumentasi ALTER COLUMN id SET DEFAULT nextval('public.
 
 
 --
--- TOC entry 2183 (class 2604 OID 16478)
+-- TOC entry 2191 (class 2604 OID 16478)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2172,7 +2199,7 @@ ALTER TABLE ONLY public.hak_akses ALTER COLUMN id SET DEFAULT nextval('public.ha
 
 
 --
--- TOC entry 2201 (class 2604 OID 16758)
+-- TOC entry 2209 (class 2604 OID 16758)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2180,7 +2207,7 @@ ALTER TABLE ONLY public.hasil_uji ALTER COLUMN id SET DEFAULT nextval('public.ha
 
 
 --
--- TOC entry 2207 (class 2604 OID 16837)
+-- TOC entry 2215 (class 2604 OID 16837)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2188,7 +2215,7 @@ ALTER TABLE ONLY public.hotspot ALTER COLUMN id SET DEFAULT nextval('public.hots
 
 
 --
--- TOC entry 2220 (class 2604 OID 18142)
+-- TOC entry 2228 (class 2604 OID 18142)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2196,7 +2223,7 @@ ALTER TABLE ONLY public.hotspot_sipongi ALTER COLUMN id SET DEFAULT nextval('pub
 
 
 --
--- TOC entry 2208 (class 2604 OID 16882)
+-- TOC entry 2216 (class 2604 OID 16882)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2204,7 +2231,7 @@ ALTER TABLE ONLY public.inventori ALTER COLUMN id SET DEFAULT nextval('public.in
 
 
 --
--- TOC entry 2209 (class 2604 OID 16890)
+-- TOC entry 2217 (class 2604 OID 16890)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2212,7 +2239,7 @@ ALTER TABLE ONLY public.inventori_patroli ALTER COLUMN id SET DEFAULT nextval('p
 
 
 --
--- TOC entry 2222 (class 2604 OID 18193)
+-- TOC entry 2230 (class 2604 OID 18193)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2220,7 +2247,7 @@ ALTER TABLE ONLY public.kadar_air_bahan_bakar ALTER COLUMN id SET DEFAULT nextva
 
 
 --
--- TOC entry 2219 (class 2604 OID 18124)
+-- TOC entry 2227 (class 2604 OID 18124)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2228,7 +2255,7 @@ ALTER TABLE ONLY public.kategori_anggota ALTER COLUMN id SET DEFAULT nextval('pu
 
 
 --
--- TOC entry 2214 (class 2604 OID 18007)
+-- TOC entry 2222 (class 2604 OID 18007)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2236,7 +2263,7 @@ ALTER TABLE ONLY public.kategori_kondisi_vegetasi ALTER COLUMN id SET DEFAULT ne
 
 
 --
--- TOC entry 2191 (class 2604 OID 16602)
+-- TOC entry 2199 (class 2604 OID 16602)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2244,7 +2271,7 @@ ALTER TABLE ONLY public.kategori_patroli ALTER COLUMN id SET DEFAULT nextval('pu
 
 
 --
--- TOC entry 2188 (class 2604 OID 16555)
+-- TOC entry 2196 (class 2604 OID 16555)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2252,7 +2279,7 @@ ALTER TABLE ONLY public.kecamatan ALTER COLUMN id SET DEFAULT nextval('public.ke
 
 
 --
--- TOC entry 2192 (class 2604 OID 16624)
+-- TOC entry 2200 (class 2604 OID 16624)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2260,7 +2287,7 @@ ALTER TABLE ONLY public.kegiatan_patroli ALTER COLUMN id SET DEFAULT nextval('pu
 
 
 --
--- TOC entry 2226 (class 2604 OID 18266)
+-- TOC entry 2234 (class 2604 OID 18266)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2268,7 +2295,7 @@ ALTER TABLE ONLY public.keterangan_lokasi ALTER COLUMN id SET DEFAULT nextval('p
 
 
 --
--- TOC entry 2211 (class 2604 OID 17934)
+-- TOC entry 2219 (class 2604 OID 17934)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2276,7 +2303,7 @@ ALTER TABLE ONLY public.kondisi_karhutla ALTER COLUMN id SET DEFAULT nextval('pu
 
 
 --
--- TOC entry 2200 (class 2604 OID 16740)
+-- TOC entry 2208 (class 2604 OID 16740)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2284,7 +2311,7 @@ ALTER TABLE ONLY public.kondisi_sumber_air ALTER COLUMN id SET DEFAULT nextval('
 
 
 --
--- TOC entry 2198 (class 2604 OID 16713)
+-- TOC entry 2206 (class 2604 OID 16713)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2292,7 +2319,7 @@ ALTER TABLE ONLY public.kondisi_tanah ALTER COLUMN id SET DEFAULT nextval('publi
 
 
 --
--- TOC entry 2196 (class 2604 OID 16687)
+-- TOC entry 2204 (class 2604 OID 16687)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2300,7 +2327,7 @@ ALTER TABLE ONLY public.kondisi_vegetasi ALTER COLUMN id SET DEFAULT nextval('pu
 
 
 --
--- TOC entry 2187 (class 2604 OID 16542)
+-- TOC entry 2195 (class 2604 OID 16542)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2308,7 +2335,7 @@ ALTER TABLE ONLY public.kota_kab ALTER COLUMN id SET DEFAULT nextval('public.kot
 
 
 --
--- TOC entry 2184 (class 2604 OID 16489)
+-- TOC entry 2192 (class 2604 OID 16489)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2316,7 +2343,15 @@ ALTER TABLE ONLY public.level_pengguna ALTER COLUMN id SET DEFAULT nextval('publ
 
 
 --
--- TOC entry 2229 (class 2604 OID 18610)
+-- TOC entry 2239 (class 2604 OID 18667)
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.lokasi_patroli ALTER COLUMN id SET DEFAULT nextval('public.lokasi_patroli_id_seq'::regclass);
+
+
+--
+-- TOC entry 2237 (class 2604 OID 18610)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2324,7 +2359,7 @@ ALTER TABLE ONLY public.navigation_menus ALTER COLUMN id SET DEFAULT nextval('pu
 
 
 --
--- TOC entry 2194 (class 2604 OID 16658)
+-- TOC entry 2202 (class 2604 OID 16658)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2332,7 +2367,7 @@ ALTER TABLE ONLY public.patroli_darat ALTER COLUMN id SET DEFAULT nextval('publi
 
 
 --
--- TOC entry 2193 (class 2604 OID 16637)
+-- TOC entry 2201 (class 2604 OID 16637)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2340,7 +2375,7 @@ ALTER TABLE ONLY public.patroli_udara ALTER COLUMN id SET DEFAULT nextval('publi
 
 
 --
--- TOC entry 2216 (class 2604 OID 18073)
+-- TOC entry 2224 (class 2604 OID 18073)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2348,7 +2383,7 @@ ALTER TABLE ONLY public.pemadaman ALTER COLUMN id SET DEFAULT nextval('public.pe
 
 
 --
--- TOC entry 2225 (class 2604 OID 18234)
+-- TOC entry 2233 (class 2604 OID 18234)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2356,7 +2391,7 @@ ALTER TABLE ONLY public.pemilik_lahan ALTER COLUMN id SET DEFAULT nextval('publi
 
 
 --
--- TOC entry 2182 (class 2604 OID 16467)
+-- TOC entry 2190 (class 2604 OID 16467)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2364,7 +2399,7 @@ ALTER TABLE ONLY public.pengguna ALTER COLUMN id SET DEFAULT nextval('public.pen
 
 
 --
--- TOC entry 2228 (class 2604 OID 18423)
+-- TOC entry 2236 (class 2604 OID 18423)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2372,7 +2407,7 @@ ALTER TABLE ONLY public.permissions ALTER COLUMN id SET DEFAULT nextval('public.
 
 
 --
--- TOC entry 2189 (class 2604 OID 16576)
+-- TOC entry 2197 (class 2604 OID 16576)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2380,7 +2415,7 @@ ALTER TABLE ONLY public.posko ALTER COLUMN id SET DEFAULT nextval('public.posko_
 
 
 --
--- TOC entry 2215 (class 2604 OID 18019)
+-- TOC entry 2223 (class 2604 OID 18019)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2388,7 +2423,7 @@ ALTER TABLE ONLY public.potensi_karhutla ALTER COLUMN id SET DEFAULT nextval('pu
 
 
 --
--- TOC entry 2185 (class 2604 OID 16508)
+-- TOC entry 2193 (class 2604 OID 16508)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2396,7 +2431,7 @@ ALTER TABLE ONLY public.provinsi ALTER COLUMN id SET DEFAULT nextval('public.pro
 
 
 --
--- TOC entry 2230 (class 2604 OID 18642)
+-- TOC entry 2238 (class 2604 OID 18642)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2404,7 +2439,7 @@ ALTER TABLE ONLY public.role_navigation_menu ALTER COLUMN id SET DEFAULT nextval
 
 
 --
--- TOC entry 2227 (class 2604 OID 18395)
+-- TOC entry 2235 (class 2604 OID 18395)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2412,7 +2447,7 @@ ALTER TABLE ONLY public.roles ALTER COLUMN id SET DEFAULT nextval('public.roles_
 
 
 --
--- TOC entry 2206 (class 2604 OID 16829)
+-- TOC entry 2214 (class 2604 OID 16829)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2420,7 +2455,7 @@ ALTER TABLE ONLY public.satelit ALTER COLUMN id SET DEFAULT nextval('public.sate
 
 
 --
--- TOC entry 2221 (class 2604 OID 18150)
+-- TOC entry 2229 (class 2604 OID 18150)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2428,7 +2463,7 @@ ALTER TABLE ONLY public.sebaran_hotspot ALTER COLUMN id SET DEFAULT nextval('pub
 
 
 --
--- TOC entry 2223 (class 2604 OID 18206)
+-- TOC entry 2231 (class 2604 OID 18206)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2436,7 +2471,7 @@ ALTER TABLE ONLY public.sosialisasi_penyadartahuan ALTER COLUMN id SET DEFAULT n
 
 
 --
--- TOC entry 2199 (class 2604 OID 16732)
+-- TOC entry 2207 (class 2604 OID 16732)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2444,7 +2479,7 @@ ALTER TABLE ONLY public.sumber_air ALTER COLUMN id SET DEFAULT nextval('public.s
 
 
 --
--- TOC entry 2197 (class 2604 OID 16705)
+-- TOC entry 2205 (class 2604 OID 16705)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2452,7 +2487,7 @@ ALTER TABLE ONLY public.tanah ALTER COLUMN id SET DEFAULT nextval('public.tanah_
 
 
 --
--- TOC entry 2210 (class 2604 OID 16908)
+-- TOC entry 2218 (class 2604 OID 16908)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2460,7 +2495,7 @@ ALTER TABLE ONLY public.test ALTER COLUMN id SET DEFAULT nextval('public.test_id
 
 
 --
--- TOC entry 2224 (class 2604 OID 18225)
+-- TOC entry 2232 (class 2604 OID 18225)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2468,7 +2503,7 @@ ALTER TABLE ONLY public.tipe_kebakaran ALTER COLUMN id SET DEFAULT nextval('publ
 
 
 --
--- TOC entry 2195 (class 2604 OID 16679)
+-- TOC entry 2203 (class 2604 OID 16679)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -2476,7 +2511,7 @@ ALTER TABLE ONLY public.vegetasi ALTER COLUMN id SET DEFAULT nextval('public.veg
 
 
 --
--- TOC entry 2547 (class 0 OID 16800)
+-- TOC entry 2551 (class 0 OID 16800)
 -- Dependencies: 217
 -- Data for Name: aktivitas_harian; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -2492,7 +2527,7 @@ COPY public.aktivitas_harian (id, nama, created_at, updated_at) FROM stdin;
 
 
 --
--- TOC entry 2660 (class 0 OID 0)
+-- TOC entry 2667 (class 0 OID 0)
 -- Dependencies: 216
 -- Name: aktivitas_harian_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2501,29 +2536,27 @@ SELECT pg_catalog.setval('public.aktivitas_harian_id_seq', 6, true);
 
 
 --
--- TOC entry 2549 (class 0 OID 16808)
+-- TOC entry 2553 (class 0 OID 16808)
 -- Dependencies: 219
 -- Data for Name: aktivitas_harian_patroli; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.aktivitas_harian_patroli (id, aktivitas_harian_id, kegiatan_patroli_id, created_at, updated_at) FROM stdin;
-5	1	1	2018-10-16 14:56:10	2018-10-16 14:56:10
-6	1	4	2018-10-16 14:58:00	2018-10-16 14:58:00
-10	1	1	2018-10-17 22:37:18	2018-10-17 22:37:18
+133	2	129	2019-02-09 14:25:40	2019-02-09 14:25:40
 \.
 
 
 --
--- TOC entry 2661 (class 0 OID 0)
+-- TOC entry 2668 (class 0 OID 0)
 -- Dependencies: 218
 -- Name: aktivitas_harian_patroli_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.aktivitas_harian_patroli_id_seq', 109, true);
+SELECT pg_catalog.setval('public.aktivitas_harian_patroli_id_seq', 133, true);
 
 
 --
--- TOC entry 2543 (class 0 OID 16771)
+-- TOC entry 2547 (class 0 OID 16771)
 -- Dependencies: 213
 -- Data for Name: anggota; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -2540,35 +2573,36 @@ COPY public.anggota (id, nama, email, no_telepon, created_at, updated_at, katego
 
 
 --
--- TOC entry 2662 (class 0 OID 0)
+-- TOC entry 2669 (class 0 OID 0)
 -- Dependencies: 212
 -- Name: anggota_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.anggota_id_seq', 16, true);
+SELECT pg_catalog.setval('public.anggota_id_seq', 18, true);
 
 
 --
--- TOC entry 2545 (class 0 OID 16782)
+-- TOC entry 2549 (class 0 OID 16782)
 -- Dependencies: 215
 -- Data for Name: anggota_patroli; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.anggota_patroli (id, anggota_id, kegiatan_patroli_id, created_at, updated_at) FROM stdin;
+346	1	129	2019-02-09 14:25:40	2019-02-09 14:25:40
 \.
 
 
 --
--- TOC entry 2663 (class 0 OID 0)
+-- TOC entry 2670 (class 0 OID 0)
 -- Dependencies: 214
 -- Name: anggota_patroli_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.anggota_patroli_id_seq', 320, true);
+SELECT pg_catalog.setval('public.anggota_patroli_id_seq', 346, true);
 
 
 --
--- TOC entry 2575 (class 0 OID 18089)
+-- TOC entry 2579 (class 0 OID 18089)
 -- Dependencies: 245
 -- Data for Name: artifisial_param; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -2581,7 +2615,7 @@ COPY public.artifisial_param (id, nama, created_at, updated_at) FROM stdin;
 
 
 --
--- TOC entry 2664 (class 0 OID 0)
+-- TOC entry 2671 (class 0 OID 0)
 -- Dependencies: 244
 -- Name: artifisial_param_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2590,7 +2624,7 @@ SELECT pg_catalog.setval('public.artifisial_param_id_seq', 3, true);
 
 
 --
--- TOC entry 2565 (class 0 OID 17953)
+-- TOC entry 2569 (class 0 OID 17953)
 -- Dependencies: 235
 -- Data for Name: cuaca; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -2604,7 +2638,7 @@ COPY public.cuaca (id, nama, created_at, updated_at) FROM stdin;
 
 
 --
--- TOC entry 2665 (class 0 OID 0)
+-- TOC entry 2672 (class 0 OID 0)
 -- Dependencies: 234
 -- Name: cuaca_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2613,7 +2647,7 @@ SELECT pg_catalog.setval('public.cuaca_id_seq', 4, true);
 
 
 --
--- TOC entry 2563 (class 0 OID 17942)
+-- TOC entry 2567 (class 0 OID 17942)
 -- Dependencies: 233
 -- Data for Name: curah_hujan; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -2626,7 +2660,7 @@ COPY public.curah_hujan (id, nama, created_at, updated_at) FROM stdin;
 
 
 --
--- TOC entry 2666 (class 0 OID 0)
+-- TOC entry 2673 (class 0 OID 0)
 -- Dependencies: 232
 -- Name: curah_hujan_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -2635,7 +2669,7 @@ SELECT pg_catalog.setval('public.curah_hujan_id_seq', 3, true);
 
 
 --
--- TOC entry 2511 (class 0 OID 16526)
+-- TOC entry 2515 (class 0 OID 16526)
 -- Dependencies: 181
 -- Data for Name: daops; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -2737,16 +2771,16 @@ COPY public.daops (id, provinsi_id, nama, created_at, updated_at) FROM stdin;
 
 
 --
--- TOC entry 2667 (class 0 OID 0)
+-- TOC entry 2674 (class 0 OID 0)
 -- Dependencies: 180
 -- Name: daops_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.daops_id_seq', 428, true);
+SELECT pg_catalog.setval('public.daops_id_seq', 430, true);
 
 
 --
--- TOC entry 2519 (class 0 OID 16586)
+-- TOC entry 2523 (class 0 OID 16586)
 -- Dependencies: 189
 -- Data for Name: desa_kelurahan; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -3294,7 +3328,7 @@ COPY public.desa_kelurahan (id, posko_id, nama, created_at, updated_at, kecamata
 
 
 --
--- TOC entry 2668 (class 0 OID 0)
+-- TOC entry 2675 (class 0 OID 0)
 -- Dependencies: 188
 -- Name: desa_kelurahan_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -3303,26 +3337,27 @@ SELECT pg_catalog.setval('public.desa_kelurahan_id_seq', 1618, true);
 
 
 --
--- TOC entry 2573 (class 0 OID 18078)
+-- TOC entry 2577 (class 0 OID 18078)
 -- Dependencies: 243
 -- Data for Name: dokumentasi; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.dokumentasi (id, kegiatan_patroli_id, url_file, tipe_file, deskripsi, created_at, updated_at) FROM stdin;
+112	129	dok-129-1549697140.png	images/png	Testing image	2019-02-09 14:25:40	2019-02-09 14:25:40
 \.
 
 
 --
--- TOC entry 2669 (class 0 OID 0)
+-- TOC entry 2676 (class 0 OID 0)
 -- Dependencies: 242
 -- Name: dokumentasi_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.dokumentasi_id_seq', 88, true);
+SELECT pg_catalog.setval('public.dokumentasi_id_seq', 112, true);
 
 
 --
--- TOC entry 2505 (class 0 OID 16475)
+-- TOC entry 2509 (class 0 OID 16475)
 -- Dependencies: 175
 -- Data for Name: hak_akses; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -3332,7 +3367,7 @@ COPY public.hak_akses (id, nama, menu, created_at, updated_at) FROM stdin;
 
 
 --
--- TOC entry 2670 (class 0 OID 0)
+-- TOC entry 2677 (class 0 OID 0)
 -- Dependencies: 174
 -- Name: hak_akses_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -3341,48 +3376,47 @@ SELECT pg_catalog.setval('public.hak_akses_id_seq', 1, false);
 
 
 --
--- TOC entry 2541 (class 0 OID 16755)
+-- TOC entry 2545 (class 0 OID 16755)
 -- Dependencies: 211
 -- Data for Name: hasil_uji; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.hasil_uji (id, patroli_darat_id, nama_pengujian, hasil, created_at, updated_at) FROM stdin;
+125	12336	Uji Remas Serasah	Serasah Kering	2019-02-09 14:25:40	2019-02-09 14:25:40
 \.
 
 
 --
--- TOC entry 2671 (class 0 OID 0)
+-- TOC entry 2678 (class 0 OID 0)
 -- Dependencies: 210
 -- Name: hasil_uji_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.hasil_uji_id_seq', 107, true);
+SELECT pg_catalog.setval('public.hasil_uji_id_seq', 125, true);
 
 
 --
--- TOC entry 2553 (class 0 OID 16834)
+-- TOC entry 2557 (class 0 OID 16834)
 -- Dependencies: 223
 -- Data for Name: hotspot; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.hotspot (id, satelit_id, kegiatan_patroli_id, deskripsi, created_at, updated_at) FROM stdin;
-6	1	1	NIHIL	2018-10-16 14:56:10	2018-10-16 14:56:10
-7	2	4	NIHIL	2018-10-16 14:58:00	2018-10-16 14:58:00
-11	2	1	NIHIL	2018-10-17 22:37:18	2018-10-17 22:37:18
+134	2	129	NIHIL	2019-02-09 14:25:40	2019-02-09 14:25:40
 \.
 
 
 --
--- TOC entry 2672 (class 0 OID 0)
+-- TOC entry 2679 (class 0 OID 0)
 -- Dependencies: 222
 -- Name: hotspot_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.hotspot_id_seq', 110, true);
+SELECT pg_catalog.setval('public.hotspot_id_seq', 134, true);
 
 
 --
--- TOC entry 2579 (class 0 OID 18139)
+-- TOC entry 2583 (class 0 OID 18139)
 -- Dependencies: 249
 -- Data for Name: hotspot_sipongi; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -3393,7 +3427,7 @@ COPY public.hotspot_sipongi (id, tanggal, created_at, updated_at) FROM stdin;
 
 
 --
--- TOC entry 2673 (class 0 OID 0)
+-- TOC entry 2680 (class 0 OID 0)
 -- Dependencies: 248
 -- Name: hotspot_sipongi_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -3402,7 +3436,7 @@ SELECT pg_catalog.setval('public.hotspot_sipongi_id_seq', 30, true);
 
 
 --
--- TOC entry 2555 (class 0 OID 16879)
+-- TOC entry 2559 (class 0 OID 16879)
 -- Dependencies: 225
 -- Data for Name: inventori; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -3416,7 +3450,7 @@ COPY public.inventori (id, nama, created_at, updated_at) FROM stdin;
 
 
 --
--- TOC entry 2674 (class 0 OID 0)
+-- TOC entry 2681 (class 0 OID 0)
 -- Dependencies: 224
 -- Name: inventori_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -3425,29 +3459,27 @@ SELECT pg_catalog.setval('public.inventori_id_seq', 5, true);
 
 
 --
--- TOC entry 2557 (class 0 OID 16887)
+-- TOC entry 2561 (class 0 OID 16887)
 -- Dependencies: 227
 -- Data for Name: inventori_patroli; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.inventori_patroli (id, kegiatan_patroli_id, inventori_id, created_at, updated_at, jumlah_unit) FROM stdin;
-11	1	2	2018-10-16 14:56:10	2018-10-16 14:56:10	\N
-13	4	5	2018-10-16 14:58:00	2018-10-16 14:58:00	\N
-17	1	5	2018-10-17 22:37:18	2018-10-17 22:37:18	\N
+140	129	3	2019-02-09 14:25:40	2019-02-09 14:25:40	2
 \.
 
 
 --
--- TOC entry 2675 (class 0 OID 0)
+-- TOC entry 2682 (class 0 OID 0)
 -- Dependencies: 226
 -- Name: inventori_patroli_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.inventori_patroli_id_seq', 116, true);
+SELECT pg_catalog.setval('public.inventori_patroli_id_seq', 140, true);
 
 
 --
--- TOC entry 2583 (class 0 OID 18190)
+-- TOC entry 2587 (class 0 OID 18190)
 -- Dependencies: 253
 -- Data for Name: kadar_air_bahan_bakar; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -3460,7 +3492,7 @@ COPY public.kadar_air_bahan_bakar (id, nama, created_at, updated_at) FROM stdin;
 
 
 --
--- TOC entry 2676 (class 0 OID 0)
+-- TOC entry 2683 (class 0 OID 0)
 -- Dependencies: 252
 -- Name: kadar_air_bahan_bakar_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -3469,7 +3501,7 @@ SELECT pg_catalog.setval('public.kadar_air_bahan_bakar_id_seq', 3, true);
 
 
 --
--- TOC entry 2577 (class 0 OID 18121)
+-- TOC entry 2581 (class 0 OID 18121)
 -- Dependencies: 247
 -- Data for Name: kategori_anggota; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -3483,7 +3515,7 @@ COPY public.kategori_anggota (id, nama, created_at, updated_at) FROM stdin;
 
 
 --
--- TOC entry 2677 (class 0 OID 0)
+-- TOC entry 2684 (class 0 OID 0)
 -- Dependencies: 246
 -- Name: kategori_anggota_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -3492,7 +3524,7 @@ SELECT pg_catalog.setval('public.kategori_anggota_id_seq', 4, true);
 
 
 --
--- TOC entry 2567 (class 0 OID 18004)
+-- TOC entry 2571 (class 0 OID 18004)
 -- Dependencies: 237
 -- Data for Name: kategori_kondisi_vegetasi; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -3504,7 +3536,7 @@ COPY public.kategori_kondisi_vegetasi (id, nama, created_at, updated_at) FROM st
 
 
 --
--- TOC entry 2678 (class 0 OID 0)
+-- TOC entry 2685 (class 0 OID 0)
 -- Dependencies: 236
 -- Name: kategori_kondisi_vegetasi_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -3513,7 +3545,7 @@ SELECT pg_catalog.setval('public.kategori_kondisi_vegetasi_id_seq', 2, true);
 
 
 --
--- TOC entry 2521 (class 0 OID 16599)
+-- TOC entry 2525 (class 0 OID 16599)
 -- Dependencies: 191
 -- Data for Name: kategori_patroli; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -3526,7 +3558,7 @@ COPY public.kategori_patroli (id, nama, created_at, updated_at) FROM stdin;
 
 
 --
--- TOC entry 2679 (class 0 OID 0)
+-- TOC entry 2686 (class 0 OID 0)
 -- Dependencies: 190
 -- Name: kategori_patroli_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -3535,7 +3567,7 @@ SELECT pg_catalog.setval('public.kategori_patroli_id_seq', 3, true);
 
 
 --
--- TOC entry 2515 (class 0 OID 16552)
+-- TOC entry 2519 (class 0 OID 16552)
 -- Dependencies: 185
 -- Data for Name: kecamatan; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -3832,7 +3864,7 @@ COPY public.kecamatan (id, kota_kab_id, nama, created_at, updated_at) FROM stdin
 
 
 --
--- TOC entry 2680 (class 0 OID 0)
+-- TOC entry 2687 (class 0 OID 0)
 -- Dependencies: 184
 -- Name: kecamatan_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -3841,29 +3873,27 @@ SELECT pg_catalog.setval('public.kecamatan_id_seq', 864, true);
 
 
 --
--- TOC entry 2523 (class 0 OID 16621)
+-- TOC entry 2527 (class 0 OID 16621)
 -- Dependencies: 193
 -- Data for Name: kegiatan_patroli; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.kegiatan_patroli (id, kategori_patroli_id, tanggal_patroli, created_at, updated_at) FROM stdin;
-1	\N	2016-02-24	\N	\N
-4	\N	2016-02-25	\N	\N
-5	\N	2016-02-26	\N	\N
+129	2	2018-12-01	2019-02-09 14:25:27	2019-02-09 14:25:40
 \.
 
 
 --
--- TOC entry 2681 (class 0 OID 0)
+-- TOC entry 2688 (class 0 OID 0)
 -- Dependencies: 192
 -- Name: kegiatan_patroli_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.kegiatan_patroli_id_seq', 110, true);
+SELECT pg_catalog.setval('public.kegiatan_patroli_id_seq', 129, true);
 
 
 --
--- TOC entry 2591 (class 0 OID 18263)
+-- TOC entry 2595 (class 0 OID 18263)
 -- Dependencies: 261
 -- Data for Name: keterangan_lokasi; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -3875,7 +3905,7 @@ COPY public.keterangan_lokasi (id, nama, created_at, updated_at) FROM stdin;
 
 
 --
--- TOC entry 2682 (class 0 OID 0)
+-- TOC entry 2689 (class 0 OID 0)
 -- Dependencies: 260
 -- Name: keterangan_lokasi_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -3884,7 +3914,7 @@ SELECT pg_catalog.setval('public.keterangan_lokasi_id_seq', 2, true);
 
 
 --
--- TOC entry 2561 (class 0 OID 17931)
+-- TOC entry 2565 (class 0 OID 17931)
 -- Dependencies: 231
 -- Data for Name: kondisi_karhutla; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -3896,7 +3926,7 @@ COPY public.kondisi_karhutla (id, nama, created_at, updated_at) FROM stdin;
 
 
 --
--- TOC entry 2683 (class 0 OID 0)
+-- TOC entry 2690 (class 0 OID 0)
 -- Dependencies: 230
 -- Name: kondisi_karhutla_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -3905,104 +3935,67 @@ SELECT pg_catalog.setval('public.kondisi_karhutla_id_seq', 2, true);
 
 
 --
--- TOC entry 2539 (class 0 OID 16737)
+-- TOC entry 2543 (class 0 OID 16737)
 -- Dependencies: 209
 -- Data for Name: kondisi_sumber_air; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.kondisi_sumber_air (id, patroli_darat_id, sumber_air_id, created_at, updated_at, latitude, longitude, panjang, lebar, kedalaman) FROM stdin;
-8	12203	1	\N	\N	\N	\N	\N	\N	\N
-9	12203	1	\N	\N	\N	\N	\N	\N	\N
-10	12204	1	\N	\N	\N	\N	\N	\N	\N
-11	12204	1	\N	\N	\N	\N	\N	\N	\N
-13	12204	1	\N	\N	\N	\N	\N	\N	\N
-14	12204	1	\N	\N	\N	\N	\N	\N	\N
-15	12205	1	\N	\N	\N	\N	\N	\N	\N
-16	12205	1	\N	\N	\N	\N	\N	\N	\N
-17	12207	1	\N	\N	\N	\N	\N	\N	\N
-18	12207	1	\N	\N	\N	\N	\N	\N	\N
-19	12208	1	\N	\N	\N	\N	\N	\N	\N
+143	12336	2	2019-02-09 14:25:40	2019-02-09 14:25:40	110.1340833	-1.96355555599999998	2	2	1.5
 \.
 
 
 --
--- TOC entry 2684 (class 0 OID 0)
+-- TOC entry 2691 (class 0 OID 0)
 -- Dependencies: 208
 -- Name: kondisi_sumber_air_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.kondisi_sumber_air_id_seq', 125, true);
+SELECT pg_catalog.setval('public.kondisi_sumber_air_id_seq', 143, true);
 
 
 --
--- TOC entry 2535 (class 0 OID 16710)
+-- TOC entry 2539 (class 0 OID 16710)
 -- Dependencies: 205
 -- Data for Name: kondisi_tanah; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.kondisi_tanah (id, patroli_darat_id, tanah_id, created_at, updated_at, latitude, longitude, luas, kedalaman_gambut) FROM stdin;
-4	12204	1	\N	\N	\N	\N	\N	\N
-6	12204	1	\N	\N	\N	\N	\N	\N
-8	12204	1	\N	\N	\N	\N	\N	\N
-9	12204	1	\N	\N	\N	\N	\N	\N
-12	12204	1	\N	\N	\N	\N	\N	\N
-13	12205	1	\N	\N	\N	\N	\N	\N
-15	12207	1	\N	\N	\N	\N	\N	\N
-16	12208	1	\N	\N	\N	\N	\N	\N
-17	12208	1	\N	\N	\N	\N	\N	\N
-18	12208	1	\N	\N	\N	\N	\N	\N
+141	12336	2	2019-02-09 14:25:40	2019-02-09 14:25:40	-1.9922222220000001	110.135527800000006	0	1.5
 \.
 
 
 --
--- TOC entry 2685 (class 0 OID 0)
+-- TOC entry 2692 (class 0 OID 0)
 -- Dependencies: 204
 -- Name: kondisi_tanah_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.kondisi_tanah_id_seq', 123, true);
+SELECT pg_catalog.setval('public.kondisi_tanah_id_seq', 141, true);
 
 
 --
--- TOC entry 2531 (class 0 OID 16684)
+-- TOC entry 2535 (class 0 OID 16684)
 -- Dependencies: 201
 -- Data for Name: kondisi_vegetasi; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.kondisi_vegetasi (id, patroli_darat_id, vegetasi_id, created_at, updated_at, kategori_kondisi_vegetasi_id, luas_tanah, latitude, longitude) FROM stdin;
-7	12203	1	\N	\N	\N	\N	\N	\N
-8	12204	2	\N	\N	\N	\N	\N	\N
-9	12204	3	\N	\N	\N	\N	\N	\N
-12	12204	4	\N	\N	\N	\N	\N	\N
-13	12204	3	\N	\N	\N	\N	\N	\N
-14	12207	3	\N	\N	\N	\N	\N	\N
-15	12207	1	\N	\N	\N	\N	\N	\N
-16	12207	4	\N	\N	\N	\N	\N	\N
-18	12207	3	\N	\N	\N	\N	\N	\N
-19	12207	5	\N	\N	\N	0.5	\N	\N
-20	12208	6	\N	\N	\N	\N	\N	\N
-21	12208	3	\N	\N	\N	\N	\N	\N
-22	12208	1	\N	\N	\N	\N	\N	\N
-23	12208	3	\N	\N	\N	\N	\N	\N
-25	12208	3	\N	\N	\N	\N	\N	\N
-26	12208	1	\N	\N	\N	0.5	\N	\N
-27	12208	5	\N	\N	\N	0.5	\N	\N
-28	12208	3	\N	\N	\N	\N	\N	\N
-29	12208	1	\N	\N	\N	\N	\N	\N
+152	12336	2	2019-02-09 14:25:40	2019-02-09 14:25:40	2	3	-1.9922222220000001	110.135527800000006
 \.
 
 
 --
--- TOC entry 2686 (class 0 OID 0)
+-- TOC entry 2693 (class 0 OID 0)
 -- Dependencies: 200
 -- Name: kondisi_vegetasi_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.kondisi_vegetasi_id_seq', 134, true);
+SELECT pg_catalog.setval('public.kondisi_vegetasi_id_seq', 152, true);
 
 
 --
--- TOC entry 2513 (class 0 OID 16539)
+-- TOC entry 2517 (class 0 OID 16539)
 -- Dependencies: 183
 -- Data for Name: kota_kab; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -4086,7 +4079,7 @@ COPY public.kota_kab (id, daops_id, nama, created_at, updated_at) FROM stdin;
 
 
 --
--- TOC entry 2687 (class 0 OID 0)
+-- TOC entry 2694 (class 0 OID 0)
 -- Dependencies: 182
 -- Name: kota_kab_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -4095,7 +4088,7 @@ SELECT pg_catalog.setval('public.kota_kab_id_seq', 330, true);
 
 
 --
--- TOC entry 2507 (class 0 OID 16486)
+-- TOC entry 2511 (class 0 OID 16486)
 -- Dependencies: 177
 -- Data for Name: level_pengguna; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -4105,7 +4098,7 @@ COPY public.level_pengguna (id, pengguna_id, hak_akses_id, created_at, updated_a
 
 
 --
--- TOC entry 2688 (class 0 OID 0)
+-- TOC entry 2695 (class 0 OID 0)
 -- Dependencies: 176
 -- Name: level_pengguna_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -4114,7 +4107,27 @@ SELECT pg_catalog.setval('public.level_pengguna_id_seq', 1, false);
 
 
 --
--- TOC entry 2501 (class 0 OID 16425)
+-- TOC entry 2607 (class 0 OID 18664)
+-- Dependencies: 273
+-- Data for Name: lokasi_patroli; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.lokasi_patroli (id, kegiatan_patroli_id, desa_kelurahan_id, latitude, longitude, suhu, kelembaban, kecepatan_angin, created_at, updated_at, cuaca_pagi_id, cuaca_sore_id, cuaca_siang_id, curah_hujan_id, ffmc_kkas_id, fwi_id, dc_kk_id) FROM stdin;
+4	129	1079	-1.99975600000000009	23.5654299999999992	10.0999999999999996	11.0999999999999996	12.0999999999999996	2019-02-09 14:25:40	2019-02-09 14:25:40	2	2	2	2	2	2	2
+\.
+
+
+--
+-- TOC entry 2696 (class 0 OID 0)
+-- Dependencies: 272
+-- Name: lokasi_patroli_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.lokasi_patroli_id_seq', 4, true);
+
+
+--
+-- TOC entry 2505 (class 0 OID 16425)
 -- Dependencies: 171
 -- Data for Name: migrations; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -4211,11 +4224,20 @@ COPY public.migrations (migration, batch) FROM stdin;
 2018_12_05_063800_add_column_html_sebaran_hotspot	84
 2018_12_16_192020_create_navigation_menu_table	85
 2018_12_16_202203_create_table_role_navigation_menu	86
+2019_01_06_201604_add_provinsi_column_sebaran_hotspot	87
+2019_02_07_205440_create_lokasi_patroli_table	88
+2019_02_08_205528_add_lokasi_patroli_id_patroli_darat_table	89
+2019_02_08_205805_add_lokasi_patroli_id_to_patroli_udara_table	90
+2019_02_08_211318_delete_unused_column_patroli_darat	91
+2019_02_08_212057_delete_unused_column_patroli_udara	92
+2019_02_09_110103_add_kategorikal_column_lokasi_patroli	93
+2019_02_09_111739_add_artifisail_param_colums_lokasi_patroli	94
+2019_02_09_112308_drop_column_from_lokasi_patroli_table	95
 \.
 
 
 --
--- TOC entry 2599 (class 0 OID 18607)
+-- TOC entry 2603 (class 0 OID 18607)
 -- Dependencies: 269
 -- Data for Name: navigation_menus; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -4230,7 +4252,7 @@ COPY public.navigation_menus (id, name, display_name, link, created_at, updated_
 
 
 --
--- TOC entry 2689 (class 0 OID 0)
+-- TOC entry 2697 (class 0 OID 0)
 -- Dependencies: 268
 -- Name: navigation_menus_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -4239,72 +4261,66 @@ SELECT pg_catalog.setval('public.navigation_menus_id_seq', 17, true);
 
 
 --
--- TOC entry 2527 (class 0 OID 16655)
+-- TOC entry 2531 (class 0 OID 16655)
 -- Dependencies: 197
 -- Data for Name: patroli_darat; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.patroli_darat (id, kegiatan_patroli_id, desa_kelurahan_id, suhu, kelembaban, kecepatan_angin, aktivitas_masyarakat, created_at, updated_at, cuaca_pagi_id, cuaca_sore_id, cuaca_siang_id, curah_hujan_id, fwi_id, ffmc_kkas_id, dc_kk_id, kadar_air_bahan_bakar_id, latitude, longitude, potensi_karhutla_id, kondisi_karhutla_id, keterangan_lokasi_id) FROM stdin;
-12203	1	1079	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-12204	1	1080	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-12205	1	1081	\N	\N	\N	\N	\N	\N	1	1	1	1	\N	\N	\N	\N	\N	\N	\N	\N	\N
-12206	1	1082	\N	\N	\N	\N	\N	\N	1	1	1	2	\N	\N	\N	\N	\N	\N	\N	\N	\N
-12207	4	1079	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-12208	5	1079	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+COPY public.patroli_darat (id, aktivitas_masyarakat, created_at, updated_at, curah_hujan_id, potensi_karhutla_id, kondisi_karhutla_id, keterangan_lokasi_id, lokasi_patroli_id) FROM stdin;
+12336	bercocok tanam	2019-02-09 14:25:40	2019-02-09 14:25:40	\N	2	2	2	4
 \.
 
 
 --
--- TOC entry 2690 (class 0 OID 0)
+-- TOC entry 2698 (class 0 OID 0)
 -- Dependencies: 196
 -- Name: patroli_darat_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.patroli_darat_id_seq', 12318, true);
+SELECT pg_catalog.setval('public.patroli_darat_id_seq', 12336, true);
 
 
 --
--- TOC entry 2525 (class 0 OID 16634)
+-- TOC entry 2529 (class 0 OID 16634)
 -- Dependencies: 195
 -- Data for Name: patroli_udara; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.patroli_udara (id, kegiatan_patroli_id, desa_kelurahan_id, latitude, longitude, confidence, distance, kegiatan, radial, keterangan, suhu, kelembaban, kecepatan_angin, created_at, updated_at, cuaca_siang_id, cuaca_pagi_id, cuaca_sore_id, curah_hujan_id, dc_kk_id, ffmc_kkas_id, fwi_id) FROM stdin;
+COPY public.patroli_udara (id, confidence, distance, kegiatan, radial, keterangan, created_at, updated_at, lokasi_patroli_id) FROM stdin;
 \.
 
 
 --
--- TOC entry 2691 (class 0 OID 0)
+-- TOC entry 2699 (class 0 OID 0)
 -- Dependencies: 194
 -- Name: patroli_udara_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.patroli_udara_id_seq', 22, true);
+SELECT pg_catalog.setval('public.patroli_udara_id_seq', 24, true);
 
 
 --
--- TOC entry 2571 (class 0 OID 18070)
+-- TOC entry 2575 (class 0 OID 18070)
 -- Dependencies: 241
 -- Data for Name: pemadaman; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.pemadaman (id, patroli_darat_id, latitude, longitude, luas_terbakar, created_at, updated_at, luas_dipadamkan, hasil_pemadaman, tipe_kebakaran_id, pemilik_lahan_id) FROM stdin;
-1	12203	1111	2222	12	\N	\N	\N	\N	\N	\N
-2	12204	333	4444	13	\N	\N	\N	\N	\N	\N
+122	12336	-1.9922222220000001	110.135527800000006	1.5	2019-02-09 14:25:40	2019-02-09 14:25:40	1	Berhasil dipadamkan	2	2
 \.
 
 
 --
--- TOC entry 2692 (class 0 OID 0)
+-- TOC entry 2700 (class 0 OID 0)
 -- Dependencies: 240
 -- Name: pemadaman_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.pemadaman_id_seq', 104, true);
+SELECT pg_catalog.setval('public.pemadaman_id_seq', 122, true);
 
 
 --
--- TOC entry 2589 (class 0 OID 18231)
+-- TOC entry 2593 (class 0 OID 18231)
 -- Dependencies: 259
 -- Data for Name: pemilik_lahan; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -4317,7 +4333,7 @@ COPY public.pemilik_lahan (id, created_at, updated_at, nama) FROM stdin;
 
 
 --
--- TOC entry 2693 (class 0 OID 0)
+-- TOC entry 2701 (class 0 OID 0)
 -- Dependencies: 258
 -- Name: pemilik_lahan_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -4326,7 +4342,7 @@ SELECT pg_catalog.setval('public.pemilik_lahan_id_seq', 3, true);
 
 
 --
--- TOC entry 2503 (class 0 OID 16464)
+-- TOC entry 2507 (class 0 OID 16464)
 -- Dependencies: 173
 -- Data for Name: pengguna; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -4339,7 +4355,7 @@ COPY public.pengguna (id, nama, email, password, created_at, updated_at, remembe
 
 
 --
--- TOC entry 2694 (class 0 OID 0)
+-- TOC entry 2702 (class 0 OID 0)
 -- Dependencies: 172
 -- Name: pengguna_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -4348,7 +4364,7 @@ SELECT pg_catalog.setval('public.pengguna_id_seq', 10, true);
 
 
 --
--- TOC entry 2597 (class 0 OID 18431)
+-- TOC entry 2601 (class 0 OID 18431)
 -- Dependencies: 267
 -- Data for Name: permission_role; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -4412,7 +4428,7 @@ COPY public.permission_role (permission_id, role_id) FROM stdin;
 
 
 --
--- TOC entry 2596 (class 0 OID 18420)
+-- TOC entry 2600 (class 0 OID 18420)
 -- Dependencies: 266
 -- Data for Name: permissions; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -4474,7 +4490,7 @@ COPY public.permissions (id, name, display_name, description, created_at, update
 
 
 --
--- TOC entry 2695 (class 0 OID 0)
+-- TOC entry 2703 (class 0 OID 0)
 -- Dependencies: 265
 -- Name: permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -4483,7 +4499,7 @@ SELECT pg_catalog.setval('public.permissions_id_seq', 140, true);
 
 
 --
--- TOC entry 2517 (class 0 OID 16573)
+-- TOC entry 2521 (class 0 OID 16573)
 -- Dependencies: 187
 -- Data for Name: posko; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -4494,7 +4510,7 @@ COPY public.posko (id, kecamatan_id, nama, created_at, updated_at) FROM stdin;
 
 
 --
--- TOC entry 2696 (class 0 OID 0)
+-- TOC entry 2704 (class 0 OID 0)
 -- Dependencies: 186
 -- Name: posko_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -4503,7 +4519,7 @@ SELECT pg_catalog.setval('public.posko_id_seq', 4, true);
 
 
 --
--- TOC entry 2569 (class 0 OID 18016)
+-- TOC entry 2573 (class 0 OID 18016)
 -- Dependencies: 239
 -- Data for Name: potensi_karhutla; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -4516,7 +4532,7 @@ COPY public.potensi_karhutla (id, nama, created_at, updated_at) FROM stdin;
 
 
 --
--- TOC entry 2697 (class 0 OID 0)
+-- TOC entry 2705 (class 0 OID 0)
 -- Dependencies: 238
 -- Name: potensi_karhutla_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -4525,7 +4541,7 @@ SELECT pg_catalog.setval('public.potensi_karhutla_id_seq', 3, true);
 
 
 --
--- TOC entry 2509 (class 0 OID 16505)
+-- TOC entry 2513 (class 0 OID 16505)
 -- Dependencies: 179
 -- Data for Name: provinsi; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -4545,7 +4561,7 @@ COPY public.provinsi (id, nama, created_at, updated_at) FROM stdin;
 
 
 --
--- TOC entry 2698 (class 0 OID 0)
+-- TOC entry 2706 (class 0 OID 0)
 -- Dependencies: 178
 -- Name: provinsi_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -4554,7 +4570,7 @@ SELECT pg_catalog.setval('public.provinsi_id_seq', 64, true);
 
 
 --
--- TOC entry 2601 (class 0 OID 18639)
+-- TOC entry 2605 (class 0 OID 18639)
 -- Dependencies: 271
 -- Data for Name: role_navigation_menu; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -4565,7 +4581,7 @@ COPY public.role_navigation_menu (id, role_id, navigation_menu_id, created_at, u
 
 
 --
--- TOC entry 2699 (class 0 OID 0)
+-- TOC entry 2707 (class 0 OID 0)
 -- Dependencies: 270
 -- Name: role_navigation_menu_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -4574,7 +4590,7 @@ SELECT pg_catalog.setval('public.role_navigation_menu_id_seq', 4, true);
 
 
 --
--- TOC entry 2594 (class 0 OID 18403)
+-- TOC entry 2598 (class 0 OID 18403)
 -- Dependencies: 264
 -- Data for Name: role_user; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -4587,7 +4603,7 @@ COPY public.role_user (pengguna_id, role_id) FROM stdin;
 
 
 --
--- TOC entry 2593 (class 0 OID 18392)
+-- TOC entry 2597 (class 0 OID 18392)
 -- Dependencies: 263
 -- Data for Name: roles; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -4600,7 +4616,7 @@ COPY public.roles (id, name, display_name, description, created_at, updated_at) 
 
 
 --
--- TOC entry 2700 (class 0 OID 0)
+-- TOC entry 2708 (class 0 OID 0)
 -- Dependencies: 262
 -- Name: roles_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -4609,7 +4625,7 @@ SELECT pg_catalog.setval('public.roles_id_seq', 29, true);
 
 
 --
--- TOC entry 2551 (class 0 OID 16826)
+-- TOC entry 2555 (class 0 OID 16826)
 -- Dependencies: 221
 -- Data for Name: satelit; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -4621,7 +4637,7 @@ COPY public.satelit (id, nama, created_at, updated_at) FROM stdin;
 
 
 --
--- TOC entry 2701 (class 0 OID 0)
+-- TOC entry 2709 (class 0 OID 0)
 -- Dependencies: 220
 -- Name: satelit_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -4630,21 +4646,21 @@ SELECT pg_catalog.setval('public.satelit_id_seq', 2, true);
 
 
 --
--- TOC entry 2581 (class 0 OID 18147)
+-- TOC entry 2585 (class 0 OID 18147)
 -- Dependencies: 251
 -- Data for Name: sebaran_hotspot; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.sebaran_hotspot (id, hotspot_sipongi_id, latitude, longitude, created_at, updated_at, html) FROM stdin;
-868	30	1.77400000000000002	117.936999999999998	2018-12-02 17:46:08	2018-12-02 17:46:08	\N
-869	30	1.77444851397999992	117.936935425000001	2018-12-02 17:46:08	2018-12-02 17:46:08	\N
-870	30	0.900157332419999956	116.914955139	2018-12-02 17:46:08	2018-12-02 17:46:08	\N
-871	30	1.77658999999999989	117.939999999999998	2018-12-02 17:46:08	2018-12-02 17:46:08	\N
+COPY public.sebaran_hotspot (id, hotspot_sipongi_id, latitude, longitude, created_at, updated_at, html, provinsi) FROM stdin;
+868	30	1.77400000000000002	117.936999999999998	2018-12-02 17:46:08	2019-01-06 20:28:00	\N	
+869	30	1.77444851397999992	117.936935425000001	2018-12-02 17:46:08	2019-01-06 20:28:00	\N	
+870	30	0.900157332419999956	116.914955139	2018-12-02 17:46:08	2019-01-06 20:28:00	\N	
+871	30	1.77658999999999989	117.939999999999998	2018-12-02 17:46:08	2019-01-06 20:28:00	\N	
 \.
 
 
 --
--- TOC entry 2702 (class 0 OID 0)
+-- TOC entry 2710 (class 0 OID 0)
 -- Dependencies: 250
 -- Name: sebaran_hotspot_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -4653,7 +4669,7 @@ SELECT pg_catalog.setval('public.sebaran_hotspot_id_seq', 871, true);
 
 
 --
--- TOC entry 2585 (class 0 OID 18203)
+-- TOC entry 2589 (class 0 OID 18203)
 -- Dependencies: 255
 -- Data for Name: sosialisasi_penyadartahuan; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -4663,7 +4679,7 @@ COPY public.sosialisasi_penyadartahuan (id, patroli_darat_id, latitude, longitud
 
 
 --
--- TOC entry 2703 (class 0 OID 0)
+-- TOC entry 2711 (class 0 OID 0)
 -- Dependencies: 254
 -- Name: sosialisasi_penyadartahuan_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -4672,7 +4688,7 @@ SELECT pg_catalog.setval('public.sosialisasi_penyadartahuan_id_seq', 1, false);
 
 
 --
--- TOC entry 2537 (class 0 OID 16729)
+-- TOC entry 2541 (class 0 OID 16729)
 -- Dependencies: 207
 -- Data for Name: sumber_air; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -4684,7 +4700,7 @@ COPY public.sumber_air (id, name, created_at, updated_at) FROM stdin;
 
 
 --
--- TOC entry 2704 (class 0 OID 0)
+-- TOC entry 2712 (class 0 OID 0)
 -- Dependencies: 206
 -- Name: sumber_air_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -4693,7 +4709,7 @@ SELECT pg_catalog.setval('public.sumber_air_id_seq', 2, true);
 
 
 --
--- TOC entry 2533 (class 0 OID 16702)
+-- TOC entry 2537 (class 0 OID 16702)
 -- Dependencies: 203
 -- Data for Name: tanah; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -4705,7 +4721,7 @@ COPY public.tanah (id, nama, created_at, updated_at) FROM stdin;
 
 
 --
--- TOC entry 2705 (class 0 OID 0)
+-- TOC entry 2713 (class 0 OID 0)
 -- Dependencies: 202
 -- Name: tanah_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -4714,7 +4730,7 @@ SELECT pg_catalog.setval('public.tanah_id_seq', 2, true);
 
 
 --
--- TOC entry 2559 (class 0 OID 16905)
+-- TOC entry 2563 (class 0 OID 16905)
 -- Dependencies: 229
 -- Data for Name: test; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -4724,7 +4740,7 @@ COPY public.test (id, nama, created_at, updated_at) FROM stdin;
 
 
 --
--- TOC entry 2706 (class 0 OID 0)
+-- TOC entry 2714 (class 0 OID 0)
 -- Dependencies: 228
 -- Name: test_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -4733,7 +4749,7 @@ SELECT pg_catalog.setval('public.test_id_seq', 1, false);
 
 
 --
--- TOC entry 2587 (class 0 OID 18222)
+-- TOC entry 2591 (class 0 OID 18222)
 -- Dependencies: 257
 -- Data for Name: tipe_kebakaran; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -4745,7 +4761,7 @@ COPY public.tipe_kebakaran (id, created_at, updated_at, nama) FROM stdin;
 
 
 --
--- TOC entry 2707 (class 0 OID 0)
+-- TOC entry 2715 (class 0 OID 0)
 -- Dependencies: 256
 -- Name: tipe_kebakaran_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -4754,7 +4770,7 @@ SELECT pg_catalog.setval('public.tipe_kebakaran_id_seq', 2, true);
 
 
 --
--- TOC entry 2529 (class 0 OID 16676)
+-- TOC entry 2533 (class 0 OID 16676)
 -- Dependencies: 199
 -- Data for Name: vegetasi; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -4770,7 +4786,7 @@ COPY public.vegetasi (id, nama, created_at, updated_at) FROM stdin;
 
 
 --
--- TOC entry 2708 (class 0 OID 0)
+-- TOC entry 2716 (class 0 OID 0)
 -- Dependencies: 198
 -- Name: vegetasi_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -4779,7 +4795,7 @@ SELECT pg_catalog.setval('public.vegetasi_id_seq', 6, true);
 
 
 --
--- TOC entry 2278 (class 2606 OID 16813)
+-- TOC entry 2287 (class 2606 OID 16813)
 -- Name: aktivitas_harian_patroli_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -4788,7 +4804,7 @@ ALTER TABLE ONLY public.aktivitas_harian_patroli
 
 
 --
--- TOC entry 2276 (class 2606 OID 16805)
+-- TOC entry 2285 (class 2606 OID 16805)
 -- Name: aktivitas_harian_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -4797,7 +4813,7 @@ ALTER TABLE ONLY public.aktivitas_harian
 
 
 --
--- TOC entry 2274 (class 2606 OID 16787)
+-- TOC entry 2283 (class 2606 OID 16787)
 -- Name: anggota_patroli_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -4806,7 +4822,7 @@ ALTER TABLE ONLY public.anggota_patroli
 
 
 --
--- TOC entry 2272 (class 2606 OID 16779)
+-- TOC entry 2281 (class 2606 OID 16779)
 -- Name: anggota_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -4815,7 +4831,7 @@ ALTER TABLE ONLY public.anggota
 
 
 --
--- TOC entry 2304 (class 2606 OID 18097)
+-- TOC entry 2313 (class 2606 OID 18097)
 -- Name: artifisial_param_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -4824,7 +4840,7 @@ ALTER TABLE ONLY public.artifisial_param
 
 
 --
--- TOC entry 2294 (class 2606 OID 17961)
+-- TOC entry 2303 (class 2606 OID 17961)
 -- Name: cuaca_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -4833,7 +4849,7 @@ ALTER TABLE ONLY public.cuaca
 
 
 --
--- TOC entry 2292 (class 2606 OID 17950)
+-- TOC entry 2301 (class 2606 OID 17950)
 -- Name: curah_hujan_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -4842,7 +4858,7 @@ ALTER TABLE ONLY public.curah_hujan
 
 
 --
--- TOC entry 2240 (class 2606 OID 16531)
+-- TOC entry 2249 (class 2606 OID 16531)
 -- Name: daops_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -4851,7 +4867,7 @@ ALTER TABLE ONLY public.daops
 
 
 --
--- TOC entry 2248 (class 2606 OID 16591)
+-- TOC entry 2257 (class 2606 OID 16591)
 -- Name: desa_kelurahan_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -4860,7 +4876,7 @@ ALTER TABLE ONLY public.desa_kelurahan
 
 
 --
--- TOC entry 2302 (class 2606 OID 18086)
+-- TOC entry 2311 (class 2606 OID 18086)
 -- Name: dokumentasi_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -4869,7 +4885,7 @@ ALTER TABLE ONLY public.dokumentasi
 
 
 --
--- TOC entry 2234 (class 2606 OID 16483)
+-- TOC entry 2243 (class 2606 OID 16483)
 -- Name: hak_akses_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -4878,7 +4894,7 @@ ALTER TABLE ONLY public.hak_akses
 
 
 --
--- TOC entry 2270 (class 2606 OID 16763)
+-- TOC entry 2279 (class 2606 OID 16763)
 -- Name: hasil_uji_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -4887,7 +4903,7 @@ ALTER TABLE ONLY public.hasil_uji
 
 
 --
--- TOC entry 2282 (class 2606 OID 16839)
+-- TOC entry 2291 (class 2606 OID 16839)
 -- Name: hotspot_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -4896,7 +4912,7 @@ ALTER TABLE ONLY public.hotspot
 
 
 --
--- TOC entry 2308 (class 2606 OID 18144)
+-- TOC entry 2317 (class 2606 OID 18144)
 -- Name: hotspot_sipongi_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -4905,7 +4921,7 @@ ALTER TABLE ONLY public.hotspot_sipongi
 
 
 --
--- TOC entry 2286 (class 2606 OID 16892)
+-- TOC entry 2295 (class 2606 OID 16892)
 -- Name: inventori_patroli_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -4914,7 +4930,7 @@ ALTER TABLE ONLY public.inventori_patroli
 
 
 --
--- TOC entry 2284 (class 2606 OID 16884)
+-- TOC entry 2293 (class 2606 OID 16884)
 -- Name: inventori_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -4923,7 +4939,7 @@ ALTER TABLE ONLY public.inventori
 
 
 --
--- TOC entry 2312 (class 2606 OID 18195)
+-- TOC entry 2321 (class 2606 OID 18195)
 -- Name: kadar_air_bahan_bakar_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -4932,7 +4948,7 @@ ALTER TABLE ONLY public.kadar_air_bahan_bakar
 
 
 --
--- TOC entry 2306 (class 2606 OID 18129)
+-- TOC entry 2315 (class 2606 OID 18129)
 -- Name: kategori_anggota_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -4941,7 +4957,7 @@ ALTER TABLE ONLY public.kategori_anggota
 
 
 --
--- TOC entry 2296 (class 2606 OID 18012)
+-- TOC entry 2305 (class 2606 OID 18012)
 -- Name: kategori_kondisi_vegetasi_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -4950,7 +4966,7 @@ ALTER TABLE ONLY public.kategori_kondisi_vegetasi
 
 
 --
--- TOC entry 2250 (class 2606 OID 16604)
+-- TOC entry 2259 (class 2606 OID 16604)
 -- Name: kategori_patroli_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -4959,7 +4975,7 @@ ALTER TABLE ONLY public.kategori_patroli
 
 
 --
--- TOC entry 2244 (class 2606 OID 16557)
+-- TOC entry 2253 (class 2606 OID 16557)
 -- Name: kecamatan_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -4968,7 +4984,7 @@ ALTER TABLE ONLY public.kecamatan
 
 
 --
--- TOC entry 2252 (class 2606 OID 16626)
+-- TOC entry 2261 (class 2606 OID 16626)
 -- Name: kegiatan_patroli_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -4977,7 +4993,7 @@ ALTER TABLE ONLY public.kegiatan_patroli
 
 
 --
--- TOC entry 2320 (class 2606 OID 18271)
+-- TOC entry 2329 (class 2606 OID 18271)
 -- Name: keterangan_lokasi_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -4986,7 +5002,7 @@ ALTER TABLE ONLY public.keterangan_lokasi
 
 
 --
--- TOC entry 2290 (class 2606 OID 17939)
+-- TOC entry 2299 (class 2606 OID 17939)
 -- Name: kondisi_karhutla_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -4995,7 +5011,7 @@ ALTER TABLE ONLY public.kondisi_karhutla
 
 
 --
--- TOC entry 2268 (class 2606 OID 16742)
+-- TOC entry 2277 (class 2606 OID 16742)
 -- Name: kondisi_sumber_air_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5004,7 +5020,7 @@ ALTER TABLE ONLY public.kondisi_sumber_air
 
 
 --
--- TOC entry 2264 (class 2606 OID 16715)
+-- TOC entry 2273 (class 2606 OID 16715)
 -- Name: kondisi_tanah_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5013,7 +5029,7 @@ ALTER TABLE ONLY public.kondisi_tanah
 
 
 --
--- TOC entry 2260 (class 2606 OID 16689)
+-- TOC entry 2269 (class 2606 OID 16689)
 -- Name: kondisi_vegetasi_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5022,7 +5038,7 @@ ALTER TABLE ONLY public.kondisi_vegetasi
 
 
 --
--- TOC entry 2242 (class 2606 OID 16544)
+-- TOC entry 2251 (class 2606 OID 16544)
 -- Name: kota_kab_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5031,7 +5047,7 @@ ALTER TABLE ONLY public.kota_kab
 
 
 --
--- TOC entry 2236 (class 2606 OID 16491)
+-- TOC entry 2245 (class 2606 OID 16491)
 -- Name: level_pengguna_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5040,7 +5056,16 @@ ALTER TABLE ONLY public.level_pengguna
 
 
 --
--- TOC entry 2334 (class 2606 OID 18615)
+-- TOC entry 2347 (class 2606 OID 18672)
+-- Name: lokasi_patroli_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY public.lokasi_patroli
+    ADD CONSTRAINT lokasi_patroli_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2343 (class 2606 OID 18615)
 -- Name: navigation_menus_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5049,7 +5074,7 @@ ALTER TABLE ONLY public.navigation_menus
 
 
 --
--- TOC entry 2256 (class 2606 OID 16663)
+-- TOC entry 2265 (class 2606 OID 16663)
 -- Name: patroli_darat_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5058,7 +5083,7 @@ ALTER TABLE ONLY public.patroli_darat
 
 
 --
--- TOC entry 2254 (class 2606 OID 16642)
+-- TOC entry 2263 (class 2606 OID 16642)
 -- Name: patroli_udara_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5067,7 +5092,7 @@ ALTER TABLE ONLY public.patroli_udara
 
 
 --
--- TOC entry 2300 (class 2606 OID 18075)
+-- TOC entry 2309 (class 2606 OID 18075)
 -- Name: pemadaman_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5076,7 +5101,7 @@ ALTER TABLE ONLY public.pemadaman
 
 
 --
--- TOC entry 2318 (class 2606 OID 18236)
+-- TOC entry 2327 (class 2606 OID 18236)
 -- Name: pemilik_lahan_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5085,7 +5110,7 @@ ALTER TABLE ONLY public.pemilik_lahan
 
 
 --
--- TOC entry 2232 (class 2606 OID 16472)
+-- TOC entry 2241 (class 2606 OID 16472)
 -- Name: pengguna_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5094,7 +5119,7 @@ ALTER TABLE ONLY public.pengguna
 
 
 --
--- TOC entry 2332 (class 2606 OID 18445)
+-- TOC entry 2341 (class 2606 OID 18445)
 -- Name: permission_role_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5103,7 +5128,7 @@ ALTER TABLE ONLY public.permission_role
 
 
 --
--- TOC entry 2328 (class 2606 OID 18430)
+-- TOC entry 2337 (class 2606 OID 18430)
 -- Name: permissions_name_unique; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5112,7 +5137,7 @@ ALTER TABLE ONLY public.permissions
 
 
 --
--- TOC entry 2330 (class 2606 OID 18428)
+-- TOC entry 2339 (class 2606 OID 18428)
 -- Name: permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5121,7 +5146,7 @@ ALTER TABLE ONLY public.permissions
 
 
 --
--- TOC entry 2246 (class 2606 OID 16578)
+-- TOC entry 2255 (class 2606 OID 16578)
 -- Name: posko_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5130,7 +5155,7 @@ ALTER TABLE ONLY public.posko
 
 
 --
--- TOC entry 2298 (class 2606 OID 18024)
+-- TOC entry 2307 (class 2606 OID 18024)
 -- Name: potensi_karhutla_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5139,7 +5164,7 @@ ALTER TABLE ONLY public.potensi_karhutla
 
 
 --
--- TOC entry 2238 (class 2606 OID 16510)
+-- TOC entry 2247 (class 2606 OID 16510)
 -- Name: provinsi_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5148,7 +5173,7 @@ ALTER TABLE ONLY public.provinsi
 
 
 --
--- TOC entry 2336 (class 2606 OID 18644)
+-- TOC entry 2345 (class 2606 OID 18644)
 -- Name: role_navigation_menu_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5157,7 +5182,7 @@ ALTER TABLE ONLY public.role_navigation_menu
 
 
 --
--- TOC entry 2326 (class 2606 OID 18417)
+-- TOC entry 2335 (class 2606 OID 18417)
 -- Name: role_user_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5166,7 +5191,7 @@ ALTER TABLE ONLY public.role_user
 
 
 --
--- TOC entry 2322 (class 2606 OID 18402)
+-- TOC entry 2331 (class 2606 OID 18402)
 -- Name: roles_name_unique; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5175,7 +5200,7 @@ ALTER TABLE ONLY public.roles
 
 
 --
--- TOC entry 2324 (class 2606 OID 18400)
+-- TOC entry 2333 (class 2606 OID 18400)
 -- Name: roles_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5184,7 +5209,7 @@ ALTER TABLE ONLY public.roles
 
 
 --
--- TOC entry 2280 (class 2606 OID 16831)
+-- TOC entry 2289 (class 2606 OID 16831)
 -- Name: satelit_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5193,7 +5218,7 @@ ALTER TABLE ONLY public.satelit
 
 
 --
--- TOC entry 2310 (class 2606 OID 18152)
+-- TOC entry 2319 (class 2606 OID 18152)
 -- Name: sebaran_hotspot_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5202,7 +5227,7 @@ ALTER TABLE ONLY public.sebaran_hotspot
 
 
 --
--- TOC entry 2314 (class 2606 OID 18211)
+-- TOC entry 2323 (class 2606 OID 18211)
 -- Name: sosialisasi_penyadartahuan_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5211,7 +5236,7 @@ ALTER TABLE ONLY public.sosialisasi_penyadartahuan
 
 
 --
--- TOC entry 2266 (class 2606 OID 16734)
+-- TOC entry 2275 (class 2606 OID 16734)
 -- Name: sumber_air_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5220,7 +5245,7 @@ ALTER TABLE ONLY public.sumber_air
 
 
 --
--- TOC entry 2262 (class 2606 OID 16707)
+-- TOC entry 2271 (class 2606 OID 16707)
 -- Name: tanah_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5229,7 +5254,7 @@ ALTER TABLE ONLY public.tanah
 
 
 --
--- TOC entry 2288 (class 2606 OID 16910)
+-- TOC entry 2297 (class 2606 OID 16910)
 -- Name: test_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5238,7 +5263,7 @@ ALTER TABLE ONLY public.test
 
 
 --
--- TOC entry 2316 (class 2606 OID 18227)
+-- TOC entry 2325 (class 2606 OID 18227)
 -- Name: tipe_kebakaran_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5247,7 +5272,7 @@ ALTER TABLE ONLY public.tipe_kebakaran
 
 
 --
--- TOC entry 2258 (class 2606 OID 16681)
+-- TOC entry 2267 (class 2606 OID 16681)
 -- Name: vegetasi_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -5256,7 +5281,7 @@ ALTER TABLE ONLY public.vegetasi
 
 
 --
--- TOC entry 2379 (class 2606 OID 16814)
+-- TOC entry 2374 (class 2606 OID 16814)
 -- Name: aktivitas_harian_patroli_aktivitas_harian_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5265,7 +5290,7 @@ ALTER TABLE ONLY public.aktivitas_harian_patroli
 
 
 --
--- TOC entry 2380 (class 2606 OID 16819)
+-- TOC entry 2375 (class 2606 OID 16819)
 -- Name: aktivitas_harian_patroli_kegiatan_patroli_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5274,7 +5299,7 @@ ALTER TABLE ONLY public.aktivitas_harian_patroli
 
 
 --
--- TOC entry 2376 (class 2606 OID 18130)
+-- TOC entry 2371 (class 2606 OID 18130)
 -- Name: anggota_kategori_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5283,7 +5308,7 @@ ALTER TABLE ONLY public.anggota
 
 
 --
--- TOC entry 2377 (class 2606 OID 16788)
+-- TOC entry 2372 (class 2606 OID 16788)
 -- Name: anggota_patroli_anggota_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5292,7 +5317,7 @@ ALTER TABLE ONLY public.anggota_patroli
 
 
 --
--- TOC entry 2378 (class 2606 OID 16793)
+-- TOC entry 2373 (class 2606 OID 16793)
 -- Name: anggota_patroli_kegiatan_patroli_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5301,7 +5326,7 @@ ALTER TABLE ONLY public.anggota_patroli
 
 
 --
--- TOC entry 2339 (class 2606 OID 16532)
+-- TOC entry 2350 (class 2606 OID 16532)
 -- Name: daops_provinsi_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5310,7 +5335,7 @@ ALTER TABLE ONLY public.daops
 
 
 --
--- TOC entry 2344 (class 2606 OID 17795)
+-- TOC entry 2355 (class 2606 OID 17795)
 -- Name: desa_kelurahan_kecamatan_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5319,7 +5344,7 @@ ALTER TABLE ONLY public.desa_kelurahan
 
 
 --
--- TOC entry 2343 (class 2606 OID 16592)
+-- TOC entry 2354 (class 2606 OID 16592)
 -- Name: desa_kelurahan_posko_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5328,7 +5353,7 @@ ALTER TABLE ONLY public.desa_kelurahan
 
 
 --
--- TOC entry 2375 (class 2606 OID 16764)
+-- TOC entry 2370 (class 2606 OID 16764)
 -- Name: hasil_uji_patroli_darat_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5337,7 +5362,7 @@ ALTER TABLE ONLY public.hasil_uji
 
 
 --
--- TOC entry 2382 (class 2606 OID 16845)
+-- TOC entry 2377 (class 2606 OID 16845)
 -- Name: hotspot_kegiatan_patroli_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5346,7 +5371,7 @@ ALTER TABLE ONLY public.hotspot
 
 
 --
--- TOC entry 2381 (class 2606 OID 16840)
+-- TOC entry 2376 (class 2606 OID 16840)
 -- Name: hotspot_satelit_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5355,7 +5380,7 @@ ALTER TABLE ONLY public.hotspot
 
 
 --
--- TOC entry 2384 (class 2606 OID 16898)
+-- TOC entry 2379 (class 2606 OID 16898)
 -- Name: inventori_patroli_inventori_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5364,7 +5389,7 @@ ALTER TABLE ONLY public.inventori_patroli
 
 
 --
--- TOC entry 2383 (class 2606 OID 16893)
+-- TOC entry 2378 (class 2606 OID 16893)
 -- Name: inventori_patroli_kegiatan_patroli_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5373,7 +5398,7 @@ ALTER TABLE ONLY public.inventori_patroli
 
 
 --
--- TOC entry 2341 (class 2606 OID 16558)
+-- TOC entry 2352 (class 2606 OID 16558)
 -- Name: kecamatan_kota_kab_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5382,7 +5407,7 @@ ALTER TABLE ONLY public.kecamatan
 
 
 --
--- TOC entry 2345 (class 2606 OID 16627)
+-- TOC entry 2356 (class 2606 OID 16627)
 -- Name: kegiatan_patroli_kategori_patroli_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5391,7 +5416,7 @@ ALTER TABLE ONLY public.kegiatan_patroli
 
 
 --
--- TOC entry 2373 (class 2606 OID 16743)
+-- TOC entry 2368 (class 2606 OID 16743)
 -- Name: kondisi_sumber_air_patroli_darat_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5400,7 +5425,7 @@ ALTER TABLE ONLY public.kondisi_sumber_air
 
 
 --
--- TOC entry 2374 (class 2606 OID 16748)
+-- TOC entry 2369 (class 2606 OID 16748)
 -- Name: kondisi_sumber_air_sumber_air_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5409,7 +5434,7 @@ ALTER TABLE ONLY public.kondisi_sumber_air
 
 
 --
--- TOC entry 2371 (class 2606 OID 16716)
+-- TOC entry 2366 (class 2606 OID 16716)
 -- Name: kondisi_tanah_patroli_darat_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5418,7 +5443,7 @@ ALTER TABLE ONLY public.kondisi_tanah
 
 
 --
--- TOC entry 2372 (class 2606 OID 16721)
+-- TOC entry 2367 (class 2606 OID 16721)
 -- Name: kondisi_tanah_tanah_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5427,7 +5452,7 @@ ALTER TABLE ONLY public.kondisi_tanah
 
 
 --
--- TOC entry 2370 (class 2606 OID 18043)
+-- TOC entry 2365 (class 2606 OID 18043)
 -- Name: kondisi_vegetasi_kategori_kondisi_vegetasi_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5436,7 +5461,7 @@ ALTER TABLE ONLY public.kondisi_vegetasi
 
 
 --
--- TOC entry 2368 (class 2606 OID 16690)
+-- TOC entry 2363 (class 2606 OID 16690)
 -- Name: kondisi_vegetasi_patroli_darat_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5445,7 +5470,7 @@ ALTER TABLE ONLY public.kondisi_vegetasi
 
 
 --
--- TOC entry 2369 (class 2606 OID 16695)
+-- TOC entry 2364 (class 2606 OID 16695)
 -- Name: kondisi_vegetasi_vegetasi_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5454,7 +5479,7 @@ ALTER TABLE ONLY public.kondisi_vegetasi
 
 
 --
--- TOC entry 2340 (class 2606 OID 16545)
+-- TOC entry 2351 (class 2606 OID 16545)
 -- Name: kota_kab_daops_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5463,7 +5488,7 @@ ALTER TABLE ONLY public.kota_kab
 
 
 --
--- TOC entry 2338 (class 2606 OID 16497)
+-- TOC entry 2349 (class 2606 OID 16497)
 -- Name: level_pengguna_hak_akses_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5472,7 +5497,7 @@ ALTER TABLE ONLY public.level_pengguna
 
 
 --
--- TOC entry 2337 (class 2606 OID 16492)
+-- TOC entry 2348 (class 2606 OID 16492)
 -- Name: level_pengguna_pengguna_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5481,34 +5506,88 @@ ALTER TABLE ONLY public.level_pengguna
 
 
 --
--- TOC entry 2357 (class 2606 OID 17962)
--- Name: patroli_darat_cuaca_pagi_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- TOC entry 2391 (class 2606 OID 18693)
+-- Name: lokasi_patroli_cuaca_pagi_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.patroli_darat
-    ADD CONSTRAINT patroli_darat_cuaca_pagi_id_foreign FOREIGN KEY (cuaca_pagi_id) REFERENCES public.cuaca(id);
-
-
---
--- TOC entry 2359 (class 2606 OID 17972)
--- Name: patroli_darat_cuaca_siang_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.patroli_darat
-    ADD CONSTRAINT patroli_darat_cuaca_siang_id_foreign FOREIGN KEY (cuaca_siang_id) REFERENCES public.cuaca(id);
+ALTER TABLE ONLY public.lokasi_patroli
+    ADD CONSTRAINT lokasi_patroli_cuaca_pagi_id_foreign FOREIGN KEY (cuaca_pagi_id) REFERENCES public.cuaca(id);
 
 
 --
--- TOC entry 2358 (class 2606 OID 17967)
--- Name: patroli_darat_cuaca_sore_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- TOC entry 2393 (class 2606 OID 18703)
+-- Name: lokasi_patroli_cuaca_siang_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.patroli_darat
-    ADD CONSTRAINT patroli_darat_cuaca_sore_id_foreign FOREIGN KEY (cuaca_sore_id) REFERENCES public.cuaca(id);
+ALTER TABLE ONLY public.lokasi_patroli
+    ADD CONSTRAINT lokasi_patroli_cuaca_siang_id_foreign FOREIGN KEY (cuaca_siang_id) REFERENCES public.cuaca(id);
 
 
 --
--- TOC entry 2360 (class 2606 OID 17977)
+-- TOC entry 2392 (class 2606 OID 18698)
+-- Name: lokasi_patroli_cuaca_sore_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.lokasi_patroli
+    ADD CONSTRAINT lokasi_patroli_cuaca_sore_id_foreign FOREIGN KEY (cuaca_sore_id) REFERENCES public.cuaca(id);
+
+
+--
+-- TOC entry 2394 (class 2606 OID 18708)
+-- Name: lokasi_patroli_curah_hujan_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.lokasi_patroli
+    ADD CONSTRAINT lokasi_patroli_curah_hujan_id_foreign FOREIGN KEY (curah_hujan_id) REFERENCES public.curah_hujan(id);
+
+
+--
+-- TOC entry 2397 (class 2606 OID 18723)
+-- Name: lokasi_patroli_dc_kk_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.lokasi_patroli
+    ADD CONSTRAINT lokasi_patroli_dc_kk_id_foreign FOREIGN KEY (dc_kk_id) REFERENCES public.artifisial_param(id);
+
+
+--
+-- TOC entry 2389 (class 2606 OID 18673)
+-- Name: lokasi_patroli_desa_kelurahan_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.lokasi_patroli
+    ADD CONSTRAINT lokasi_patroli_desa_kelurahan_id_foreign FOREIGN KEY (desa_kelurahan_id) REFERENCES public.desa_kelurahan(id);
+
+
+--
+-- TOC entry 2395 (class 2606 OID 18713)
+-- Name: lokasi_patroli_ffmc_kkas_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.lokasi_patroli
+    ADD CONSTRAINT lokasi_patroli_ffmc_kkas_id_foreign FOREIGN KEY (ffmc_kkas_id) REFERENCES public.artifisial_param(id);
+
+
+--
+-- TOC entry 2396 (class 2606 OID 18718)
+-- Name: lokasi_patroli_fwi_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.lokasi_patroli
+    ADD CONSTRAINT lokasi_patroli_fwi_id_foreign FOREIGN KEY (fwi_id) REFERENCES public.artifisial_param(id);
+
+
+--
+-- TOC entry 2390 (class 2606 OID 18678)
+-- Name: lokasi_patroli_kegiatan_patroli_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.lokasi_patroli
+    ADD CONSTRAINT lokasi_patroli_kegiatan_patroli_id_foreign FOREIGN KEY (kegiatan_patroli_id) REFERENCES public.kegiatan_patroli(id);
+
+
+--
+-- TOC entry 2358 (class 2606 OID 17977)
 -- Name: patroli_darat_curah_hujan_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5517,61 +5596,7 @@ ALTER TABLE ONLY public.patroli_darat
 
 
 --
--- TOC entry 2363 (class 2606 OID 18108)
--- Name: patroli_darat_dc_kk_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.patroli_darat
-    ADD CONSTRAINT patroli_darat_dc_kk_id_foreign FOREIGN KEY (dc_kk_id) REFERENCES public.artifisial_param(id);
-
-
---
--- TOC entry 2356 (class 2606 OID 16669)
--- Name: patroli_darat_desa_kelurahan_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.patroli_darat
-    ADD CONSTRAINT patroli_darat_desa_kelurahan_id_foreign FOREIGN KEY (desa_kelurahan_id) REFERENCES public.desa_kelurahan(id);
-
-
---
--- TOC entry 2362 (class 2606 OID 18103)
--- Name: patroli_darat_ffmc_kkas_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.patroli_darat
-    ADD CONSTRAINT patroli_darat_ffmc_kkas_id_foreign FOREIGN KEY (ffmc_kkas_id) REFERENCES public.artifisial_param(id);
-
-
---
--- TOC entry 2361 (class 2606 OID 18098)
--- Name: patroli_darat_fwi_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.patroli_darat
-    ADD CONSTRAINT patroli_darat_fwi_id_foreign FOREIGN KEY (fwi_id) REFERENCES public.artifisial_param(id);
-
-
---
--- TOC entry 2364 (class 2606 OID 18196)
--- Name: patroli_darat_kadar_air_bahan_bakar_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.patroli_darat
-    ADD CONSTRAINT patroli_darat_kadar_air_bahan_bakar_id_foreign FOREIGN KEY (kadar_air_bahan_bakar_id) REFERENCES public.kadar_air_bahan_bakar(id);
-
-
---
--- TOC entry 2355 (class 2606 OID 16664)
--- Name: patroli_darat_kegiatan_patroli_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.patroli_darat
-    ADD CONSTRAINT patroli_darat_kegiatan_patroli_id_foreign FOREIGN KEY (kegiatan_patroli_id) REFERENCES public.kegiatan_patroli(id);
-
-
---
--- TOC entry 2367 (class 2606 OID 18272)
+-- TOC entry 2361 (class 2606 OID 18272)
 -- Name: patroli_darat_keterangan_lokasi_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5580,7 +5605,7 @@ ALTER TABLE ONLY public.patroli_darat
 
 
 --
--- TOC entry 2366 (class 2606 OID 18256)
+-- TOC entry 2360 (class 2606 OID 18256)
 -- Name: patroli_darat_kondisi_karhutla_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5589,7 +5614,16 @@ ALTER TABLE ONLY public.patroli_darat
 
 
 --
--- TOC entry 2365 (class 2606 OID 18251)
+-- TOC entry 2362 (class 2606 OID 18683)
+-- Name: patroli_darat_lokasi_patroli_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.patroli_darat
+    ADD CONSTRAINT patroli_darat_lokasi_patroli_id_foreign FOREIGN KEY (lokasi_patroli_id) REFERENCES public.lokasi_patroli(id);
+
+
+--
+-- TOC entry 2359 (class 2606 OID 18251)
 -- Name: patroli_darat_potensi_karhutla_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5598,88 +5632,16 @@ ALTER TABLE ONLY public.patroli_darat
 
 
 --
--- TOC entry 2349 (class 2606 OID 17987)
--- Name: patroli_udara_cuaca_pagi_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- TOC entry 2357 (class 2606 OID 18688)
+-- Name: patroli_udara_lokasi_patroli_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.patroli_udara
-    ADD CONSTRAINT patroli_udara_cuaca_pagi_id_foreign FOREIGN KEY (cuaca_pagi_id) REFERENCES public.cuaca(id);
+    ADD CONSTRAINT patroli_udara_lokasi_patroli_id_foreign FOREIGN KEY (lokasi_patroli_id) REFERENCES public.lokasi_patroli(id);
 
 
 --
--- TOC entry 2348 (class 2606 OID 17982)
--- Name: patroli_udara_cuaca_siang_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.patroli_udara
-    ADD CONSTRAINT patroli_udara_cuaca_siang_id_foreign FOREIGN KEY (cuaca_siang_id) REFERENCES public.cuaca(id);
-
-
---
--- TOC entry 2350 (class 2606 OID 17992)
--- Name: patroli_udara_cuaca_sore_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.patroli_udara
-    ADD CONSTRAINT patroli_udara_cuaca_sore_id_foreign FOREIGN KEY (cuaca_sore_id) REFERENCES public.cuaca(id);
-
-
---
--- TOC entry 2351 (class 2606 OID 17997)
--- Name: patroli_udara_curah_hujan_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.patroli_udara
-    ADD CONSTRAINT patroli_udara_curah_hujan_id_foreign FOREIGN KEY (curah_hujan_id) REFERENCES public.curah_hujan(id);
-
-
---
--- TOC entry 2352 (class 2606 OID 18173)
--- Name: patroli_udara_dc_kk_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.patroli_udara
-    ADD CONSTRAINT patroli_udara_dc_kk_id_foreign FOREIGN KEY (dc_kk_id) REFERENCES public.artifisial_param(id);
-
-
---
--- TOC entry 2347 (class 2606 OID 16648)
--- Name: patroli_udara_desa_kelurahan_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.patroli_udara
-    ADD CONSTRAINT patroli_udara_desa_kelurahan_id_foreign FOREIGN KEY (desa_kelurahan_id) REFERENCES public.desa_kelurahan(id);
-
-
---
--- TOC entry 2353 (class 2606 OID 18178)
--- Name: patroli_udara_ffmc_kkas_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.patroli_udara
-    ADD CONSTRAINT patroli_udara_ffmc_kkas_id_foreign FOREIGN KEY (ffmc_kkas_id) REFERENCES public.artifisial_param(id);
-
-
---
--- TOC entry 2354 (class 2606 OID 18183)
--- Name: patroli_udara_fwi_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.patroli_udara
-    ADD CONSTRAINT patroli_udara_fwi_id_foreign FOREIGN KEY (fwi_id) REFERENCES public.artifisial_param(id);
-
-
---
--- TOC entry 2346 (class 2606 OID 16643)
--- Name: patroli_udara_kegiatan_patroli_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.patroli_udara
-    ADD CONSTRAINT patroli_udara_kegiatan_patroli_id_foreign FOREIGN KEY (kegiatan_patroli_id) REFERENCES public.kegiatan_patroli(id);
-
-
---
--- TOC entry 2386 (class 2606 OID 18242)
+-- TOC entry 2381 (class 2606 OID 18242)
 -- Name: pemadaman_pemilik_lahan_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5688,7 +5650,7 @@ ALTER TABLE ONLY public.pemadaman
 
 
 --
--- TOC entry 2385 (class 2606 OID 18237)
+-- TOC entry 2380 (class 2606 OID 18237)
 -- Name: pemadaman_tipe_kebakaran_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5697,7 +5659,7 @@ ALTER TABLE ONLY public.pemadaman
 
 
 --
--- TOC entry 2390 (class 2606 OID 18434)
+-- TOC entry 2385 (class 2606 OID 18434)
 -- Name: permission_role_permission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5706,7 +5668,7 @@ ALTER TABLE ONLY public.permission_role
 
 
 --
--- TOC entry 2391 (class 2606 OID 18439)
+-- TOC entry 2386 (class 2606 OID 18439)
 -- Name: permission_role_role_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5715,7 +5677,7 @@ ALTER TABLE ONLY public.permission_role
 
 
 --
--- TOC entry 2342 (class 2606 OID 16579)
+-- TOC entry 2353 (class 2606 OID 16579)
 -- Name: posko_kecamatan_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5724,7 +5686,7 @@ ALTER TABLE ONLY public.posko
 
 
 --
--- TOC entry 2393 (class 2606 OID 18650)
+-- TOC entry 2388 (class 2606 OID 18650)
 -- Name: role_navigation_menu_navigation_menu_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5733,7 +5695,7 @@ ALTER TABLE ONLY public.role_navigation_menu
 
 
 --
--- TOC entry 2392 (class 2606 OID 18645)
+-- TOC entry 2387 (class 2606 OID 18645)
 -- Name: role_navigation_menu_role_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5742,7 +5704,7 @@ ALTER TABLE ONLY public.role_navigation_menu
 
 
 --
--- TOC entry 2388 (class 2606 OID 18406)
+-- TOC entry 2383 (class 2606 OID 18406)
 -- Name: role_user_pengguna_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5751,7 +5713,7 @@ ALTER TABLE ONLY public.role_user
 
 
 --
--- TOC entry 2389 (class 2606 OID 18411)
+-- TOC entry 2384 (class 2606 OID 18411)
 -- Name: role_user_role_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5760,7 +5722,7 @@ ALTER TABLE ONLY public.role_user
 
 
 --
--- TOC entry 2387 (class 2606 OID 18212)
+-- TOC entry 2382 (class 2606 OID 18212)
 -- Name: sosialisasi_penyadartahuan_patroli_darat_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -5769,7 +5731,7 @@ ALTER TABLE ONLY public.sosialisasi_penyadartahuan
 
 
 --
--- TOC entry 2609 (class 0 OID 0)
+-- TOC entry 2615 (class 0 OID 0)
 -- Dependencies: 6
 -- Name: SCHEMA public; Type: ACL; Schema: -; Owner: postgres
 --
@@ -5780,7 +5742,7 @@ GRANT ALL ON SCHEMA public TO postgres;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
--- Completed on 2019-01-06 16:59:29 WIB
+-- Completed on 2019-02-18 09:42:03 WIB
 
 --
 -- PostgreSQL database dump complete
