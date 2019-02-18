@@ -809,14 +809,11 @@ class PatroliController extends Controller
             $patroliDarat->delete();
 
             // Delete patroli_udara
-            $patroliUdaras = PatroliUdara::where('lokasi_patroli_id', '=', $lokasiPatroli->id);
+            $patroliUdara = PatroliUdara::where('lokasi_patroli_id', '=', $lokasiPatroli->id);
             $patroliUdara->delete();
 
             // Delete lokasi patroli
             $lokasiPatroli->delete();
         }
-        
-
-        
     }
 }
